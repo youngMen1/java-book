@@ -169,4 +169,29 @@ private final List<BigDecimal> prices = Arrays.asList(
 ### 2.6.lambda表达式的重用
 
 
+```
+/**
+     * lambda表达式带来的冗余
+     */
+    private void test51() {
+        final long count1 = friends.stream().filter(name -> name.startsWith("N")).count();
+        final long count2 = editors.stream().filter(name -> name.startsWith("N")).count();
+        final long count3 = comrades.stream().filter(name -> name.startsWith("N")).count();
+        System.out.println(count1 + " " + count2 + " " + count3);
+    }
+ 
+    /**
+     * 重用
+     */
+    private void test52() {
+        final Predicate<String> startsWith = name -> name.startsWith("N");
+        final long count1 = friends.stream().filter(startsWith).count();
+        final long count2 = editors.stream().filter(startsWith).count();
+        final long count3 = comrades.stream().filter(startsWith).count();
+        System.out.println(count1 + " " + count2 + " " + count3);
+    }
+```
+
+
+
 
