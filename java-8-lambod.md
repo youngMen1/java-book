@@ -52,7 +52,9 @@ private final List<BigDecimal> prices = Arrays.asList(
 运行结果：
 
 ![](/static/image/20200422141523610.png)
+
 ### 2.3.集合的使用
+
 ```
    /**
      * 集合的使用
@@ -65,18 +67,26 @@ private final List<BigDecimal> prices = Arrays.asList(
                 System.out.println(name);
             }
         });
- 
+
         friends.forEach((final String name) -> System.out.println(name));
- 
+
         friends.forEach((name) -> System.out.println(name));
- 
+
         friends.forEach(name -> System.out.println(name));
- 
+
         friends.forEach(System.out::println);
     }
 ```
-运行结果：
-![](/static/image/2020042214154563.png)
+
+运行结果：  
+![](/static/image/2020042214154563.png)  
 都是从传统的写法上，慢慢的过度到Lambda的写法。
+
+### 2.4.列表的转化
+
+
+
+
+
 
 
