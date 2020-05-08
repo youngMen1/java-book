@@ -231,7 +231,6 @@ private final List<BigDecimal> prices = Arrays.asList(
 
 ### 2.8.Optional
 
-
 ```
  /**
      * Optional
@@ -241,7 +240,7 @@ private final List<BigDecimal> prices = Arrays.asList(
         pickName1(friends, "N");
         pickName2(friends, "N");
     }
- 
+
     public static void pickName1(List<String> names, String startingLetter) {
         String foundName = null;
         for (String name : names) {
@@ -252,7 +251,7 @@ private final List<BigDecimal> prices = Arrays.asList(
         }
         System.out.println(String.format("A name starting with %s: %s", startingLetter, foundName));
     }
- 
+
     public static void pickName2(List<String> names, String startingLetter) {
         final Optional<String> foundName = names.stream()
                 .filter(name -> name.startsWith(startingLetter))
@@ -261,8 +260,11 @@ private final List<BigDecimal> prices = Arrays.asList(
         foundName.ifPresent(System.out::println);
     }
 ```
-运行结果：
+
+运行结果：  
 ![](/static/image/20200422141813398.png)
+
+### 2.9.MapReduce map（映射）和reduce\(归约，化简）是数学上两个很基础的概念
 
 
 
