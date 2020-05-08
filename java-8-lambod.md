@@ -530,5 +530,5 @@ Person{age=35, name='Greg'}
 
 运行结果：
 
-20200422140914515.png
+![](/static/image/20200422140914515.png)
 
