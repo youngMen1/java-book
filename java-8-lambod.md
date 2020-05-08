@@ -231,3 +231,35 @@ private final List<BigDecimal> prices = Arrays.asList(
 
 ### 2.8.Optional
 
+
+```
+ /**
+     * Optional
+     */
+    @Test
+    public void test7() {
+        pickName1(friends, "N");
+        pickName2(friends, "N");
+    }
+ 
+    public static void pickName1(List<String> names, String startingLetter) {
+        String foundName = null;
+        for (String name : names) {
+            if (name.startsWith(startingLetter)) {
+                foundName = name;
+                break;
+            }
+        }
+        System.out.println(String.format("A name starting with %s: %s", startingLetter, foundName));
+    }
+ 
+    public static void pickName2(List<String> names, String startingLetter) {
+        final Optional<String> foundName = names.stream()
+                .filter(name -> name.startsWith(startingLetter))
+                .findFirst();
+        System.out.println(String.format("A name starting with %s: %s", startingLetter, foundName.orElse("No name found")));
+        foundName.ifPresent(System.out::println);
+    }
+```
+
+
