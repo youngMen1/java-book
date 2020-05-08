@@ -132,4 +132,6 @@ private final List<BigDecimal> prices = Arrays.asList(
 运行结果：
 
 ![img](/static/image/20200422141625541.png)
+都是从传统的写法上，慢慢的过度到Lambda的写法。
+### 2.5.在集合中查找元素
 
