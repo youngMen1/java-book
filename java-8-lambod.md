@@ -131,10 +131,10 @@ private final List<BigDecimal> prices = Arrays.asList(
 
 运行结果：
 
-![img](/static/image/20200422141625541.png)
+![img](/static/image/20200422141625541.png)  
 都是从传统的写法上，慢慢的过度到Lambda的写法。
-### 2.5.在集合中查找元素
 
+### 2.5.在集合中查找元素
 
 ```
  private void test41() {
@@ -146,7 +146,7 @@ private final List<BigDecimal> prices = Arrays.asList(
         }
         System.out.println(startsWith);
     }
- 
+
     /**
      * filter方法接收一个返回布尔值的lambda表达式。
      * 如果表达式结果为true，运行上下文中的那个元素就会被添加到结果集中;
@@ -162,5 +162,7 @@ private final List<BigDecimal> prices = Arrays.asList(
     }
 ```
 
+运行结果：
 
+2020042214164436.png
 
