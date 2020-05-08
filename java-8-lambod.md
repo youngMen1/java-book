@@ -23,5 +23,11 @@ private final List<BigDecimal> prices = Arrays.asList(
     );
 ```
 
+### 2.2.初识，简单对比lambda和常规操作的不同
+
+```
+
+```
+
 
 
