@@ -317,23 +317,25 @@ private void test81() {
     public void test9() {
         final String str = "w00t";
         str.chars().forEach(ch -> System.out.println(ch));
- 
+
         str.chars().forEach(System.out::println);
- 
+
         str.chars()
                 .mapToObj(ch -> Character.valueOf((char) ch))
                 .forEach(System.out::println);
- 
+
         str.chars()
                 .filter(ch -> Character.isDigit(ch))
                 .forEach(ch -> printChar(ch));
- 
+
     }
- 
+
     private static void printChar(int aChar) {
         System.out.println((char) (aChar));
     }
 ```
 
+运行结果：
 
+20200422141856449.png
 
