@@ -191,7 +191,8 @@ private final List<BigDecimal> prices = Arrays.asList(
         System.out.println(count1 + " " + count2 + " " + count3);
     }
 ```
-
+运行结果：
+20200422141726414.png
 
 
 
