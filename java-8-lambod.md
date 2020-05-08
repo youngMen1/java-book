@@ -84,9 +84,51 @@ private final List<BigDecimal> prices = Arrays.asList(
 
 ### 2.4.列表的转化
 
+```
+ private void test31() {
+        final List<String> uppercaseNames = new ArrayList<String>();
+        for (String name : friends) {
+            uppercaseNames.add(name.toUpperCase());
+        }
+        System.out.println(uppercaseNames);
+    }
+ 
+    private void test32() {
+        final List<String> uppercaseNames = new ArrayList<String>();
+        friends.forEach(name -> uppercaseNames.add(name.toUpperCase()));
+        System.out.println(uppercaseNames);
+    }
+ 
+    /**
+     * Steam的map方法可以用来将输入序列转化成一个输出的序列
+     * map方法把lambda表达式的运行结果收齐起来，返回一个结果集
+     */
+    private void test33() {
+        friends.stream()
+                .map(name -> name.toUpperCase())
+                .forEach(name -> System.out.print(name + " "));
+        System.out.println();
+    }
+ 
+    /**
+     *
+     */
+    private void test34() {
+        friends.stream()
+                .map(name -> name.length())
+                .forEach(count -> System.out.print(count + " "));
+    }
+ 
+    /**
+     *
+     */
+    private void test35() {
+        friends.stream()
+                .map(String::length)
+                .forEach(count -> System.out.print(count + " "));
+    }
 
-
-
+```
 
 
 
