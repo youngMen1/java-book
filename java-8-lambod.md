@@ -261,5 +261,8 @@ private final List<BigDecimal> prices = Arrays.asList(
         foundName.ifPresent(System.out::println);
     }
 ```
+运行结果：
+![](/static/image/20200422141813398.png)
+
 
 
