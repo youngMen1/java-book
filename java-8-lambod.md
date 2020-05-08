@@ -209,7 +209,7 @@ private final List<BigDecimal> prices = Arrays.asList(
         final long count2 = friends.stream().filter(startsWith2).count();
         System.out.println(count1 + " " + count2);
     }
- 
+
     /**
      * filter可不是什么函数都接受的。它只接受只有一个参数的函数，那个参数对应的就是集合中的元素，返回一个boolean值，
      * 它希望传进来的是一个Predicate。
@@ -219,11 +219,13 @@ private final List<BigDecimal> prices = Arrays.asList(
         final long count2 = friends.stream().filter(checkIfStartsWith("B")).count();
         System.out.println(count1 + " " + count2);
     }
- 
+
     public static Predicate<String> checkIfStartsWith(final String letter) {
         return name -> name.startsWith(letter);
     }
 ```
 
+运行结果：
 
+20200422141746999.png
 
