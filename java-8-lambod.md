@@ -166,3 +166,7 @@ private final List<BigDecimal> prices = Arrays.asList(
 
 2020042214164436.png
 
+### 2.6.lambda表达式的重用
+
+
+
