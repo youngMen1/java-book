@@ -462,7 +462,7 @@ Person{age=35, name='Greg'}
         testB5();
         testB6();
     }
- 
+
     private void testB6() {
         Comparator<Person> byAge = Comparator.comparing(Person::getAge);
         Map<Character, Optional<Person>> oldestPersonOfEachLetter =
@@ -472,17 +472,17 @@ Person{age=35, name='Greg'}
         System.out.println("Oldest person of each letter:");
         System.out.println(oldestPersonOfEachLetter);
     }
- 
+
     @Test
     public void testB5() {
         Map<Integer, List<String>> nameOfPeopleByAge =
                 people.stream()
                         .collect(
                                 Collectors.groupingBy(Person::getAge, Collectors.mapping(Person::getName, Collectors.toList())));
- 
+
         System.out.println("People grouped by age: " + nameOfPeopleByAge);
     }
- 
+
     /**
      * to Map<Integer, List<Person>>
      */
@@ -493,7 +493,7 @@ Person{age=35, name='Greg'}
                         .collect(Collectors.groupingBy(Person::getAge));
         System.out.println("Grouped by age: " + peopleByAge);
     }
- 
+
     /**
      * to list
      */
@@ -504,7 +504,7 @@ Person{age=35, name='Greg'}
                         .collect(Collectors.toList());
         System.out.println("People older than 20: " + olderThan20);
     }
- 
+
     /**
      * to list
      */
@@ -515,7 +515,7 @@ Person{age=35, name='Greg'}
                         .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
         System.out.println("People older than 20: " + olderThan20);
     }
- 
+
     /**
      * to list
      */
@@ -528,5 +528,7 @@ Person{age=35, name='Greg'}
     }
 ```
 
+运行结果：
 
+20200422140914515.png
 
