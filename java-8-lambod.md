@@ -164,7 +164,7 @@ private final List<BigDecimal> prices = Arrays.asList(
 
 运行结果：
 
-2020042214164436.png
+![](/static/image/2020042214164436.png)
 
 ### 2.6.lambda表达式的重用
 
