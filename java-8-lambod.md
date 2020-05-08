@@ -92,13 +92,13 @@ private final List<BigDecimal> prices = Arrays.asList(
         }
         System.out.println(uppercaseNames);
     }
- 
+
     private void test32() {
         final List<String> uppercaseNames = new ArrayList<String>();
         friends.forEach(name -> uppercaseNames.add(name.toUpperCase()));
         System.out.println(uppercaseNames);
     }
- 
+
     /**
      * Steam的map方法可以用来将输入序列转化成一个输出的序列
      * map方法把lambda表达式的运行结果收齐起来，返回一个结果集
@@ -109,7 +109,7 @@ private final List<BigDecimal> prices = Arrays.asList(
                 .forEach(name -> System.out.print(name + " "));
         System.out.println();
     }
- 
+
     /**
      *
      */
@@ -118,7 +118,7 @@ private final List<BigDecimal> prices = Arrays.asList(
                 .map(name -> name.length())
                 .forEach(count -> System.out.print(count + " "));
     }
- 
+
     /**
      *
      */
@@ -127,8 +127,9 @@ private final List<BigDecimal> prices = Arrays.asList(
                 .map(String::length)
                 .forEach(count -> System.out.print(count + " "));
     }
-
 ```
 
+运行结果：
 
+20200422141625541.png
 
