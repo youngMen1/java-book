@@ -449,7 +449,84 @@ Person{age=35, name='Greg'}
 
 ### 2.12.收集器
 
-
+```
+/**
+     * 收集器
+     */
+    @Test
+    public void testB() {
+        testB1();
+        testB2();
+        testB3();
+        testB4();
+        testB5();
+        testB6();
+    }
+ 
+    private void testB6() {
+        Comparator<Person> byAge = Comparator.comparing(Person::getAge);
+        Map<Character, Optional<Person>> oldestPersonOfEachLetter =
+                people.stream()
+                        .collect(Collectors.groupingBy(person -> person.getName().charAt(0),
+                                Collectors.reducing(BinaryOperator.maxBy(byAge))));
+        System.out.println("Oldest person of each letter:");
+        System.out.println(oldestPersonOfEachLetter);
+    }
+ 
+    @Test
+    public void testB5() {
+        Map<Integer, List<String>> nameOfPeopleByAge =
+                people.stream()
+                        .collect(
+                                Collectors.groupingBy(Person::getAge, Collectors.mapping(Person::getName, Collectors.toList())));
+ 
+        System.out.println("People grouped by age: " + nameOfPeopleByAge);
+    }
+ 
+    /**
+     * to Map<Integer, List<Person>>
+     */
+    @Test
+    public void testB4() {
+        Map<Integer, List<Person>> peopleByAge =
+                people.stream()
+                        .collect(Collectors.groupingBy(Person::getAge));
+        System.out.println("Grouped by age: " + peopleByAge);
+    }
+ 
+    /**
+     * to list
+     */
+    private void testB3() {
+        List<Person> olderThan20 =
+                people.stream()
+                        .filter(person -> person.getAge() > 20)
+                        .collect(Collectors.toList());
+        System.out.println("People older than 20: " + olderThan20);
+    }
+ 
+    /**
+     * to list
+     */
+    private void testB2() {
+        List<Person> olderThan20 =
+                people.stream()
+                        .filter(person -> person.getAge() > 20)
+                        .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+        System.out.println("People older than 20: " + olderThan20);
+    }
+ 
+    /**
+     * to list
+     */
+    private void testB1() {
+        List<Person> olderThan20 = new ArrayList<>();
+        people.stream()
+                .filter(person -> person.getAge() > 20)
+                .forEach(person -> olderThan20.add(person));
+        System.out.println("People older than 20: " + olderThan20);
+    }
+```
 
 
 
