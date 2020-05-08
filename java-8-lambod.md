@@ -305,7 +305,7 @@ private void test81() {
 
 运行结果：
 
-20200422141838855.png
+![img](/static/image/20200422141838855.png)
 
 ### 2.10.字符串及方法引用
 
@@ -337,5 +337,5 @@ private void test81() {
 
 运行结果：
 
-20200422141856449.png
+![img](/static/image/20200422141856449.png)
 
