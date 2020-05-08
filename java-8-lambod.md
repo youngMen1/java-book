@@ -405,6 +405,48 @@ private void testA7(List<Person> people) {
         people.forEach(System.out::println);
     }
 ```
+运行结果：
+
+
+```
+Sorted in ascending order by age: 
+Person{age=20, name='John'}
+Person{age=21, name='Sara'}
+Person{age=21, name='Jane'}
+Person{age=35, name='Greg'}
+Sorted in descending order by age: 
+Person{age=35, name='Greg'}
+Person{age=21, name='Sara'}
+Person{age=21, name='Jane'}
+Person{age=20, name='John'}
+Sorted in ascending order by age: 
+Person{age=20, name='John'}
+Person{age=21, name='Sara'}
+Person{age=21, name='Jane'}
+Person{age=35, name='Greg'}
+Sorted in descending order by age: 
+Person{age=35, name='Greg'}
+Person{age=21, name='Sara'}
+Person{age=21, name='Jane'}
+Person{age=20, name='John'}
+Youngest: Person{age=20, name='John'}
+Eldest: Person{age=35, name='Greg'}
+Sorted in ascending order by name: 
+Person{age=35, name='Greg'}
+Person{age=21, name='Jane'}
+Person{age=20, name='John'}
+Person{age=21, name='Sara'}
+Sorted in ascending order by name: 
+Person{age=35, name='Greg'}
+Person{age=21, name='Jane'}
+Person{age=20, name='John'}
+Person{age=21, name='Sara'}
+Sorted in ascending order by age and name: 
+Person{age=20, name='John'}
+Person{age=21, name='Jane'}
+Person{age=21, name='Sara'}
+Person{age=35, name='Greg'}
+```
 
 
 
