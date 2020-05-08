@@ -1,6 +1,6 @@
 # 1.基本介绍
 
-Java 8 Lambod 表达式的代码实际操作例子，主要是把jdk8里面的lambda常用的例子摆一摆，忘记了看一看就知道怎么使用，方便回忆。
+Java 8 Lambda 表达式的代码实际操作例子，主要是把jdk8里面的lambda常用的例子摆一摆，忘记了看一看就知道怎么使用，方便回忆。
 
 # 2.怎么使用
 
@@ -11,7 +11,7 @@ private final List<BigDecimal> prices = Arrays.asList(
             new BigDecimal("10"), new BigDecimal("30"), new BigDecimal("17"),
             new BigDecimal("20"), new BigDecimal("15"), new BigDecimal("18"),
             new BigDecimal("45"), new BigDecimal("12"));
- 
+
     private final List<String> friends = Arrays.asList("Brian", "Nate", "Neal", "Raju", "Sara", "Scott");
     private final List<String> editors = Arrays.asList("Brian", "Jackie", "John", "Mike");
     private final List<String> comrades = Arrays.asList("Kate", "Ken", "Nick", "Paula", "Zach");
