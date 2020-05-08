@@ -194,15 +194,36 @@ private final List<BigDecimal> prices = Arrays.asList(
 运行结果：  
 ![](/static/image/20200422141726414.png)
 
-
-
 ### 2.7.闭包 使用词法作用域和闭包
 
-
-
-
-
-
+```
+  /**
+     * 第一个predicate判断名字是否是以N开头的，第二个是判断是否以B开头的。
+     * 我们把这两个实例分别传递给两次filter方法调用。
+     * 这样看起来很合理，但是两个predicate产生了冗余，它们只是那个检查的字母不同而已。
+     */
+    private void test61() {
+        final Predicate<String> startsWith1 = name -> name.startsWith("N");
+        final Predicate<String> startsWith2 = name -> name.startsWith("B");
+        final long count1 = friends.stream().filter(startsWith1).count();
+        final long count2 = friends.stream().filter(startsWith2).count();
+        System.out.println(count1 + " " + count2);
+    }
+ 
+    /**
+     * filter可不是什么函数都接受的。它只接受只有一个参数的函数，那个参数对应的就是集合中的元素，返回一个boolean值，
+     * 它希望传进来的是一个Predicate。
+     */
+    private void test62() {
+        final long count1 = friends.stream().filter(checkIfStartsWith("N")).count();
+        final long count2 = friends.stream().filter(checkIfStartsWith("B")).count();
+        System.out.println(count1 + " " + count2);
+    }
+ 
+    public static Predicate<String> checkIfStartsWith(final String letter) {
+        return name -> name.startsWith(letter);
+    }
+```
 
 
 
