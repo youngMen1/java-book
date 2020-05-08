@@ -341,7 +341,6 @@ private void test81() {
 
 ### 2.11.Comparator
 
-
 ```
 private void testA7(List<Person> people) {
         final Function<Person, Integer> byAge = person -> person.getAge();
@@ -351,7 +350,7 @@ private void testA7(List<Person> people) {
                         .sorted(comparing(byAge).thenComparing(byTheirName))
                         .collect(Collectors.toList()));
     }
- 
+
     private void testA6(List<Person> people) {
         final Function<Person, String> byName = person -> person.getName();
         List<Person> list = people.stream()
@@ -359,7 +358,7 @@ private void testA7(List<Person> people) {
                 .collect(Collectors.toList());
         printPeople("Sorted in ascending order by name: ", list);
     }
- 
+
     private void testA5(List<Person> people) {
         List<Person> list = people.stream()
                 .sorted((person1, person2) ->
@@ -367,46 +366,46 @@ private void testA7(List<Person> people) {
                 .collect(Collectors.toList());
         printPeople("Sorted in ascending order by name: ", list);
     }
- 
+
     private void testA4(List<Person> people) {
         people.stream()
                 .max(Person::ageDifference)
                 .ifPresent(eldest -> System.out.println("Eldest: " + eldest));
     }
- 
+
     private void testA3(List<Person> people) {
         people.stream()
                 .min(Person::ageDifference)
                 .ifPresent(youngest -> System.out.println("Youngest: " + youngest));
     }
- 
+
     private void testA2(List<Person> people) {
         Comparator<Person> compareAscending = (person1, person2) -> person1.ageDifference(person2);
         Comparator<Person> compareDescending = compareAscending.reversed();
         List<Person> list = people.stream().sorted(compareAscending).collect(Collectors.toList());
         printPeople("Sorted in ascending order by age: ", list);
- 
+
         list = people.stream().sorted(compareDescending).collect(Collectors.toList());
         printPeople("Sorted in descending order by age: ", list);
     }
- 
+
     private void testA1(List<Person> people) {
         List<Person> ascendingAge = people.stream().sorted((person1, person2) -> person1.ageDifference(person2))
                 .collect(Collectors.toList());
         printPeople("Sorted in ascending order by age: ", ascendingAge);
- 
+
         List<Person> descendingAge = people.stream().sorted((person1, person2) -> person2.ageDifference(person1))
                 .collect(Collectors.toList());
         printPeople("Sorted in descending order by age: ", descendingAge);
     }
- 
+
     public static void printPeople(final String message, final List<Person> people) {
         System.out.println(message);
         people.forEach(System.out::println);
     }
 ```
-运行结果：
 
+运行结果：
 
 ```
 Sorted in ascending order by age: 
@@ -447,6 +446,10 @@ Person{age=21, name='Jane'}
 Person{age=21, name='Sara'}
 Person{age=35, name='Greg'}
 ```
+
+### 2.12.收集器
+
+
 
 
 
