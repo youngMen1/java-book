@@ -53,4 +53,28 @@ private final List<BigDecimal> prices = Arrays.asList(
 
 ![](/static/image/20200422141523610.png)
 ### 2.3.集合的使用
+```
+   /**
+     * 集合的使用
+     */
+    @Test
+    public void test2() {
+        friends.forEach(new Consumer<String>() {
+            @Override
+            public void accept(final String name) {
+                System.out.println(name);
+            }
+        });
+ 
+        friends.forEach((final String name) -> System.out.println(name));
+ 
+        friends.forEach((name) -> System.out.println(name));
+ 
+        friends.forEach(name -> System.out.println(name));
+ 
+        friends.forEach(System.out::println);
+    }
+```
+
+
 
