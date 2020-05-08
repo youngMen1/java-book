@@ -75,6 +75,7 @@ private final List<BigDecimal> prices = Arrays.asList(
         friends.forEach(System.out::println);
     }
 ```
-
+运行结果：
+![](/static/image/2020042214154563.png)
 
 
