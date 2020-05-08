@@ -77,5 +77,6 @@ private final List<BigDecimal> prices = Arrays.asList(
 ```
 运行结果：
 ![](/static/image/2020042214154563.png)
+都是从传统的写法上，慢慢的过度到Lambda的写法。
 
 
