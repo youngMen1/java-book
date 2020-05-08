@@ -26,7 +26,7 @@ private final List<BigDecimal> prices = Arrays.asList(
 ### 2.2.初识，简单对比lambda和常规操作的不同
 
 ```
- /**
+   /**
      * 假设超过20块的话要打九折
      */
     private void test11() {
@@ -38,7 +38,7 @@ private final List<BigDecimal> prices = Arrays.asList(
         }
         System.out.println("Total of discounted prices: " + totalOfDiscountedPrices);
     }
- 
+
     private void test12() {
         final BigDecimal totalOfDiscountedPrices =
                 prices.stream()
@@ -47,7 +47,6 @@ private final List<BigDecimal> prices = Arrays.asList(
                         .reduce(BigDecimal.ZERO, BigDecimal::add);
         System.out.println("Total of discounted prices: " + totalOfDiscountedPrices);
     }
-
 ```
 
 
