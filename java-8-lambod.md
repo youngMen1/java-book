@@ -227,5 +227,5 @@ private final List<BigDecimal> prices = Arrays.asList(
 
 运行结果：
 
-20200422141746999.png
+![](/static/image/20200422141746999.png)
 
