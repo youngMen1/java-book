@@ -168,7 +168,6 @@ private final List<BigDecimal> prices = Arrays.asList(
 
 ### 2.6.lambda表达式的重用
 
-
 ```
 /**
      * lambda表达式带来的冗余
@@ -179,7 +178,7 @@ private final List<BigDecimal> prices = Arrays.asList(
         final long count3 = comrades.stream().filter(name -> name.startsWith("N")).count();
         System.out.println(count1 + " " + count2 + " " + count3);
     }
- 
+
     /**
      * 重用
      */
@@ -191,8 +190,19 @@ private final List<BigDecimal> prices = Arrays.asList(
         System.out.println(count1 + " " + count2 + " " + count3);
     }
 ```
-运行结果：
+
+运行结果：  
 ![](/static/image/20200422141726414.png)
+
+
+
+### 2.7.闭包 使用词法作用域和闭包
+
+
+
+
+
+
 
 
 
