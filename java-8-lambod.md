@@ -266,5 +266,42 @@ private final List<BigDecimal> prices = Arrays.asList(
 
 ### 2.9.MapReduce map（映射）和reduce\(归约，化简）是数学上两个很基础的概念
 
+```
+private void test81() {
+        System.out.println("Total number of characters in all names: " + friends.stream()
+                .mapToInt(name -> name.length())
+                .sum());
+    }
+ 
+    private void test82() {
+        final Optional<String> aLongName = friends.stream().reduce((name1, name2) -> name1.length() >= name2.length() ? name1 : name2);
+        aLongName.ifPresent(name -> System.out.println(String.format("A longest name: %s", name)));
+    }
+ 
+    private void test83() {
+        final String steveOrLonger = friends.stream().reduce("Steve", (name1, name2) -> name1.length() >= name2.length() ? name1 : name2);
+        System.out.println(steveOrLonger);
+    }
+ 
+    private void test84() {
+        for (String name : friends) {
+            System.out.print(name + ", ");
+        }
+        System.out.println();
+ 
+        for (int i = 0; i < friends.size() - 1; i++) {
+            System.out.print(friends.get(i) + ", ");
+        }
+ 
+        if (friends.size() > 0) {
+            System.out.println(friends.get(friends.size() - 1));
+        }
+ 
+        System.out.println(String.join(", ", friends));
+ 
+        System.out.println(friends.stream().map(String::toUpperCase).collect(Collectors.joining(", ")));
+    }
+```
+
 
 
