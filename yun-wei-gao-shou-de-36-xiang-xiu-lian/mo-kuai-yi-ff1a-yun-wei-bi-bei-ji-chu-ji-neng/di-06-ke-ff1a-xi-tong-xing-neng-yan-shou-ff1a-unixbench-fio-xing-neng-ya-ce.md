@@ -8,7 +8,7 @@
 
 ## 测试前关注点
 
-CgpOIF5gtPGAQgQyAAbHfhNzTM4078.png
+![](/static/image/CgpOIF5gtPGAQgQyAAbHfhNzTM4078.png)
 
 通常在对一个系统进行基准测试前，先了解其用途和系统本身的情况是十分必要的。
 
