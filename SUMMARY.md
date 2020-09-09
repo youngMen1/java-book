@@ -8,9 +8,9 @@
     * [第02讲（下）：企业 Nginx 高性能优化配置实战总结](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-02-jiang-ff08-xia-ff09-ff1a-qi-ye-nginx-gao-xing-neng-you-hua-pei-zhi-shi-zhan-zong-jie.md)
     * [第03讲（上）：Nginx 负载均衡常见架构及问题解析](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-03-jiang-ff08-shang-ff09-ff1a-nginx-fu-zai-jun-heng-chang-jian-jia-gou-ji-wen-ti-jie-xi.md)
     * [第03讲（下）：Nginx 负载均衡常见架构及问题解析](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-03-jiang-ff08-xia-ff09-ff1a-nginx-fu-zai-jun-heng-chang-jian-jia-gou-ji-wen-ti-jie-xi.md)
-    * 第04课：入口网关服务注册发现-Openresty 动态 upstream
-    * 第05课：Curl 命令最常见使用方式及案例
-    * 第06课：系统性能验收：Unixbench、FIO 性能压测
+    * [第04课：入口网关服务注册发现-Openresty 动态 upstream](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-04-ke-ff1a-ru-kou-wang-guan-fu-wu-zhu-ce-fa-73b0-openresty-dong-tai-upstream.md)
+    * [第05课：Curl 命令最常见使用方式及案例](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-05-ke-ff1a-curl-ming-ling-zui-chang-jian-shi-yong-fang-shi-ji-an-li.md)
+    * [第06课：系统性能验收：Unixbench、FIO 性能压测](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-06-ke-ff1a-xi-tong-xing-neng-yan-shou-ff1a-unixbench-fio-xing-neng-ya-ce.md)
     * 第07课：基于 Django\_crontab、Xadmin 做一套定时任务管理系统
   * [模块二：部署](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu.md)
   * 模块三：割接
