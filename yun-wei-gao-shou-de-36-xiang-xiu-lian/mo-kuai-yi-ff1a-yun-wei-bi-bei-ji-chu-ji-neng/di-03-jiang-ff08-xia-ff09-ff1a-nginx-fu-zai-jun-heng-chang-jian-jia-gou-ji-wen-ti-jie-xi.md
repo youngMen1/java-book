@@ -199,5 +199,5 @@ check_keepalive_requests 100;  //一个连接发送的请求数
 check_http_send “HEAD / HTTP/1.1\r\nConnection: keep-alive\r\n\r\n”; //定义健康检查方式
 check_http_expect_alive http_2xx http_3xx;  //判断后端返回状态码
 ```
-
+通过这样的配置，我们定义了检测间隔、周期和超时时间；定义了一个连接发送的请求数；然后是定义健康检查方式，比如检查 head 头的请求信息；最后判断后端返回状态码，如果是非 200 或 300 的话，就认为后台服务不健康，需要把这个问题服务除掉，避免用户请求到问题节点。
 
