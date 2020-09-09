@@ -49,6 +49,11 @@ i_count 的作用是当一个文件被一个进程引用时，它的数值会加
 
 Cgq2xl6VdFKAHdwFAAEiLPkGCz8212.png
 
+接下来我们要想办法把这个文件进行恢复，输入cp 3 /opt/recovertest/deletefile.txt_bak，这时我就把这 3 个文件做了一个拷贝，实现将数据恢复到 /opt/recovertest/deletefile.txt_bak 文件。
+
+
+
+这个时候cd /opt/recovertest/，cat deletefile.txt_bak 看一下里面的内容，可以发现这个文件的内容与刚刚生成的的测试文件内容一致，所以刚刚删除的文件恢复完毕。
 
 
 
