@@ -171,3 +171,6 @@ data:
 ![](/static/image/Ciqah16MTOKAfz10AAHg6mVlC2E229.png)
 对于数据要求紧密的业务，我们可能需要这么做。所以在 Pod 、容器、业务这三个方面，需要提前做好规划。另外，我们需要来根据实际情况选择生成 Pod 的 Controller，包括 Deployment、DaemonSet、StatefulSet、Job、CronJob 等相关类型，你可以去了解 K8S 相关的 Controller。
 
+## 步骤五：配置 Service
+
+
