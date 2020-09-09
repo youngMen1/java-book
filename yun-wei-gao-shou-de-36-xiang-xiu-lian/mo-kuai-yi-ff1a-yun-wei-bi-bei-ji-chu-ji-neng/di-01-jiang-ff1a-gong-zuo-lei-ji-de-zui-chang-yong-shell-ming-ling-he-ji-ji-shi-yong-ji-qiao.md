@@ -37,3 +37,7 @@
 * Ctrl + d：终端中输入 exit 后回车。
 
 ### linux命令中快捷键（top）
+
+* Shift + p：根据 CPU 使用率排序；
+
+* Shift + m：根据内存占用排序。
