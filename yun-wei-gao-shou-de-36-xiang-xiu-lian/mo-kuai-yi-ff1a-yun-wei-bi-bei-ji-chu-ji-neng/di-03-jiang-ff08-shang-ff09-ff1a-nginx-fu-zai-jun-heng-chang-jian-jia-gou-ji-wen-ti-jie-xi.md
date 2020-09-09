@@ -15,4 +15,4 @@ Nginx 作为负载均衡是基于代理模式的基础之上，所以在学习�
 
 ![](/static/image/Cgq2xl5OWo2ASqnDAAEXHWzwSlE436.png)
 
-Nginx 负载均衡应用架构
+## Nginx 负载均衡应用架构
