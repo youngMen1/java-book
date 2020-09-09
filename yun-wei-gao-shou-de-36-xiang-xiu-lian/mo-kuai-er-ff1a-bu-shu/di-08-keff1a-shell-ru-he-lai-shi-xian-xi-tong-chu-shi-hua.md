@@ -36,3 +36,5 @@ Cgq2xl5qC1-AJZ-eAAOMT2A6vD8550.png
 ## 学习基础
 
 学习这个脚本之前，你需要有一定的 Linux 操作基础，同时需要了解基础的操作系统原理，接下来，给你画了一张思维导图。
+
+CgpOIF5qC1-ATg7VAALizw8mvh4653.png
