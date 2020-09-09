@@ -41,3 +41,5 @@ CgpOIF5gtPGAQgQyAAbHfhNzTM4078.png
 了解了业务的整体情况，我们心里就可以有了一杆秤，让测试结果更有针对性，我们就不只是在作执行，而是在向更高一层考虑问题。
 
 ## 章节思维导图
+
+CgpOIF5gtQiADB-UAASwQDk9GjA321.png
