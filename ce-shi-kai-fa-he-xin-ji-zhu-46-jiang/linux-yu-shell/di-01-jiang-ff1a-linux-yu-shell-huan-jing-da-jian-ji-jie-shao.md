@@ -55,7 +55,7 @@
 
 如果你的系统是 Mac，那么恭喜你，Mac 系统自带了 Terminal，你还可以安装  iTerm2，它们都是标准的 Shell 环境。在 Linux 环境下，建议你使用 Bash，Bash 是目前行业内使用最广泛的 Shell 环境，在 Windows 环境下，建议你使用 Git bash，它几乎包含了 Linux 常用的全部指令。
 
-CgoB5l3OcR6ASe74AADtcorq_Jc477.png
+![](/static/image/CgoB5l3OcR6ASe74AADtcorq_Jc477.png)
 
 如果你想更全面地掌握 Shell，不受限于自己电脑的操作系统，那么可以购买云服务器，目前国内主流的云服务器厂商有阿里云、腾讯云、华为云。国外云服务器厂商有 DigitalOccean 和 Lincode，拥有一台属于自己的云服务器也是一个 IT 工程师的成年礼。
 
@@ -64,7 +64,7 @@ CgoB5l3OcR6ASe74AADtcorq_Jc477.png
 
 ## Hello world
 
-CgotOV3OcR6AOiCPAAELnbG0Gnc303.png
+![](/static/image/CgotOV3OcR6AOiCPAAELnbG0Gnc303.png)
 
 最后，带你演示如何完成我们的第一行命令，我自己的演示电脑是 Mac 系统，并安装了 iTerm2，我们先输入一个简单的 echo 指令，echo指令用于回显，你输入什么系统就输出什么 ，我们输入一个 echo hello world，你可以看到输出显示了 hello world，你也可以使用 Terminal 终端，虽然与 iTerm2 界面不一样，但本质是一样的。输入 echo hello world 也输出了 hello world。除此以外，你还可以登录自己的云服务器，比如我输入账户和密码后，登录自己的云服务器，也可以支持 echo hello world。
 
