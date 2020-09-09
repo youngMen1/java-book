@@ -32,3 +32,6 @@ CgpOIF5XlqGAJ1iwAAE2ca-U8Go037.png
 
 
 那我们需要的动态 Upstream 是一个什么场景呢？当往这组集群中再添加一台新的后台服务 real server，也就是 App server 3 ，并且实现将入口的流量动态的(非手动方式)分发给新 App server 3，这个时候我们就需要用到动态配置upstream了。
+
+## 动态 Upstream 实现意义
+
