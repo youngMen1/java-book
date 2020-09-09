@@ -185,4 +185,71 @@ livenessProbe:  //定义就绪探针
      ….
 ```
 
+第三部分，就是配置的 PVC内容，这里直接挂载了一个逻辑卷。
 
+
+```
+ volumeMounts:  定义卷挂载
+
+        name: jenkinshome 
+
+        subPath: jenkins2 
+
+        mountPath: /var/jenkins_home 
+
+volumes: 
+
+    - name: jenkinshome 
+
+        persistentVolumeClaim: 
+
+            claimName: opspvc
+```
+最后，我们可以通过 kubectl 来创建 deployment 对象。
+
+
+
+kubectl create -f jenkins-deployment.yaml 
+
+
+
+这个就是 deployment.yaml 里面几个重要的配置项的一部分。
+## Service配置
+接下来讲一讲，创建 service 对象的几个重要的配置。一块就是创建服务的名称，对外暴露服务的端口，以及关联后端 Node 节点的端口。总共创建了对外服务两个端口，一个是Jenkins的 Web 服务端口，一个是 agent 所需要进行信息通信的端口。所以以 yaml 文件写好以后，同样通过 kubectl 来创建对象。
+
+
+```
+kubectl create -f jenkins-service.yaml 
+
+
+
+apiVersion: v1
+
+kind: Service 
+
+spec:
+
+ports: 
+
+    - name: web 
+
+       port: 8080 
+
+       targetPort: web 
+
+        nodePort: 30002 
+
+     - name: agent 
+
+        port: 50000 
+
+        targetPort: agent
+
+
+```
+
+以上是给你介绍 K8s 的集群部署 Jenkins 高可用架构核心的优势、步骤。你可以在网上找一些资料，来模拟整体搭建这样的一套服务。
+
+### 思路二、Jenkins 的 Pipeline 工作流
+
+第二个核心思路就是 Jenkins 的 Pipeline 工作流。
