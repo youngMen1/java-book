@@ -278,3 +278,11 @@ Cgq2xl58Pj2Af4yJAAGBiRwNohg190.png
 Cgq2xl58Pj6AO_1IAASzA5iuWew245.png
 
 图中我们会看到 Jenkins 整体的构建和发布的过程。我们看到开发人员进行代码的提交，通过在 git 仓库上做版本库的代码管理，同时通过一个钩子（webhook）触发 Jenkins 来进行部署、构建、测试，然后进行环境的发布。这是一种单流水线的方式。
+
+Cgq2xl58Pj6AWo65AABvMXRVTog127.png
+
+总结归纳发现 Jenkins 负责构建、测试和发布，这属于单 Pipeline 任务流模式。
+
+
+
+如果是多分支或者多部署环境的方式，这个时候我们该怎么做呢？
