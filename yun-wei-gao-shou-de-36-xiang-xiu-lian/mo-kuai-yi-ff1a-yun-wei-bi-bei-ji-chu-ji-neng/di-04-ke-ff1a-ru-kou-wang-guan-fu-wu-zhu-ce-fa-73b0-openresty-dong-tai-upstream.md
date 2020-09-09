@@ -66,3 +66,5 @@ Cgq2xl5XlrOAW-n0AAFbOCQssio629.png
 
 
 我们知道Nginx 本身诞生的比 K8s 和 Docker 更早，Nginx 默认的配置模块是有来实现动态Upstream 是有局限的，这也是上一讲中我所认为Nginx存在缺陷，所以我们想要实现，通常有这么几种方式：
+
+CgpOIF5XlsKAFA4dAACi4m6_YDE387.png
