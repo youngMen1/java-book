@@ -121,3 +121,8 @@ CgpOIF5U0tOAeMMQAAGg2smEGW8440.png
 第二种方式是 Session 复制。所谓 Session 复制是在后台应用的基础上，让 Session 之间可以以传播的方式进行复制。也就是 App1 上如果有一个 Session，那么它可以复制给 App2、App3，无论怎样轮询，三个 App 上都会有同样的 Session 信息，不至于因为轮询导致丢失会话失效。
 
 * 解决方案 3：Session 共享
+Session 共享是由程序完成的，我们把 Session 信息不放在本地，通过应用程序把 Session 信息放入共享的 K/V 存储中，这样就不会产生 Session 丢失情况了。
+
+
+
+我们可以看到，如果 Nginx 解决 Session 丢失问题基于 Session 保持来解决，所以怎样配置 Nginx 呢？
