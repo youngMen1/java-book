@@ -92,3 +92,17 @@ CgpOIF5XlsKAFA4dAACi4m6_YDE387.png
 我们看下如图描述的内容：
 Cgq2xl5Xls6AJ57nAAEo03hFxpQ626.png
 
+
+通过开放接口，管理中心或者配置中心用可以调用这三个接口动态修改入口网关的负载均衡配置。我们接下来重点介绍Openresty Lua 语言如何开发实现这三个接口。
+
+
+
+在正式演示之前再带你熟悉一下 Openresty。Openresty 是一个基于 Nginx 与 Lua 开发的高性能web平台，内部集成了大量的 Lua 库和第三方模块，如果使用Nginx则需要通过 Nginx 编译 Lua 模块非常繁琐，所以需要支持LUA直接使用 Openresty 就可以了。
+
+
+
+大家用浏览器打开 Openresty 的官方网站（https://openresty.org/cn/），你可以看到 Openresty 的官方文档，同时因为本课时会作 Openresty 的演示，如果你希望模拟安装，可以按照官网的方式来进行安装。
+
+
+
+同样，接下来演示案例也用到了Nginx模拟后台服务，Nginx 的安装建议你参考官方的安装方式，这里可以通过 官方提供yum 源的方式来安装 Nginx。
