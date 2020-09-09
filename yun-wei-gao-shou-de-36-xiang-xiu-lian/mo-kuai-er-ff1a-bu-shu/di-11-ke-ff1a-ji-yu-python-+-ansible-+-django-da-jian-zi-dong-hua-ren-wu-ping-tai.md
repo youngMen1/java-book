@@ -175,3 +175,12 @@ Ciqah155wHOATKf0AATlRJB7cOI285.png
 提交的Json格式如图所示，exec_args中执行命令的方式是 touch 一个文件，我这里执行命令是在/tmp目录下touch 一个 test22 的文件。sn_key 是唯一主机的标识，我们可以在资产管理系统里面点击详细这一部分来提取出 sn 号，这个就是它的唯一标识。
 
 Cgq2xl55wHOAH6vtAAMlclXaedE645.png
+
+mod_type 是直接执行 adhoc 的模块方式，这里我执行的是 Shell 的命令。
+
+
+
+接下来，我在 Chrome 下使用模拟 post 请求客户端插件 PostMan，来模拟提交这个任务到工程的自动化任务 API 接口，并开始执行。
+
+
+Cgq2xl55wHOACyO2AAXukl_6PSE019.png
