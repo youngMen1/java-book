@@ -40,3 +40,10 @@ CgpOIF5wY7yAJJsMAAJRRuQVMKw843.png
 ### 学习基础
 
 这里提醒你，学习本课程可能需要你具备 Linux 的操作基础，同时要掌握 Jenkins 的基础操作能力。
+
+## 基于 Jenkins 的持续集成方案
+
+
+
+
+
