@@ -141,3 +141,21 @@ data:
 
 Ciqah16MTOKAMC3nAADut5Hn2xI668.png
 
+第 1 步需要将应用封装到容器里，这里我画了一张图，它把业务、环境和系统整体打包到一个容器镜像里面去。最底层还是一个 OS 操作系统层（可以选择 CentOS、Ubuntu、Alpine） ，Alpine 是官方最小化的 Linux 镜像。
+
+
+
+第 2 层是程序代码所需要依赖的一些环境。如果是 Java 服务的话，这里就需要依赖 Java 的解析器，比如 OpenJDK 和 OrackeJDK，Servlet 容器是 Tomcat 还是其他的服务。
+
+
+
+最上层就是代码。
+
+
+
+这些所有内容整体构成需要打包成容器镜像.
+
+## 步骤二：PV/PVC 持久化数据
+
+Ciqah16MTOKAFeWAAALlWm1EIKQ939.png
+
