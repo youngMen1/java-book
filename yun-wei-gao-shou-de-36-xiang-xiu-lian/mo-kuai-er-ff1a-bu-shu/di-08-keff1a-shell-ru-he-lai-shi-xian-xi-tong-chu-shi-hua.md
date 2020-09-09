@@ -69,13 +69,7 @@ CgpOIF5qC1-ATg7VAALizw8mvh4653.png
 
 另外一个命令就是关闭 Selinux。Selinux是 内核的安全模组，其提供了访问控制安全策略机制，选择关闭 Selinux，对维护管理会更加方便。因为 Selinux 的安全机制实在是太强大了，而一般的场景又不太需要 Selinux 存在，反而会给实际管理服务运行带来很多干扰。
 
-
-
 所以在这个脚本里面，一般企业都会直接在启动项里面把操作系统默认开启的 Selinux 关闭，关闭方式你可以看一下：
-
-
-
-
 
 ```
 /bin/sed -i 's/SELINUX=permissive/SELINUX=disabled/' /etc/selinux/config
@@ -83,8 +77,10 @@ CgpOIF5qC1-ATg7VAALizw8mvh4653.png
 /bin/sed -i 's/SELINUX=enforcing/SELINUX=disabled/'  /etc/selinux/config
 ```
 
-
-
-
-
 这是通过 sed 命令去修改文件里面的配置，直接将 Selinux 关闭。
+
+## 优化操作系统内核参数
+
+另外值得注意的就是优化操作系统内核参数。这里重点给你讲解 Timestamps 配置，建议把它设置为 0。为什么呢？因为在部分极少数的场景中可能会导致网络上的抖动或者丢包，这里给你画一张图演示一下：
+
+Cgq2xl5qC1-ABdFAAALgbr--nNA834.png
