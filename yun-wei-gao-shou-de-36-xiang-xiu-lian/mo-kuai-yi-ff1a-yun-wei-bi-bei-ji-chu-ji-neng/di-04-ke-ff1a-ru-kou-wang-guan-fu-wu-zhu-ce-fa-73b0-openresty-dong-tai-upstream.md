@@ -67,7 +67,7 @@ Cgq2xl5XlrOAW-n0AAFbOCQssio629.png
 
 我们知道Nginx 本身诞生的比 K8s 和 Docker 更早，Nginx 默认的配置模块是有来实现动态Upstream 是有局限的，这也是上一讲中我所认为Nginx存在缺陷，所以我们想要实现，通常有这么几种方式：
 
-CgpOIF5XlsKAFA4dAACi4m6_YDE387.png
+![](/static/image/CgpOIF5XlsKAFA4dAACi4m6_YDE387.png)
 
 第一种方式是通过 Nginx+Lua，使用 Lua 语言开发接口，做到动态调用，也就是基于 Openresty 动态实现 Upstream，因为我们知道 Openresty 服务本身就是基于 Nginx 和 Lua 的一个结合体。
 
