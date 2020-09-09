@@ -139,7 +139,7 @@ data:
 
 ## 步骤一：封装应用容器
 
-Ciqah16MTOKAMC3nAADut5Hn2xI668.png
+![](/static/image/Ciqah16MTOKAMC3nAADut5Hn2xI668.png)
 
 第 1 步需要将应用封装到容器里，这里我画了一张图，它把业务、环境和系统整体打包到一个容器镜像里面去。最底层还是一个 OS 操作系统层（可以选择 CentOS、Ubuntu、Alpine） ，Alpine 是官方最小化的 Linux 镜像。
 
