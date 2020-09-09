@@ -17,6 +17,7 @@
     * 第09课：搭建基于 Jenkins 的持续集成平台所需关注的几个问题
     * 第10课：基于 Python+Ansible+Django 搭建 CMDB 平台
     * 第11课：基于 Python+Ansible+Django 搭建自动化任务平台
+    * 第12课：基于 K8S 架构下打造 CI\CD 平台的核心思路
   * 模块三：割接
   * 模块四：故障排查
   * 模块五：监控
