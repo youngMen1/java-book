@@ -40,3 +40,5 @@
 首先第一点，就是 Jenkins 本身服务的部署高可用。
 
 Cgq2xl58Pj2ARAUEAAECOYYrTH8534.png
+
+回顾一下 Jenkins 本身的部署模式，通常有以下三种方式：
