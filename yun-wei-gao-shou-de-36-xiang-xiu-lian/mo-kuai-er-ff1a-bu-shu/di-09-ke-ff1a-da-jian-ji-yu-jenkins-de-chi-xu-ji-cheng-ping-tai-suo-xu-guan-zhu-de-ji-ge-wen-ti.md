@@ -17,3 +17,4 @@
 持续集成和 Devops 的差异
 
 持续集成这个概念想必我们早已耳熟能详了，近些年新产生的一个概念叫作 Devops，那持续集成和 Devops 有什么差异呢？你可以看一下我这里画的一张图示：
+CgpOIF5wY7yAJJsMAAJRRuQVMKw843.png
