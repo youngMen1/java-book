@@ -37,7 +37,7 @@ playbook 是 Ansibe的一种模式，需要根据 yml 及 palybook 语法要求
 
 
 
-tasks 是 playbook 具体执行的任务，这里任务是执行 shell:touch /tmp/{{touch_file}} 文件。我们会看到用 touch 命令添加的文件是可以用变量 (touch_file) 的方式来引用。在做一个更大规模的自动化任务时，用 playbook 整体做会更好，因为它可以把很多东西抽象用剧本方式管理。
+tasks 是 playbook 具体执行的任务，这里任务是执行 shell:`touch /tmp/{{touch_file}}` 文件。我们会看到用 touch 命令添加的文件是可以用变量 (touch_file) 的方式来引用。在做一个更大规模的自动化任务时，用 playbook 整体做会更好，因为它可以把很多东西抽象用剧本方式管理。
 
 
 
