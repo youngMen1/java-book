@@ -34,4 +34,6 @@ Cgq2xl6FmKmAO_CMAAU2syJogr0306.png
 
 首先，我们知道 Nginx 的启动进程总共包含 master 进程和 work 线程，work 线程负责实际处理用户的请求，而 master 进程则起到管理和分配流量的作用。
 
+Cgq2xl6FmKqAJXLOAAIMFmFy9LU520.png
+
 
