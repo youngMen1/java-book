@@ -24,7 +24,7 @@ Imoocc 工程可以做到自动化资产收集和自动化任务执行，资产�
 
 运维资产管理系统就是要把所有的这些资产做整体的管理和收集。我们讲到 CMDB 也是 Devops 设计里面最基础的一个环节，可以通过这样的一张图示来形象的衡量资产管理的重要性。
 
-Cgq2xl5zJpGAMNBTAAF2XF3qyck100.png
+![](/static/image/Cgq2xl5zJpGAMNBTAAF2XF3qyck100.png)
 
 在企业里面，Devops 功能包括了监控、配置管理、资产弹性、自动化任务等相关功能。这些功能大多依赖于资产管理的功能。所以搜集资产是 Devops 工程设计里面非常重要、非常基础的一个环节。
 
@@ -32,22 +32,22 @@ Cgq2xl5zJpGAMNBTAAF2XF3qyck100.png
 
 如果资产作到自动化搜集怎么实现呢？接下来我把这个工程的第一个版本及部分代码给你来演示一下。
 
-Cgq2xl5zJpKAXQ3uAAVfaDFT2hc238.png
+![](/static/image/Cgq2xl5zJpKAXQ3uAAVfaDFT2hc238.png)
 
 首先，用 PyCharm 工具打开工程代码，左侧是目录结构，底部是一个 terminal 控制终端，上面是代码内容，如果你了解 PyCharm 就比较清楚了。
 
 我本地已经准备好一个演示环境，因为需要收集资产信息，本地环境的资产除了包括演示的这台主机以外，还包括另外一台单独的装了 VMware 的虚拟机，在虚拟机上还运行了一个 Docker 的容器（这些就是我本地收集的目标资产对象）。
-CgpOIF5zJpKAM5HDAARNAa2lrTA683.png
+![](/static/image/CgpOIF5zJpKAM5HDAARNAa2lrTA683.png)
 
 登录到这台虚拟机后，可以发现启动的容器开放了 ssh 端口并进行了端口的映射（22022->22），所以整体的环境是这样的。我通过客户端一台机器去扫描目标资源，由于环境的限制，这里我把这台虚拟机当成了一台物理设备来进行扫描，正常结果中会把这台设备与容器两个对象中相关的资产信息进行整体的扫描，并且会把它们的关系罗列出来。
 
 回到工程代码，我们来具体演示一下：
 
-Cgq2xl5zJpKALeVmAAJNcMymoDg695.png
+![](/static/image/Cgq2xl5zJpKALeVmAAJNcMymoDg695.png)
 
 回到工程代码，首先需要运行一个脚本，把目标资产信息扫描出来。这里通过 Python 直接执行 main.py 文件，就可以开启对局域网的扫描。我们可以看到这个时候，在终端会输出相关的日志及扫描到的信息。
 
-CgpOIF5zJpKALpfAAAKrgiK7cBE082.png
+![](/static/image/CgpOIF5zJpKALpfAAAKrgiK7cBE082.png)
 
 在脚本执行完成以后，我们会看到打印在终端的信息，这里打印出了登录的主机相关信息，我们还可以看到它的 IP 信息和端口信息。这个 ssh 端口就是容器所映射出来的端口，还会看到把相关的主机容器上的主机信息也做了相关的打印，也就是信息收集。
 
