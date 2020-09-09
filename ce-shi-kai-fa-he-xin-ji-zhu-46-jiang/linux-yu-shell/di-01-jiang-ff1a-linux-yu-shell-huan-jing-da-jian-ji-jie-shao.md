@@ -2,7 +2,7 @@
 
 ## 操作系统简史 
 
-CgoB5l3OcR2AV-1_AARjoDt0imA774.png
+![](/static/image/CgoB5l3OcR2AV-1_AARjoDt0imA774.png)
 
 首先，我们来看一下整个操作系统的简史，整个操作系统可以分为四大时代：
 
