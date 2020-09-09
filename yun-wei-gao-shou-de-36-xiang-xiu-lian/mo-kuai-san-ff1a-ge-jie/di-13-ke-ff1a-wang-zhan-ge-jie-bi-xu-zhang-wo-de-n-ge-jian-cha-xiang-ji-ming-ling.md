@@ -116,3 +116,5 @@ Ciqah16C0-6AK5boAATDWWIZsHk523.png
 Cgq2xl6C0-6AYeyEAAK0jgdukno479.png
 
 当做完域名解析以后，需要检查新的域名是否能按照要求去解析。这个时候我需要做的是 ping 新的域名，看看是否正常，可以看到我 ping 了这个域名以后返回地址是正常的。此外，通过 ping 命令，我还可以关注返回的延迟是否符合预期，可以看到当前这个延迟也是符合的。
+
+Ciqah16C0-6AXw64AAE_YFW0DdE654.png
