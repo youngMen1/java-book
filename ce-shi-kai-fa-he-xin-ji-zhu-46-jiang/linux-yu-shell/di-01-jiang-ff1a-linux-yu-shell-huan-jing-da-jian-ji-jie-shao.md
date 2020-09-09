@@ -57,3 +57,8 @@
 
 CgoB5l3OcR6ASe74AADtcorq_Jc477.png
 
+如果你想更全面地掌握 Shell，不受限于自己电脑的操作系统，那么可以购买云服务器，目前国内主流的云服务器厂商有阿里云、腾讯云、华为云。国外云服务器厂商有 DigitalOccean 和 Lincode，拥有一台属于自己的云服务器也是一个 IT 工程师的成年礼。
+
+
+在配置云服务器时，推荐使用 Linux 体系下的 CentOS 和 Ubuntu 系统，CentOS 是红帽发布的一个免费的、开源的系统，Ubuntu 也是非常知名的 Linux 体系下的操作系统，整体配置时，CentOS 可以作为服务器，而 Ubuntu 作为个人工作机。
+
