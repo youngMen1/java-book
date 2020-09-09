@@ -19,7 +19,7 @@
 ## 客户端IP地址获取问题
 第一个问题是客户端 IP 地址获取问题，为什么会存在客户端 IP 地址获取问题呢？
 
-CgpOIF5U0tqAdFH3AAFLYg4Sm0c598.png
+![](/static/image/CgpOIF5U0tqAdFH3AAFLYg4Sm0c598.png)
 
 我们来看这样一张模拟图，图中请求从用户到 Nginx，再到后端服务。我们可以看到用户的 IP 地址是 100.100.100.100，Nginx 的地址是 192.168.0.1，通过 Nginx 负载均衡到三台后端服务，它们的 IP 分别是 192.168.1.1、192.168.1.2、192.168.1.3。
 
@@ -71,7 +71,7 @@ remote_addr 是一个 Nginx 的内置变量，它获取到的是 Nginx 层前端
 
 接下来，我们来看第二个问题，也就是 Nginx 作为负载均衡是如何把请求域名信息携带到后端的？这样的问题是什么样的场景呢？首先我们来看一张示意图。
 
-Cgq2xl5U0uGAe2_GAAFMYE51VWw660.png
+![](/static/image/Cgq2xl5U0uGAe2_GAAFMYE51VWw660.png)
 
 用户的 IP 同样是 100.100.100.100，Nginx 对外 IP 地址是 200.200.200.200，Nginx 本身内部的地址是 192.168.0.1，同样分发给三个后端服务。当用户请求某一 Nginx 入口域名时，会携带一个头信息，叫作 Host 头信息。如果通过域名方式，当用户请求的是 http://www.jesonc.com，它的 Host 头就是  www.jesonc.com，以这样的方式请求到代理层时，由于 Nginx 没有将头信息携带到后端，而是把配置的头信息置为空，这样就导致后端服务想要获取不到用户请求的 Host 信息，导致服务不可用。这时需要 Nginx 将用户携带的 Host 头信息真实的传递给后端。
 
@@ -106,7 +106,7 @@ http {
 然后，如果用户没有携带头信息，而后端又要求指定域名，那么我们就可以在 proxy_set_header 下，将 Host 头信息指定成一个固定的域名，保证满足后台对 Host 头信息的要求，这样就可以解决域名携带问题。
 
 ## 负载均衡导致session丢失问题
-CgpOIF5U0tOAeMMQAAGg2smEGW8440.png
+![](/static/image/CgpOIF5U0tOAeMMQAAGg2smEGW8440.png)
 
 另外一个是 session 丢失问题，我们知道，session 是用户的一个会话信息，服务端和用户端通信需要一个访问认证，以及对鉴权处理的时候，给客户端分配一串 session 信息，这个 session 信息会在客户端以 cookie 的方式承载到服务端中进行校验。如果加入 Nginx 负载均衡，会默认开启一个轮询策略。假如这样的一种场景，用户请求到 Nginx，第一次请求会分发给 App server 1，第二次请求分发给 App server 2，但用户的 session 保留在 App1 上，此时这条请求再去请求 App2 的话，由于 App2 上没有 session 信息，就导致会话丢失，用户需要重新登录。我们看到 Nginx 作为负载均衡  + Java 后台应用中遇见的一种问题，我们该怎样解决呢？
 
