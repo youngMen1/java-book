@@ -57,7 +57,7 @@ CgpOIF5zJpKALpfAAAKrgiK7cBE082.png
 通过这种方式展示还不够清晰，这就需要有一套前台的展示页面，能够非常清晰的展示所收集的系统信息，并且展示它们的关联关系，所以这里我继续演示前台界面是什么效果。
 
 
-Cgq2xl5zJpOAfJ37AAKKZIal5Ks938.png
+![](/static/image/Cgq2xl5zJpOAfJ37AAKKZIal5Ks938.png)
 
 使用 Python manage.py runserver 的方式，在本地监听 5555 端口，并把这个服务运行起来。然后打开浏览器，输入 127.0.0.1:5555 端口的 url地址，这时就可以登录后台系统。在后台系统中你可以看到整个界面会展示几类信息：物理设备信息、虚拟设备信息、网络设备信息。
 
