@@ -28,7 +28,8 @@
     * 第26课：防火墙：iptables 企业级安全策略
   * [模块七：虚拟化](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-qi-ff1a-xu-ni-hua.md)
     * 第29课：虚拟化关键技术浅析（NUMA、dpdk、绑核）
-  * 模块八：方案
+  * [模块八：方案](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-ba-ff1a-fang-an.md)
+    * 第31课：4、7 层入口负载均衡 SLB 如何作才是最佳姿势
   * 模块九：趋势
 * [测试开发核心技术 46 讲](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang.md)
   * [Linux 与 Shell](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell.md)
