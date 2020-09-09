@@ -193,3 +193,14 @@ Ciqah155wHSAPhPbAANojZQK3YM533.png
 当服务端返回了内容，看到 http reponse 的状态是成功的，并看到信息"sucess"（成功的），并看到执行此任务具体日志（它是ansible的接口所返回的）。
 
 Ciqah155wHSAYKeEAAJCjs_ILvU244.png
+
+
+然后通过另外一种方式我们再来验证是不是成功，可以直接 ssh 登录服务器主机上，然后进入 tmp 目录，输入 ls，会发现 test22 这个文件在我录制视频的时间点有对应生成这样的一个文件，说明自动化任务是已经执行成功了。
+
+
+
+通过这个课时我们能够理解 Ansible 如何融合到 Devops 里面，以及在这个过程中对应需要做的一些开发工作。
+
+
+
+本专栏课中的所有案例配置及源代码，你可以课后通过这个地址 http://www.jesonc.com/jeson/2020/02/07/ywgs36/ 自己下载，密码为：mukelaoshi。
