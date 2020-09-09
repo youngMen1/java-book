@@ -186,4 +186,4 @@ M 是指模型，V 是视图，T 是我们刚刚讲的目录结构里面的 temp
 
 在下图中，我们可以看到 MVT 大概的框架模式。当用户请求过来时会通过三个大的层次，分别是 URL、Views 还有后台的 models。
 
-Cgq2xl5nIHyAM5EnAAb-zfht2e4708.png
+![](/static/image/Cgq2xl5nIHyAM5EnAAb-zfht2e4708.png)
