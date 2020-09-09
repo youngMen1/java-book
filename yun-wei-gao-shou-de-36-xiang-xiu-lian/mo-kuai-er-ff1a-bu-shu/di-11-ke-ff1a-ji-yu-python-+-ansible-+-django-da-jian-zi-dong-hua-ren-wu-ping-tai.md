@@ -73,7 +73,7 @@ templates 里面主要放一些模板和相关的配置，我们可以把一些�
 
 
 
-最后一个是 webserver.yml文件，他是一个主文件，我们在部署这样一套自动化工程时，就可以通过ansible + webserver.yml 整体执行 roles 剧本。
+最后一个是 webserver.yml文件，他是一个主文件，我们在部署这样一套自动化工程时，就可以通过`ansible + webserver.yml` 整体执行 roles 剧本。
 
 
 
