@@ -58,3 +58,5 @@ Cgq2xl5XlrOAW-n0AAFbOCQssio629.png
 
 
 图中上面的箭头表示一个服务的注册和动态的 Upstream 更新配置文件。下面的箭头表示动态的实现负载均衡策略流量转发，这个就是在 K8s 和 Docker 的部署场景中入口网关的实现原理。
+
+## 动态 Upsteam 实现方式
