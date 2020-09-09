@@ -181,3 +181,7 @@ Cgq2xl5zJpWAEFtEAAEk9jyLdTM009.png
 ### 探测环境
 
 接下来介绍如何使用这套工程，以及它所探测目标资源环境。
+
+CgpOIF5zJpWADyboAAF-Fvz6tC0285.png
+
+图中右侧是所需要探测的客户端，左侧为服务端，服务端这里通过一些对应的通用协议，比如 ssh、ping、telnet 等相关命令来探测客户端目标服务器。在目标的服务器上，装有对应的虚拟化内容的虚拟机，比如 KVM、Docker、ESX 等。
