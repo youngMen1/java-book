@@ -14,6 +14,7 @@
     * [第07课：基于 Django\_crontab、Xadmin 做一套定时任务管理系统](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-07-ke-ff1a-ji-yu-django-crontab-xadmin-zuo-yi-tao-ding-shi-ren-wu-guan-li-xi-tong.md)
   * [模块二：部署](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu.md)
     * 第08课：Shell 如何来实现系统初始化
+    * 第09课：搭建基于 Jenkins 的持续集成平台所需关注的几个问题
   * 模块三：割接
   * 模块四：故障排查
   * 模块五：监控
