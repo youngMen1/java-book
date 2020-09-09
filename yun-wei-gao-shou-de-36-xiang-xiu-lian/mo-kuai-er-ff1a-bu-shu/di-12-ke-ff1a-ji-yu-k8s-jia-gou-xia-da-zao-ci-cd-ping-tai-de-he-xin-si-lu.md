@@ -298,3 +298,26 @@ Cgq2xl58Pj6ADKhZAAExRAaf_HA281.png
 接下来我来具体演示一下，这里需要用到 一个 Jenkinsfile 名称脚本来进行对应的控制。Jenkinsfile 本身就是用 Groovy 语言进行编写的，我们需要编写它让 Jenkins 的这个工作流支持控制多分支、多环境的部署。那具体怎么做呢？接下来我们再来讲一讲它的关键步骤是什么样子的。
 
 ### 关键步骤
+
+接下来我们介绍如何来做一个多分支的 job ？整体的步骤建议参考这篇文章（https://jenkins.io/zh/doc/tutorials/build-a-multibranch-pipeline-project）。从这篇文章里面，我提炼了几个关键的步骤，接下来给你进行讲解。
+
+1、镜像 jenkinsci/blueocean = jenkins +  Blue Ocean 插件和功能
+
+第一个推荐容器用 jenkinsci/blueocean 这个镜像，它是在 Jenkins 的基础上默认集成 Blue Ocean 插件功能的镜像。Blue Ocean 这个插件起到什么作用呢？
+
+Blue Ocean 作用：
+
+
+（1）清晰简单界面
+
+
+
+它可以使 Jenkins 管理控制台更加的清晰、简单，比如我们要去定位 Pipeline 的错误，在控制台就可以非常友好的定位，相比 Jenkins 默认的控制台会更加的方便。
+
+
+
+（2）Pipeline 可视化编辑
+
+
+
+其次它支持 Pipeline 的可视化编辑，我们在控制台编辑创建 Pipeline 的任务会更加方便。
