@@ -321,3 +321,108 @@ Blue Ocean 作用：
 
 
 其次它支持 Pipeline 的可视化编辑，我们在控制台编辑创建 Pipeline 的任务会更加方便。
+
+
+2、工程仓库
+
+
+第二点，就是我们创建好了 Jenkins job以后，需要去创建 job 的代码工程。这里有一个样例工程 GitHub 的地址是（https://github.com/jenkins-do CI、CD /building-a-multibranch-pipeline-project）。
+
+
+
+我们来重点看一下这个工程的目录结构。
+
+
+
+```
+/
+
+├── jenkins
+
+│   └── scripts
+
+│       ├── deliver-for-development.sh
+
+│       ├── deploy-for-production.sh
+
+│       ├── kill.sh
+
+│       └── test.sh
+
+├── Jenkinsfile
+
+├── package.json
+
+├── public
+
+│   ├── index.html
+
+└── src
+
+    ├── App. CI、CD s
+
+    ├── App.js
+
+    ├── …
+```
+这里非常重要的一点就是在工程的根目录下有一个 Jenkinsfile，刚刚我们讲到了 Jenkinsfile 就是用 Groovy 语言书写的一个 Pipeline 脚本。同时，它会引用 Jenkins 目录下的几个 sh 脚本来控制部署任务。
+
+
+
+3、创建多分支
+
+
+
+在你创建好工程以后，接下来需要在本地模拟多个分支，你可以创建测试环境的分支、线上环境的分支、预上线环境的分支等等多个分支， git 通过 git branch 来操作。
+
+
+
+4、Jenkinsfile
+
+
+
+刚刚讲到Jenkinsfile 是非常重要的，这个 Pipline 的脚本需要同时支持多个分支构建。
+
+
+
+我接下来打开这个文件给你看一下，在我的控制台给你展示一下 Jenkinsfile 的内容。
+
+
+
+我用 vim 的编辑器打开，stages 这个大的模块里面会控制着它相关的工作流的流程。如最前面的 stage('build') 这个流程是控制进行构建的步骤，这里是执行的 npm install 命令。接下来是测试的流程，它执行一个 Shell 脚本来作。
+
+
+
+再往下看是控制发布流程，需支持两个发布流程，一个是发布到 Development，也就是开发环境。另一个是发布到线上环境。可以通过这样的一种方式来控制发布到不同的环境。如果是开发环境下，这里会判断它的这个分支(通过 git branch 来打分支)是不是开发环境？ 在 Jenkinsfile 流程脚本下，它会通过判断语句来确定是不是对应的分支。如果是 git 的开发分支，那么就执行这个脚本；如果是线上的一个分支，就执行另外的一个发布的脚本。
+
+
+
+这就是通过 Groovy 语言实现多分支部署的一个 Jenkinsfile 脚本样例。
+
+#演示结束#
+
+
+
+安装步骤：https://jenkins.io/zh/doc/tutorials/build-a-multibranch-pipeline-project/
+
+
+
+Jenkins 的 API 能力
+
+
+```
+JAVA:https://github.com/jenkinsci/java-client-api
+
+Python:https://github.com/pycontribs/jenkinsapi
+```
+
+最后讲一讲，在 Jenkins 下，如果你要把 Jenkins 能力融入到你的 Devops 平台，则需要了解 Jenkins 的 API 能力，才能够通过 Devops 调用 Jenkins 的 API 来实现 job 的灵活管理、创建.
+
+
+
+你可以看一下一篇 API 的官方文档（https://wiki.jenkins.io/display/JENKINS/Remote+access+API），为了更加方便研发人员去进行 Jenkins 的 API 接口调用，官方也开放 API 或者 SDK，我们可以直接选择对应的语言下载对应的模块，如 Java，你可以访问这个 GitHub 地址（https://github.com/jenkinsci/java-client-api）去下载它的 API 或者 SDK。如果你用的是 Python语言，你可以选择这个 GitHub 地址（https://github.com/pycontribs/jenkinsapi）去下载，有了这个 API 我们就可以通过本地的 Devops 工程来直接引用这些模块，对于 Jenkins 里面的 job 管理\创建是非常方便的。
+
+
+
+以上就是在 K8s 和 Docker 容器化的部署架构下，我认为 Jenkins 来做 CI\CD 所需要具备的几点能力讲解。
+
