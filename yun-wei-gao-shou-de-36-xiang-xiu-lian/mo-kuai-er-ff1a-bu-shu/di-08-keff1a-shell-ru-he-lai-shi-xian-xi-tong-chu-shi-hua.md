@@ -111,3 +111,5 @@ CgpOIF5qC1-AVlH_AAORTXwTB0A492.png
 
 
 以上就是刚刚讲到的所有关于网卡队列的长度大小的优化。单独摘出来的一个参数配置，需要注意的就是 ip_local_port_range。这个参数表示从本地最多可以使用多少个 IP 和端口连接同一个目标 IP 及端口，所以这个值也可以适当的调整，在我的脚本里也会做优化。
+
+Cgq2xl5qC1-ARQjxAAHQtHHl1RA689.png
