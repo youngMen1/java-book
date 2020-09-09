@@ -45,3 +45,4 @@
 ## 割接检查分类
 
 我们先给割接检查进行分类：
+Cgq2xl6C0-yAfOVkAAVgPLjNgOE302.png
