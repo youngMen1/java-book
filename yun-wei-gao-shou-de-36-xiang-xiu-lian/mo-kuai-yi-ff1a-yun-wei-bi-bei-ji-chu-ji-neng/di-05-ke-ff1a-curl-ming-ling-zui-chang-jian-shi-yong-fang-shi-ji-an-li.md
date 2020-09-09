@@ -17,3 +17,5 @@
 ## Curl 使用用途
 
 本课时内容围绕 Curl 命令展开 ，并分享一些场景案例的使用经验。
+
+CgpOIF5eIOCABTEDAAEA2ZcJPmg686.png
