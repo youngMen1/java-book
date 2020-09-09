@@ -16,3 +16,5 @@
 ## 动态 Upstream 场景
 
 首先，我们来讲解第一部分内容，也就是动态 Upstream 的场景。
+
+CgpOIF5XlqGAJ1iwAAE2ca-U8Go037.png
