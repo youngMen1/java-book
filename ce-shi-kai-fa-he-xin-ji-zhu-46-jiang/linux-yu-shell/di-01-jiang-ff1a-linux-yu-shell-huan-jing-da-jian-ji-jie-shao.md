@@ -62,3 +62,6 @@ CgoB5l3OcR6ASe74AADtcorq_Jc477.png
 
 在配置云服务器时，推荐使用 Linux 体系下的 CentOS 和 Ubuntu 系统，CentOS 是红帽发布的一个免费的、开源的系统，Ubuntu 也是非常知名的 Linux 体系下的操作系统，整体配置时，CentOS 可以作为服务器，而 Ubuntu 作为个人工作机。
 
+## Hello world
+
+CgotOV3OcR6AOiCPAAELnbG0Gnc303.png
