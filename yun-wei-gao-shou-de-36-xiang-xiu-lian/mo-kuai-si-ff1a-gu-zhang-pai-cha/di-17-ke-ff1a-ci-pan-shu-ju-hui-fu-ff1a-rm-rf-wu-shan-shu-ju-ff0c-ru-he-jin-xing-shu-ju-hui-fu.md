@@ -54,6 +54,13 @@ Cgq2xl6VdFKAISawAAFE37oeL_w498.png
 
 Cgq2xl6VdIqAWXFLAADmb9zygRM543.png
 
+现在我们已经模拟出文件在进程使用过程中被删除的场景，那么接下来我们来演示恢复该文件。
+
+
+
+首先需要找到是哪个进程在使用这个文件，我们可以通过 lsof 命令，grep 刚刚删除的文件名称（deltefile.txt），会列出当前使用文件的进程。我们会看到tail 命令正在使用，它（进程）的 pid 是 4701。
+
+
 
 
 
