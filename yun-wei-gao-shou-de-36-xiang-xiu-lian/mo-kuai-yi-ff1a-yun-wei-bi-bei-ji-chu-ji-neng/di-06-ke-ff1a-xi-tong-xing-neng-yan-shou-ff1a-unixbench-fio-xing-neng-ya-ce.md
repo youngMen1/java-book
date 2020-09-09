@@ -42,7 +42,7 @@ CgpOIF5gtPGAQgQyAAbHfhNzTM4078.png
 
 ## 章节思维导图
 
-CgpOIF5gtQiADB-UAASwQDk9GjA321.png
+![](/static/image/CgpOIF5gtQiADB-UAASwQDk9GjA321.png)
 
 和运维相关的性能测试这里主要归纳为四大类，分别是业务压测、服务压测、网络压测、系统压测。
 
