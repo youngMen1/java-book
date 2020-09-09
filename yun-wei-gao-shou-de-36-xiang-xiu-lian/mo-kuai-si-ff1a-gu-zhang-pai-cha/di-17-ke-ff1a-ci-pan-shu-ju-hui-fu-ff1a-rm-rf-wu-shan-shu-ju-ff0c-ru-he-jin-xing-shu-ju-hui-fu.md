@@ -52,7 +52,7 @@ i_count 的作用是当一个文件被一个进程引用时，它的数值会加
 
 接下来在另一个窗口，我同样到/test 目录下，而此时我要执行的是 rm -rf ./deletefile.txt，这样就“彻底”把这个文件删除。接下来我们通过 ls，可以看到本地已经没有这个文件了。
 
-Cgq2xl6VdIqAWXFLAADmb9zygRM543.png
+![](/static/image/Cgq2xl6VdIqAWXFLAADmb9zygRM543.png)
 
 现在我们已经模拟出文件在进程使用过程中被删除的场景，那么接下来我们来演示恢复该文件。
 
