@@ -39,7 +39,8 @@
 
 首先第一点，就是 Jenkins 本身服务的部署高可用。
 
-Cgq2xl58Pj2ARAUEAAECOYYrTH8534.png
+
+![](/static/image/Cgq2xl58Pj2ARAUEAAECOYYrTH8534.png)
 
 回顾一下 Jenkins 本身的部署模式，通常有以下三种方式：
 
@@ -73,7 +74,8 @@ Cgq2xl58Pj2ARAUEAAECOYYrTH8534.png
 
 为了让你能够更加形象地来理解，这里画了一张图：
 
-Cgq2xl58Pj2ASTTbAAPOlOYZ6DM633.png
+
+![](/static/image/Cgq2xl58Pj2ASTTbAAPOlOYZ6DM633.png)
 
 我们看到这里有 K8s 整个集群，包含有三个 Node 节点，每个 Node 节点上有一组 Pod。Pod 会分为两大类型，一个是 Master 类型的 Pod，一个是 Slave 类型的 Pod。在 K8s 里面最小的管理单元是 Pod ，我们姑且认为它是一个独立的服务个体。
 
@@ -214,7 +216,9 @@ kubectl create -f jenkins-deployment.yaml 
 
 
 这个就是 deployment.yaml 里面几个重要的配置项的一部分。
+
 ## Service配置
+
 接下来讲一讲，创建 service 对象的几个重要的配置。一块就是创建服务的名称，对外暴露服务的端口，以及关联后端 Node 节点的端口。总共创建了对外服务两个端口，一个是Jenkins的 Web 服务端口，一个是 agent 所需要进行信息通信的端口。所以以 yaml 文件写好以后，同样通过 kubectl 来创建对象。
 
 
@@ -254,7 +258,8 @@ ports: 
 
 第二个核心思路就是 Jenkins 的 Pipeline 工作流。
 
-Cgq2xl58Pj2Af4yJAAGBiRwNohg190.png
+
+![](/static/image/Cgq2xl58Pj2Af4yJAAGBiRwNohg190.png)
 
 
 在整个 Jenkins 的工作 job 类型里面，这里我给它做了一个分类：一个是基础的 job 服务类型，这是一种常见的job方式。第二就是通过 Groovy 语言来实现 Pipeline 工作流，Pipeline 工作流有什么好处呢？它可以使构建任务会更加灵活，维护性更好。
@@ -275,11 +280,13 @@ Cgq2xl58Pj2Af4yJAAGBiRwNohg190.png
 
 刚刚说到了多分支，我们接下来理解一下多分支的具体含义，这里我画了一张图：
 
-Cgq2xl58Pj6AO_1IAASzA5iuWew245.png
+
+![](/static/image/Cgq2xl58Pj6AO_1IAASzA5iuWew245.png)
 
 图中我们会看到 Jenkins 整体的构建和发布的过程。我们看到开发人员进行代码的提交，通过在 git 仓库上做版本库的代码管理，同时通过一个钩子（webhook）触发 Jenkins 来进行部署、构建、测试，然后进行环境的发布。这是一种单流水线的方式。
 
-Cgq2xl58Pj6AWo65AABvMXRVTog127.png
+
+![](/static/image/Cgq2xl58Pj6AWo65AABvMXRVTog127.png)
 
 总结归纳发现 Jenkins 负责构建、测试和发布，这属于单 Pipeline 任务流模式。
 
@@ -288,7 +295,7 @@ Cgq2xl58Pj6AWo65AABvMXRVTog127.png
 如果是多分支或者多部署环境的方式，这个时候我们该怎么做呢？
 
 
-Cgq2xl58Pj6ADKhZAAExRAaf_HA281.png
+![](/static/image/Cgq2xl58Pj6ADKhZAAExRAaf_HA281.png)
 
 
 假设我们现在有两种分支，一个是测试分支，一个是线上环境分支，这个时候我们在 Jenkins 里面就需要同步支持构建和本地测试。测试完可能需要进行两个工程的打包、发布。
