@@ -227,4 +227,4 @@ Cgq2xl5zJpaAE_NvAADuJPpNISA959.png
 以下这些配置是固定的，你可以不用去改动，因为这里会去执行我主机上的信息获取命令，比如获取主机版本、主机名、MAC 地址、sn 号等，都是通过命令去获取的。
 
 
-
+CgpOIF5zJpeAcDksAABCkXF4kb0332.png
