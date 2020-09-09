@@ -36,6 +36,5 @@ Cgq2xl5zJpKAXQ3uAAVfaDFT2hc238.png
 
 首先，用 PyCharm 工具打开工程代码，左侧是目录结构，底部是一个 terminal 控制终端，上面是代码内容，如果你了解 PyCharm 就比较清楚了。
 
-
-
 我本地已经准备好一个演示环境，因为需要收集资产信息，本地环境的资产除了包括演示的这台主机以外，还包括另外一台单独的装了 VMware 的虚拟机，在虚拟机上还运行了一个 Docker 的容器（这些就是我本地收集的目标资产对象）。
+CgpOIF5zJpKAM5HDAARNAa2lrTA683.png
