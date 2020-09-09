@@ -155,8 +155,12 @@ PlayBookResultsCollector(CallbackBase) 跟前面类是一样的，只不过它�
 ### 工程执行过程
 
 最后我来给你演示一下整个工程的执行过程。
+
 Ciqah155wHGAVPdAAADGi3JVaHk602.png
+
+刚讲到了对外暴露的是  /adhocdo  的接口地址，现在我们来请求这个地址，并且按照它的参数要求来进行请求。这里用 POST 方法，提交的是 taskid 这个参数，主要是任务的 ID。mod_type 主要是模块的类型，因为 adhoc 这个任务是需要以模块的方式来进行任务执行的。执行的参数就代表具体的任务命令了。sn_key 对主机起到唯一标识的作用，我们需要对哪一台主机就用 sn_key 来对应的执行。
 
 Ciqah155wHKAPwtfAACH5Q2NW3o196.png
 
+这里有具体的参数，我用 JSON 的格式提交的任务， JSON 的格式是这样的，举个例子，我们会看到这里有执行的任务 ID，然后类型是 shell，执行的命令是 touch 一个文件，group 它执行的是主机组（可选择不加）。最后 加入机器的sn_key。
 
