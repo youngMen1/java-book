@@ -92,3 +92,4 @@ Ciqah16FmKqAMZZeAAKlVRgND70352.png
 
 一个中型企业，通常会把传统的逻辑层进行拆分，分别拆成业务层和服务层，在这种模式的基础上，我们通过这张图来了解 MySQL 的停服割接是如何做到的？
 
+Ciqah16FmKqAQVr8AASygXQDB2I188.png
