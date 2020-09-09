@@ -84,7 +84,7 @@ Jenkins 在微服务的集成架构里面起着一个核心的持续集成环境
 ### Devops 集成架构
 
 最后的一张图示，就是 Devops 集成架构了：
-Cgq2xl5wY7-ANUjVAAdwdd2Q2To107.png
+![](/static/image/Cgq2xl5wY7-ANUjVAAdwdd2Q2To107.png)
 
 这个 Devops 平台不仅处理代码发布和自动化持续测试，更多的把运维的相关工作融入到 Devops 平台中。比如企业的资产管理、配置管理、监控等相关的运维任务平台都融合到整体的一个叫 Devops 的平台。
 
