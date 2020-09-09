@@ -108,3 +108,5 @@ Nginx 基础配置优化的最后一项是文件压缩，我们希望做到 Ngi
 * application/vnd.ms-fontobject image/x-icon;  gip 压缩类型；
 
 * gzip_disable “msie6”;  关闭 IE6 的压缩。
+
+最后这两项表示设置 zip 的压缩类型及是否关闭 客户端使用 IE6 浏览器请求过来的压缩，以上就是对文件压缩的典型配置，你可以根据具体情况做一些细节上的调整。
