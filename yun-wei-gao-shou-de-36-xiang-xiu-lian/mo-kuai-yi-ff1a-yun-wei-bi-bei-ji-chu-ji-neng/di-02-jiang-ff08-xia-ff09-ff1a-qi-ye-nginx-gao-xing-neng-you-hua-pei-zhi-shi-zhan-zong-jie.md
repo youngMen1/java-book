@@ -76,3 +76,13 @@ open_file_cache_valid 是设置主动更新和检查的时间，表示每隔 30 
 Cgq2xl5Li66AdSdZAACCZvpT1KM925.png
 
 最后一个内容就是代理缓存的优化了，代理缓存比较常见，比如说代理 访问PHP 后台服务并作缓存，也可以代理 JAVA 服务，缓存 JAVA后台服务的返回数据，注意这里不局限于通过 http_proxy来作代理缓存，只要 Nginx 支持的代理模式(UWSGI、SGI)都可以设置代理缓存。你可以来看一下通过http_proxy设置的如下示例：
+
+
+```
+proxy_cache_path /path/to/cache levels=1:2 keys_zone=my_cache:10m max_size=10g inactive=60mlocation / {
+        proxy_cache my_cache;
+        …
+}
+```
+
+
