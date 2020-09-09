@@ -163,5 +163,5 @@ Ciqah16MTOKAFeWAAALlWm1EIKQ939.png
 
 ## 步骤三：ConfigMap/Secret 配置
 
-
+第 3 步就是应用程序所需要的相关配置，它可以通过 K8S 的 ConfigMap 或 Secret，把这些应用程序所需要的一些配置，以 key-value 的形式传递到 Container（容器）里面 。
 
