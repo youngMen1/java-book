@@ -38,3 +38,5 @@
 ### 思路一、Jenkins 服务高可用
 
 首先第一点，就是 Jenkins 本身服务的部署高可用。
+
+Cgq2xl58Pj2ARAUEAAECOYYrTH8534.png
