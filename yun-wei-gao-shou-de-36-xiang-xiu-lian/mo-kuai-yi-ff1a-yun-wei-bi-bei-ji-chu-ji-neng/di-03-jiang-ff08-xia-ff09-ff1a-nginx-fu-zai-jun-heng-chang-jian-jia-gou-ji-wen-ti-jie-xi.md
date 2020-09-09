@@ -123,6 +123,4 @@ CgpOIF5U0tOAeMMQAAGg2smEGW8440.png
 * 解决方案 3：Session 共享
 Session 共享是由程序完成的，我们把 Session 信息不放在本地，通过应用程序把 Session 信息放入共享的 K/V 存储中，这样就不会产生 Session 丢失情况了。
 
-
-
 我们可以看到，如果 Nginx 解决 Session 丢失问题基于 Session 保持来解决，所以怎样配置 Nginx 呢？
