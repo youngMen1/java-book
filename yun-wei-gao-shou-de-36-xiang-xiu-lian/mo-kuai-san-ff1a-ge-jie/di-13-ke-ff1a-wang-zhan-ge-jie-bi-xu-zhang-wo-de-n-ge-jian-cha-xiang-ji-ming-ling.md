@@ -137,3 +137,5 @@ Ciqah16C0--AW5JQAAQ1pt-LJyo960.png
 
 
 通常可以使用 Chrome 里的开发工具，然后刷新一下页面，去判断页面里每一个元素对应的下载状态，以及返回的值是否正常。
+
+Cgq2xl6C0--ACPjnAAHVp8fK2vo945.png
