@@ -6,7 +6,7 @@
     * [第01讲：工作累积的最常用 Shell 命令合集及使用技巧](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-01-jiang-ff1a-gong-zuo-lei-ji-de-zui-chang-yong-shell-ming-ling-he-ji-ji-shi-yong-ji-qiao.md)
     * [第02讲（上）：企业 Nginx 高性能优化配置实战总结](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-02-jiang-ff08-shang-ff09-ff1a-qi-ye-nginx-gao-xing-neng-you-hua-pei-zhi-shi-zhan-zong-jie.md)
     * [第02讲（下）：企业 Nginx 高性能优化配置实战总结](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-02-jiang-ff08-xia-ff09-ff1a-qi-ye-nginx-gao-xing-neng-you-hua-pei-zhi-shi-zhan-zong-jie.md)
-    * 第03讲（上）：Nginx 负载均衡常见架构及问题解析
+    * [第03讲（上）：Nginx 负载均衡常见架构及问题解析](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-03-jiang-ff08-shang-ff09-ff1a-nginx-fu-zai-jun-heng-chang-jian-jia-gou-ji-wen-ti-jie-xi.md)
   * [模块二：部署](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu.md)
   * 模块三：割接
   * 模块四：故障排查
