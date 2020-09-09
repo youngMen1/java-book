@@ -6,7 +6,7 @@
 
 通过上一课时的学习，想必你已经对网站割接的定义都有一定的了解。在此基础上再讲一讲割接和迁移存在的区别。
 
-Cgq2xl6FmKmAO_CMAAU2syJogr0306.png
+![](/static/image/Cgq2xl6FmKmAO_CMAAU2syJogr0306.png)
 
 也许你认为割接就是迁移，但事实并非如此，我们可以将割接理解为迁移中的一个关键部分，但它并不完全属于迁移。举个例子，我们需要修改程序的配置，或者要做版本的升级，这些情况都需要作割接操作，但并不属于网站的迁移范围。接下来我会在这张图里，选择入口层 Nginx、数据层 MySQL 这两个案例，对割接的关键思路和步骤进行详细介绍。
 
@@ -34,7 +34,7 @@ Cgq2xl6FmKmAO_CMAAU2syJogr0306.png
 
 首先，我们知道 Nginx 的启动进程总共包含 master 进程和 work 线程，work 线程负责实际处理用户的请求，而 master 进程则起到管理和分配流量的作用。
 
-Cgq2xl6FmKqAJXLOAAIMFmFy9LU520.png
+![](/static/image/Cgq2xl6FmKqAJXLOAAIMFmFy9LU520.png)
 
 
 如图所示，当我们把一个版本升级到另外一个版本时，假设老的版本为 A 版本，当我把 Nginx 的版本做完升级（升级为版本 B），通过执行 nginx reload ，此时不会影响 A 版本的所有 master 进程和 work 线程的工作，而直接会在 A 版本的基础上启用 B 版本的 master 进程和 B 版本的 work 线程。
@@ -80,7 +80,7 @@ Nginx reload 这种方式，给了我们进行 Nginx 版本平滑升级提供支
 
 MySQL 数据库的任何迁移或者版本升级都要非常慎重和细致，所以它通常是交给 DBA 的同学负责。首先我来为你讲解MySQL 在停服迁移割接的过程。
 
-Ciqah16FmKqAMZZeAAKlVRgND70352.png
+![](/static/image/Ciqah16FmKqAMZZeAAKlVRgND70352.png)
 
 我们先来看一下这样的一张图，在这张图里我仍然把企业通架构分为入口层、逻辑层和数据层。
 
@@ -92,7 +92,7 @@ Ciqah16FmKqAMZZeAAKlVRgND70352.png
 
 一个中型企业，通常会把传统的逻辑层进行拆分，分别拆成业务层和服务层，在这种模式的基础上，我们通过这张图来了解 MySQL 的停服割接是如何做到的？
 
-Ciqah16FmKqAQVr8AASygXQDB2I188.png
+![](/static/image/Ciqah16FmKqAQVr8AASygXQDB2I188.png)
 
 这里我把这个图画成了入口层和服务逻辑层，相当于先把业务逻辑层摘除掉了。在这张图里我们会看到，由于停服割接会影响用户访问，所以我们需要先在入口层把用户的请求流量关闭。要关闭用户的请求流量通常在代理上进行维护页面切换。
 
@@ -141,7 +141,7 @@ location / {
 
 
 刚刚我们讲的是在停服割接时 MySQL 的步骤，MySQL 如何实现不停服割接？不停服割接会对人员的投入和 DBA 的相关技术能力提出更高的要求。
-Ciqah16FmKuAaVH0AAaOEBkiat0291.png
+![](/static/image/Ciqah16FmKuAaVH0AAaOEBkiat0291.png)
 还是在这张图里面，我们先要重点解决几个问题，一个是老库和新库的数据如何在不一致的情况下进行恢复和填补，这时我们需要在逻辑层对你的数据开启一个 CIDR 日志，也就是说，我们要在某一个时间，在服务逻辑层上把业务上的 CIDR 日志完整地保留一份。这里的 CIDR就是对数据的增 加、删除和更新。
 
 同时我们还需要开发一个非常重要的工具，我把它命名为 Migration Tools，这个工具通常是企业根据自身业务情况和数据库的表结构情况来进行开发。在不停服割接时，由于服务逻辑层切换了数据库的连接地址，我们可以用 Mgration Tools 通过日志重放的方式重新填平数据上的差异。
