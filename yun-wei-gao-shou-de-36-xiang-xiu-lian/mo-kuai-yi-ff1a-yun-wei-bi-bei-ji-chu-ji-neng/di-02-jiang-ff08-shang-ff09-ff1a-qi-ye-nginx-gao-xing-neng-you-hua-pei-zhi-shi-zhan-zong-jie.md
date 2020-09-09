@@ -12,7 +12,7 @@
 
 接下来的课程内容会涉及以上这三点知识内容，但是不会像初学那样面面俱到来讲，所以希望遇到疑问时再回来按照这三个方面提前巩固基础知识。
 
-CgpOIF5FJ5mAVRPiAABbkiJwxcQ434.png
+![](/static/image/CgpOIF5FJ5mAVRPiAABbkiJwxcQ434.png)
 
 Nginx 的优化这个课时主要内容分为两部分来讲，一部分是基础配置优化，另外一部分是缓存配置优化，本课时我们主要学习基础配置优化的部分。
 
