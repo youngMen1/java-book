@@ -44,3 +44,5 @@ CgpOIF5zJpKAM5HDAARNAa2lrTA683.png
 回到工程代码，我们来具体演示一下：
 
 Cgq2xl5zJpKALeVmAAJNcMymoDg695.png
+
+回到工程代码，首先需要运行一个脚本，把目标资产信息扫描出来。这里通过 Python 直接执行 main.py 文件，就可以开启对局域网的扫描。我们可以看到这个时候，在终端会输出相关的日志及扫描到的信息。
