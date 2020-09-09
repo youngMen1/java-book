@@ -15,7 +15,7 @@
 * [测试开发核心技术 46 讲](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang.md)
   * [Linux 与 Shell](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell.md)
     * [第01讲：Linux 与 Shell 环境搭建及介绍](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell/di-01-jiang-ff1a-linux-yu-shell-huan-jing-da-jian-ji-jie-shao.md)
-  * 编程语言
+  * [编程语言](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/bian-cheng-yu-yan.md)
   * 数据结构与算法
   * 数据库
   * Web 自动化测试技术
