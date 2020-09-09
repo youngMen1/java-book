@@ -253,3 +253,5 @@ ports: 
 ### 思路二、Jenkins 的 Pipeline 工作流
 
 第二个核心思路就是 Jenkins 的 Pipeline 工作流。
+
+Cgq2xl58Pj2Af4yJAAGBiRwNohg190.png
