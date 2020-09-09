@@ -30,13 +30,14 @@
     * 第29课：虚拟化关键技术浅析（NUMA、dpdk、绑核）
   * [模块八：方案](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-ba-ff1a-fang-an.md)
     * 第31课：4、7 层入口负载均衡 SLB 如何作才是最佳姿势
-  * 模块九：趋势
+  * [模块九：趋势](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-jiu-ff1a-qu-shi.md)
+    * 第33课：云原生关键技术浅析
 * [测试开发核心技术 46 讲](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang.md)
   * [Linux 与 Shell](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell.md)
     * [第01讲：Linux 与 Shell 环境搭建及介绍](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell/di-01-jiang-ff1a-linux-yu-shell-huan-jing-da-jian-ji-jie-shao.md)
   * [编程语言](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/bian-cheng-yu-yan.md)
   * 数据结构与算法
-  * 数据库
+  * [数据库](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/shu-ju-ku.md)
   * Web 自动化测试技术
   * [App 自动化测试技术](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/app-zi-dong-hua-ce-shi-ji-zhu.md)
   * 接口自动化测试
