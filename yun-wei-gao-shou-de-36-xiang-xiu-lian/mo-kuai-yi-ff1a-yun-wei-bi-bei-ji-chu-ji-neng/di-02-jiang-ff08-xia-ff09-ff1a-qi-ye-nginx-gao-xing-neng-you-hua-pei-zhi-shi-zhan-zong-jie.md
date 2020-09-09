@@ -72,3 +72,5 @@ Cgq2xl5Li8uABNYPAADrCiQf_mE895.png
 open_file_cache_valid 是设置主动更新和检查的时间，表示每隔 30 秒检查缓存文件的元信息有没有对应的更新，如果有更新就需要去做对应的更新，它是一个更新的策略。
 
 ## 代理缓存优化
+
+Cgq2xl5Li66AdSdZAACCZvpT1KM925.png
