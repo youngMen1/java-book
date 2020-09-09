@@ -18,7 +18,7 @@
 
 本课时内容围绕 Curl 命令展开 ，并分享一些场景案例的使用经验。
 
-CgpOIF5eIOCABTEDAAEA2ZcJPmg686.png
+![](/static/image/CgpOIF5eIOCABTEDAAEA2ZcJPmg686.png)
 
 Curl 的使用主要分为两大类。
 
@@ -32,7 +32,7 @@ Curl 的使用主要分为两大类。
 
 ## 网站服务分析
 
-Cgq2xl5eIQCAcdemAADr6L5_rSE693.png
+![](/static/image/Cgq2xl5eIQCAcdemAADr6L5_rSE693.png)
 
 我们先从网站的服务分析开始讲起。聊到网站的状态分析，经常有同学会问我一些问题，比如说自己的网站无法打开怎么排查？自己安装了一个服务，打开浏览器请求不到，怎么去分析？提出这样的问题，我觉得你可能对于整个网站服务的故障排查思路不是非常清晰，下面我们来梳理一下。
 
