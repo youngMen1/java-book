@@ -126,11 +126,11 @@ Ciqah16C0-6AXw64AAE_YFW0DdE654.png
 导致 DNS 解析记录不正常的原因通常有三种，第一是由于 DNS 解析缓存失效周期的问题，第二是由于 DNS 本地地址的配置错误，第三是由于 DNS 劫持造成的一些问题，这些都可能导致你的解析记录不正常。这个时候我们就需要去指定解析的服务端，光用 ping 命令实现不了，我们需要通过 nslookup 命令来做，或者 dig 这个更加专业命令。我们可以用 dig +@dns解析服务，直接 at 你的期望提供解析的 DNS 服务 IP 地址。
 
 
-Cgq2xl6C0-6AOhEOAANHrdS3wOg837.png
+![](/static/image/Cgq2xl6C0-6AOhEOAANHrdS3wOg837.png)
 
 dig 会更加专业， 比如一个 + trace，就是模拟迭代+递归的整个解析过程作分析。
 
-Ciqah16C0--AW5JQAAQ1pt-LJyo960.png
+![](/static/image/Ciqah16C0--AW5JQAAQ1pt-LJyo960.png)
 
 通常在做完一次割接以后，如果你是线上服务的话，可能没有那么多时间通过命令方式检查。所以你首要事情就是查看服务是否可访问，那么最便捷直接的方式的就是通过浏览器的方式去访问新的域名地址，看看是否能够正常的打开这个网站。现在我输入 www.jesonc.com 这个域名来访问网站，这个时候直接访问的内容就非常清晰了，浏览器看到的响应页面有做对应的新内容变更。
 
