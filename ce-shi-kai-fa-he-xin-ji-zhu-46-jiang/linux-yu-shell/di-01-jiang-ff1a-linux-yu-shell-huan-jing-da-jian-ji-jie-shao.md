@@ -65,3 +65,9 @@ CgoB5l3OcR6ASe74AADtcorq_Jc477.png
 ## Hello world
 
 CgotOV3OcR6AOiCPAAELnbG0Gnc303.png
+
+最后，带你演示如何完成我们的第一行命令，我自己的演示电脑是 Mac 系统，并安装了 iTerm2，我们先输入一个简单的 echo 指令，echo指令用于回显，你输入什么系统就输出什么 ，我们输入一个 echo hello world，你可以看到输出显示了 hello world，你也可以使用 Terminal 终端，虽然与 iTerm2 界面不一样，但本质是一样的。输入 echo hello world 也输出了 hello world。除此以外，你还可以登录自己的云服务器，比如我输入账户和密码后，登录自己的云服务器，也可以支持 echo hello world。
+
+
+
+好了，本课时的全部内容就讲完了，通过本课时的学习我们对操作系统简史有了一定的了解，接下来需要你配置好自己的环境，Windows 环境下推荐使用 Git bash，Mac 环境推荐使用 iTerm2 工具，而如果你想体验更丰富的内容也可以通过 ssh 登录云端服务器，进行相关指令的练习。
