@@ -141,3 +141,5 @@ Ciqah16C0--AW5JQAAQ1pt-LJyo960.png
 Cgq2xl6C0--ACPjnAAHVp8fK2vo945.png
 
 如果网站的部分元素、链接请求出现问题时，我们需要通过一些工具去具体判断是因为什么原因导致服务不正常。比如说我这里需要判断连接是不是正常，就可以通过 telnet 方法判断域名地址以及对应的端口，因为我对外提供的是 HTTP 服务，所以我就请求 80 的端口，看看 telnet 连接是否能够通畅？
+
+Ciqah16C0--AMrGJAAC1IcWE_d0849.png
