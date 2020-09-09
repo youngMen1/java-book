@@ -55,7 +55,7 @@ Cgq2xl6VdFKAHdwFAAEiLPkGCz8212.png
 
 这个时候cd /opt/recovertest/，cat deletefile.txt_bak 看一下里面的内容，可以发现这个文件的内容与刚刚生成的的测试文件内容一致，所以刚刚删除的文件恢复完毕。
 
-Ciqah16VdL6ATGvHAAEkok5hmU0511.png
+![](/static/image/Ciqah16VdL6ATGvHAAEkok5hmU0511.png)
 
 
 
