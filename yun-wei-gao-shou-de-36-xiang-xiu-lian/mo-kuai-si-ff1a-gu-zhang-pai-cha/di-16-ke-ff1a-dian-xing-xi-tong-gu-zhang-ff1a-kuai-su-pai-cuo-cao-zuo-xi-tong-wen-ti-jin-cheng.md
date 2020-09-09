@@ -144,7 +144,7 @@ Cgq2xl6OzBCAVqEDAADn6mBVAos240.png
 
 我们首先来分析一下，不可中断睡眠状态产生的场景，这里我画了一张简单的图示：
 
-Cgq2xl6OzBGAYhKmAAIGtoLnki4328.png
+![](/static/image/Cgq2xl6OzBGAYhKmAAIGtoLnki4328.png)
 
 我们会看到这里有两个进程，分别是进程 A 和进程 B，中间是一个队列，进程 B 负责添加数据，添加完数据以后，它要唤醒进程 A 来提取数据，并且执行相应的任务。假设在 B 唤醒 A 的过程中，A 进程正在处理上一次的任务，此时 A 就无法响应 B 的这次唤醒，这个时候就会导致进程 A 进入等待状态，从而进入不可中断的睡眠状态。
 
