@@ -22,7 +22,7 @@
   * 模块四：故障排查
   * 模块五：监控
   * 模块六：安全
-  * 模块七：虚拟化
+  * [模块七：虚拟化](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-qi-ff1a-xu-ni-hua.md)
   * 模块八：方案
   * 模块九：趋势
 * [测试开发核心技术 46 讲](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang.md)
