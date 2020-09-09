@@ -47,3 +47,13 @@
 
 ## Shell 的种类
 
+在 Linux 系统中你可以通过 cat 指令来查看 etc/ 下的 shells，可以看到本地支持的 Shell 种类非常多，常见的有 bash、csh、ksh、sh，等等。其中，sh 是 Bash 的早期形态，因为 sh 不是 GNU 项目，所以后期又开发了 Bash。
+
+
+
+在 Windows 系统中，是没有 Shell 环境的，Windows 下的 Shell 其实叫作 command，现在升级为 PowerShell，但是 Windows 指令与 Linux 系统并不兼容，因为它本身不是从 Linux/Unix 系统衍生出来的，所以导致 Windows 与目前的OS，如：Mac、Linux、Android、iOS 的命令不兼容。为了解决这个问题，在 Windows 中你可以使用 Git bash，以及 Cygwin 来模拟 Shell 环境。
+
+
+
+如果你的系统是 Mac，那么恭喜你，Mac 系统自带了 Terminal，你还可以安装  iTerm2，它们都是标准的 Shell 环境。在 Linux 环境下，建议你使用 Bash，Bash 是目前行业内使用最广泛的 Shell 环境，在 Windows 环境下，建议你使用 Git bash，它几乎包含了 Linux 常用的全部指令。
+
