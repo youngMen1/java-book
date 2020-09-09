@@ -170,3 +170,8 @@ Ciqah155wHKAO35aAAGx4BbLhL0386.png
 接下来我来演示一下 IMOOCC自动化任务执行的过程。在上一个课时里面我们讲到了 IMOOCC 工程对自动化资产的收集。有了上一课时的基础，我在本地的这套工程已经收集到了对应的资产信息，如本地的这台输入主机的信息就已经在我的这套资产管理系统里面直接提取。
 
 Ciqah155wHOATKf0AATlRJB7cOI285.png
+
+
+提交的Json格式如图所示，exec_args中执行命令的方式是 touch 一个文件，我这里执行命令是在/tmp目录下touch 一个 test22 的文件。sn_key 是唯一主机的标识，我们可以在资产管理系统里面点击详细这一部分来提取出 sn 号，这个就是它的唯一标识。
+
+Cgq2xl55wHOAH6vtAAMlclXaedE645.png
