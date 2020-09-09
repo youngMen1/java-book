@@ -15,6 +15,7 @@
   * [模块二：部署](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu.md)
     * 第08课：Shell 如何来实现系统初始化
     * 第09课：搭建基于 Jenkins 的持续集成平台所需关注的几个问题
+    * 第10课：基于 Python+Ansible+Django 搭建 CMDB 平台
   * 模块三：割接
   * 模块四：故障排查
   * 模块五：监控
