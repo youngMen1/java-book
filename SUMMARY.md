@@ -22,8 +22,10 @@
     * [第13课：网站割接必须掌握的 N 个检查项及命令](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie/di-13-ke-ff1a-wang-zhan-ge-jie-bi-xu-zhang-wo-de-n-ge-jian-cha-xiang-ji-ming-ling.md)
   * [模块四：故障排查](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha.md)
     * 第16课：典型系统故障：快速排错操作系统问题进程
-  * 模块五：监控
-  * 模块六：安全
+  * [模块五：监控](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-wu-ff1a-jian-kong.md)
+    * 第24课：Zabbix 自动发现和自动注册
+  * [模块六：安全](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-liu-ff1a-an-quan.md)
+    * 第26课：防火墙：iptables 企业级安全策略
   * [模块七：虚拟化](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-qi-ff1a-xu-ni-hua.md)
   * 模块八：方案
   * 模块九：趋势
