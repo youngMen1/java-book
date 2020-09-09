@@ -21,6 +21,7 @@
   * [模块三：割接](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie.md)
     * [第13课：网站割接必须掌握的 N 个检查项及命令](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie/di-13-ke-ff1a-wang-zhan-ge-jie-bi-xu-zhang-wo-de-n-ge-jian-cha-xiang-ji-ming-ling.md)
     * [第14课：割接关键思路解析：停服维护、无缝升级如何设计](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie/di-14-ke-ff1a-ge-jie-guan-jian-si-lu-jie-xi-ff1a-ting-fu-wei-hu-3001-wu-feng-sheng-ji-ru-he-she-ji.md)
+    * 第15课：服务向 Kubernetes 容器平台迁移必须了解的事情
   * [模块四：故障排查](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha.md)
     * 第16课：典型系统故障：快速排错操作系统问题进程
   * [模块五：监控](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-wu-ff1a-jian-kong.md)
