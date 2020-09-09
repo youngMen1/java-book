@@ -7,3 +7,5 @@
 掌握本课时的内容，建议你课前先了解 Linux 的一些使用基础及操作系统原理。
 
 测试前关注点
+
+CgpOIF5gtPGAQgQyAAbHfhNzTM4078.png
