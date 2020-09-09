@@ -122,3 +122,5 @@ CgpOIF5zJpSACdzWAAA33Ac2y-E712.png'
 * 按照某一个类型展示
 
 另外，在中间的大窗口，我会按资源类型做一个全局的统计。
+
+Cgq2xl5zJpSAVWPTAAAhVhvmLRc779.png
