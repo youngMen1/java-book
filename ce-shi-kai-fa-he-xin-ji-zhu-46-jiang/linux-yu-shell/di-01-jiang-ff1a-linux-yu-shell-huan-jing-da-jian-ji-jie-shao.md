@@ -18,4 +18,4 @@
 
 
 ## Bash 是什么
-CgoB5l3OcR2AV-1_AARjoDt0imA774.png
+![](/static/image/CgoB5l3OcR2AV-1_AARjoDt0imA774.png)
