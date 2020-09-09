@@ -21,7 +21,7 @@ Nginx 作为负载均衡是基于代理模式的基础之上，所以在学习�
 
 分层入口代理架构
 
-CgpOIF5OfKmARBsLAAJDi2DWALc170.png
+![](/static/image/CgpOIF5OfKmARBsLAAJDi2DWALc170.png)
 
 第一类是分层入口代理架构（属于相对传统架构），我们可以对整个后台网站服务系统架构做一个分层。大体可以分为用户请求入口层，以及为用户请求提供逻辑处理的服务层和为用户提供真正相关数据的数据层。
 
@@ -50,7 +50,7 @@ CgpOIF5OfKmARBsLAAJDi2DWALc170.png
 总结一下，Nginx 在分层架构里扮演了一个 7 层应用层负载均衡角色。随着软件架构和系统架构是不断演进变化，我们发现企业开始采用 K8s、Docker 这种轻量化、虚拟化部署；还有很多企业更加倾向于微服务架构，支持 set 化等。在这样的架构下，传统的分层负载均衡模式，促使改进去支持服务注册和发现。这个就是Jeson想介绍的第二种Nginx负载均衡模式。
 
 ## 服务注册发现代理架构
-Cgq2xl5OWquAOOSKAAKxOrFbX1w188.png
+![](/static/image/Cgq2xl5OWquAOOSKAAKxOrFbX1w188.png)
 
 如图所示，图中重点列出了 Nginx 在注册发现场景中扮演的角色。同样，我们可以看到整个流量还是通过 Nginx 来做入口网关的，但是重要的一点是 Nginx 需要支持动态的发现和注册后端服务。
 
