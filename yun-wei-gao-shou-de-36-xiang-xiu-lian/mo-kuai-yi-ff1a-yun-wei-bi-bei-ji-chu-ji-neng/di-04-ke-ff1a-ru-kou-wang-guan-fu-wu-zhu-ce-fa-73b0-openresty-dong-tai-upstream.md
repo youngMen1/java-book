@@ -68,3 +68,27 @@ Cgq2xl5XlrOAW-n0AAFbOCQssio629.png
 我们知道Nginx 本身诞生的比 K8s 和 Docker 更早，Nginx 默认的配置模块是有来实现动态Upstream 是有局限的，这也是上一讲中我所认为Nginx存在缺陷，所以我们想要实现，通常有这么几种方式：
 
 CgpOIF5XlsKAFA4dAACi4m6_YDE387.png
+
+第一种方式是通过 Nginx+Lua，使用 Lua 语言开发接口，做到动态调用，也就是基于 Openresty 动态实现 Upstream，因为我们知道 Openresty 服务本身就是基于 Nginx 和 Lua 的一个结合体。
+
+
+
+第二种方式是通过已经开源并成熟的组件，如 confd 工具或 国内某大公司开源的 nginx-upsync-module 的模块来实现动态 Upstream。
+
+
+
+第三种方式是通过一个独立的入口网关把 Nginx 完全替换掉，比如我们现在了解的 Kong 网关还有 Traefik，都是在 K8s 中支持云原生的非常好的网关服务。
+
+
+
+那我总结的实现方式有以上三种，接下来本课时我们来演示 Openresty 动态 Upstream 方案，使用 Lua 语言开发一套动态的接口，我们可以动态地调用接口实现一个动态的分流。
+
+
+
+这个方案中实现了3个接口，让 Openresty 支持添加、删除、监控 Upstream 后台节点的功能（如图接口1-接口3）。
+
+
+
+我们看下如图描述的内容：
+
+
