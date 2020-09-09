@@ -29,7 +29,8 @@
 ## Shell 初始化脚本 Jinit 框架
 
 刚才演示了 Jinit.sh 脚本的执行过程和执行结果，想必你想了解 Jinit.sh 脚本到底做了哪些系统的初始化，具体修改了哪些内容，接下来就给你详细讲解。
-Cgq2xl5qC1-AJZ-eAAOMT2A6vD8550.png
+
+![](/static/image/Cgq2xl5qC1-AJZ-eAAOMT2A6vD8550.png)
 
 首先，我们来看一下 Jinit.sh 脚本的整体结构。如果你了解 Shell 会发现，这是一种最基础的编写方式，Shell 会由上到下，依次执行每一段优化项。如果你想将脚本写得更好，建议你把优化项封装成函数，这样维护性更高。另外你也可以选择优先调用执行顺序.  
 
@@ -37,7 +38,8 @@ Cgq2xl5qC1-AJZ-eAAOMT2A6vD8550.png
 
 学习这个脚本之前，你需要有一定的 Linux 操作基础，同时需要了解基础的操作系统原理，接下来，给你画了一张思维导图。
 
-CgpOIF5qC1-ATg7VAALizw8mvh4653.png
+
+![](/static/image/CgpOIF5qC1-ATg7VAALizw8mvh4653.png)
 
 图中我列出了 Jinit.sh 脚本里面所具体执行的每一项优化内容，从大类来看，共分为三类，分别是优化操作系统性能、提高操作系统安全和便捷化管理。
 
@@ -83,7 +85,8 @@ CgpOIF5qC1-ATg7VAALizw8mvh4653.png
 
 另外值得注意的就是优化操作系统内核参数。这里重点给你讲解 Timestamps 配置，建议把它设置为 0。为什么呢？因为在部分极少数的场景中可能会导致网络上的抖动或者丢包，这里给你画一张图演示一下：
 
-Cgq2xl5qC1-ABdFAAALgbr--nNA834.png
+
+![](/static/image/Cgq2xl5qC1-ABdFAAALgbr--nNA834.png)
 
 
 如果我把 Timestamps 设为 1，当客户端往服务端发包的时候，它会判断源 IP 在上次通讯时的时间戳值会不会大于本次。如果不大于的话，也就是当时间戳比本地的时间戳更加小的时候，这时就会直接 drop 到这个包。这样会有一些影响，所以这个时候我们直接把它设为 0，就可以避这样的问题。
@@ -92,7 +95,8 @@ Cgq2xl5qC1-ABdFAAALgbr--nNA834.png
 
 另外就是操作系统内核的优化，除了文件句柄等我们常知道的优化内容以外，经常需要考虑网络的底层去优化。说到网络底层优化，你就需要先了解 TCP 的 3 次握手和 4 次挥手，这个是非常重要的，别看是非常简单的一个概念，这里我们来回顾一下这张图。
 
-CgpOIF5qC1-AVlH_AAORTXwTB0A492.png
+
+![](/static/image/CgpOIF5qC1-AVlH_AAORTXwTB0A492.png)
 
 客户端主动连接，我们会看到 3 次握手时，客户端和服务端分别进入一个新的状态；同样，当客户端对服务端进行 4 次挥手断开这些连接时，客户端和服务端每次的状态也相应发生改变。
 
@@ -112,7 +116,7 @@ CgpOIF5qC1-AVlH_AAORTXwTB0A492.png
 
 以上就是刚刚讲到的所有关于网卡队列的长度大小的优化。单独摘出来的一个参数配置，需要注意的就是 ip_local_port_range。这个参数表示从本地最多可以使用多少个 IP 和端口连接同一个目标 IP 及端口，所以这个值也可以适当的调整，在我的脚本里也会做优化。
 
-Cgq2xl5qC1-ARQjxAAHQtHHl1RA689.png
+![](/static/image/Cgq2xl5qC1-ARQjxAAHQtHHl1RA689.png)
 
 在操作系统内核优化方面，我们把配置net.ipv4.tcp_syncookies 设置为 1，为什么呢？syncookies 一般用来防范 SYN 的攻击，或者说释放对于 sync_backlog 的依赖，所以我们改为 syncookies 校验机制。接下来具体讲解下：
 
