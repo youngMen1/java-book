@@ -76,3 +76,7 @@ Ciqah16OzBCAKt5RAABshfA11Ls394.png
 如果是通过 top 命令来分析进程对内存使用率情况，那么我们可以按住“shift+m”，这个时候它就可以按照内存这一列的使用率进行排序，我们可以把操作系统上当前占用率更高的进程整体罗列出来。 ps 命令也是一样，只不过是在 sort 排序这一列里，改成了 -%MEM，按照这一列来进行由大到小的数值排序。
 
 Ciqah16OzBCAMzG_AADk9yzHaj0041.png
+
+以上就是排查进程对操作系统的内存资源使用过度的方式，接下来讲解是进程使用的磁盘 IO分析场景，我们首先用 yum install  sysstat 安装软件包，再在操作系统的 Terminal 终端上面执行 iostat 命令。
+
+Cgq2xl6OzBCAMlMoAABTWkXEzMs498.png
