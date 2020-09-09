@@ -30,7 +30,7 @@ Ansible 的应用通常有两种方式，第 1 种是 adhoc（命令模式）�
 我们刚刚讲到了 adhoc 模式，它在终端执行时是这样的：ansible  <host-pattern>  [options]。举个例子，这里我用 ansible 命令执行，对 testsever1 这台主机执行任务，-m 表示它执行什么样的模块化的任务； shell 是 Ansible 和 adhoc 里面的一个模块，-a 代表执行 shell 里面的哪个命令及参数；touch /tmp/jesonc.txt 代表它在执行创建新的文件。
 
 ## playbook
-Ciqah155wHCARXKPAAEGxYJzasw197.png
+![](/static/image/Ciqah155wHCARXKPAAEGxYJzasw197.png)
 
 playbook 是 Ansibe的一种模式，需要根据 yml 及 palybook 语法要求写一个剧本文件，这个剧本文件以 yml 作为格式，我们可以看这样的一张图，在执行同样一个我刚讲的任务，它的剧本展示如上：在这里定义主机、执行的对象，执行的用户、定义一个变量。
 
@@ -46,7 +46,7 @@ tasks 是 playbook 具体执行的任务，这里任务是执行 shell:touch /t
 
 刚讲到了 adhoc 和playbook 它们的执行用例，我们再来讲一讲 roles。 roles是在一个大型的任务场景里，执行一个整体、工程化任务。
 
-Ciqah155wHCAXLU8AAFRHO4gLxc907.png
+![](/static/image/Ciqah155wHCAXLU8AAFRHO4gLxc907.png)
 
 我们会看到 roles 有一个特定结构的目录结构（如图所示），接下来我们来讲解下这个事例结构：
 
@@ -102,7 +102,7 @@ templates 里面主要放一些模板和相关的配置，我们可以把一些�
 
 接下来我们来讲解这个工程的设计理念是如何实现的。我们先来讲解工程化理念中后台设计这一部分，我们会看到用户端整体请求的一个过程，首先用户端通过浏览器发送 POST/GET 请求，也就是把需要执行的任务发送给后端，由后端来具体执行，这里会看到最右侧用到了三个数据库存储服务，分别是 MySQL、 Redis 和 Mongo。
 
-Ciqah155wHCARtpTAAHVwx-gTak127.png
+![](/static/image/Ciqah155wHCARtpTAAHVwx-gTak127.png)
 
 绝大部分关系型数据都会放在 MySQL 中，Redis 在这里主要作任务锁的作用，自动化任务场景中不希望任务重复执行，或者说我在执行一个任务的时候，不希望有再次调用，就会把它锁在 Redis 里面。最后是 Mongo，Mongo 主要用来记录执行的日志，这会方便溯源，当我们要查找某一个自动化任务执行的过程在哪一个位置出现问题，也可以通过 Mongo 日志直接来进行分析。
 
@@ -125,14 +125,14 @@ Ciqah155wHCARtpTAAHVwx-gTak127.png
 
 这套工程是基于 Python3.6 和 Django 1.8 开发的，ansible用到了 Ansible2.4.1 版本。演示环境用到的是 MySQL 5.7 和 Redis4.1 版本，同时你需要一个开发工具，这里给你推荐 PyCharm，你可以用 PyCharm 工具打开源码，源码请在课程最后的链接里进行下载，安装方式请参考第 10 课时，这里就不再多讲了。
 
-Ciqah155wHGAdMFQAADEpb7Dwsw655.png
+![](/static/image/Ciqah155wHGAdMFQAADEpb7Dwsw655.png)
 
 下面我们来看下自动化部分的代码内容，在整体的任务调用到服务端以后，在 urls.py 文件里定义了一个对外的 API 接口路径，即 /adhocdo 接口。
 
 ### 核心类功能
 
 views.py 视图里面定义了一个 adhoc_task() 函数，它会来负责接收请求，并且执行对应的逻辑。同时，在这套工程里面把前端发过来的任务请求、资产信息关联起来，当它在调用底层的 Ansible 接口时，也需要进行一次封装，这个会在 ansible_api.py 文件里把 Ansible 模块的默认内核方法重做封装提供外部调用。
-Ciqah155wHGAJLotAAFmNJ-edRA051.png
+![](/static/image/Ciqah155wHGAJLotAAFmNJ-edRA051.png)
 
 刚讲到的需要封装 Ansible 类，那么具体封装了哪些类呢？在 ansible_api.py 这个文件里面包含 4 个大类，一个是 MyInventory()，另外一个是 ModelResultsCollector(CallbackBase)，还有一个是 PlayBookResultsCollector(CallbackBase)，最后是 ANSRunner(object)。
 
@@ -156,25 +156,25 @@ PlayBookResultsCollector(CallbackBase) 跟前面类是一样的，只不过它�
 
 最后我来给你演示一下整个工程的执行过程。
 
-Ciqah155wHGAVPdAAADGi3JVaHk602.png
+![](/static/image/Ciqah155wHGAVPdAAADGi3JVaHk602.png)
 
 刚讲到了对外暴露的是  /adhocdo  的接口地址，现在我们来请求这个地址，并且按照它的参数要求来进行请求。这里用 POST 方法，提交的是 taskid 这个参数，主要是任务的 ID。mod_type 主要是模块的类型，因为 adhoc 这个任务是需要以模块的方式来进行任务执行的。执行的参数就代表具体的任务命令了。sn_key 对主机起到唯一标识的作用，我们需要对哪一台主机就用 sn_key 来对应的执行。
 
-Ciqah155wHKAPwtfAACH5Q2NW3o196.png
+![](/static/image/Ciqah155wHKAPwtfAACH5Q2NW3o196.png)
 
 这里有具体的参数，我用 JSON 的格式提交的任务， JSON 的格式是这样的，举个例子，我们会看到这里有执行的任务 ID，然后类型是 shell，执行的命令是 touch 一个文件，group 它执行的是主机组（可选择不加）。最后 加入机器的sn_key。
 
-Ciqah155wHKAO35aAAGx4BbLhL0386.png
+![](/static/image/Ciqah155wHKAO35aAAGx4BbLhL0386.png)
 
 
 接下来我来演示一下 IMOOCC自动化任务执行的过程。在上一个课时里面我们讲到了 IMOOCC 工程对自动化资产的收集。有了上一课时的基础，我在本地的这套工程已经收集到了对应的资产信息，如本地的这台输入主机的信息就已经在我的这套资产管理系统里面直接提取。
 
-Ciqah155wHOATKf0AATlRJB7cOI285.png
+![](/static/image/Ciqah155wHOATKf0AATlRJB7cOI285.png)
 
 
 提交的Json格式如图所示，exec_args中执行命令的方式是 touch 一个文件，我这里执行命令是在/tmp目录下touch 一个 test22 的文件。sn_key 是唯一主机的标识，我们可以在资产管理系统里面点击详细这一部分来提取出 sn 号，这个就是它的唯一标识。
 
-Cgq2xl55wHOAH6vtAAMlclXaedE645.png
+![](/static/image/Cgq2xl55wHOAH6vtAAMlclXaedE645.png)
 
 mod_type 是直接执行 adhoc 的模块方式，这里我执行的是 Shell 的命令。
 
@@ -183,16 +183,16 @@ mod_type 是直接执行 adhoc 的模块方式，这里我执行的是 Shell 的
 接下来，我在 Chrome 下使用模拟 post 请求客户端插件 PostMan，来模拟提交这个任务到工程的自动化任务 API 接口，并开始执行。
 
 
-Cgq2xl55wHOACyO2AAXukl_6PSE019.png
+![](/static/image/Cgq2xl55wHOACyO2AAXukl_6PSE019.png)
 
 大家按照 JSON 的格式配置好后，可以参考设置的方式，然后点击 send按钮，这样的话就会把我的数据进行 POST 提交，我们会看到它这里已经在 loading 中，需要等待服务端返回的结果。
 
 
-Ciqah155wHSAPhPbAANojZQK3YM533.png
+![](/static/image/Ciqah155wHSAPhPbAANojZQK3YM533.png)
 
 当服务端返回了内容，看到 http reponse 的状态是成功的，并看到信息"sucess"（成功的），并看到执行此任务具体日志（它是ansible的接口所返回的）。
 
-Ciqah155wHSAYKeEAAJCjs_ILvU244.png
+![](/static/image/Ciqah155wHSAYKeEAAJCjs_ILvU244.png)
 
 
 然后通过另外一种方式我们再来验证是不是成功，可以直接 ssh 登录服务器主机上，然后进入 tmp 目录，输入 ls，会发现 test22 这个文件在我录制视频的时间点有对应生成这样的一个文件，说明自动化任务是已经执行成功了。
