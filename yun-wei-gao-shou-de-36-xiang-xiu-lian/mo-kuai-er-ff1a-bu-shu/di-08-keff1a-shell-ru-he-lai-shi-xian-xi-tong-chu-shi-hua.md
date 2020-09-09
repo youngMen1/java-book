@@ -133,4 +133,318 @@ Cgq2xl5qC1-ARQjxAAHQtHHl1RA689.png
 以上就是这个脚本里面我摘取出来的几点优化项来给你重点讲的。
 
 ## Shell 脚本逻辑
+在整个 Shell 初始化脚本中还有很多个优化项，接下来我们可以打开这个脚本自己看一下。我登录到控制台，连接服务器以后，用 vim 编辑器将脚本打开，从上给你一一讲解一下。
 
+
+```
+
+WORK_DIR=$(pwd)
+
+#Only root
+
+[[ $EUID -ne 0 ]] && echo 'Error: This script must be run as root!' && exit 1
+
+```
+
+
+
+
+首先，最开始我会判断是不是 root 用户在运行？这里只能是 root 用户来执行这个初始化脚本。
+
+
+
+
+
+```
+###
+
+# Close selinux services
+
+###
+
+/bin/sed -i 's/mingetty tty/mingetty --noclear tty/' /etc/inittab
+
+/bin/sed -i 's/SELINUX=permissive/SELINUX=disabled/' /etc/selinux/config
+
+/bin/sed -i 's/SELINUX=enforcing/SELINUX=disabled/'  /etc/selinux/config
+
+
+
+/bin/cat<<EOF >> /etc/profile
+
+
+
+export PS1='\u@\h:\w\n\\$ '
+
+
+
+EOF
+```
+
+
+
+
+
+上面这一段是用于关闭 selinux，并且把终端的交互的环境显示通过 ps1 变量设置成一个自定义模式。
+
+
+
+
+
+```
+###
+
+# Close unuseful services
+
+###
+
+systemctl disable 'postfix'
+
+systemctl disable 'NetworkManager'
+
+systemctl disable 'abrt-ccpp'
+```
+
+
+
+
+
+同时，会关闭一些不常用到的服务，接下来会新建操作系统上的一个普通用户，并且配置这个普通用户的 sudoers 权限，控制它是不是可以去提取 root 权限。因为我们尽可能的在生产环境里把 root 账号关闭，让普通用户来进行登录。如果涉及需要 root 用户的话，可以给它开提权控制。
+
+```
+
+###
+
+# Change Intel P-state
+
+###
+
+
+sed -i '/GRUB_CMDLINE_LINUX/{s/"$//g;s/$/ intel_pstate=disable intel_idle.max_cstate=0 processor.max_cstate=1 idle=poll"/}' /etc/default/grub
+```
+
+
+
+
+
+接下来就是调整我的CPU的能源管理模块优化，这里调整的是 pstate 和 cstate 数值。
+
+
+
+
+
+```
+###
+
+#Bash Aliases
+
+###
+
+cat > /etc/profile.d/Je.sh <<EOF
+
+alias ls='ls -hAF --color=auto --time-style=long-iso'
+
+alias ll='ls -l'
+
+alias cp='cp -i'
+
+alias mv='mv -i'
+
+alias rm='rm -i'
+
+alias ds='ds -h'
+
+alias df='df -h'
+
+alias grep='egrep --color'
+
+
+
+EOF
+
+```
+
+
+
+
+再往下，就涉及运维管理操作的便捷性，我会把一些常用到的命令，通过 alias 命令做一个别名，这样更加容易进行管理和维护。后面还会添加一个公共的密钥，当我们通过客户端和服务端建立ssh连接时，当然不希望是通过用户密码的方式，通过密钥的方式更加常见，因为这样可以防止中间人被劫持，通过密钥的方式也会更加安全。
+
+
+
+
+
+```
+###
+
+# Public key
+
+###
+
+mkdir /root/.ssh
+
+pub_key='ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4mvukv4f5seBuzrCnCCm1DpSgYw/kvq+XgsUP8mnzUpyaQ6D8BKfbOn6T20tUU/ksiJwSuUQHfw5v9JsnBACto3o/RmId0Ltn4DCq19sSwMP3YJb9dRb8SA/Pc5Xl7MPwPoSYyuY20ztMfo1GBx5N9dDuQ3j1MdKYTY9SdfFwPr0ZQvesKT1ozfQ9HHrcUi1CLJw+irYW9+jU39CsMrrZmCjb/n53gP87Do0lj9TkqXK2SYNdA88cmK2IQJP3LfFWWrwYH01FkImZbt7ODDQ21BqGccLY7xCbsNb1iBlT8Mpy4/Wlg1qqnNPxBbw1nrs9A+2MnAfGDHXYhkFC/n6wQ== root@linux.jesonc.net'
+
+echo $pub_key >> /root/.ssh/authorized_keys
+
+chmod 700 /root/.ssh
+
+chmod 600 /root/.ssh/authorized_keys
+
+chown -R root:root /root/.ssh
+```
+
+
+
+
+
+所以在操作系统安全性的考虑方面，我会自动的给它生成一个密钥，这个密钥是公共密钥，可以直接在本地保存好对应的私钥，那么我就可以直接通过私钥来登录。
+
+
+
+
+```
+
+found=`grep -c net.ipv4.tcp_tw_recycle /etc/sysctl.conf`
+
+if ! [ $found -gt "0" ]
+
+then
+
+cat > /etc/sysctl.conf << EOF
+
+net.core.rmem_max = 16777216
+
+net.core.wmem_max = 16777216
+
+fs.file-max = 131072
+
+kernel.panic=1
+
+net.ipv4.tcp_rmem = 4096 87380 16777216
+
+net.ipv4.tcp_wmem = 4096 65536 16777216
+
+net.ipv4.tcp_timestamps = 0
+
+net.ipv4.tcp_window_scaling = 1
+
+net.ipv4.tcp_sack = 1
+
+net.ipv4.tcp_no_metrics_save = 1
+
+net.core.netdev_max_backlog = 3072
+
+net.ipv4.tcp_max_syn_backlog = 4096
+
+net.ipv4.tcp_max_tw_buckets = 720000
+
+net.ipv4.ip_local_port_range = 1024 65000
+
+net.ipv4.tcp_fin_timeout = 5
+
+net.ipv4.tcp_tw_recycle = 1
+
+net.ipv4.tcp_retries1 = 2
+
+net.ipv4.tcp_retries2 = 10
+
+net.ipv4.tcp_synack_retries = 2
+
+net.ipv4.tcp_syn_retries = 2
+
+net.ipv4.tcp_syncookies = 1
+
+EOF
+
+fi
+```
+
+
+
+
+
+我们知道文件句柄的大小，内存里面的空间分配的大小，还有刚讲到的网卡队列相关的大小，都是在这里一起来做优化，还有我们刚讲到的 syncookie，你也可以看到在这里做了相应的优化。
+
+
+
+
+
+```
+###
+
+# Max open files
+
+###
+
+found=`grep -c "^* soft nproc" /etc/security/limits.conf`
+
+if ! [ $found -gt "0" ]
+
+then
+
+cat >> /etc/security/limits.conf << EOF
+
+* soft nproc 2048
+
+* hard nproc 16384
+
+* soft nofile 8192
+
+* hard nofile 65536
+
+EOF
+
+fi
+```
+
+
+
+
+
+这一段就是设置操作系统最大的文件打开数，这里你可以通过这种方式来优化。接下来，就是调整 ssh 的登录端口，我把默认的端口改成 9922 端口。再往下，就是 history 也就是保留的历史终端操作记录的长度，及它保留的历史记录的格式，一般会希望保留更多的历史记录。
+
+
+
+
+```
+
+###
+
+# Auto configure IP
+
+###
+
+
+
+cd ${WORK_DIR}
+
+sh ./autoconfigip.sh
+```
+
+
+
+
+
+接下来这一段就比较特别，会调用执行 autoconfigip.sh 脚本。这个脚本是用于自动去配置 IP，你感兴趣可以把这个脚本打开，会发现我做到的就是把动态的 IP 通过配置文件的方式自动生成一个静态的网卡的 eth 设备的 IP，我们就不用手动去配置 IP 。
+
+
+
+
+
+```
+###
+
+# Configure yum repository
+
+###
+
+#cat > /etc/yum.repos.d/Jjesonc.repo << EOF
+
+#-----------------
+
+```
+
+
+
+
+最后这部分我加了注释，这段配置 yum 源。一般的大公司都会需要有一个自己的 yum 源，yum 源可以去维护我们自己的软件包，还有我们定制的软件包，以及整体的相关依赖，所以有对应的公司的 yum 源，你可以把 yum 源的配置一并放入到你的初始化脚本里面，这样的话，在你一台新的机器启动以后，默认让它去执行这样的一个初始化脚本，就把你操作系统里面很多需要自己去维护的内容，通过脚本的方式执行了，对操作系统的运维管理而言，这个是非常方便且非常有效的。
