@@ -23,7 +23,7 @@
     * [第14课：割接关键思路解析：停服维护、无缝升级如何设计](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie/di-14-ke-ff1a-ge-jie-guan-jian-si-lu-jie-xi-ff1a-ting-fu-wei-hu-3001-wu-feng-sheng-ji-ru-he-she-ji.md)
     * [第15课：服务向 Kubernetes 容器平台迁移必须了解的事情](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie/di-15-ke-ff1a-fu-wu-xiang-kubernetes-rong-qi-ping-tai-qian-yi-bi-xu-le-jie-de-shi-qing.md)
   * [模块四：故障排查](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha.md)
-    * 第16课：典型系统故障：快速排错操作系统问题进程
+    * [第16课：典型系统故障：快速排错操作系统问题进程](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-16-ke-ff1a-dian-xing-xi-tong-gu-zhang-ff1a-kuai-su-pai-cuo-cao-zuo-xi-tong-wen-ti-jin-cheng.md)
   * [模块五：监控](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-wu-ff1a-jian-kong.md)
     * 第24课：Zabbix 自动发现和自动注册
   * [模块六：安全](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-liu-ff1a-an-quan.md)
