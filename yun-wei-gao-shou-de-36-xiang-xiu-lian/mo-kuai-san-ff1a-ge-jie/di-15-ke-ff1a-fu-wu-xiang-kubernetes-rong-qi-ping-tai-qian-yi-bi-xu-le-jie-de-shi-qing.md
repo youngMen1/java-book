@@ -14,7 +14,7 @@
 
 为什么需要关注程序中有状态的这些内容呢？这是因为程序迁移到 K8S 的架构下，K8S 调度需要对 Pod 节点的弹性扩缩或资源调度。如果服务固定依赖本地存储空间数据，那么就可能出现因为 K8S 的调度导致这部分已经存储在本地的数据丢失，因为启用新的业务 pod，无法读取原有的 pod 上的数据。这时我们需要将数据在本地做无状态化。
 
-Ciqah16MTOCAHEBfAAPnCtCdK5Y628.png
+![](/static/image/Ciqah16MTOCAHEBfAAPnCtCdK5Y628.png)
 
 以上就是在迁移到 K8S 之前所需要重点考虑的第一个问题，如何解决呢？就需要将业务服务做到本地无状态化，这里我画了一张图。
 
@@ -23,7 +23,7 @@ Ciqah16MTOCAHEBfAAPnCtCdK5Y628.png
 
 ## 业务日志收集排查
 
-Ciqah16MTOCAQCSAAAKhbPhNDg4966.png
+![](/static/image/Ciqah16MTOCAQCSAAAKhbPhNDg4966.png)
 
 第二个问题，当程序从非 K8S 架构迁移到 K8S 架构后，对于日志的收集也是我们需要关注的问题，在 Linux 的开源系统环境下，传统的收集方式是首先通过 Syslog 协议，然后通过 Linux 系统上的 Syslog-d 或者 Rsyslog 日志服务对业务日志进行收集。这里我画了一张图，这张图显示的是在传统收集方式和非 K8S 架构下，对日志常用的收集方式。
 
