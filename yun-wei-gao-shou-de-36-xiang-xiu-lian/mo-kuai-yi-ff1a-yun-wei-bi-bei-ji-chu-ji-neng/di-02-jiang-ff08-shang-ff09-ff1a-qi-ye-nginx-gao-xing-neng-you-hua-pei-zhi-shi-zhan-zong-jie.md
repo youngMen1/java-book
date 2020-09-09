@@ -79,4 +79,4 @@ Nginx 第二个基础配置优化项是 IO 流事件模型，我们经常可以�
 
 第三个基础配置优化是零拷贝，所谓零拷贝的配置是在 Nginx 中的 HTTP 配置模块中添加一个 sendfile on 配置项，它便是一个零拷贝，所谓零拷贝并不代表不拷贝了，而是说它做到了文件的内核态到用户态的零拷贝。
 
-CgpOIF5FJ72ARWG4AAB82n3NOT0111.png
+![](/static/image/CgpOIF5FJ72ARWG4AAB82n3NOT0111.png)
