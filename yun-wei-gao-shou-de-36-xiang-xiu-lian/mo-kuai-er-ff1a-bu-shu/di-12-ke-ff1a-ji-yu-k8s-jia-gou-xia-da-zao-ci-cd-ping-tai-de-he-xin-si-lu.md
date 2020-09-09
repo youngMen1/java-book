@@ -74,3 +74,51 @@ Cgq2xl58Pj2ARAUEAAECOYYrTH8534.png
 为了让你能够更加形象地来理解，这里画了一张图：
 
 Cgq2xl58Pj2ASTTbAAPOlOYZ6DM633.png
+
+我们看到这里有 K8s 整个集群，包含有三个 Node 节点，每个 Node 节点上有一组 Pod。Pod 会分为两大类型，一个是 Master 类型的 Pod，一个是 Slave 类型的 Pod。在 K8s 里面最小的管理单元是 Pod ，我们姑且认为它是一个独立的服务个体。
+
+
+
+这个 Pod 上面运行的是 Jenkins 的 Master 服务，在另外两个 Node 上面的是 Jenkins 的 Slave 的 Pod 服务，所以我们会看到在 K8s 这套集群体系下，Jenkins 是以主从的方式运行在 K8s 的架构之上， Jenkins 的 Job 任务交给 Slave 节点去完成，而 Master 只负责进行 Job 的管控或中心平台的作用。
+
+## 优势
+
+1、Job 资源隔离
+
+有一个优势是 Job 间资源隔离，我会看到 Jenkins 将 Job 分给了不同的 Pod 处理，Pod 本身就是以容器化（cgroup）进行资源隔离，所以 Job 间不会造成进程的争抢。
+
+
+
+2、动态伸缩
+
+同时，K8s 的支持动态伸缩特性，当 Pod 资源不足，需要扩容新的 Pod 的时候，可以借用 K8s 的动态伸缩模式来进行 Pod 资源的扩容。
+
+
+
+3、高可用
+
+同时也保证了服务的高可用，因为我们知道 K8s 对服务的拉起可以做到自动的故障诊断及故障拉起。
+
+
+
+这个就是 Jenkins 本身融合到 K8s 架构里面的高可用架构的图示。在最外面挂了一组存储卷，我们可以把 Jenkins 需要持久化的相关内容，以 PVC 方式挂载到分布式的存储之中。这样的话就保证了数据的高可靠。
+
+## 如何实现？
+
+接下来我讲解一下，如果你要来部署这样的一套架构的话，它的核心思路是什么样的？整个部署完 K8s 的集群以后，我们首先需要部署的就是 Jenkins 的 Master 节点。
+
+
+
+Master 节点相关的配置是通过 K8s 来创建几个重要的对象：一个是 namespace，这是 K8s 给 Jenkins 的一个独立的命名空间。第二个就是 PVC 对象，我们会在图中看到一组外挂的存储节点，创建 PVC 对象。接下来就是要创建 deployment 对象，如果你了解 K8s 一定会清楚，deployment 是一个非常重要的 K8s control 的对象，它直接控制着 Pod 资源的镜像、Pod 的资源使用，还有它的服务探针等相关内容，这个都是在 deployment 里面进行创建的。最后是创建 service 对象，service 对象创建以后，Pod 就可以正式的对集群内部提供服务。
+
+
+
+以上，就是在 Master Jenkins 节点在 K8s 里面创建的过程。接下来，我们就可以在 Master 启用以后，登录Jenkins的管理控制台来配置 Slave 结点。
+
+
+
+在控制台里面，我们需要重点的两步来配置 Slave 节点，就是：
+
+1.我们需要安装 K8s 的插件(kubernetes plugin)。
+
+2.需要配置 Slave 的模板信息，也就是 Slave deployment。
