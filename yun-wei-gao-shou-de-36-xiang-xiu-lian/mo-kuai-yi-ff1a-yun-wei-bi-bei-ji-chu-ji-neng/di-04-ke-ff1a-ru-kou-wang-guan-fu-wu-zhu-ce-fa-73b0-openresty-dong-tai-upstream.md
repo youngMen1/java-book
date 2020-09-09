@@ -90,7 +90,7 @@ CgpOIF5XlsKAFA4dAACi4m6_YDE387.png
 
 
 我们看下如图描述的内容：
-Cgq2xl5Xls6AJ57nAAEo03hFxpQ626.png
+![](/static/image/Cgq2xl5Xls6AJ57nAAEo03hFxpQ626.png)
 
 
 通过开放接口，管理中心或者配置中心用可以调用这三个接口动态修改入口网关的负载均衡配置。我们接下来重点介绍Openresty Lua 语言如何开发实现这三个接口。
