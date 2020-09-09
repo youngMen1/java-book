@@ -116,4 +116,9 @@ Cgq2xl5zJpSAMOZhAAJZ02uIxOg018.png
 
 这个工程的信息展示，你可以看到，在左侧的菜单栏里面，我会把整个 Devops 里与工程相关的功能做一个罗列。
 
-CgpOIF5zJpSACdzWAAA33Ac2y-E712.png
+CgpOIF5zJpSACdzWAAA33Ac2y-E712.png'
+
+
+* 按照某一个类型展示
+
+另外，在中间的大窗口，我会按资源类型做一个全局的统计。
