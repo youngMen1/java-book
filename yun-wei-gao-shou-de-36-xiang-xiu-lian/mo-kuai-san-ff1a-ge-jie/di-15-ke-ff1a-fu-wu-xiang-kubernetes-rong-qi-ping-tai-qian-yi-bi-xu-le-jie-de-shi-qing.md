@@ -41,3 +41,11 @@ EFK 是个什么样的架构呢？E 表示 Elasticsearch，它是一个搜索存
 
 
 Ciqah16MTOGAGl1PAAPqPWzdVpo519.png
+
+针对这套 EFK 架构，我同样画了一张图，这里介绍最常用到的架构方案。在 K8S 的 node 节点里可以通过 PVC 让容器将日志目录挂载到 node 节点的本地目录下，然后通过 filebeat 去收集日志信息，放到中心日志存储里。
+
+
+
+filebeat 可以通配 *.log 这样的样例文件，这样就能直接把整体的日志信息作同步。在图示中我画了一个路径，看到固定的日志路径 /datal/log 下，我可以通配它的 `<namespace> `目录，或是` <workload-type> 、 <workload-name> 和 <logname>` 这些日志文件，它们都可以通过 filebeat 来通配。 相对于 Rsyslog 而言，filebeat 对于日志收集器对 K8S 的弹性和资源调度模式更加友好。
+
+## Java 内存溢出问题排查
