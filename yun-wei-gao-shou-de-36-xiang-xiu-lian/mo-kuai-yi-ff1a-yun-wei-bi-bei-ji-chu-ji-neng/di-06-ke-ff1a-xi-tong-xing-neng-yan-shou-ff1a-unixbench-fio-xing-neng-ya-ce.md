@@ -189,7 +189,7 @@ FIO 是一个开源的主流的 Linux 磁盘 IO 测试工具。通常对于磁�
 
 我们使用 FIO 这个工具可以针对这三项指标去进行测试，并分析结论，在使用 FIO 之前建议你尽量使用一台空闲的机器来运行，以免因为 FIO 对操作系统上的磁盘或者文件的读写而损坏文件系统，这个地方你需要注意一下。
 
-Cgq2xl5gtaCAGekxAAmbidRaDZI069.png
+![](/static/image/Cgq2xl5gtaCAGekxAAmbidRaDZI069.png)
 
 关于 FIO 的使用，参数相比于 Unixbench 就更多了。我们会看到这里有很多的参数说明，值得重点注意的有：bs 这个参数表示块的大小， iodepth 表示队列的请求深度，我们可以理解为在请求 IO 时会有多少个并发，如果深度数值越大说明并发请求越多。
 
