@@ -61,11 +61,11 @@ Cgq2xl5zJpOAfJ37AAKKZIal5Ks938.png
 
 使用 Python manage.py runserver 的方式，在本地监听 5555 端口，并把这个服务运行起来。然后打开浏览器，输入 127.0.0.1:5555 端口的 url地址，这时就可以登录后台系统。在后台系统中你可以看到整个界面会展示几类信息：物理设备信息、虚拟设备信息、网络设备信息。
 
-CgpOIF5zJpOALuvRAACLq9bGI6I552.png
+![](/static/image/CgpOIF5zJpOALuvRAACLq9bGI6I552.png)
 
 我们重点看下物理设备和虚拟设备信息。在物理设备信息栏里会看到这里已经扫描到了一台物理机，它是一台承载 Docker 类型的物理机。
 
-Cgq2xl5zJpOAcCmiAAKjQ3sBmI8075.png
+![](/static/image/Cgq2xl5zJpOAcCmiAAKjQ3sBmI8075.png)
 
 点击子链接会进入新的界面，新界面会展示这台物理设备上的机器相关属性，比如 IP 地址、服务器品牌、操作系统等（备注：你可以看到这里的服务器品牌是 VMware，因为本地资源有限，所以没有物理设备，这里稍微改动了代码，把 VM 当成物理设备来处理，所以这里实际上是一台虚拟机）。
 
