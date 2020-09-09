@@ -27,7 +27,7 @@ Ansible 的应用通常有两种方式，第 1 种是 adhoc（命令模式）�
 
 
 
-我们刚刚讲到了 adhoc 模式，它在终端执行时是这样的：ansible  <host-pattern>  [options]。举个例子，这里我用 ansible 命令执行，对 testsever1 这台主机执行任务，-m 表示它执行什么样的模块化的任务； shell 是 Ansible 和 adhoc 里面的一个模块，-a 代表执行 shell 里面的哪个命令及参数；touch /tmp/jesonc.txt 代表它在执行创建新的文件。
+我们刚刚讲到了 adhoc 模式，它在终端执行时是这样的：`ansible  <host-pattern>  [options]。`举个例子，这里我用 ansible 命令执行，对 testsever1 这台主机执行任务，-m 表示它执行什么样的模块化的任务； shell 是 Ansible 和 adhoc 里面的一个模块，-a 代表执行 shell 里面的哪个命令及参数；touch /tmp/jesonc.txt 代表它在执行创建新的文件。
 
 ## playbook
 ![](/static/image/Ciqah155wHCARXKPAAEGxYJzasw197.png)
