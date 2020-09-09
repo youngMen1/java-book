@@ -83,4 +83,19 @@ data:
 举个例子，在 K8S 里通过 yaml 语法创建对象的时候，如果我创建一个 Configmap，它的作用是创建一台数据库相关配置文件的相关信息，我们知道数据库的配置文件信息包含主机名称、主机端口、以及数据库名称，这些都是数据库在进行初始化安装的时候，我们通常所需要配置的一些相关信息。这些信息我们可以写到 Configmap 里，然后通过 Configmap 传递到你的容器里，去做初始化配置的生成。
 
 
+```
+apiVersion: v1
+kind: Secret
+metadata:
+    name: Mysql-secret
+    labels:
+        app: k8smysql
+data:
+    MYSQL_ROOT_PASSWORD: jesonc.com  //root口令
+    MYSQL_USER_NAME: jesonc 普通用户名
+    MYSQL_USER_PASSWORD: # 普通用户口令（"dbuser"）
+```
+
+
+
 
