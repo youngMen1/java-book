@@ -17,7 +17,7 @@
     * [第09课：搭建基于 Jenkins 的持续集成平台所需关注的几个问题](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu/di-09-ke-ff1a-da-jian-ji-yu-jenkins-de-chi-xu-ji-cheng-ping-tai-suo-xu-guan-zhu-de-ji-ge-wen-ti.md)
     * [第10课：基于 Python+Ansible+Django 搭建 CMDB 平台](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu/di-10-ke-ff1a-ji-yu-python-+-ansible-+-django-da-jian-cmdb-ping-tai.md)
     * [第11课：基于 Python+Ansible+Django 搭建自动化任务平台](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu/di-11-ke-ff1a-ji-yu-python-+-ansible-+-django-da-jian-zi-dong-hua-ren-wu-ping-tai.md)
-    * 第12课：基于 K8S 架构下打造 CI\CD 平台的核心思路
+    * [第12课：基于 K8S 架构下打造 CI\CD 平台的核心思路](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu/di-12-ke-ff1a-ji-yu-k8s-jia-gou-xia-da-zao-ci-cd-ping-tai-de-he-xin-si-lu.md)
   * 模块三：割接
   * 模块四：故障排查
   * 模块五：监控
