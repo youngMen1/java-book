@@ -113,11 +113,11 @@ Ciqah16C0-6AK5boAATDWWIZsHk523.png
 
 接下来通过我发布的脚本，把代码发布到线上，这里就需要演示做变更后的检查。
 
-Cgq2xl6C0-6AYeyEAAK0jgdukno479.png
+![](/static/image/Cgq2xl6C0-6AYeyEAAK0jgdukno479.png)
 
 当做完域名解析以后，需要检查新的域名是否能按照要求去解析。这个时候我需要做的是 ping 新的域名，看看是否正常，可以看到我 ping 了这个域名以后返回地址是正常的。此外，通过 ping 命令，我还可以关注返回的延迟是否符合预期，可以看到当前这个延迟也是符合的。
 
-Ciqah16C0-6AXw64AAE_YFW0DdE654.png
+![](/static/image/Ciqah16C0-6AXw64AAE_YFW0DdE654.png)
 
 如果我 ping 对应的域名没有返回结果（看不到 IP 地址或地址不对），这说明我的解析出了问题，需要进一步排查 DNS 解析是否正常，我们可以通过其他工具来检查，比如 nslookup，它可以指定 DNS 的解析服务地址，这里使用 8.8.8.8 作为一个 local dns 来进行解析，接下来我再敲入 www.jesonc.com 这个域名，看看是否解析正常。
 
