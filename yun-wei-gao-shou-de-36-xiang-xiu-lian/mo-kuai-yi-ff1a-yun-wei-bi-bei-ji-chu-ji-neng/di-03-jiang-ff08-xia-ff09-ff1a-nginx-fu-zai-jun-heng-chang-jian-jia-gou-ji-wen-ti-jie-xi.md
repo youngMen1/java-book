@@ -170,3 +170,5 @@ http {
 第二种方式基于 URL_hash，URL_hash 方式就是添加一个自定义 hash，通过设置 Nginx 内部的请求变量 $request_url 进行 hash 运算，这样就可以基于这个请求的 URL 地址来做 hash 了，也就做到 Session 的保持的方案。
 
 ## 真实的 Realserver 状态检测
+
+Cgq2xl5U0sqAES8QAAFVZjwh4gg899.png
