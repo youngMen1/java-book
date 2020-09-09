@@ -19,7 +19,7 @@
     * [第11课：基于 Python+Ansible+Django 搭建自动化任务平台](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu/di-11-ke-ff1a-ji-yu-python-+-ansible-+-django-da-jian-zi-dong-hua-ren-wu-ping-tai.md)
     * [第12课：基于 K8S 架构下打造 CI\CD 平台的核心思路](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu/di-12-ke-ff1a-ji-yu-k8s-jia-gou-xia-da-zao-ci-cd-ping-tai-de-he-xin-si-lu.md)
   * [模块三：割接](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie.md)
-    * 第13课：网站割接必须掌握的 N 个检查项及命令
+    * [第13课：网站割接必须掌握的 N 个检查项及命令](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie/di-13-ke-ff1a-wang-zhan-ge-jie-bi-xu-zhang-wo-de-n-ge-jian-cha-xiang-ji-ming-ling.md)
   * [模块四：故障排查](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha.md)
     * 第16课：典型系统故障：快速排错操作系统问题进程
   * 模块五：监控
