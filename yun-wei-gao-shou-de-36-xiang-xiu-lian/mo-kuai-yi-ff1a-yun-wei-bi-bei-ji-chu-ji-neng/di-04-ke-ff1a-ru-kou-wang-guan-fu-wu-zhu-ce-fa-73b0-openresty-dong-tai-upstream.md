@@ -50,7 +50,7 @@ CgpOIF5XlqGAJ1iwAAE2ca-U8Go037.png
 这个场景中，如果upstream配置不是通过动态的方式去实现调整，就需要通过手动的方式（先修改配置，再手工重启服务等），手动的方式没法作到自动化及实时触发调整。
 
 
-Cgq2xl5XlrOAW-n0AAFbOCQssio629.png
+![](/static/image/Cgq2xl5XlrOAW-n0AAFbOCQssio629.png)
 
 
 我们再看一个常见的 K8s 的入口网关架构，这里就使用了动态 Upstream。我们知道 K8s + Docker 的服务部署模式下，ETCD 作为服务注册发现中的 KV存储数据库，存取着后台节点服务的注册信息，包含服务名称、连接方式等。所以，在图中会把所有后台的 服务节点(App1-App4) 的信息注册到 ETCD 的数据库中存储。然后 入口网关(如：Nginx) 通过查看etcd中数据并根据变化情况动态地调整 Upstream 配置，这个就是在K8S中动态入口网关理论原理。
