@@ -26,3 +26,5 @@
 CgotOV3OcR6AXUcsAACOQHI_BVM743.png
 
 在 1989 年，随着 Bash 的诞生，标志着一个真正属于 Shell 的时代的来临，Bash 提供了更优秀的语法支持，同时还是开源、开放的项目。从 1989 年起，更多的系统默认使用 Bash 作为主机交互界面。
+
+## Shell 的价值
