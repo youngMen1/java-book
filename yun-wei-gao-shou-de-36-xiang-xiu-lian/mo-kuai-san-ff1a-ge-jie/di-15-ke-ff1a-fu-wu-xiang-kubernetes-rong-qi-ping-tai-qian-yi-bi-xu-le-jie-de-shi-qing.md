@@ -173,13 +173,13 @@ data:
 
 ## 步骤五：配置 Service
 
-Ciqah16MTOOAXFDwAAL8KTjCLf4820.png
+![](/static/image/Ciqah16MTOOAXFDwAAL8KTjCLf4820.png)
 
 第 5 步是配置 Service。Service 使得 Pod 可以提供内部访问方式，对外能够抽象成一个对象，也就是 Service 这个对象。集群内部可以直接使用 Service Name 进行通信，这就是 Service 的作用。我们看一下这个图。
 
 ## 步骤六：配置 Ingress
 
 第 6 步是配置 Ingress。Ingress 可以暴露内部的服务给外部，所以它常承担是 7 层反向代理和负载均衡的作用。当把内部服务暴露到外部的时候就会用到 Ingress 这个对象，
-Ciqah16MTOOABerKAAQ882_XZBc624.png
+![](/static/image/Ciqah16MTOOABerKAAQ882_XZBc624.png)
 
 在做完 Ingress 后，把服务迁移到 K8S 集群的步骤基本上就已经完成了，这是一个通用的6个步骤。
