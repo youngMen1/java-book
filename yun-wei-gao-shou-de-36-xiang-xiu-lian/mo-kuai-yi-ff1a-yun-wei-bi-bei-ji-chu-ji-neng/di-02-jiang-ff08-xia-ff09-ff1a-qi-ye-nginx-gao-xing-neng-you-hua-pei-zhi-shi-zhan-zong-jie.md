@@ -51,7 +51,7 @@
 
 第 2 个缓存设置方式需要对 HTTPS 访问进行缓存优化，因为当前我们很多网站通常在开启 HTTPS ，当开启https后客户端访问服务端打开一次浏览器，通过https方式会比 HTTP 请求握手会要增加很多次从而延迟也增加了。这时就需要考虑 HTTPS 是否有更好的优化方案来减少客户端和服务端请求。
 
-Cgq2xl5Li8uABNYPAADrCiQf_mE895.png
+![](/static/image/Cgq2xl5Li8uABNYPAADrCiQf_mE895.png)
 
 如图中是一个https请求过程，实际在进行 HTTPS 请求之前的需要进行TCP 的三次握手过程，而这里我只是描述 HTTPS 的建连过程，客户端发送 hello 报文，服务端发送证书，客户端进行加密，服务端验证加密。这时开始进行服务端与客户端的传输。我们看到整个 HTTPS 建连增加了部分的证书加密的协商。
 
@@ -73,7 +73,7 @@ open_file_cache_valid 是设置主动更新和检查的时间，表示每隔 30 
 
 ## 代理缓存优化
 
-Cgq2xl5Li66AdSdZAACCZvpT1KM925.png
+![](/static/image/Cgq2xl5Li66AdSdZAACCZvpT1KM925.png)
 
 最后一个内容就是代理缓存的优化了，代理缓存比较常见，比如说代理 访问PHP 后台服务并作缓存，也可以代理 JAVA 服务，缓存 JAVA后台服务的返回数据，注意这里不局限于通过 http_proxy来作代理缓存，只要 Nginx 支持的代理模式(UWSGI、SGI)都可以设置代理缓存。你可以来看一下通过http_proxy设置的如下示例：
 
@@ -87,15 +87,9 @@ proxy_cache_path /path/to/cache levels=1:2 keys_zone=my_cache:10m max_size=1
 
 proxy_cache_path 表示在本地分配哪个路径来存储并缓存后台返回数据；cache levels 表示存放文件的分层方式；my_cache:10m max_size=10g 分别表示是开辟一个名为my_cache共享块（用于统计访问次数）及缓存的单个文件的最大大小等。
 
-
-
 这些都是做对应的缓存在本地的文件目录相关属性的一些设置。另外一块的设置表示在proxy_cache 的时候，通过 location 引用到 cache 的名称。
 
-
-
 代理缓存的特性是什么呢？首先通过 Nginx 作代理，可以支持实现动静态的分离，静态元素直接交给 Nginx 来处理，再把后端动态数据适当作缓存。通常做这种代理+缓存的架构，是能有效的提高整体网站的访问并发性能。
-
-
 
 对于我们提到的服务端的缓存优化大多交给开发来做，这里就不再做非 Nginx 的缓存配置的讲解了。
 
