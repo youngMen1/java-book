@@ -173,7 +173,7 @@ Unixbench 测试项里面更多关注的是计算性能和内存的 IO 等场景
 
 ## FIO 使用
 
-Cgq2xl5gtYiAI2f-AAJp6_7gP_I248.png
+![](/static/image/Cgq2xl5gtYiAI2f-AAJp6_7gP_I248.png)
 
 FIO 是一个开源的主流的 Linux 磁盘 IO 测试工具。通常对于磁盘的测试主要会关注这几个测试项，分别是：Iops，也就是每秒进行读写（I/O）操作的次数，它评估的是，每秒对于磁盘的操作次数和能力，执行次数越多说明执行数据越快。
 
