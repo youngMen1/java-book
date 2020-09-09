@@ -31,3 +31,5 @@ Cgq2xl5zJpGAMNBTAAF2XF3qyck100.png
 ## 自动化资产搜集
 
 如果资产作到自动化搜集怎么实现呢？接下来我把这个工程的第一个版本及部分代码给你来演示一下。
+
+Cgq2xl5zJpKAXQ3uAAVfaDFT2hc238.png
