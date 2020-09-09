@@ -1,5 +1,7 @@
 # 第01讲：Linux 与 Shell 环境搭建及介绍
 
+本课时我们主要讲解操作系统简史，以及 Linux 与 Shell 的环境搭建等内容。
+
 ## 操作系统简史 
 
 ![](/static/image/CgotOV3OcR2AGGnhAAFTLJlqgys080.png)
