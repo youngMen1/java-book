@@ -40,7 +40,7 @@ Nginx 的优化这个课时主要内容分为两部分来讲，一部分是基�
 
 接下来讲一下具体配置方式，那由于 Nginx CPU 亲和性配置本身有多套配置方案，这里推荐你直接将配置项设置成 auto（worker_cpu_affinity ），即采用了 Nginx 推荐的 CPU 绑核策略方式。另外的一个方式是手动绑定，将 worker 线程数量与 CPU 核心数一一绑定方式设置。我们设置成 auto Nginx 会自动识别并按照推荐策略来分配 worker 线程和 CPU。
 
-Cgq2xl5FJ6eARXPfAACAxakE-So430.png
+![](/static/image/Cgq2xl5FJ6eARXPfAACAxakE-So430.png)
 
 
 如图所示，我们看到 CPU 的核心有 8 个，即 CPU0~CPU7，如果我们设置成 auto 后，那么 Nginx 会将 8 个 worker 线程一对一地按照推荐策略绑定到 CPU 核心上，这样避免 CPU 频繁对 worker 线程进行调度，从而降低 CPU 损耗。
