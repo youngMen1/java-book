@@ -126,3 +126,9 @@ Ciqah155wHCARtpTAAHVwx-gTak127.png
 这套工程是基于 Python3.6 和 Django 1.8 开发的，ansible用到了 Ansible2.4.1 版本。演示环境用到的是 MySQL 5.7 和 Redis4.1 版本，同时你需要一个开发工具，这里给你推荐 PyCharm，你可以用 PyCharm 工具打开源码，源码请在课程最后的链接里进行下载，安装方式请参考第 10 课时，这里就不再多讲了。
 
 Ciqah155wHGAdMFQAADEpb7Dwsw655.png
+
+下面我们来看下自动化部分的代码内容，在整体的任务调用到服务端以后，在 urls.py 文件里定义了一个对外的 API 接口路径，即 /adhocdo 接口。
+
+### 核心类功能
+
+views.py 视图里面定义了一个 adhoc_task() 函数，它会来负责接收请求，并且执行对应的逻辑。同时，在这套工程里面把前端发过来的任务请求、资产信息关联起来，当它在调用底层的 Ansible 接口时，也需要进行一次封装，这个会在 ansible_api.py 文件里把 Ansible 模块的默认内核方法重做封装提供外部调用。
