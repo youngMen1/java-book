@@ -147,3 +147,26 @@ http {
 ```
 
 这个配置中我们在负载均衡 Upstream 对应的地址池中加入一个 ip_hash 策略，这样就可以基于 ip_hash 的方式进行轮询了。
+
+
+```
+http {
+        …
+        upstream app_servers {
+            hash $request_uri;
+                 server ip1:port1;
+                 server ip2:port2;
+                 server ip3:port3;
+        }
+        server {
+         …
+              location / {
+                  proxy_pass http://app_servers;   
+              }
+        ….
+        }
+}
+```
+第二种方式基于 URL_hash，URL_hash 方式就是添加一个自定义 hash，通过设置 Nginx 内部的请求变量 $request_url 进行 hash 运算，这样就可以基于这个请求的 URL 地址来做 hash 了，也就做到 Session 的保持的方案。
+
+## 真实的 Realserver 状态检测
