@@ -23,7 +23,7 @@
   * 数据结构与算法
   * 数据库
   * Web 自动化测试技术
-  * App 自动化测试技术
+  * [App 自动化测试技术](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/app-zi-dong-hua-ce-shi-ji-zhu.md)
   * 接口自动化测试
   * 持续集成、持续交付、DevOps 体系
   * 测试平台开发技术栈讲解
