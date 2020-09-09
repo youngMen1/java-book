@@ -2,8 +2,8 @@
 
 * [Introduction](README.md)
 * [运维高手的36项修炼](yun-wei-gao-shou-de-36-xiang-xiu-lian.md)
-  * 模块一：运维必备基础技能
-  * 模块二：部署
+  * [模块一：运维必备基础技能](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng.md)
+  * [模块二：部署](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu.md)
   * 模块三：割接
   * 模块四：故障排查
   * 模块五：监控
