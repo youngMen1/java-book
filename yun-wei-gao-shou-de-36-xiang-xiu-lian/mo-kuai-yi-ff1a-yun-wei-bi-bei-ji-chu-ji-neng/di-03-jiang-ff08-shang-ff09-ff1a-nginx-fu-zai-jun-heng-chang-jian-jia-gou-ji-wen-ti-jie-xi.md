@@ -63,3 +63,24 @@ Cgq2xl5OWquAOOSKAAKxOrFbX1w188.png
 ## 常用配置
 
 首先，我们先回顾Nginx基础负载均衡配置。
+
+
+
+```
+http {
+        …
+        upstream app_servers {
+                 server ip1:port1;
+                 server ip2:port2;
+                 server ip3:port3;
+        }
+        server {
+         …
+              location / {
+                      proxy_pass http://app_servers; 
+              }
+        ….
+        }
+}
+```
+
