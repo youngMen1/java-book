@@ -13,7 +13,7 @@
     * [第06课：系统性能验收：Unixbench、FIO 性能压测](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-06-ke-ff1a-xi-tong-xing-neng-yan-shou-ff1a-unixbench-fio-xing-neng-ya-ce.md)
     * [第07课：基于 Django\_crontab、Xadmin 做一套定时任务管理系统](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-07-ke-ff1a-ji-yu-django-crontab-xadmin-zuo-yi-tao-ding-shi-ren-wu-guan-li-xi-tong.md)
   * [模块二：部署](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu.md)
-    * 第08课：Shell 如何来实现系统初始化
+    * [第08课：Shell 如何来实现系统初始化](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu/di-08-keff1a-shell-ru-he-lai-shi-xian-xi-tong-chu-shi-hua.md)
     * 第09课：搭建基于 Jenkins 的持续集成平台所需关注的几个问题
     * 第10课：基于 Python+Ansible+Django 搭建 CMDB 平台
     * 第11课：基于 Python+Ansible+Django 搭建自动化任务平台
