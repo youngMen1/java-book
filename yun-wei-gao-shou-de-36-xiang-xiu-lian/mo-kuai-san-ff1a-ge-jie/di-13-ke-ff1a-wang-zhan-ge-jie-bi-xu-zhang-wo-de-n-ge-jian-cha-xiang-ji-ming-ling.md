@@ -127,3 +127,5 @@ Ciqah16C0-6AXw64AAE_YFW0DdE654.png
 
 
 Cgq2xl6C0-6AOhEOAANHrdS3wOg837.png
+
+dig 会更加专业， 比如一个 + trace，就是模拟迭代+递归的整个解析过程作分析。
