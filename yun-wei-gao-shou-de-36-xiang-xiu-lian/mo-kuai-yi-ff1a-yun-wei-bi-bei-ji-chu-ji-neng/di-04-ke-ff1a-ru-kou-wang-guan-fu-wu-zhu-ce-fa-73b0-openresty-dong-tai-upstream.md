@@ -50,4 +50,4 @@ CgpOIF5XlqGAJ1iwAAE2ca-U8Go037.png
 这个场景中，如果upstream配置不是通过动态的方式去实现调整，就需要通过手动的方式（先修改配置，再手工重启服务等），手动的方式没法作到自动化及实时触发调整。
 
 
-
+Cgq2xl5XlrOAW-n0AAFbOCQssio629.png
