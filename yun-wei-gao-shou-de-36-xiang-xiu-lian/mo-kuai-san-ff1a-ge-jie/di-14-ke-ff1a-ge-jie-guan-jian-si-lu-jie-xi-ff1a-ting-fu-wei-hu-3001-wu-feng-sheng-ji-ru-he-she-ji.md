@@ -121,3 +121,16 @@ rewrite ^(.*)$ /maintain.html break;
 
 
 
+```
+location / {
+    access_by_lua_block {
+        if ngx.var.remote_addr != "221.219.97.238" then
+        return ngx.redirect('http://www.jesonc.com/maintain.html',302);
+        end
+    }
+    proxy_pass http://local;
+}
+```
+
+
+
