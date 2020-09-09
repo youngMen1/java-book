@@ -184,3 +184,5 @@ mod_type 是直接执行 adhoc 的模块方式，这里我执行的是 Shell 的
 
 
 Cgq2xl55wHOACyO2AAXukl_6PSE019.png
+
+大家按照 JSON 的格式配置好后，可以参考设置的方式，然后点击 send按钮，这样的话就会把我的数据进行 POST 提交，我们会看到它这里已经在 loading 中，需要等待服务端返回的结果。
