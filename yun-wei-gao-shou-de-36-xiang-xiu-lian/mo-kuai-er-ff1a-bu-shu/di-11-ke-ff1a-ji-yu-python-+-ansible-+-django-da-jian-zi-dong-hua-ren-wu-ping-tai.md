@@ -189,3 +189,5 @@ Cgq2xl55wHOACyO2AAXukl_6PSE019.png
 
 
 Ciqah155wHSAPhPbAANojZQK3YM533.png
+
+当服务端返回了内容，看到 http reponse 的状态是成功的，并看到信息"sucess"（成功的），并看到执行此任务具体日志（它是ansible的接口所返回的）。
