@@ -15,4 +15,5 @@
 * [测试开发核心技术 46 讲](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang.md)
   * Linux 与 Shell
   * 编程语言
+  * 数据结构与算法
 
