@@ -185,3 +185,14 @@ Cgq2xl5zJpWAEFtEAAEk9jyLdTM009.png
 CgpOIF5zJpWADyboAAF-Fvz6tC0285.png
 
 图中右侧是所需要探测的客户端，左侧为服务端，服务端这里通过一些对应的通用协议，比如 ssh、ping、telnet 等相关命令来探测客户端目标服务器。在目标的服务器上，装有对应的虚拟化内容的虚拟机，比如 KVM、Docker、ESX 等。
+
+### 探测器逻辑
+
+
+接下来，我们来介绍这一套工程对于它的目标主机、虚拟机及信息资产的探测逻辑。
+
+
+
+我们会看到，通过 main.py 文件实际上执行的三个大的方面，第一个是做存活探测，第二个是做主机探测，第三个是做主机关系探测。
+
+CgpOIF5zJpWAcd3dAAFKPqRX0rA372.png
