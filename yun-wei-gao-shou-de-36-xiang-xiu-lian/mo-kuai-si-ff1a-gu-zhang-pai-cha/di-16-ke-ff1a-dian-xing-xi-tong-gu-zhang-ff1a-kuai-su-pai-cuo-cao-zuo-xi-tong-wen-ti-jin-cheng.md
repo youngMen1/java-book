@@ -75,11 +75,11 @@ Ciqah16OzBCAKt5RAABshfA11Ls394.png
 
 如果是通过 top 命令来分析进程对内存使用率情况，那么我们可以按住“shift+m”，这个时候它就可以按照内存这一列的使用率进行排序，我们可以把操作系统上当前占用率更高的进程整体罗列出来。 ps 命令也是一样，只不过是在 sort 排序这一列里，改成了 -%MEM，按照这一列来进行由大到小的数值排序。
 
-Ciqah16OzBCAMzG_AADk9yzHaj0041.png
+![](/static/image/Ciqah16OzBCAMzG_AADk9yzHaj0041.png)
 
 以上就是排查进程对操作系统的内存资源使用过度的方式，接下来讲解是进程使用的磁盘 IO分析场景，我们首先用 yum install  sysstat 安装软件包，再在操作系统的 Terminal 终端上面执行 iostat 命令。
 
-Cgq2xl6OzBCAMlMoAABTWkXEzMs498.png
+![](/static/image/Cgq2xl6OzBCAMlMoAABTWkXEzMs498.png)
 
 可以看到我在执行 iostat 命令后面加入两个数值的参数，分别是 2 和 1，2 表示刷新的频率，间隔周期，1 表示总共的次数，我这里总共只执行了一次。
 
@@ -95,7 +95,7 @@ Cgq2xl6OzBCAMlMoAABTWkXEzMs498.png
 
 只用 iostat 命令还不够，有时候我们还会想更加具体地了解每一个进程使用 lO 的情况。这个时候我们只需要去安装另外一个包：iotop。它能够展示每个进程对 lO 的使用。值得注意的是，如果你的系统 lO 操作非常频繁，这个命令可能会占用比较大的操作系统性能，所以你还是需要合理使用它。iotop 会把每一个进程信息的 IO 使用率进行罗列，并展示出来。我们看到这里有一个展示的效果图示：
 
-Ciqah16OzBCAHK2vAADAVSLisC4355.png
+![](/static/image/Ciqah16OzBCAHK2vAADAVSLisC4355.png)
 
 刚刚讲到的查找进程 IO 资源使用情况，接下来我将为你介绍进程占用文件句柄。
 
@@ -131,7 +131,7 @@ Ciqah16OzBCAHK2vAADAVSLisC4355.png
 
 接下来我们讲下操作系统僵尸进程分析和处理，我们知道LInux的父子进程，任何一个子进程(init除外)在exit()之后，并非马上就消失掉，而是留下一个称为僵尸进程(Zombie)的数据结构，等待父进程处理。这是每个 子进程在结束时都要经过的阶段。如果子进程在exit()之后，父进程没有来得及处理，这时用ps命令就能看到子进程的状态是“Z”
 
-Cgq2xl6OzBCAVqEDAADn6mBVAos240.png
+![](/static/image/Cgq2xl6OzBCAVqEDAADn6mBVAos240.png)
 
 
 我们通过 ps -ef +管道符号（|），grep 一个“defunct”关键词，就会展示所有僵尸状态的进程。如果是通过 top 命令，也可以查看当前操作系统上的异常状态进程个数。
