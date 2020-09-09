@@ -33,3 +33,4 @@ Ciqah16OzA-ASdUyAAQqyjnlKws003.png
 以上就是我罗列的一些常见的进程问题类型，针对这些问题，接下来我罗列了一张表格，看看可以通过哪些命令来分析进程问题。
 
 ## 进程分析命令
+Cgq2xl6OzA-AFspTAALINqZd-a8200.png
