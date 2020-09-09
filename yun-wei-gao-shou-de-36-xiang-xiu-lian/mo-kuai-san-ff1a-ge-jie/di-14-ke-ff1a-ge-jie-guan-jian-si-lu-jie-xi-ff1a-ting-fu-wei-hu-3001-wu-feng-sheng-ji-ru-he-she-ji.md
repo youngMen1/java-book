@@ -153,3 +153,5 @@ Ciqah16FmKuAaVH0AAaOEBkiat0291.png
 
 
 刚刚讲到的不停服割接方式是通过 Mgration_tools，直接以同步的数据把老库和新库的数据填平，接下来介绍第 2 种方式，就是做服务层作数据双写。所谓双写就是在服务层同时写两份数据，既写给老库也写给新库。
+
+Ciqah16FmKuADHD8AAT1Jp-tn5U841.png
