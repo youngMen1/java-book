@@ -60,3 +60,5 @@ CgpOIF5zJpKALpfAAAKrgiK7cBE082.png
 Cgq2xl5zJpOAfJ37AAKKZIal5Ks938.png
 
 使用 Python manage.py runserver 的方式，在本地监听 5555 端口，并把这个服务运行起来。然后打开浏览器，输入 127.0.0.1:5555 端口的 url地址，这时就可以登录后台系统。在后台系统中你可以看到整个界面会展示几类信息：物理设备信息、虚拟设备信息、网络设备信息。
+
+CgpOIF5zJpOALuvRAACLq9bGI6I552.png
