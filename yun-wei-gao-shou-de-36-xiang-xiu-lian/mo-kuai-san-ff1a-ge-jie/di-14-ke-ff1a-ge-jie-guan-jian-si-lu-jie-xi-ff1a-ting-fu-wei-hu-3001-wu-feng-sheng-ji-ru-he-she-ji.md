@@ -141,4 +141,4 @@ location / {
 
 
 刚刚我们讲的是在停服割接时 MySQL 的步骤，MySQL 如何实现不停服割接？不停服割接会对人员的投入和 DBA 的相关技术能力提出更高的要求。
-
+Ciqah16FmKuAaVH0AAaOEBkiat0291.png
