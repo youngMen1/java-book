@@ -104,3 +104,5 @@ Cgq2xl6C0-2AIiQJAANXyFfWkc8409.png
 
 
 这里我需要对我的博客系统做一个变更升级，并且加入一个新的域名解析为例演示。涉及的操作主要为一个域名新的解析，这里我加入了 www.jesonc.com 这个域名，这个操作我已经做好了，添加了一条对应的 a 记录来做变更。
+
+Ciqah16C0-6AK5boAATDWWIZsHk523.png
