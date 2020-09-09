@@ -123,7 +123,7 @@ CgpOIF5zJpSACdzWAAA33Ac2y-E712.png'
 
 另外，在中间的大窗口，我会按资源类型做一个全局的统计。
 
-Cgq2xl5zJpSAVWPTAAAhVhvmLRc779.png
+![](/static/image/Cgq2xl5zJpSAVWPTAAAhVhvmLRc779.png)
 
 * 类型关系关联
 
@@ -138,13 +138,13 @@ Cgq2xl5zJpSAVWPTAAAhVhvmLRc779.png
 
 第二个块就是资产信息内容。这里我截了一张图：
 
-CgpOIF5zJpSAZH84AAFt9Oq8nFg989.png
+![](/static/image/CgpOIF5zJpSAZH84AAFt9Oq8nFg989.png)
 
 在资产信息内容中，会收集服务器 IP、服务器品牌、主机名、系统版本、设备的 sn 号、MAC 地址、宿主机的类型、相关的编号，以及 ssh 登录所需信息。有了登录的连接信息就为自动化任务执行奠定了一个重要信息基础。
 
 ## 资产登录信息内容
 
-Cgq2xl5zJpWAEFtEAAEk9jyLdTM009.png
+![](/static/image/Cgq2xl5zJpWAEFtEAAEk9jyLdTM009.png)
 
 接下来这个页面展示的是与登录的连接相关的信息内容，包含：登录的用户名、ssh 登录密码、ssh 的登录端口和 IP 信息，同时也可以支持 key 的登录信息记录，因为前面讲过，key 的登录方式会比密码登录的方式更加安全。
 
@@ -182,7 +182,7 @@ Cgq2xl5zJpWAEFtEAAEk9jyLdTM009.png
 
 接下来介绍如何使用这套工程，以及它所探测目标资源环境。
 
-CgpOIF5zJpWADyboAAF-Fvz6tC0285.png
+![](/static/image/CgpOIF5zJpWADyboAAF-Fvz6tC0285.png)
 
 图中右侧是所需要探测的客户端，左侧为服务端，服务端这里通过一些对应的通用协议，比如 ssh、ping、telnet 等相关命令来探测客户端目标服务器。在目标的服务器上，装有对应的虚拟化内容的虚拟机，比如 KVM、Docker、ESX 等。
 
@@ -195,11 +195,11 @@ CgpOIF5zJpWADyboAAF-Fvz6tC0285.png
 
 我们会看到，通过 main.py 文件实际上执行的三个大的方面，第一个是做存活探测，第二个是做主机探测，第三个是做主机关系探测。
 
-CgpOIF5zJpWAcd3dAAFKPqRX0rA372.png
+![](/static/image/CgpOIF5zJpWAcd3dAAFKPqRX0rA372.png)
 
 存活探测会扫描在一个局域网内部存活的 IP 地址列表。主机探测会获取对应存活的主机上面的系统信息，如 sn 号、版本、MAC 等相关的主机资产信息。主机关系探测会识别宿主机和它对应安装的虚拟子机的映射关系。这就是整体的探测逻辑和顺序。如图所示：
 
-CgpOIF5zJpaAd0ofAAGTHivpKic910.png
+![](/static/image/CgpOIF5zJpaAd0ofAAGTHivpKic910.png)
 
 首先，我会做主机存活的探测，扫描出对应的存活的主机 IP 列表，有了这份 IP 列表后，就可以做 ssh 的端口探测。ssh 端口探测先判断局域网内部的 ssh 端口是不是开放的，如果开放了 ssh 端口，就可以认为它是 Linux 主机，可以进一步做 ssh 登录测试；如果不开放 ssh 端口，可以认为它是非 Linux 主机，然后会把它放到到另外一个列表中。接下来我会模拟 ssh 的用户登录，判断它的登录方式，分别是通过用户的密码登录方式和 key 的登录方式。登录完成以后，就可以去获取这台主机上的主机信息，并提取出来了。
 
@@ -210,7 +210,7 @@ CgpOIF5zJpaAd0ofAAGTHivpKic910.png
 
 ### 启动探测器演示
 
-Cgq2xl5zJpaAE_NvAADuJPpNISA959.png
+![](/static/image/Cgq2xl5zJpaAE_NvAADuJPpNISA959.png)
 
 前提是：安装了相关程序代码的服务环境，并且本地也有对应的目标主机可以供你去探测。
 
@@ -224,7 +224,7 @@ Cgq2xl5zJpaAE_NvAADuJPpNISA959.png
 以下这些配置是固定的，你可以不用去改动，因为这里会去执行我主机上的信息获取命令，比如获取主机版本、主机名、MAC 地址、sn 号等，都是通过命令去获取的。
 
 
-CgpOIF5zJpeAcDksAABCkXF4kb0332.png
+![](/static/image/CgpOIF5zJpeAcDksAABCkXF4kb0332.png)
 
 最后，这里单独列出一个 dockerinfo 配置项目，它为 Docker 的登录方式单独独立出一个用户密码，是因环境的差异性而做的，我的环境会把 Docker 映射出来做 ssh 端口，并且有独立的一套密码，所以我单独做了配置。
 
