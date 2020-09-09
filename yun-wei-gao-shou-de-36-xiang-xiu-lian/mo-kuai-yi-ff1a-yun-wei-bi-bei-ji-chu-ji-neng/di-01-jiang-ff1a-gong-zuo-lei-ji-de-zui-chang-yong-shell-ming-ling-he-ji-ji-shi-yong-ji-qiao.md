@@ -86,7 +86,7 @@ find -type f|awk -F/-v OFS=/'{$NF="";dir[$0]++}END{for(i in dir)print dir
 
 因为这个命令组合比较复杂，我们在控制台中来看具体的演示，首先在控制台中输入这一串命令组合。
 
-CgpOIF5BIhKADtFGAANv__aeR0g437.png
+![](/static/image/CgpOIF5BIhKADtFGAANv__aeR0g437.png)
 
 你可以看到在当前目录路径通过执行命令，结果中已经把每一个产生文件的路径都展示出来了，并且前面还会显示在每一个路径下一共包含了多少文件，如果我们系统 提示inode 使用率问题，需要分析出哪个路径下的文件数最多，这时就可以通过 这个组合命令来进行分析。
 
