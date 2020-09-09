@@ -112,3 +112,5 @@ Ciqah16C0-6AK5boAATDWWIZsHk523.png
 
 
 接下来通过我发布的脚本，把代码发布到线上，这里就需要演示做变更后的检查。
+
+Cgq2xl6C0-6AYeyEAAK0jgdukno479.png
