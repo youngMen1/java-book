@@ -40,7 +40,7 @@ Ciqah16MTOCAQCSAAAKhbPhNDg4966.png
 EFK 是个什么样的架构呢？E 表示 Elasticsearch，它是一个搜索存储日志引擎，既可以进行日志的存储，也可以进行日志的检索，是一个非常强大的工具。K 表示 Kibana，它是 Elasticsearch 的界面化展示。有了这两个东西，我们相当于有了一套后端日志的检索和展示平台。相比之前方式重要的区别在于端日志收集方式，Rsyslog 是非 K8S 架构下常用到的日志收集器，那么在 K8S 架构里，工具常用 filebeat 或者 fluent。相比 Rsyslog，这两个搜集组件支持对日志路径、名字的通配，我们不用关心某个具体的日志，它们可以通配某一级目录或者是某一个目录的所有通配日志名称。
 
 
-Ciqah16MTOGAGl1PAAPqPWzdVpo519.png
+![](/static/image/Ciqah16MTOGAGl1PAAPqPWzdVpo519.png)
 
 针对这套 EFK 架构，我同样画了一张图，这里介绍最常用到的架构方案。在 K8S 的 node 节点里可以通过 PVC 让容器将日志目录挂载到 node 节点的本地目录下，然后通过 filebeat 去收集日志信息，放到中心日志存储里。
 
