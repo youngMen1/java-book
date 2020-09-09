@@ -132,3 +132,4 @@ Ciqah155wHGAdMFQAADEpb7Dwsw655.png
 ### 核心类功能
 
 views.py 视图里面定义了一个 adhoc_task() 函数，它会来负责接收请求，并且执行对应的逻辑。同时，在这套工程里面把前端发过来的任务请求、资产信息关联起来，当它在调用底层的 Ansible 接口时，也需要进行一次封装，这个会在 ansible_api.py 文件里把 Ansible 模块的默认内核方法重做封装提供外部调用。
+Ciqah155wHGAJLotAAFmNJ-edRA051.png
