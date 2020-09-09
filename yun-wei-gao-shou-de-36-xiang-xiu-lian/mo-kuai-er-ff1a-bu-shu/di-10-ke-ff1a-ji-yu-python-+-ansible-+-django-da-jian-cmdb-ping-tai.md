@@ -55,3 +55,6 @@ CgpOIF5zJpKALpfAAAKrgiK7cBE082.png
 
 
 通过这种方式展示还不够清晰，这就需要有一套前台的展示页面，能够非常清晰的展示所收集的系统信息，并且展示它们的关联关系，所以这里我继续演示前台界面是什么效果。
+
+
+Cgq2xl5zJpOAfJ37AAKKZIal5Ks938.png
