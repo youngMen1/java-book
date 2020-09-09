@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [运维高手的36项修炼](yun-wei-gao-shou-de-36-xiang-xiu-lian.md)
   * [模块一：运维必备基础技能](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng.md)
-    * 第01讲：工作累积的最常用 Shell 命令合集及使用技巧
+    * [第01讲：工作累积的最常用 Shell 命令合集及使用技巧](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-yi-ff1a-yun-wei-bi-bei-ji-chu-ji-neng/di-01-jiang-ff1a-gong-zuo-lei-ji-de-zui-chang-yong-shell-ming-ling-he-ji-ji-shi-yong-ji-qiao.md)
     * 第02讲（上）：企业 Nginx 高性能优化配置实战总结
     * 第02讲（下）：企业 Nginx 高性能优化配置实战总结
     * 第03讲（上）：Nginx 负载均衡常见架构及问题解析
