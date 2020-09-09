@@ -190,3 +190,14 @@ Cgq2xl5U0sqAES8QAAFVZjwh4gg899.png
 
 
 那么怎么做呢？这里就需要依赖一个第三方模块了，这个第三方模块就是 nginx_upstream_check_module，它是由淘宝技术团队开发并开源的，提供了更加细致的对后台服务真实状态的检测。你可以把这个模块编译到 Nginx 中，或是使用淘宝的 Tengine，Tengine 也是基于 Nginx 1.6 版本开发开源的。我们接下来看下具体配置：
+
+
+
+```
+check interval=3000 rise=2 fall=5 timeout=1000 type=http;  //定义检查间隔、周期、时间
+check_keepalive_requests 100;  //一个连接发送的请求数
+check_http_send “HEAD / HTTP/1.1\r\nConnection: keep-alive\r\n\r\n”; //定义健康检查方式
+check_http_expect_alive http_2xx http_3xx;  //判断后端返回状态码
+```
+
+
