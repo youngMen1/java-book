@@ -29,3 +29,4 @@
 ## Shell 初始化脚本 Jinit 框架
 
 刚才演示了 Jinit.sh 脚本的执行过程和执行结果，想必你想了解 Jinit.sh 脚本到底做了哪些系统的初始化，具体修改了哪些内容，接下来就给你详细讲解。
+Cgq2xl5qC1-AJZ-eAAOMT2A6vD8550.png
