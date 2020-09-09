@@ -18,3 +18,17 @@
 首先，我们来讲解第一部分内容，也就是动态 Upstream 的场景。
 
 CgpOIF5XlqGAJ1iwAAE2ca-U8Go037.png
+
+我们先来看一下这样一个典型的场景，整体了解动态 Upstream 的作用。
+
+
+
+从图中流量的整体入口开始看，流量从左上方按照箭头方向访问站点，最先交给第一级服务 Nginx，Nginx 承担入口网关的作用，通常情况下，通过 Nginx Upstream来作负载均衡，从而实现将入口的流量均匀地分配给后台的 real server处理。
+
+
+
+从图中我们可以看到，右上角的方框中有两台 Real server ，分别是 App server 1 和 App server 2。
+
+
+
+那我们需要的动态 Upstream 是一个什么场景呢？当往这组集群中再添加一台新的后台服务 real server，也就是 App server 3 ，并且实现将入口的流量动态的(非手动方式)分发给新 App server 3，这个时候我们就需要用到动态配置upstream了。
