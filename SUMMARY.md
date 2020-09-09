@@ -6,6 +6,7 @@
     * 第01讲：工作累积的最常用 Shell 命令合集及使用技巧
     * 第02讲（上）：企业 Nginx 高性能优化配置实战总结
     * 第02讲（下）：企业 Nginx 高性能优化配置实战总结
+    * 第03讲（上）：Nginx 负载均衡常见架构及问题解析
   * [模块二：部署](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-er-ff1a-bu-shu.md)
   * 模块三：割接
   * 模块四：故障排查
