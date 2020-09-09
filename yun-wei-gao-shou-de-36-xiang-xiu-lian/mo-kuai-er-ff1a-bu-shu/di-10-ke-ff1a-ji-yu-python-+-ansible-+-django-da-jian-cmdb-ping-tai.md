@@ -132,3 +132,10 @@ Cgq2xl5zJpSAVWPTAAAhVhvmLRc779.png
 
 
 以上就是这个系统的一些功能设计。
+
+## 资产信息内容
+
+
+第二个块就是资产信息内容。这里我截了一张图：
+
+CgpOIF5zJpSAZH84AAFt9Oq8nFg989.png
