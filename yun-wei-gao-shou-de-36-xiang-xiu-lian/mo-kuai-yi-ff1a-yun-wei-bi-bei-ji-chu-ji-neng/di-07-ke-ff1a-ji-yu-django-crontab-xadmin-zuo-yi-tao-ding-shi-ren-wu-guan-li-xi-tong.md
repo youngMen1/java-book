@@ -173,3 +173,17 @@ super 用户，并且做模型的初始化，启动也是通过它来执行 mana
 
 
 requirements.txt 是一个模块列表，我会把整个工程所依赖的相关模块，以列表的方式存放在requirements.txt 中。你安装的时候需要从 requirements.txt 中提取相关的模块。所以它是一个 Jcrontab 工程所需要用到的安装模块的一个介绍说明。
+
+## 代码框架结构
+
+接下来我们再来了解整个代码的框架结构。这个工程用到的是 Django 框架，我们知道 Django 是一个基于 MVC 或是 MVT 模式的框架。
+
+
+
+M 是指模型，V 是视图，T 是我们刚刚讲的目录结构里面的 templates目录，它里面存放的是相关的模板。
+
+
+
+在下图中，我们可以看到 MVT 大概的框架模式。当用户请求过来时会通过三个大的层次，分别是 URL、Views 还有后台的 models。
+
+Cgq2xl5nIHyAM5EnAAb-zfht2e4708.png
