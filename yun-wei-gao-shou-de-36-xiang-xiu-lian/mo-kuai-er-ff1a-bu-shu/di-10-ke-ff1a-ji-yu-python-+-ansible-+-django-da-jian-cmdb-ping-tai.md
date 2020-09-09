@@ -64,3 +64,5 @@ Cgq2xl5zJpOAfJ37AAKKZIal5Ks938.png
 CgpOIF5zJpOALuvRAACLq9bGI6I552.png
 
 我们重点看下物理设备和虚拟设备信息。在物理设备信息栏里会看到这里已经扫描到了一台物理机，它是一台承载 Docker 类型的物理机。
+
+Cgq2xl5zJpOAcCmiAAKjQ3sBmI8075.png
