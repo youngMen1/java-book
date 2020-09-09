@@ -17,7 +17,7 @@
 
 首先，我们来讲解第一部分内容，也就是动态 Upstream 的场景。
 
-CgpOIF5XlqGAJ1iwAAE2ca-U8Go037.png
+![](/static/image/CgpOIF5XlqGAJ1iwAAE2ca-U8Go037.png)
 
 我们先来看一下这样一个典型的场景，整体了解动态 Upstream 的作用。
 
