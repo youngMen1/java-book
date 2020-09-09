@@ -43,6 +43,7 @@ i_count 的作用是当一个文件被一个进程引用时，它的数值会加
 
 首先需要找到是哪个进程在使用这个文件，我们可以通过 lsof 命令，grep 刚刚删除的文件名称（deltefile.txt），会列出当前使用文件的进程。我们会看到tail 命令正在使用，它（进程）的 pid 是 4701。
 
+Ciqah16VdFKAC0qqAADFpBm8jCA754.png
 
 
 
