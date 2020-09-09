@@ -70,6 +70,6 @@ CgpOIF5wY7yAJJsMAAJRRuQVMKw843.png
 
 
 ### 微服集成架构
-
-
+接下来我们再看一下所谓的微服务集成架构。
+CgpOIF5wY76AB1SaAAZNIemKRrY433.png
 
