@@ -113,3 +113,5 @@ CgpOIF5U0tOAeMMQAAGg2smEGW8440.png
 解决 session 丢失的问题，通常有以下几种做法：
 
 * 解决方案 1：Session 保持
+
+第一种方式是做 Session 保持，就是把负载均衡策略基于原有轮询数的基础上，改用 ip_hash、URL_hash 来解决。ip_hash 就是基于用户 IP 来做 hash，一个用户的请求统一分发到一台机器上。URL_hash 用于用户请求固定页面时，将用户请求固定到具体 后端 上，就保证了 Session 不会被丢失。
