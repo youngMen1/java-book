@@ -228,3 +228,9 @@ Cgq2xl5zJpaAE_NvAADuJPpNISA959.png
 
 
 CgpOIF5zJpeAcDksAABCkXF4kb0332.png
+
+最后，这里单独列出一个 dockerinfo 配置项目，它为 Docker 的登录方式单独独立出一个用户密码，是因环境的差异性而做的，我的环境会把 Docker 映射出来做 ssh 端口，并且有独立的一套密码，所以我单独做了配置。
+
+
+
+最后，在配置完对应的环境信息以后，就可以启动探测脚本。这里可以通过 Python3.6 执行 main.py 文件，这样就开启你的探测任务。
