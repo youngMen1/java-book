@@ -57,4 +57,28 @@ filebeat 可以通配 *.log 这样的样例文件，这样就能直接把整体�
 其实方法并不困难，我们知道开发人员可以使用 jmap，通过 -dump 选项，把 Java 堆中的对象 dump 到本地文件，然后使用 eclipse 的 MAT 进行分析。容器化的方式也是同样的道理，但需要了解的是，还是要把容器里面的日志导入 node 节点，或者导出到中心化的存储上去。所以我们可以用这种方式来做：在 docker 里面挂接一个 node 节点存储空间（PVC），接着配置一个参数,在 JVM 上通过配置 DumpPath（路径在你共享的硬盘上），这样就可以实现在内存溢出后，把这些信息都 dump 到你的共享硬盘的路径下。那么再出现内存溢出问题时，即使你的 Pod 节点不可用了，但是日志还是能够非常清晰的在 node 本地并留存。
 
 ## 配置文件管理
+刚刚我们讲到了三个方面的问题：存储的日志收集，状态的服务，以及 Java 内存溢出排查。还有一部分重要的内容就是程序的相关配置如何在 K8S 中管理。对这些配置的内容，我要如何去进行管理？
+
+
+
+这里有两种模式，在 K8S 架构里，第 1 种模式是把相关的普通文件配置信息，交给 K8S 的 Configmap 进行处理。第 2 种模式则是把加密类型数据信息，交给 K8S 的 Secret。
+
+
+
+Configmap 和 Secret 使用的其实是同一套存储机制，只不过 Secret 相较于 Configmap 而言，通过了一些安全性的 Base64 数据加密，所以它的安全性会更高一些。
+
+
+```
+apiVersion: v1
+ kind: ConfigMap
+metadata:
+   name: Mysql-config # ConfigMap的名字, 在引用数据时需要
+   labels:
+        app: k8smysq;
+data:
+    MYSQL_HOST: J-database-service # 数据库主机
+    MYSQL_PORT: "3306" # 数据库端口
+    MYSQL_DATABASE: jesonc_com# 数据库名
+```
+
 
