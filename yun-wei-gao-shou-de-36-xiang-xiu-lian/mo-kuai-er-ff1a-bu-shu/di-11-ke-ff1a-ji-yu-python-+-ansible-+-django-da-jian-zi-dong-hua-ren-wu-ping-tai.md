@@ -133,3 +133,30 @@ Ciqah155wHGAdMFQAADEpb7Dwsw655.png
 
 views.py 视图里面定义了一个 adhoc_task() 函数，它会来负责接收请求，并且执行对应的逻辑。同时，在这套工程里面把前端发过来的任务请求、资产信息关联起来，当它在调用底层的 Ansible 接口时，也需要进行一次封装，这个会在 ansible_api.py 文件里把 Ansible 模块的默认内核方法重做封装提供外部调用。
 Ciqah155wHGAJLotAAFmNJ-edRA051.png
+
+刚讲到的需要封装 Ansible 类，那么具体封装了哪些类呢？在 ansible_api.py 这个文件里面包含 4 个大类，一个是 MyInventory()，另外一个是 ModelResultsCollector(CallbackBase)，还有一个是 PlayBookResultsCollector(CallbackBase)，最后是 ANSRunner(object)。
+
+
+
+我们从上往下来进行介绍， MyInventory() 是把 Inventory 默认的 Ansible 类做了一个定义，它定义了主机和主机组的相关关系。
+
+
+
+ModelResultsCollector(CallbackBase) 把按照默认的回调类 (CallbackBase) 重新做了封装，修改一些任务的显示和返回的内容，并回执 adhoc 任务成功失败的状态，都是在这个类里面进行封装。
+
+
+
+PlayBookResultsCollector(CallbackBase) 跟前面类是一样的，只不过它封装的是playbook 类，同样也会返回相关任务的执行状态。
+
+
+
+最后一个就是 ANSRunner(object)，这是一个任务执行类，我们在视图的 adhoc_task() 里调用 Ansiblerunner 来执行它的具体化任务，所以它是直接对外暴露执行方法。
+
+### 工程执行过程
+
+最后我来给你演示一下整个工程的执行过程。
+Ciqah155wHGAVPdAAADGi3JVaHk602.png
+
+Ciqah155wHKAPwtfAACH5Q2NW3o196.png
+
+
