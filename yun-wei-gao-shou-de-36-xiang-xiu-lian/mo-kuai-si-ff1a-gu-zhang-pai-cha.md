@@ -113,3 +113,4 @@ tcpdump tcp -i eth0 -t -s 0 -c 100 dst port 6060 and src net 192.168.1.0/24 -w  
 tcpdump 后面加 TCP 的协议，-i 表示监听抓服务器上哪个网卡；-t 表示不显示时间戳；-s 可以抓到完整的数据包 ，如果不加的话，可能就只抓部分字节；-c 表示一共抓取多少次数据包；dst port 6060 表示抓取目标端口是 6060 的数据包；后面加了一个 src net + 网段，表示数据包的来源网络地址为 192.168.1.104 。
 
 接下来以 tcpdump 方式进行演示。首先登录到我的服务器上，然后输入了 tcpdump 命令及这一串选项，加入了一个 -w test.pcap ，表示把抓取的数据包存放到文件里面，因为我们一会可以拿 WireShark 工具来做数据包分析。
+CgoCgV6etK2AfgBEAAEfyWiBW5E145.png
