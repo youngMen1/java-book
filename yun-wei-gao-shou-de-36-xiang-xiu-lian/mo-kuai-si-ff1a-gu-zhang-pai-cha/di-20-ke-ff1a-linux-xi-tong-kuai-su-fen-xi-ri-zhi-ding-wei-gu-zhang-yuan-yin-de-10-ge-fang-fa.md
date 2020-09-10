@@ -306,5 +306,7 @@ cat access.log|awk '/\/etc\/passwd/{print $1}'|sort -n|uniq -c|sort –nr
 # 解析 MySQL 日志
 接下来给你介绍的就是 MySQL 的日志。
 
-MySQL 日志类型
+## MySQL 日志类型
 MySQL 日志相对来说更加简单，它只有几个类型，分别是 error_log、slow_log、binlog 和查询日志。
+
+Ciqah16ipcmAR_TTAAKv0YH9EQw405.png
