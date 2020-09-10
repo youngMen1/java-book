@@ -116,3 +116,5 @@ tcpdump 后面加 TCP 的协议，-i 表示监听抓服务器上哪个网卡；-
 CgoCgV6etK2AfgBEAAEfyWiBW5E145.png
 
 接下来直接在服务端执行这样的命令，抓取的数据包改为 5 个，然后我在客户端执行 curl 命令，请求服务端目标地址是 6060 的端口，发送一个 HTTP 协议。
+
+Ciqah16etLWAcs2dAAC3nOSs2iU257.png
