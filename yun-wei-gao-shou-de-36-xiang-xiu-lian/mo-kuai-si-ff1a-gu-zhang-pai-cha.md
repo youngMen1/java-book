@@ -53,3 +53,5 @@ CgoCgV6es2GADVtdAAHGVu-elhg712.png
 Ciqah16es26ACqVnAAHPywKy70k381.png
 
 这时我在 -n 的选项之前再加一个 -I，表示客户端向目标服务端发送 ICMP 的数据包，我们再来看一下效果，发现在发送到第 12 条的时候，就到了目标服务器端，然后直接给出了一个反馈，完成了整个 traceroute 过程。
+
+CgoCgV6es36AaTLIAAI7PnT0K7I888.png
