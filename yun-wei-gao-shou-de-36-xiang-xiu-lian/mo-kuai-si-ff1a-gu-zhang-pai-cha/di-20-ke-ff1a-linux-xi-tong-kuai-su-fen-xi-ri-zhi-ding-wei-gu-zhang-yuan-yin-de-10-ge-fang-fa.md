@@ -144,3 +144,10 @@ Nginx access_log 内容，我们常常要去做对应的分析，主要的场景
 第一大类就是对于最频繁访问的 IP，了解哪一个 IP 可能频繁访问并对服务端造成的请求压力比较大，所以我们就需要分析 Nginx 打印出来的 access 日志基于 IP 的统计排名。这时我们可以通过这样的一段命令来进行分析：
 
 
+
+```
+cat access.log|awk '{print $1}'|sort |uniq -c |sort -n -k 1 -r|more
+
+```
+
+
