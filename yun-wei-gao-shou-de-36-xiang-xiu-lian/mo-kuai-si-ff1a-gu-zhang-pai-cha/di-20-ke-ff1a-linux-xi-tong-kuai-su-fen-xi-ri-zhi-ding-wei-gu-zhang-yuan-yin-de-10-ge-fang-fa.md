@@ -71,3 +71,20 @@ Context: http, server, location, if in location, limit_except
 * gzip：设置日志写入前先进行压缩，压缩比越高，消耗也越大；压缩比越小，占用的空间就会越多。
 * flush：设置日志缓存的有效时间。
 * if：条件判断。也就是需要满足什么条件才记录访问日志，比如我们可以只把请求等于 200 的条件的日志来做记录。
+
+
+这就是 access_log 在 Nginx 服务里面的定义规则， access_log 是 Nginx 里面一个非常重要的日志，它记录了用户请求的相关内容。
+
+**第二个重要的日志类型就是 Nginx 错误日志。**它主要用于分析 Nginx 的配置、Nginx 本身服务的问题，所以它记录的是 Nginx 进程启动、停止、重启及处理请求过程中发生的所有错误信息。它的配置方式是这样的：
+Syntax: error_log file [level];
+在 Nginx conf 里面，我们只需要将 error_log 加具体的文件路径，再加上日志级别，就可以进行错误日志的配置并打印输出。
+
+它默认的配置样例是这样的：
+
+
+
+```
+Default: error_log logs/error.log error;
+
+```
+
