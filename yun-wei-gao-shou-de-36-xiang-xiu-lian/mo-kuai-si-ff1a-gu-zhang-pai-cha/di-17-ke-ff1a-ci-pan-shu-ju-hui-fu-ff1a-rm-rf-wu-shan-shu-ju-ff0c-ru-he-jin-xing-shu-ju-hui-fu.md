@@ -99,7 +99,7 @@ Ciqah16VdOeAOn_dAAB14_xLtZU663.png
 
 在执行以上恢复操作之前，我先要确保数据恢复的目录 /opt/recovertest 下，cd  /opt/recovertest 目录下，执行想恢复的文件 extundelete /dev/sdb --restore-file file。
 
-Ciqah16VdFOACsNKAAF1sVuVggU217.png
+![](/static/image/Ciqah16VdFOACsNKAAF1sVuVggU217.png)
 
 
 执行完命令后，会有一个成功的提示。此时在当前目录的 RECOVERED_FILES 目录，有对应恢复好的文件，一个是 file，一个是 file.v1（这个为刚恢复的文件），为什么是 file.v1 呢？因为我在做操作的时候有操作过两遍，所以它恢复了两个文件。第 1 个 file 是我之前写入的内容，第 2 个 file 则是由于我执行了第 2 次恢复，恢复的文件虽然也是 file，所以会自动命名成一个新的版本，叫作 file.v1（这个文件就是我们想要恢复的文件名称）。
