@@ -93,3 +93,5 @@ CgqCHl66bA2AM-vuAABLSq_t41U364.jpg
 接下来进入我正在运行的操作系统里面，登录进入系统，首先需要模拟损坏 GURB。
 
 CgqCHl66bB2AVJwFAACveDe3Ia4694.jpg
+
+进入 /boot 目录下输入 ls 会看到 GRUB 对应的文件目录，然后通过 rm -rf grub* 删除 GRUB 的文件目录。
