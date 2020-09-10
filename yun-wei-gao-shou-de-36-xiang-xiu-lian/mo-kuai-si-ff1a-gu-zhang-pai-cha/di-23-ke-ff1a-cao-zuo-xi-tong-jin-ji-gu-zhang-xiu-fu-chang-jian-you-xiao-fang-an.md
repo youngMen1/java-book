@@ -140,3 +140,5 @@ Ciqc1F66bGuAWYrCAABLIALdS3M504.jpg
 Ciqc1F66bHOAEm3PAAAfY1xGwoU495.jpg
 
 然后执行 grub2-install /dev/sda（添加需要修复系统所在的磁盘的设备）。
+
+CgqCHl66bHuAXyiiAAAmz6_nPZo827.jpg
