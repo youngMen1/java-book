@@ -37,3 +37,8 @@ Zabbix 的自动发现其实就是自动发现并自动添加监控客户端的�
 
 CgqCHl68_HmAbetTAAClb6f9nPQ911.jpg
 
+我们来看一下，这里有几个框，一个是配置规则的名称（Name），由于我们没有用到代理模式，所以 Discovery by proxy 是 no proxy，下面定义的 IP range 就是规定的扫描主机段范围，如果 Zabbix_server 在多个主机段，我只想扫描一个子网段或者是某一个主机段中的主机，就需要定义好它针对的主机段信息，可以按照这样的格式去填入。
+
+下面的 Update interval 就是扫描的周期，也就是上次扫描完成以后间隔多久再次扫描。下面的 Checks，zabbix agent "system.uname"表示检查主机的原数据，可以调用 Zabbix_agent 的 system.uname 函数来获取客户端主机的元数据。再往下的 Device uniqueness 就是定义设备的唯一性要求，这个单选框选到了 IP address 这里，代表以 IP 作为唯一的标识来做一台主机。如果我们选择 Zabbix_agent 的 system.uname，就是以主机的元数据来标识这是一台唯一性的主机。
+
+我们在刚刚的选项框里面能看到需要填入的具体信息选项的说明，你可以具体来看一下：
