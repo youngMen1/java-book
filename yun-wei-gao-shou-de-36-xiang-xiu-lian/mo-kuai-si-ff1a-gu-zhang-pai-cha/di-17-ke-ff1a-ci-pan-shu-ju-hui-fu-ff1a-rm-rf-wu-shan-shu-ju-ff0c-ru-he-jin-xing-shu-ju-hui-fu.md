@@ -93,5 +93,15 @@ make && make install
 
 Ciqah16VdOeAOn_dAAB14_xLtZU663.png
 
+我们也可以选择恢复单独文件类型文件，执行：extundelete /dev/sdb --restore-file file
+
+
+
+加入的选项是 --restore-file，后面加你想恢复的文件名称。
+
+
+
+在执行以上恢复操作之前，我先要确保数据恢复的目录 /opt/recovertest 下，cd  /opt/recovertest 目录下，执行想恢复的文件 extundelete /dev/sdb --restore-file file。
+
 
 
