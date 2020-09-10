@@ -132,3 +132,5 @@ CgqCHl66bF2AdAI3AAANA6T4YWM710.jpg
 修复 GRUB，Centos 7 有对应的成熟的命令，首先新建一个目录（mkdir /boot/grub2），因为我们刚才把整个文件目录做了删除。
 
 Ciqc1F66bGKAb3hQAABJCj_36rw341.jpg
+
+Ciqc1F66bGuAWYrCAABLIALdS3M504.jpg
