@@ -157,3 +157,7 @@ CgqCHl66bJaAZoaXAAEhYTMITew904.jpg
 这个时候可以选择重新启动磁盘，然后在启动过程中修改启动 GRUB 的配置，，把 selinux 设置为禁用，这时需要重启启动虚拟机，然后按 e键进入 GRUB 菜单中编辑，找到“ Linux 16” 这一行并在“ centos/swap” 后面输入 selinux = 0 把 selinux 临时禁用（永久关闭的方式请见课时8），这样在启动过程中就不再加载 selinux 的相关策略。
 
 Ciqc1F66bNaAM40mAAAXBpmReRQ703.jpg
+
+然后按住 control + X 继续启动，就可以进入到登录界面，说明操作系统正常启动。
+
+好了，本课时内容就全部讲完了，如果你遇到相应的问题可以尝试用今天讲到的方法尝试修复操作系统故障。
