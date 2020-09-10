@@ -118,3 +118,5 @@ Ciqc1F6z5gaAVbOEAADJKPLGQmc895.png
 Ciqc1F6z5g-ASJ0NAAA7FAzWRc8740.png
 
 那么接下来我们就可以通过浏览器打开 Kibana 的管理后台，从界面里来看一看检索日志的记录和一些可视化展示的图表，我们可以点击界面上的 Discover 按钮，同时选择好对应的时间周期，然后可以增加一个 filter 过滤器，过滤器里面敲入对应的关键字来进行索引。
+
+CgqCHl6z5iGAPXFTAAG-rTIWEkU001.png
