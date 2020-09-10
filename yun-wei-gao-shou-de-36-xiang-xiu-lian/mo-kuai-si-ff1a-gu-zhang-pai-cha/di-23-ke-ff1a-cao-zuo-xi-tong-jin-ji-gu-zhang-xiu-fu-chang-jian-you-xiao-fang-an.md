@@ -64,4 +64,5 @@ CgqCHl66a_yAAvcMAAEMHAiOI_A313.jpg
 2.在启动菜单（GRUB）读秒界面按 e 键进入编辑模式。
 3.用上下键移动到“kernel”行，按 e 进入行编辑模式。
 4.在行编辑界面，在行末尾键入s、S、1 或者 single。
-
+然后进行保存、重启就可以告诉系统重启后以单用户模式加载启动操作系统，这是 Centos 6 进入单用户模式的操作流程，相比 Centos 6 ， Centos 7的进去单用模式可能略显复杂。
+Ciqc1F66bASAZ7p_AABx_fUX-gY425.jpg
