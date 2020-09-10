@@ -41,6 +41,6 @@ Ciqc1F7og5SAHDTIAAFdGy6d7gs623.png
 
 4.FULLNAT：基于 SNAT 和 DNAT 结合对数据包处理实现转发。
 
-CgqCHl7og6GAN6_JAAEQoa2o41c358.png
+![](/static/image/CgqCHl7og6GAN6_JAAEQoa2o41c358.png)
 
 接下来我们分别介绍 4 种模式的实现原理。
