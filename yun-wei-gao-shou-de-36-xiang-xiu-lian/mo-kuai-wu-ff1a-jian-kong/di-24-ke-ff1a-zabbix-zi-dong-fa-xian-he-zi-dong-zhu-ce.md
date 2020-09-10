@@ -35,5 +35,5 @@ Zabbix 的自动发现其实就是自动发现并自动添加监控客户端的�
 
 我们登录到 Zabbix 控制台，首先配置自动发现规则，我们按顺序点击 Configuration、Discovery 和 create Discovery rule，这就是配置的自动发现规则。
 
-
+CgqCHl68_HmAbetTAAClb6f9nPQ911.jpg
 
