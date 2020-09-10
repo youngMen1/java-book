@@ -57,5 +57,11 @@ i_count 的作用是当一个文件被一个进程引用时，它的数值会加
 
 ![](/static/image/Ciqah16VdL6ATGvHAAEkok5hmU0511.png)
 
+接下来我来演示误删数据场景2（在没有进程使用文件的情况下，如何恢复误删的文件）。演示这种场景，保险起见我在本地多挂载了一块 SDB 的独立硬盘设备。
+
+
+
+
+这种情况要如何恢复数据呢？我们需要安装 extundelete 这个工具。登录到我的测试机上，在这个演示场景里，挂载一块独立硬盘设备 /dev/sdb 并作数据格式化。完成格式化后。把单独的 sdb 设备，挂载到 test 目录下（mount /dev/sdb /test），接下来在 test 目录下生成一个内容为“deletetest ”的测试文件file(echo 'deletetest'>file),这个时候本地目录会生成一个测试的文件：file，再新建一个叫 testdir 的目录（mkdir /test/testdir），那么这时本地既有文件又有目录，也就是我接下来要演示删除的这些文件。
 
 
