@@ -148,7 +148,7 @@ CgqCHl66bEmATe3oAAAx4fNQ8RQ164.jpg
 
 然后在 BIOS 中将启动介质设置为磁盘 1，然后重启启动，这个时候会看到正常进入 GRUB 的选择菜单栏里，这个时候选择默认的第一个启动菜单项。
 
-CgqCHl66bIuAECi-AAA33rT3QlU625.jpg
+![](/static/image/CgqCHl66bIuAECi-AAA33rT3QlU625.jpg)
 
 这时，我们观察下启动过程，会发现启动停留在一个 selinux 报错上，导致后面一直无法启动，这个时候我们还需要修复下，在启动的时候不去加载 selinux。
 
