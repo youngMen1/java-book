@@ -108,3 +108,5 @@ CgqCHl6z5d2AcOLCAAJxBl6qrh8402.png
 所以我们现在来模拟演示一下。首先我需要开启的是 MySQL 的慢查询配置，那么通过 set global slow_query_log=‘ON‘，这样就可以开启慢查询日志，还需要设置好慢查询日志标准是大于 1 秒的，那么同样是 set global long_query_time 大于或等于 1，它的意思是大于 1 秒的查询语句，才会认为是慢查询，并且做日志的记录。
 
 CgqCHl6z5f2Adg-FAAG1tRCeSEs038.png
+
+那么另外还要设置慢查询日志的位置，通过 set global slow_query_log = 日志文件路径，这里设置到 filebeat 配置监听的路径下，就完成了慢查询日志的路径设置。
