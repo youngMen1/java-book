@@ -49,5 +49,5 @@
   * 接口自动化测试
   * 持续集成、持续交付、DevOps 体系
   * 测试平台开发技术栈讲解
-* Java 并发编程 78 讲
+* [Java 并发编程 78 讲](java-bing-fa-bian-cheng-78-jiang.md)
 
