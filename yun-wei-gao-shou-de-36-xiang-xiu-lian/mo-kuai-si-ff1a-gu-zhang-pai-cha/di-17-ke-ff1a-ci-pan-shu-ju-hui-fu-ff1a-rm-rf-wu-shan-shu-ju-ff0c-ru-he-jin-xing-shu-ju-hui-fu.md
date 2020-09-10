@@ -69,4 +69,23 @@ Cgq2xl6VdFOAPrHcAAEVDgSoHww503.png
 
 在执行命令extundelete之前需要先做的是 umount，把我们刚刚误删的目录 umount 掉（umount  /test -l），避免有新的进程再往磁盘块里写数据，同时也便于执行工具进行接下来的分析。
 
+附：extundelete 命令安装方式：
+
+
+
+```
+yum -y install bzip2 e2fsprogs e2fsprogs-devel gcc-c++
+
+wget https://nchc.dl.sourceforge.net/project/extundelete/extundelete/0.2.4/extundelete-0.2.4.tar.bz2
+
+tar jxvf extundelete-0.2.4.tar.bz2 
+
+cd extundelete-0.2.4
+
+./configure 
+
+make && make install
+```
+
+
 
