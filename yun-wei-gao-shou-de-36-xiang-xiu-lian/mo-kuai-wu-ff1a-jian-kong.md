@@ -97,3 +97,7 @@ CgqCHl7Dn92AUZXSAAA-WIx3DA0895.png
 然后点击 add data source，它里面有一个默认的配置模板，我们可以点击 Prometheus：
 
 Ciqc1F7Dn-mAQzgBAAAz07_mVFg961.png
+
+然后我们就可以进入 Grafana 的控制台，针对 Prometheus 这样的一个数据源，它的具体的配置界面。这里需要配置的有如下几大块配置：
+
+CgqCHl7Dn_GAR0ZJAACqBAiI04E471.png
