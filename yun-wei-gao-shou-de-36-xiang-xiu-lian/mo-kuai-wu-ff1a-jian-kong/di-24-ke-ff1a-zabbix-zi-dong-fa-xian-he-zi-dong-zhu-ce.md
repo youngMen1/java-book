@@ -96,3 +96,5 @@ Zabbix_agent 主动上报的一种配置这里需要配置 2 大块：
 这里的场景和前面介绍的模式场景环境基本上一样。那么客户端主动上报模式的配置，首先就是要在 Zabbix控制台里配置自动注册的规则及动作。我们同样点击 Configration->Actions，这时需要添加一条 auto registration 规则。
 
 CgqCHl68_KeAWF1gAAAn8mXN_z8660.jpg
+
+在这个规则里面配置 Action 动作，第 1 块是动作的名称（Name），下面是满足什么样的条件，这里我设置的条件为 Host metadata contains linux 表示是主机的元数据包含了 Linux 的条件，只要满足了是Linux类型的主机一个条件，然后配置执行步骤 Operation，如图：
