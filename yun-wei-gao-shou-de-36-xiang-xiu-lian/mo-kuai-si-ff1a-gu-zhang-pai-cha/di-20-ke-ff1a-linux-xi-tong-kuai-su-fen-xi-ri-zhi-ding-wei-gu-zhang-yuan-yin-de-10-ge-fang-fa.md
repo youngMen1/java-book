@@ -182,3 +182,24 @@ cat access.log|grep '221.219.98.129'|awk '{print $7}'|sort |uniq -c |sort -n -k 
 ```
 这时我们就可以通过 grep 把 access.log 按照某一个 IP 做一个筛选，然后把第 7 列 $reques（也就是请求路径等情况）打印出来。然后再进行一个同样的排序，我们会看到这个 IP 主要请求的是哪些地址，和它们对应的请求次数。
 
+### 3、更多场景
+当然还有更多的场景：
+
+**（1）查看爬虫、机器人访问**
+
+比如我们想要去分析这个 IP 或者某一些请求是否可能有爬虫，或者有一些通过脚本类似机器人的行为，因为通常这种行为对于服务端可能会造成请求流量的影响，所以需要通过 access.log 来进行分析来排查这些行为。
+
+通常第一类可以通过组合命令的方式来做：
+
+
+
+```
+cat access.log|grep -iv "MSIE|Firefox|Chrome|Opera|Safari|Gecko|Mozilla|wordpress"
+
+```
+
+cat 一个日志以后分析 grep -iv，i 表示查看的内容，里面是不区分大小写的；-v 是做一个反向的排查，也就是把正常浏览器通过 Agent (MSIE|Firefox|Chrome|Opera|Safari|Gecko|Mozilla|wordpress)端进行访问全部做一个反向的排查（看到通过非正常的 Agent 所转发的请求）。这样就可以判断有没有可能是机器人或爬虫的请求，以及大概的占比以及它们的行为。
+
+**（2）过滤没有 Agent 的请求**
+
+后面介绍的组合命令就是分析没有带 Agent 的请求。有可能一些请求是没有把 Agent 带过来的，我们需要关注并分析。
