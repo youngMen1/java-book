@@ -144,7 +144,7 @@ CgqCHl66bEmATe3oAAAx4fNQ8RQ164.jpg
 ![](/static/image/CgqCHl66bHuAXyiiAAAmz6_nPZo827.jpg)
 
 这个时候我们就可以通过 ls 命令查看对应目录下有没有文件生成，如果有文件生成以后就可以重启操作系统，
-Ciqc1F66bIOAVgJcAABUL1FHMtM765.jpg)
+![](/static/image/Ciqc1F66bIOAVgJcAABUL1FHMtM765.jpg)
 
 然后在 BIOS 中将启动介质设置为磁盘 1，然后重启启动，这个时候会看到正常进入 GRUB 的选择菜单栏里，这个时候选择默认的第一个启动菜单项。
 
