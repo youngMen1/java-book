@@ -91,3 +91,5 @@ docker run -d -p 3000:3000 grafana/grafana
 
 安装好 Prometheus 以后，接下来需要安装的就是 Grafana，它是一个 Web 界面化的监控数据的展示平台，我们同样可以通过 docker run 的方式来完成一键化安装，并且3000 的端口对外服务。完成安装以后，同样可以在浏览器里访问 {ip}:3000 的端口，就可以访问到 Grafana 控制台的界面，它有一个默认的用户密码，用户是 admin，密码也是 admin，我们登录进去以后，就完成了 Grafana 的安装。
 接下来需要配置的就是 Grafana 的采集数据源要从哪个地方采集，所以我们需要把 Grafana 的数据源配置成从 Prometheus 去采集，我们在登录到 Grafana 界面以后，在浏览器里面点击 Data Source 这个按钮：
+
+CgqCHl7Dn92AUZXSAAA-WIx3DA0895.png
