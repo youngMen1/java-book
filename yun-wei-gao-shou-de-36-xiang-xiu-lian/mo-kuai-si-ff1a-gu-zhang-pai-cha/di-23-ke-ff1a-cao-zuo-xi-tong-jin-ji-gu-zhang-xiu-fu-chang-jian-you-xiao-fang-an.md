@@ -118,3 +118,6 @@ Ciqc1F66bDuAOuSNAADMrAEagRY261.jpg
 
 
 Ciqc1F66bEGAYEcOAAEoAMQ3u00725.jpg
+
+
+这里输入 1，就进入了救援模式，并进入了一个 Shell 的交互界面了，这样我们就可以通过输入命令来修复已经损坏的 GRUB 文件。
