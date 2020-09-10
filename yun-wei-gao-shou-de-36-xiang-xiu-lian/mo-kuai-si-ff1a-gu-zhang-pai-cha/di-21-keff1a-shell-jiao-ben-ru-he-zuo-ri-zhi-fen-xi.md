@@ -5,3 +5,9 @@
 ## grep 命令
 
 首先为你讲解一个常用命令 grep ， grep 是 Linux 常用对日志文件进行筛选查找的命令。它的常用使用方式是这样的：
+
+```
+grep [选项] PATTERN filename
+
+```
+
