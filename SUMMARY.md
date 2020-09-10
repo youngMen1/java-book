@@ -37,7 +37,7 @@
   * [模块六：安全](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-liu-ff1a-an-quan.md)
     * [第26课：防火墙：iptables 企业级安全策略](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-liu-ff1a-an-quan/di-26-ke-ff1afang-huo-qiang-ff1a-iptables-qi-ye-ji-an-quan-ce-lve.md)
     * 第27课：应用安全：基于 HTTP、HTTPS 请求过程中常见 waf 攻防策略
-    * 第28课：防洪安全：DDoS 的原理分析及攻防策略
+    * [第28课：防洪安全：DDoS 的原理分析及攻防策略](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-liu-ff1a-an-quan/di-28-ke-ff1a-fang-hong-an-quan-ff1a-ddos-de-yuan-li-fen-xi-ji-gong-fang-ce-lve.md)
   * [模块七：虚拟化](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-qi-ff1a-xu-ni-hua.md)
     * 第29课：虚拟化关键技术浅析（NUMA、dpdk、绑核）
   * [模块八：方案](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-ba-ff1a-fang-an.md)
