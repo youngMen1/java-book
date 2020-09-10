@@ -85,3 +85,5 @@ Ciqc1F66bASAZ7p_AABx_fUX-gY425.jpg
 接下来，我们来演示救援模式的使用，我们模拟把 GURB 文件进行删除，删除以后会提示因为没有了 GURB 的启动配置文件导致系统无法进入 GURB 菜单选项引导界面了，这时就需要我们使用救援模式来修复 GURB。
 
 首先，我使用 Vmware 虚拟并启动了一个 Centos 7 的实验操作系统，使用这样的环境来模拟救援模式修复 GURB 的过程。
+
+CgqCHl66bA2AM-vuAABLSq_t41U364.jpg
