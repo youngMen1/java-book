@@ -100,3 +100,7 @@ CgqCHl68_KeAWF1gAAAn8mXN_z8660.jpg
 在这个规则里面配置 Action 动作，第 1 块是动作的名称（Name），下面是满足什么样的条件，这里我设置的条件为 Host metadata contains linux 表示是主机的元数据包含了 Linux 的条件，只要满足了是Linux类型的主机一个条件，然后配置执行步骤 Operation，如图：
 
 Ciqc1F68_LCADryJAACKuB-Bv8Y577.jpg
+
+Add host 这个动作是添加主机到某一个主机组，这里演示中的这些设置和主动发现模式中 Actions 设置关联主机模板等等，我们会看到这里配置前面（模式一）配置是相同的
+
+接下来就是调整我们的 agent 配置，在 agent 配置里面，我们重点需要加入的一行是 ServerActive，表示主动上报到 Server 端的地址信息，那么我们就要配置好对应的 Zabbix_server 所在的 IP 地址，从而去做主动上报。同样的，配置完成以后启用 agent这个进程，那么接下来我们要在服务端进行检查。
