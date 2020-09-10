@@ -56,4 +56,99 @@ egrep ‘[^0][0-9]{0,2}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}’ ./test -c
 awk ‘pattern’ filename
 
 ```
+awk 后面加想要匹配的文件内容，然后再加这个文件的路径或者名称。
 
+示例：`awk -F: ‘/root/’ /etc/passwd`
+
+如上有一个使用事例，awk -F:，它表示查找 /etc 下的 passwd 文件，这里会以冒号进行内容上按列分割，然后前面加了一个匹配的内容（pattern），/root/ 表示是查找 /etc/ passwd 文件内容是否包含 root 这个关键字，然后打印对应的行打印。
+
+第 2 个使用方式是：
+
+
+```
+awk ‘{action}’ filename
+
+```
+示例：`awk -F: ‘{print $1}’ /etc/passwd`
+
+我们同样看一下这个示例，这里的 {print $1}，$1 表示打印 /etc/passwd 文件中每行的第 1 列（及系统上的用户名）。
+
+第3种使用方式是：
+
+
+```
+awk ‘pattern {action}’ filename
+
+```
+我们看到它既做了查找，后面又做了 action。这个方式会更加全面。这里同样有一个例子：
+
+
+```
+awk -F: ‘/root/{print $1,$3}’ /etc/passwd
+
+```
+首先它会做一个查找，匹配有 root 关键字的这一行，然后打印它的第 1 列和第 3 列，这里 awk 在这里既做关键词的匹配，也做了 action({print $1,$3})。
+
+经验来看，awk 的强大主要体现在它的 action （动作指令），它可以对文件内容进行丰富灵活的处理，关于action的使用格式可以细分如下：
+
+
+```
+格式1:BEGIN{} {} END{}
+```
+
+BEGIN{} 表示在 awk 处理行前，需要执行的动作。中间的 {} 表示在 awk 执行过程中，所需要执行的动作，END{} 表示处理完所有内容以后的动作。
+
+值得注意的是：实际使用 action 这种格式中，BEGIN{} 和 END{} 我们可以选择不加。
+
+我们来看一下这个案例：
+
+
+
+```
+awk -F: 'length($1)==5{count++;print $1}END{print "count is: "count}' /etc/passwd
+
+```
+它只加了中间括号 {} 和 END{}，在这个样例的 awk 里面，它对 passwd 文件做了一个操作，用来匹配 /etc/passwd 里每一行第 1 列的内容（Linux 系统用户名）长度是否等于 5，如果是等于 5，则说明匹配到要求的条件（length($1)==5）。条件成立以后在处理过程中会做一个计数（count++），并把第 1 列的内容打印出来，执行完 awk 以后，再把 count 的结果打印出来，我们就知道总体的匹配有多少个。
+
+这就是 awk 的技术样例。那么再来看一下这样的一个样例：
+
+
+```
+Cat xxx.log|awk 'BEGIN{max=0;min=1} 
+{if ($4 ~ /jeson/ && $8==200){ 
+sum+=$NF; count+=1; 
+if($9 > max) max=$9 fi;if($9 < min) min=$9 fi; 
+}
+}
+END {print "Average = ", sum/count;print "Max = ", max;print "Min", min}'
+
+```
+
+我们上一课时的内容里面讲到过进行性能分析时，通常需要对 Nginx 的 access 日志进行响应时间的分析，如果我们想了解某一个接口它总体的情况，如最大响应时间是多久，最小的响应时间是多久，或者它的平均响应时间是多久，这时就可能需要通过 awk 来对日志进行整体分析，这里来看一下。
+
+补充：xxx.log的日志格式：
+
+
+```
+log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+                      '$status $body_bytes_sent "$http_referer" '
+                      ‘“$http_user_agent” “$http_x_forwarded_for” $upstream_response_time';
+
+```
+
+这里的使用方式是这样的：
+
+首先 cat 一个日志，把日志整打印出来，然后通过管道符给 awk 处理，这里就用到了 BEGIN{} 这个 action 行为，然后还有中间的括号行为，以及 END{}。
+
+接下来 BEGIN action(max=0；min=1) 表示的是在执行 awk 之前所需要进行预处理的部分，这里先设置变量 max 等于 0，还有一个最小的值 min 等于 1。在进行处理中的括号里会有一个整体的语句进行判断，判断 $4（也就是 Cat xxx.log 这个文件的第 4 列是否匹配关键字 jeson），同时还要满足另外一个条件 $8==200（也就是 Nginx log 里面的返回状态码是否满足 200）。如果这两个条件都成立，这个时候就会用 sum 进行计数，$NF 表示日志里面最后一列的内容，sum+=$NF 表示 upstream_response_time 的数值进行累加，得到整体 upstream_response_time 的时间，也就是将 Nginx 转发到后端所有请求响应时间求和，赋值给 sum 变量。count+=1 表示 count 同时做一个计数器来自增。
+
+if($9 > max) max=$NF fi;if($NF < min) min=$NF ，接下来会做一个判断，判断 $NF（也就是最后的响应时间）是否大于 max（第一次是默认值 0），如果大于 0 的话，那么它会把 max 的值重新替换。同样，也会和最小值进行比较，如果它小于最小值，就又会把最小变量 min 做一个替换，从而循环的去进行判断，通过每一个请求拿到整体最大请求和最小请求的时间，并且都赋值到对应的变量里去，分别是 count、sum、max 和 min。
+
+END {print "Average = ", sum/count;print "Max = ", max;print "Min", min}'
+最后再整体把它的结果输出，这里就用到了 END 后面的括号了。它会把这个文件内容里面的平均响应时间求出来，通过 sum 变量，用整体的响应时间除以请求个数（sum/count），这样就得到了一个平均的响应时间。然后把 max 变量打印出来，得到了最大响应时间。min 这个时变量打印出来就是最小打印时间。
+
+## ag 命令
+
+接下来还要为你介绍一个文件分析命令 ag，ag 命令相比 awk 和 grep 命令来我们感觉会更加新鲜，它的优势是性能比 grep 和 awk 做文件查找会更高效，并它默认支持正则方式，而不用通过 egrep 这种在里面加一些 -e 的选项，可以直接进行正则匹配。
+
+ag 使用选项，跟 grep 命令基本上都是一致的。我们可以看一下：
