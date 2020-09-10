@@ -117,7 +117,7 @@ root 用户密码错误是我们非常常见的错误，可能是由于忘记了
 这里会加载启动救援模式必需的操作系统内核和服务程序。
 
 
-Ciqc1F66bEGAYEcOAAEoAMQ3u00725.jpg
+![](/static/image/Ciqc1F66bEGAYEcOAAEoAMQ3u00725.jpg)
 
 
 这里输入 1，就进入了救援模式，并进入了一个 Shell 的交互界面了，这样我们就可以通过输入命令来修复已经损坏的 GRUB 文件。
