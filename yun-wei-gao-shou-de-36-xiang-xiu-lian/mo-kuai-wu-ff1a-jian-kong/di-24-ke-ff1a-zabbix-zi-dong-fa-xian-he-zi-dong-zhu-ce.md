@@ -81,3 +81,7 @@ HostMetadataItem=system.uname  //通过system.uname函数动态获取主机元�
 ```
 * Server=172.21.64.12 配置，也就是 Zabbix_server（zabbix服务端） IP 地址。
 * HostMetadataItem 主要是来配置主机的元数据，这里可以通过 system.uname 来动态获取元数据信息。
+
+完成 Zabbix_agent 配置以后重启，这样就可以开始等待一段时间来判断服务端是否有发现这台主机，是不是能够自动发现新的主机。
+
+我们在介绍完第 2 种模式，也就是 Zabbix_agent 主动上报模式配置以后，接下来教你如何在 Zabbix 控制台判断是否找到新的主机.
