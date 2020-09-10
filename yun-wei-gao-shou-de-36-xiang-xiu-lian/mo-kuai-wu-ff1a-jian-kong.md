@@ -13,3 +13,7 @@ Prometheus 是由一套组件所组成，接下来我们具体来介绍一下它
 * 第 3 个组件就是 Push Gateway，它是一个支持客户端使用主动推送监控数据的中间网关。刚讲到 Prometheus server 默认以拉取监控数据的方式来抓取客户端数据。当我们的客户端需要通过 push 主动推送时就需要 Push Gateway 组件来作中间转化。
 * 第 4 个组件是 Exporter，它是 Prometheus 的一类数据采集组件的总称，负责从目标节点处搜集数据，并将其转化为 Prometheus 支持的抓取的格式，这提供了一个统一形式的接口供服务端抓取。
 * 第 5 个组件是 Alertmanager，警告管理器，在监控系统中负责报警模块，所有 Prometheus 发出的报警都是通过它进行处理和触发告警消息的。
+
+了解了几个核心组件后，我们来看一下 Prometheus 这些组件所构成的 Promethues 整体监控架构。
+
+CgqCHl7Dn2SAX4_sAAEeHG2vN7E056.png
