@@ -87,5 +87,10 @@ cd extundelete-0.2.4
 make && make install
 ```
 
+安装好这个工具（extundelete）后，执行：extundelete /dev/sdb --inode 2
+
+我们可以在命令后面加入设备名称，然后加入上面的 inode 进行分析。完成之后我们会看到显示屏幕上已经出现了刚刚删除的文件、名称及目录，还会看到 inode 号以及当前的状态。
+
+
 
 
