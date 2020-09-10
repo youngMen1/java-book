@@ -36,4 +36,4 @@ Kafka 是 ELK 和 EFK 里面一个附加的关键组件（缩写 K），它主�
 首先第 1 套比较简单，而且是中小型企业才会用到的一种方式。即通过 Logstash 来做日志的收集，我们会看到这样的一张图，在每个客户端部署一套 Logstash 工具，主要用于日志收集，并且也可以提供一些日志的过滤功能。而服务端通过 Elasticsearch 和 Kibana 实现，这样只可以实现简单的日志收集。
 
 
-
+Ciqc1F6z5SGAQhkKAAU8iq4TdH8042.png
