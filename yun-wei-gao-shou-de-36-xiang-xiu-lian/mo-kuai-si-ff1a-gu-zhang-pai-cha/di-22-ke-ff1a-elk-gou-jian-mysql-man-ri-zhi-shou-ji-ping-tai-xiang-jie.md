@@ -100,3 +100,5 @@ filebeat 同样是在安装好官方源后，直接通过 #yum install filebeat-
 指定好它的 slowlog，也就是慢日志的收集路径，就可以监听并收集 MySQL 日志。我们可以在客户端通过这样一条命令，filebeat -e -c filebeat.yml -d "publish"，-c 指定的是它的主配置文件。然后通过 -d "publish" 方式去推送客户端日志。
 
 接下来登录到控制台，可以通过执行这条命令来推送。我们可以看到，终端会展示出推送日志的相关进度和一些信息。
+
+CgqCHl6z5d2AcOLCAAJxBl6qrh8402.png
