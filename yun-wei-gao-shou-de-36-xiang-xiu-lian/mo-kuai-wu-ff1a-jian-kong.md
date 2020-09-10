@@ -43,3 +43,16 @@ CgqCHl7Dn2SAX4_sAAEeHG2vN7E056.png
 CgqCHl7Dn5yAKlxWAACmu5VzQHw993.png
 
 它们之间的不同主要体现在以下几个方面：
+
+首先 Zabbix 是由 PHP 开发的，而 Prometheus 是 GO 语言开发的。其次，从开发时间来看，Prometheus 比 Zabbix 晚出来很多年，没有太多复杂多余的逻辑，再次存储数据库的方式也不同（后面具体介绍），这些因素使得 Prometheus 在性能上会比 Zabbix 更优。
+
+第二，正是由于 Zabbix 问世的时间更早，所以它的代码成熟度会略高，而 Prometheus 由于出来的更晚，所以它可能会有代码需要加固。
+
+第三，Prometheus 相对 Zabbix 而言，可能存在的另外一个劣势就是配置的复杂度更高，我们在上节课里面有讲到 Zabbix 的自动发现和自动上报，Zabbix的监控配置在控制台相对完善，而 Prometheus 则需要去进行很多配置项的和数据规则这样的运算配置，所以它的复杂度相对 Zabbix 而言会更高一些。
+
+于其他维度分析，我们看到 Prometheus 均是优于 Zabbix，尤其是对于 K8s+容器的支持，而 Zabbix 到了很晚才去兼容支持 K8s 这种动态发现、编排容器的架构模式，所以当前很多 K8s 部署场景里的监控系统都会基于 Prometheus 来实现。
+
+此外，再总结一些更多 Prometheus的几个特性：
+
+1.Prometheus 采用了一种 Pull（拉）且 HTTP 的方式获取数据降低客户端的复杂度，服务端可以更加方便地水平扩展。
+2.Prometheus 存储使用时序数据库 Zabbix 采用关系数据库保存，这极大限制了 Zabbix 采集的性能， Prometheus 自研一套高性能的时序数据库， 在 V3 版本可以达到每秒千万级别的数据存储。
