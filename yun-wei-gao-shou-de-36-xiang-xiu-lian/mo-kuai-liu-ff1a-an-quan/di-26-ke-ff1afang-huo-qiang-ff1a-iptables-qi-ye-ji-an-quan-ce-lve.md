@@ -73,3 +73,28 @@ Ciqc1F7GXNaAWc-BAACVfKp2FC8903.png
 这样的话就完成了整体规则的清空。另外，iptables -P 设置了 3 条具体规则的链，一个是 INPUT 链，一个是 OUTPUT 链，一个是 FORWARD 链。那么这 3 条链分别设置 Accept，也就是允许所有数据包进行访问，这就完成了整体的初始化。我们看到初始化里没有做任何安全防护规则，而是把以往的规则进行清空，并且设置一条权限比较大的规则，在这个基础上再进行具体的安全防护规则设置。
 
 首先第一个安全防护规则就是通过 iptables 命令来进行设置的，每次设置完具体的命令后，就会把这些命令转化为 iptables 所能识别的一条规则生成到配置文件里。通常对于用户来说对配置文件的管理可能是非常容易理解的，所以为了方便进行 iptables 设置，我们更愿意把 iptables 命令的使用和选项的使用，封装成一些 Shell 脚本来直接批量化设置。这里会看到我使用的 iptables 命令进行设置的同时，也结合了一些 Shell 脚本的语法格式。我们来看一下：
+
+
+
+```
+iptables -A INPUT -i lo -j ACCEPT  //允许本地访问
+LOCAL_NET="xxx.xxx.xxx.xxx/xx”  //允许内部指定网段访问
+if [ "$LOCAL_NET" ]
+then
+        iptables -A INPUT -p tcp -s $LOCAL_NET -j ACCEPT
+fi
+ALLOW_HOSTS=(                             //允许访问主机Ip开白
+       "xxx.xxx.xxx.xxx"
+       "xxx.xxx.xxx.xxx"
+)
+
+if [ "${ALLOW_HOSTS}" ]
+then
+        for allow_host in ${ALLOW_HOSTS[@]}
+        do
+                iptables -A INPUT -p tcp -s $allow_host -j ACCEPT
+        done
+fi
+
+```
+
