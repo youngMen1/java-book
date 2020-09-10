@@ -122,3 +122,5 @@ Ciqc1F6z5g-ASJ0NAAA7FAzWRc8740.png
 CgqCHl6z5iGAPXFTAAG-rTIWEkU001.png
 
 这里我敲入的是 slow.query 这个关键字，就会匹配出对应的可以检索的项目，点击想要查询的对应项目，展示出想检索的某一个时间周期内对应的一些日志记录，以及它的图表是什么样子的，同时在下方会有对应的 MySQL 的日志信息打印出来，通过 Kibana 这样的可视化界面就能够看到的相关信息了。
+
+Ciqc1F6z5iiAK1ZXAAG-rTIWEkU923.png
