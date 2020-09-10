@@ -71,3 +71,11 @@ Ciqc1F7Z5qiABuNpAAGxNcsS_Ho822.png
 除了软件的不断优化，硬件也在对虚拟化的技术不断改善及性能调优。主流的服务器 CPU 的厂商，如 Intel 和 AMD ，他们从 CPU 层，也就是硬件层，考虑去支持虚拟化的一些指令。Intel 引入了 Intel-VT （Virtualization Technology）虚拟化 CPU 指令集，这种 CPU 有 VMX root operation 和 VMX non-root operation 两种模式，且两种模式都有一套 Ring0-4 权限级别。 这里就使得 VMM 可以运行在 VMX root operation 模式下,客户 OS 运行在 VMX non-root operation 模式下，而且两种操作模式可以互相转换。
 
 CgqCHl7Z5rKAHPYjAAIJrpujE5k364.png
+
+对于虚拟主机上面的应用有需求，需要 OS 去使用底层特权或遇到需要 VMM 处理的事件，这时 OS 就可以切换到 VMX root operation 模式。
+
+这种依赖 CPU 硬件虚拟化方式，应用广泛，性能也是比较出众的。
+
+## NUMA 虚拟化技术
+
+接下来要给你来分享虚拟化技术，也是围绕 CPU 的资源优化，叫作 NUMA。NUMA 是对于虚拟主机调用内存的一套新的管理方式，为什么需要 NUMA？在早期的 CPU 架构里面，CPU 对于内存的调用都要通过硬件上面的北桥芯片，但随着 CPU 的核数不断增加， CPU 对于内存的调用都通过北桥芯片，肯定会产生很多冲突，这个时候就把内存逐步在底层硬件上面做了改造，把内存绑定到了不同的 CPU 的寄存器里面。
