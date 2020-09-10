@@ -86,4 +86,4 @@ HostMetadataItem=system.uname  //通过system.uname函数动态获取主机元�
 
 我们在介绍完第 2 种模式，也就是 Zabbix_agent 主动上报模式配置以后，接下来教你如何在 Zabbix 控制台判断是否找到新的主机.
 
-Zabbix agent 主动上报
+## Zabbix agent 主动上报
