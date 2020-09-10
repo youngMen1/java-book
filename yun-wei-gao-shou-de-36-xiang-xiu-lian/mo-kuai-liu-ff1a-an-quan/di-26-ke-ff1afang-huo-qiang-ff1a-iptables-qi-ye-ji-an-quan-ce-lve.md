@@ -214,4 +214,40 @@ iptables -A INPUT -p tcp --syn -m multiport --dports $SSH -m recent --name ssh_a
 iptables -A INPUT -p tcp --syn -m multiport --dports $SSH -m recent --name ssh_attack --rcheck --seconds 60 --hitcount 5 -j REJECT --reject-with tcp-reset
 
 ```
+这里会看到同样是基于 TCP 的协议请求，访问 SSH 端口的时候，会判断最近 60 秒之内访问了多少次数，如果是超过了次数限制的话，那么就会进行 REJECT，也就是拒绝 IP 来进行访问了。所以 SSH 还有 FTP 都可以通过这样的一种方式来防止暴力破解的攻击。
 
+接下来我们需要在机器上面设置，哪一些服务是需要正常对外提供服务的，这里我们可以来具体设置一些需要对外提供的服务，比如需要允许某一些网段访问指定的一些服务，或是访问 SSH 服务等。如果是有一些 HTTP 服务，需要公共对外服务的话，同样可以把网段的源地址限制去掉，而把公共服务对外暴露，那也就是把服务设置成对外能够允许提供正常服务，不因为 iptables 规则而阻止，所以这里我们主要是围绕服务来进行具体设置的。
+
+
+
+```
+iptables -A INPUT -p tcp -m multiport --dports $HTTP -j ACCEPT
+……
+LIMITED_LOCAL_NET="xxx.xxx.xxx.xxx/xx"
+if [ "$LIMITED_LOCAL_NET" ]
+then
+        # SSH
+        iptables -A INPUT -p tcp -s $LIMITED_LOCAL_NET -m multiport --dports $SSH -j ACCEPT # LIMITED_LOCAL_NET -> SELF
+        # FTP
+        iptables -A INPUT -p tcp -s $LIMITED_LOCAL_NET -m multiport --dports $FTP -j ACCEPT # LIMITED_LOCAL_NET -> SELF
+        # MySQL
+        iptables -A INPUT -p tcp -s $LIMITED_LOCAL_NET -m multiport --dports $MYSQL -j ACCEPT # LIMITED_LOCAL_NET -> SELF
+fi
+ZABBIX_IP="xxx.xxx.xxx.xxx"
+if [ "$ZABBIX_IP" ]
+then
+        iptables -A INPUT -p tcp -s $ZABBIX_IP --dport 10050 -j ACCEPT 
+fi
+
+```
+我们刚刚讲到的 IP 规则设置了基于底层协议的限制规则，还帮助应用层来做安全频率上的一些规则限制，刚刚我们也讲到了，如何允许正常服务对外提供访问设置，最后我们只要进行一条规则来整体收尾，也就是要设置除了这些规则以外的其他的所有服务，默认不允许访问，因为我们知道 iptables 默认不做设置的话，它是允许对外提供服务的。
+
+假设有 300 的端口，我们没有允许这些文件共享的服务对外提供服务，它默认也是可以对外来提供的，因为 iptables 默认是允许对外提供访问的。所以在最后我们需要设计一条收尾规则，就是除了我们刚刚设置的这些规则以外，其他的访问的数据包一概是 drop 掉的，不允许访问的。所以我们就加一条规则：
+
+
+
+```
+ptables -A INPUT -p tcp -m multiport --dports $HTTP -j ACCEPT 
+
+```
+这样就完成了一个完整的规则设置了。本课时我们讲解的 iptables 的规则设置，还有他的一些整个使用关系，以及具体的安全设置上的一些设置样例，你可以再多多理解，下个课时我将讲解“应用安全：基于 HTTP、HTTPS 请求过程中常见 waf 攻防策略”，记得按时听课。
