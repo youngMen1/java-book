@@ -100,3 +100,15 @@ Default: error_log logs/error.log error;
 * string：十分重要，主要定义日志格式和对应内容，它是通过 Nginx 变量来做具体定义。
 
 我们看看具体的配置：
+
+
+
+```
+og_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+
+                      '$status $body_bytes_sent "$http_referer" '
+
+                      '"$http_user_agent" "$http_x_forwarded_for"';
+
+```
+
