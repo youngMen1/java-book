@@ -65,7 +65,7 @@ Ciqah16VdFOAZFR6AAGnNj1Lipk925.png
 
 我们可以通过 rm -rf ./*，直接把当前目录下的文件整体删除。然后我需要恢复这个文件，原理就是：通过分析它的 block 块，来恢复 inode 链接，要分析并恢复已删除文件的链接，我们要用到一些工具，这里推荐你使用一个叫 extundelete 的命令，它是在 Linux 下基于 ext3\ext4 的文件分析工具，可以对文件系统已删除的文件进行分析，并进行数据恢复。
 
-Cgq2xl6VdFOAPrHcAAEVDgSoHww503.png
+![](/static/image/Cgq2xl6VdFOAPrHcAAEVDgSoHww503.png)
 
 在执行命令extundelete之前需要先做的是 umount，把我们刚刚误删的目录 umount 掉（umount  /test -l），避免有新的进程再往磁盘块里写数据，同时也便于执行工具进行接下来的分析。
 
