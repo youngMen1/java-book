@@ -56,3 +56,30 @@ CgqCHl7Dn5yAKlxWAACmu5VzQHw993.png
 
 1.Prometheus 采用了一种 Pull（拉）且 HTTP 的方式获取数据降低客户端的复杂度，服务端可以更加方便地水平扩展。
 2.Prometheus 存储使用时序数据库 Zabbix 采用关系数据库保存，这极大限制了 Zabbix 采集的性能， Prometheus 自研一套高性能的时序数据库， 在 V3 版本可以达到每秒千万级别的数据存储。
+
+## Prometheus+grafana结合
+接下来我们就拿 Prometheus + Grafana 结合来为你做一个搭建演示，来讲解这套结构应该如何配置。
+
+这里分 4 大块，一个是安装和配置 Prometheus；第二块就是安装或者配置 Grafana UI 的外围控制台展示；第三是配置 Grafana 数据源，因为 Grafana 是需要通过 Prometheus 去抓取的，我们需要配置的 Grafana 所采集的 Prometheus 数据；第四就是我们需要配置客户端 Expprters 作数据采集.
+
+首先我们来讲解 Prometheus 安装，它的安装比较容易。
+
+Prometheus 它可以支持源码编译的安装，也可以支持容器的安装，这里我们来介绍容器的安装方式。
+
+如果安装容器的话，我们通过安装 Docker 这样的容器组件，通过 yum install docker 先安装好 Docker 这个服务，并且启动通过 systemctl start docker，这种 CentOS7 的服务管理启动方式，启动 Docker 的服务，然后我们执行 docker pull prom/prometheus ，这样就从远端拉取了一个官方的 Prometheus 镜像。
+
+
+
+```
+docker run -d -p 9090:9090 \
+    -v ~/docker/prometheus/:/etc/prometheus/ \
+    prom/prometheu
+
+```
+
+然后我们就可以 docker run 了，直接以服务的方式运行，然后做一个端口映射，把本地的 9090 端口映射到容器的 9090 端口里面去，并且做一个数据卷的挂载。这个就是把 Prometheus 的配置文件挂载到了本地的一个目录（~/docker/prometheus/）下去，因为我们需要去修改 Prometheus 的配置文件，这样的话会更加方便。 后面加的就是拉取的镜像名称，这样就可以完成这个容器的启动，Prometheus 服务就已经安装完成。
+
+安装完成以后，接下来我们需要修改配置文件，它的配置文件是在我们本地目录路径 /root/docker/prometheus/prometheus.yml （主配置文件）。这个文件里我们首先要来看的有两大块，一个是 global 块，这里面定义的是 Prometheus 的全局新配置，还有 scrape_config 块，这里定义了 Prometheus 要抓取的目标，这块的配置是我们需要修改的，我们可以等到把客户端整体搭建起来以后，再来修改配置文件。
+
+整个启用完成以后，我们可以在浏览器里面访问你的本机 IP 地址和 Prometheus 对外暴露的 9090 端口，这样就可以登录到 Prometheus UI 的控制台。
+
