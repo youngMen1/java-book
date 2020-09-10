@@ -22,3 +22,8 @@ CgqCHl7GXLmAQNIJAAAx_JTgoQQ756.png
 在这张图里，我们会看到当前整个 Netfilter 在应用平台服务里面，起到的至关性作用。而 iptables 发布的其实是两款专业的防火墙工具，那么对于 iptables 和 firewalld，这两个防火墙服务之间有两个比较大的差异，这里给你来介绍一下。
 
 
+## iptables 和 firewalld 之间的差异
+
+
+
+
