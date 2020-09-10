@@ -177,32 +177,32 @@ ag 使用选项，跟 grep 命令基本上都是一致的。我们可以看一�
 
 整体 Nginx 的日志进行分析，接下来登录到一台测试机上面，然后 cd t21 目录下，有一个 nginx_check.sh 的 Shell 脚本。
 
-Ciqah16oCk2AEbinAAF6FZc0C8Y862.png
+![](/static/image/Ciqah16oCk2AEbinAAF6FZc0C8Y862.png)
 
 我们首先来介绍一下 Shell 脚本的整体结构，最上面的这一段语句是做一个文件路径（/tmp/logs）的判断，如果存在的话，就会先把之前的文件做一个清空。
 
-Ciqah16oClaAAuEjAAHN0RjwOLs251.png
+![](/static/image/Ciqah16oClaAAuEjAAHN0RjwOLs251.png)
 
 这是因为执行日志分析的脚本时，会把每一项的功能得到的统计结果，输出到 tmp 路径下面的 logs 目录下，并且以对应的文件名进行归纳。当我们执行完脚本以后，想要了解每一项结果内容的时候，就可以到该路径下面去查看对应的结果。
 
 这里需要填写 Nginx 的 access 日志目录，用于分析的文件 access 日志路径。接下来做日志路径判断，如果日志路径不存在，那么脚本执行就会中断退出。
 
-CgoCgV6oCnSAMMVaAAHrrrcMxQM494.png
+![](/static/image/CgoCgV6oCnSAMMVaAAHrrrcMxQM494.png)
 
 再往下看的话，这里就是做系统版本检测，这个脚本需要在 Debian 操作系统或者 Ubuntu 、Centos 这样的操作系统上，如果操作系统不能满足的话也会退出。
 
 接下来就要用到我们刚刚讲到的 ag 命令。在没有 ag 命令情况下，脚本会先提示并进行安装，对应的使用 Yu m 或者是 apt get 包管理器安装。
 
-Ciqah16oCnyAU7F5AAK3m1tcm1U889.png
+![](/static/image/Ciqah16oCnyAU7F5AAK3m1tcm1U889.png)
 
 下面就具体每一项的功能分析：
 
-CgoCgV6oCoSABFmQAADl0mRWcSA337.png
+![](/static/image/CgoCgV6oCoSABFmQAADl0mRWcSA337.png)
 
 这里分析的就是访问 Top20 的 IP 地址，那么 ag 命令就做一个正则匹配，把所有的地址打印出来，然后通过 sort 来进行排序，uniq 来进行统计，然后再得到由大到小的结果，并且过滤出前 20 行数，然后同时把内容给到 tee 这个命令，它会把输出内容重定向到日志结果目录（/tmp/logs/top20.log），整体执行完毕后，如果我们想要看这一项分析结果的话，那么就可以在 log 目录下 Top20.log 文件里查看。另外 tee 命令还可以支持在终端输出，也就是既把结果放在终端输出。
 
 所以这样就完成了第 1 项的日志功能分析，分析出访次数问前 20 的 IP 地址，并且打印。后面的每一项功能分析其实都是类似的原理，通过 ag 命令来对文件进行关键字查找，并且进行分析和统计。
 
-CgoCgV6oCouACYpDAAOHWLR8AZM738.png
+![](/static/image/CgoCgV6oCouACYpDAAOHWLR8AZM738.png)
 
 好了，最后执行 sh nginx_check.sh，就可以开始 nginx access 日志来分析，我们在控制台终端关注它的执行过程和进度，并且在结果目录中详细分析日志得到的结果内容。
