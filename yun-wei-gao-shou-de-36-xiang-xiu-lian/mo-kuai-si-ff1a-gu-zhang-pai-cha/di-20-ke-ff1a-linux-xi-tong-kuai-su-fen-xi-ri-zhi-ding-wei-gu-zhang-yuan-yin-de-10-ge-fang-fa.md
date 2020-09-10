@@ -22,3 +22,7 @@ Ciqah16ipEeAGWevAAbzAGpV_r4743.png
 学习本课时，你只需要了解 Nginx 操作基础，并且了解 MySQL 的使用基础。
 
 # 解析 Nginx 日志
+
+在本课时的内容里，首先给你介绍的就是 Nginx 的日志。
+
+## Nginx 的日志类型
