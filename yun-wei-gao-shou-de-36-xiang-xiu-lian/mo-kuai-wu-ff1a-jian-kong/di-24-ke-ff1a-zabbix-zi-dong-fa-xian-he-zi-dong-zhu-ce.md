@@ -62,3 +62,6 @@ CgqCHl68_JOAIENYAADdSo5DXj4465.jpg
 Type of calculation中的设置表示 Conditions 这个选项框里给它添加了两个条件（分别对应是条件 A 和条件 B）。它们必须满足什么关系（如：and 或者是 or），我这里是设置的是 A and B，也就是说添加的条件中需要同时成立，才能够满足整体的条件。
 
 整体的条件满足以后，我们就会继续配置 actions 里面的另外一大块 Operations。我们点击 Operations 会看到，它负责具体设置执行动作，我们可以在这里定义它的主题，还有它的 message（信息），这些都是用于我们发送这些文字提醒。
+
+
+CgqCHl68_JyABJdqAAC4yAEr8K4251.jpg
