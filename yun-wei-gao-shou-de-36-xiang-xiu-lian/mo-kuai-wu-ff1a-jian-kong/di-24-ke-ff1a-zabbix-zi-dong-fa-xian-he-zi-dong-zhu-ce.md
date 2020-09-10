@@ -65,3 +65,5 @@ Type of calculation中的设置表示 Conditions 这个选项框里给它添加�
 
 
 CgqCHl68_JyABJdqAAC4yAEr8K4251.jpg
+
+如果不发送文字提醒，只是为了添加主机到 Zabbix 列表里，监控主机的信息列表的话，我们就可以添加如下的几个对应的 Operations，首先在 Operations 这一栏里来添加 3 个操作：
