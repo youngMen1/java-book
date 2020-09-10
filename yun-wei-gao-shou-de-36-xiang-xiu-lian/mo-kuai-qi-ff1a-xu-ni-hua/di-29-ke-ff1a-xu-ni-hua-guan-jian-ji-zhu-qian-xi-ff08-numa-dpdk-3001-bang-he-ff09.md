@@ -49,3 +49,5 @@ CgqCHl7Z5pqASfvmAAGwHYuxx1k074.png
 ## CPU 全虚拟化原理
 
 下面这张图展示了 CPU 虚化早期的全虚拟化原理的实现方式：
+
+CgqCHl7Z5qGAHRbsAAGofogy0rg750.png
