@@ -144,4 +144,4 @@ Ciqc1F66bHOAEm3PAAAfY1xGwoU495.jpg
 CgqCHl66bHuAXyiiAAAmz6_nPZo827.jpg
 
 这个时候我们就可以通过 ls 命令查看对应目录下有没有文件生成，如果有文件生成以后就可以重启操作系统，
-
+Ciqc1F66bIOAVgJcAABUL1FHMtM765.jpg
