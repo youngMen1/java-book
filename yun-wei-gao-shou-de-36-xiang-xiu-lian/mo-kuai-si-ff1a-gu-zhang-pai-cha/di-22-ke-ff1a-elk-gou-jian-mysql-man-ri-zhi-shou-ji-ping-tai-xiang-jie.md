@@ -110,3 +110,5 @@ CgqCHl6z5d2AcOLCAAJxBl6qrh8402.png
 CgqCHl6z5f2Adg-FAAG1tRCeSEs038.png
 
 那么另外还要设置慢查询日志的位置，通过 set global slow_query_log = 日志文件路径，这里设置到 filebeat 配置监听的路径下，就完成了慢查询日志的路径设置。
+
+Ciqc1F6z5gaAVbOEAADJKPLGQmc895.png
