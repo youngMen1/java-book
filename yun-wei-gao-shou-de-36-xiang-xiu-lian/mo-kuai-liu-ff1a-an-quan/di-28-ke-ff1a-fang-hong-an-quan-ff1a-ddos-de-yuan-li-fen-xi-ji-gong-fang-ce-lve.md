@@ -43,3 +43,5 @@ CgqCHl7XGh6AJUcsAADJmlpjZoc188.png
 ## SYN FLOOD 攻击及其解决方法
 
 第二种 DDOS 攻击类型就是 SYN FLOOD 攻击，它具有这样的一些特性，它虽然也使用了大量肉鸡进行访问，这些肉鸡是一直不停地发底层 TCP SYN+ACK 的数据包，它会有针对性地对这种数据频繁地发送 SYN+ACK 的 TCP 数据包，并不是单纯的封堵出口流量，可以实现服务端一直处于 TCP 等待连接（TCP 第 3 次握手）。
+
+CgqCHl7XGiaAPMPyAADmT73CQo0190.png
