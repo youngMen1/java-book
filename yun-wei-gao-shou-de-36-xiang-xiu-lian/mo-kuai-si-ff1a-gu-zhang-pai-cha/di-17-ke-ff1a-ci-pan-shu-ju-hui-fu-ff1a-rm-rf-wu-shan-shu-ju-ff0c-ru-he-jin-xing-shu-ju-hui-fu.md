@@ -104,7 +104,7 @@ Ciqah16VdFOACsNKAAF1sVuVggU217.png
 
 执行完命令后，会有一个成功的提示。此时在当前目录的 RECOVERED_FILES 目录，有对应恢复好的文件，一个是 file，一个是 file.v1（这个为刚恢复的文件），为什么是 file.v1 呢？因为我在做操作的时候有操作过两遍，所以它恢复了两个文件。第 1 个 file 是我之前写入的内容，第 2 个 file 则是由于我执行了第 2 次恢复，恢复的文件虽然也是 file，所以会自动命名成一个新的版本，叫作 file.v1（这个文件就是我们想要恢复的文件名称）。
 
-Cgq2xl6VdFOASIv2AAEQM7CcbS4528.png
+![](/static/image/Cgq2xl6VdFOASIv2AAEQM7CcbS4528.png)
 
 刚刚讲到的选项是恢复单个文件，假设我们要恢复所有文件的话，就把选项改为 --restore-all，这样就把分析出来的已删除文件进行了恢复。如果件，只想恢复某一个目录，就可以把 "all" 改成 directory，然后用 restore-directory 这种方式恢复单个已删除的文件目录。
 
