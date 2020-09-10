@@ -94,3 +94,5 @@ Zabbix_agent 主动上报的一种配置这里需要配置 2 大块：
 * 客户端配置地调整。
 
 这里的场景和前面介绍的模式场景环境基本上一样。那么客户端主动上报模式的配置，首先就是要在 Zabbix控制台里配置自动注册的规则及动作。我们同样点击 Configration->Actions，这时需要添加一条 auto registration 规则。
+
+CgqCHl68_KeAWF1gAAAn8mXN_z8660.jpg
