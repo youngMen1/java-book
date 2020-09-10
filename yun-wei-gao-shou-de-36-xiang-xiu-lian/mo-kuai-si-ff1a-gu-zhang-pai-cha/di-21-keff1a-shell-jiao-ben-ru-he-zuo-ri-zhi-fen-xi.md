@@ -180,3 +180,5 @@ ag 使用选项，跟 grep 命令基本上都是一致的。我们可以看一�
 Ciqah16oCk2AEbinAAF6FZc0C8Y862.png
 
 我们首先来介绍一下 Shell 脚本的整体结构，最上面的这一段语句是做一个文件路径（/tmp/logs）的判断，如果存在的话，就会先把之前的文件做一个清空。
+
+Ciqah16oClaAAuEjAAHN0RjwOLs251.png
