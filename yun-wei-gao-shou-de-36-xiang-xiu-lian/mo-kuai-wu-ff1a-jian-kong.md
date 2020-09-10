@@ -93,3 +93,7 @@ docker run -d -p 3000:3000 grafana/grafana
 接下来需要配置的就是 Grafana 的采集数据源要从哪个地方采集，所以我们需要把 Grafana 的数据源配置成从 Prometheus 去采集，我们在登录到 Grafana 界面以后，在浏览器里面点击 Data Source 这个按钮：
 
 CgqCHl7Dn92AUZXSAAA-WIx3DA0895.png
+
+然后点击 add data source，它里面有一个默认的配置模板，我们可以点击 Prometheus：
+
+Ciqc1F7Dn-mAQzgBAAAz07_mVFg961.png
