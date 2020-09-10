@@ -74,3 +74,5 @@ CgqCHl6z5U2AHWb9AAWMvjPVKxg279.png
 有了 ES 官方源以后，就可以安装第 1 个组件了，通过 #yum install elasticsearch -y 直接安装好 ES 。安装好以后，接下来需要配置 Elasticsearch。这里配置需要注意的一点就是把 Elasticsearch 暴露一个接口地址出来，所以我修改的是 /etc/elasticsearch 下面的 elasticsearch.yml 主配置文件，里面有一个 network.host，我们将它的配置文件修改为本地网卡的接口地址，然后通过 systemctl start elasticsearch.service 启动 ES 服务。
 
 如何判断 ES 服务启动是否成功呢？首先可以通过执行命令 journalctl --unit 来判断服务是否正常启动？也可以通过在控制台敲入 systemctl status elasticsearch 去判断服务是否处于“ running”的状态。
+
+Ciqc1F6z5aiAPWhVAATBHouaBAk740.png
