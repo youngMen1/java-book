@@ -162,3 +162,21 @@ iptables -A INPUT -p tcp --syn -j SYN_FLOOD
 我们刚刚讲到的是设置一条自定义链，这种自定义链都需要通过默认链来进行调用。我们看到在默认链里面则是使用 INPUT 链来进行具体调用， -j 后面加了默认的自定义链，这样就完成了整个的自链的设置。
 
 我们刚刚讲到的其实是对包的频次进行设置，那么对于其他协议的包其实也可以用同样的一些办法，我们可以看一下这里的 ICMP设置：
+
+
+```
+iptables -N PING_OF_DEATH  //丢弃ICMP超出限制
+iptables -A PING_OF_DEATH -p icmp --icmp-type echo-request \
+         -m hashlimit \
+         --hashlimit 1/s \
+         --hashlimit-burst 10 \
+         --hashlimit-htable-expire 300000 \
+         --hashlimit-mode srcip \
+         --hashlimit-name t_PING_OF_DEATH \
+         -j RETURN
+iptables -A PING_OF_DEATH -j LOG --log-prefix "ping_of_death_attack: "
+iptables -A PING_OF_DEATH -j DROP
+iptables -A INPUT -p icmp --icmp-type echo-request -j PING_OF_DEATH
+
+```
+
