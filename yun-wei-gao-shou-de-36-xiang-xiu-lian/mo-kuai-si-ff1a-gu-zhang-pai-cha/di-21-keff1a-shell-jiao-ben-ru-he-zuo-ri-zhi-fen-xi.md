@@ -188,3 +188,7 @@ Ciqah16oClaAAuEjAAHN0RjwOLs251.png
 这里需要填写 Nginx 的 access 日志目录，用于分析的文件 access 日志路径。接下来做日志路径判断，如果日志路径不存在，那么脚本执行就会中断退出。
 
 CgoCgV6oCnSAMMVaAAHrrrcMxQM494.png
+
+再往下看的话，这里就是做系统版本检测，这个脚本需要在 Debian 操作系统或者 Ubuntu 、Centos 这样的操作系统上，如果操作系统不能满足的话也会退出。
+
+接下来就要用到我们刚刚讲到的 ag 命令。在没有 ag 命令情况下，脚本会先提示并进行安装，对应的使用 Yu m 或者是 apt get 包管理器安装。
