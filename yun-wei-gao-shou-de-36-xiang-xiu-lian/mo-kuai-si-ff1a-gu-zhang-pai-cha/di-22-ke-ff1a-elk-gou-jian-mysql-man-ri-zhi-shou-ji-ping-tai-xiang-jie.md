@@ -36,9 +36,9 @@ Kafka 是 ELK 和 EFK 里面一个附加的关键组件（缩写 K），它主�
 首先第 1 套比较简单，而且是中小型企业才会用到的一种方式。即通过 Logstash 来做日志的收集，我们会看到这样的一张图，在每个客户端部署一套 Logstash 工具，主要用于日志收集，并且也可以提供一些日志的过滤功能。而服务端通过 Elasticsearch 和 Kibana 实现，这样只可以实现简单的日志收集。
 
 
-Ciqc1F6z5SGAQhkKAAU8iq4TdH8042.png
+![](/static/image/Ciqc1F6z5SGAQhkKAAU8iq4TdH8042.png)
 
-Ciqc1F6z5SaAKUmwAAYyNWdHooE182.png
+![](/static/image/Ciqc1F6z5SaAKUmwAAYyNWdHooE182.png)
 
 第 2 套架构是在整个客户端里，用到了 Beats 工具来做日志收集。服务端还是维持使用 Elasticsearch 和 Kibana，Beats 代替了 Logstash，Beats 里有一个非常重要的日志收集工具，就是 Filebeat，用来代替 Logstash。主要的优势是：
 
@@ -46,7 +46,7 @@ Ciqc1F6z5SaAKUmwAAYyNWdHooE182.png
 
 另外， Beats 提供了非常丰富的场景，除了使用 Filebeat 工具外，还可以看到会有其他的一些家族成员，如 Packetbeat 、Metricbeat、Winlogbeat ，每个家族成员都会针对性地收集一些不同的数据。所以我们想要收集其他数据内容时，就可以用 Beats 里面的其他工具针对性的收集，如 Winlog 主要收集 Windows 上的相关日志。
 
-Ciqc1F6z5TeAC7N2AAdHW2m1zI8345.png
+![](/static/image/Ciqc1F6z5TeAC7N2AAdHW2m1zI8345.png)
 
 第 3 套方案，我们看到在第 2 套方案中加入了很多的组件，其中最重要的一个组件就是 Kafka。
 
@@ -60,7 +60,7 @@ ES 不再是以单实例的方部署，而是采用集群架构，考虑 Kafka �
 
 讲到了 Elasticsearch 里面的常见架构模式的演变（1、继续性能；2、日志级别）。接下来我们要来详细讲解如何从零开始搭建 ELK，并且收集 MySQL 日志。我们首先来看一下这样的一张图：
 
-CgqCHl6z5U2AHWb9AAWMvjPVKxg279.png
+![](/static/image/CgqCHl6z5U2AHWb9AAWMvjPVKxg279.png)
 
 
 这张图主要用于展示接下来搭建的这套 ELK 收集 MySQL 日志的架构。这里主要用到两台机器，一个是客户端的机器，一个服务端的机器，我们知道客户端的机器是用来收集 MySQL 日志的，所以这里需要安装一个 MySQL 服务。
@@ -75,19 +75,19 @@ CgqCHl6z5U2AHWb9AAWMvjPVKxg279.png
 
 如何判断 ES 服务启动是否成功呢？首先可以通过执行命令 journalctl --unit 来判断服务是否正常启动？也可以通过在控制台敲入 systemctl status elasticsearch 去判断服务是否处于“ running”的状态。
 
-Ciqc1F6z5aiAPWhVAATBHouaBAk740.png
+![](/static/image/Ciqc1F6z5aiAPWhVAATBHouaBAk740.png)
 
 还有一个校验的方式，通过 curl 命令访问暴露对外地址和 elastic 默认监听的 9200 端口，并向对应路径发一个 HTTP 请求，判断是否有正常 HTTP 响应并且查看它的响应内容。
 
 具体的 curl 方式是这样的，curl 后面加对外暴露的接口地址，然后回车，就会在终端里返回并展示一段 JSON 格式的信息，我们会看到 Elasticsearch 当前的一些版本等信息，这说明 ES 运行正常。
 
-CgqCHl6z5bCASazjAAOYchcFIA4972.png
+![](/static/image/CgqCHl6z5bCASazjAAOYchcFIA4972.png)
 
 接下来安装第 2 个组件 Kibana，我们来看一下它是怎么安装的。我先把本地的官方 yum 本源配置好（elk.repo），接下来可以直接用 yum install kibana 一键完成安装。安装完成以后，同样需要去修改它的配置，这个配置在 /etc/kibana.yml ，那么主要修改这几个地方，一个是服务端口默认是 5601，还有对外暴露的服务地址。 另外，需要取 Elasticsearch 里面数据接口地址，所以我们要配置好 Elasticsearch 对外的服务接口。启动方式是通过：/usr/share/kibana/bin/kibana -c /etc/kibana/kibana.yml，完成对 kibana 的启动，或者可以通过 systemctl start kibana 的方式，直接启动 kibana 服务。
 
 那么启动完成以后，就可以在浏览器里访问 kibana 的管理界面，敲入 kibana 对外暴露的 IP 地址，还有 5601 对外暴露的服务端口号，就可以访问 kibana 的后台。登录后的展示界面。
 
-CgqCHl6z5cuAQ4-LAAPqe8miRuU124.png
+![](/static/image/CgqCHl6z5cuAQ4-LAAPqe8miRuU124.png)
 
 接下来我们需要去配置客户端日志采集。客户端是如何来做的呢？首先我们需要安装好一台 MySQL，同时需要安装日志收集工具 filebeat。
 
@@ -101,29 +101,29 @@ filebeat 同样是在安装好官方源后，直接通过 #yum install filebeat-
 
 接下来登录到控制台，可以通过执行这条命令来推送。我们可以看到，终端会展示出推送日志的相关进度和一些信息。
 
-CgqCHl6z5d2AcOLCAAJxBl6qrh8402.png
+![](/static/image/CgqCHl6z5d2AcOLCAAJxBl6qrh8402.png)
 
 同时再开一个客户端的终端，然后登录到以前安装好的 MySQL 。 首先我们需要开启 MySQL 的慢查询日志，并且指定 MySQL 的慢查询日志路径和标准，比如说是大于 1 秒才做 MySQL 慢查询日志记录。此外，我们还要模拟执行一条延迟比较长的 MySQL 语句来产生这样的一条日志信息，让 filebeat 进行日志的推送。我们会看到 filebeat 在整个启动完成以后，日志停留在等待的状态，并没有新的日志在刷新。
 
 所以我们现在来模拟演示一下。首先我需要开启的是 MySQL 的慢查询配置，那么通过 set global slow_query_log=‘ON‘，这样就可以开启慢查询日志，还需要设置好慢查询日志标准是大于 1 秒的，那么同样是 set global long_query_time 大于或等于 1，它的意思是大于 1 秒的查询语句，才会认为是慢查询，并且做日志的记录。
 
-CgqCHl6z5f2Adg-FAAG1tRCeSEs038.png
+![](/static/image/CgqCHl6z5f2Adg-FAAG1tRCeSEs038.png)
 
 那么另外还要设置慢查询日志的位置，通过 set global slow_query_log = 日志文件路径，这里设置到 filebeat 配置监听的路径下，就完成了慢查询日志的路径设置。
 
-Ciqc1F6z5gaAVbOEAADJKPLGQmc895.png
+![](/static/image/Ciqc1F6z5gaAVbOEAADJKPLGQmc895.png)
 
 配置完成以后，需要在 MySQL 终端上，模拟执行一条执行时间较长的语句，比如执行 select sleep(5)，这样就会模拟执行一条查询语句，并且会让它休眠 5 秒。接下来我们看到服务端窗口的 MySQL 这条 sleep 语句已经执行完毕了，同时我们可以再打开 filebeat 的推送窗口，发现这里产生了一条推送日志，表示成功地把这条日志推送给了 ES。
 
-Ciqc1F6z5g-ASJ0NAAA7FAzWRc8740.png
+![](/static/image/Ciqc1F6z5g-ASJ0NAAA7FAzWRc8740.png)
 
 那么接下来我们就可以通过浏览器打开 Kibana 的管理后台，从界面里来看一看检索日志的记录和一些可视化展示的图表，我们可以点击界面上的 Discover 按钮，同时选择好对应的时间周期，然后可以增加一个 filter 过滤器，过滤器里面敲入对应的关键字来进行索引。
 
-CgqCHl6z5iGAPXFTAAG-rTIWEkU001.png
+![](/static/image/CgqCHl6z5iGAPXFTAAG-rTIWEkU001.png)
 
 这里我敲入的是 slow.query 这个关键字，就会匹配出对应的可以检索的项目，点击想要查询的对应项目，展示出想检索的某一个时间周期内对应的一些日志记录，以及它的图表是什么样子的，同时在下方会有对应的 MySQL 的日志信息打印出来，通过 Kibana 这样的可视化界面就能够看到的相关信息了。
 
-Ciqc1F6z5iiAK1ZXAAG-rTIWEkU923.png
+![](/static/image/Ciqc1F6z5iiAK1ZXAAG-rTIWEkU923.png)
 
 我们会看到通过这样的一个成型的日志检索系统去检索分析起来会更加容易，我们不需要通过一些临时性的命令或编写脚本进行复杂烦琐分析，能够快速、高效的获取我们想要的结果。
 
