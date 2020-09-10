@@ -35,7 +35,7 @@ Zabbix 的自动发现其实就是自动发现并自动添加监控客户端的�
 
 我们登录到 Zabbix 控制台，首先配置自动发现规则，我们按顺序点击 Configuration、Discovery 和 create Discovery rule，这就是配置的自动发现规则。
 
-CgqCHl68_HmAbetTAAClb6f9nPQ911.jpg
+![](/static/image/CgqCHl68_HmAbetTAAClb6f9nPQ911.jpg)
 
 我们来看一下，这里有几个框，一个是配置规则的名称（Name），由于我们没有用到代理模式，所以 Discovery by proxy 是 no proxy，下面定义的 IP range 就是规定的扫描主机段范围，如果 Zabbix_server 在多个主机段，我只想扫描一个子网段或者是某一个主机段中的主机，就需要定义好它针对的主机段信息，可以按照这样的格式去填入。
 
@@ -43,17 +43,17 @@ CgqCHl68_HmAbetTAAClb6f9nPQ911.jpg
 
 我们在刚刚的选项框里面能看到需要填入的具体信息选项的说明，你可以具体来看一下：
 
-Ciqc1F68_IWACLmRAAA5Dtpkssg217.jpg
+![](/static/image/Ciqc1F68_IWACLmRAAA5Dtpkssg217.jpg)
 
 在配置好相应的录入规则以后，接下来我们需要做的就是配置它的执行动作，我们同样在 Zabbix 控制台，点击 Configuration 按钮，然后点击 Actions，在下面我们来新建一个 Discovery 类型的 action。
 
-Ciqc1F68_IuAMgiIAAB-YdH43CY334.jpg
+![](/static/image/Ciqc1F68_IuAMgiIAAB-YdH43CY334.jpg)
 
 接下来就会进入这个动作的具体配置界面。
 
 Action 标签栏内最上面是 action 的名称（Name），我们可以自定义来书写。中间（Type of calculation）是配置它的条件等等,好了我们先看到这里，如果选择右边的标签“ Operations”，就是来定义具体执行动作。
 
-CgqCHl68_JOAIENYAADdSo5DXj4465.jpg
+![](/static/image/CgqCHl68_JOAIENYAADdSo5DXj4465.jpg)
 
 回到 Actions 这一栏，继续详细讲解，这里添加的动作需要设置条件（供包含 3 大块），我们先来看下面的 New condition（就是添加新的条件），我们可以下拉对应的选项框，选择好对应的条件，比如这里规定了主机 IP 的范围。如果列好了这个条件以后，点击 add 按钮就会增加到 Conditions 这个选项框里面去，也就是说，新加的这些条件都会放入到这个选项框里面。
 
@@ -64,7 +64,7 @@ Type of calculation中的设置表示 Conditions 这个选项框里给它添加�
 整体的条件满足以后，我们就会继续配置 actions 里面的另外一大块 Operations。我们点击 Operations 会看到，它负责具体设置执行动作，我们可以在这里定义它的主题，还有它的 message（信息），这些都是用于我们发送这些文字提醒。
 
 
-CgqCHl68_JyABJdqAAC4yAEr8K4251.jpg
+![](/static/image/CgqCHl68_JyABJdqAAC4yAEr8K4251.jpg)
 
 如果不发送文字提醒，只是为了添加主机到 Zabbix 列表里，监控主机的信息列表的话，我们就可以添加如下的几个对应的 Operations，首先在 Operations 这一栏里来添加 3 个操作：
 
@@ -95,17 +95,17 @@ Zabbix_agent 主动上报的一种配置这里需要配置 2 大块：
 
 这里的场景和前面介绍的模式场景环境基本上一样。那么客户端主动上报模式的配置，首先就是要在 Zabbix控制台里配置自动注册的规则及动作。我们同样点击 Configration->Actions，这时需要添加一条 auto registration 规则。
 
-CgqCHl68_KeAWF1gAAAn8mXN_z8660.jpg
+![](/static/image/CgqCHl68_KeAWF1gAAAn8mXN_z8660.jpg)
 
 在这个规则里面配置 Action 动作，第 1 块是动作的名称（Name），下面是满足什么样的条件，这里我设置的条件为 Host metadata contains linux 表示是主机的元数据包含了 Linux 的条件，只要满足了是Linux类型的主机一个条件，然后配置执行步骤 Operation，如图：
 
-Ciqc1F68_LCADryJAACKuB-Bv8Y577.jpg
+![](/static/image/Ciqc1F68_LCADryJAACKuB-Bv8Y577.jpg)
 
 Add host 这个动作是添加主机到某一个主机组，这里演示中的这些设置和主动发现模式中 Actions 设置关联主机模板等等，我们会看到这里配置前面（模式一）配置是相同的
 
 接下来就是调整我们的 agent 配置，在 agent 配置里面，我们重点需要加入的一行是 ServerActive，表示主动上报到 Server 端的地址信息，那么我们就要配置好对应的 Zabbix_server 所在的 IP 地址，从而去做主动上报。同样的，配置完成以后启用 agent这个进程，那么接下来我们要在服务端进行检查。
 
-Ciqc1F68_LqADz5LAABmKUChNkM384.jpg
+![](/static/image/Ciqc1F68_LqADz5LAABmKUChNkM384.jpg)
 
 以上就是我们讲解的 Zabbix 对于主机动态发现的两种模式：第 1 个是服务端主动扫描发现。第 2 个是 agent 主动上报。如果自动发现了主机，我们可以点击 Monitoring -> Discovery，然后进入自动发现的列表，可以控制台看到已添加了一台 agent主机，其中有一台主机就是表示我已经发现了一台主机，看到主机相关信息。
 
