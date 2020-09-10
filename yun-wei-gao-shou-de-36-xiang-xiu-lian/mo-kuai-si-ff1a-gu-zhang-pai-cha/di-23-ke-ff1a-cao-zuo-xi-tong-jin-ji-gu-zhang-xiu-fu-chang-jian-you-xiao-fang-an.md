@@ -91,3 +91,5 @@ CgqCHl66bA2AM-vuAABLSq_t41U364.jpg
 我的操作系统挂载了两块硬盘，硬盘 1 为系统盘，硬盘 2 为数据盘，光盘这里挂载到了与已安装的操作系统 Centos 7 一样版本的 ISO 镜像，演示中进入的救援模式是需要 CD/DVD 介质来启动进入。
 
 接下来进入我正在运行的操作系统里面，登录进入系统，首先需要模拟损坏 GURB。
+
+CgqCHl66bB2AVJwFAACveDe3Ia4694.jpg
