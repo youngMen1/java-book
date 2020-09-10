@@ -88,3 +88,15 @@ CgqCHl6z5bCASazjAAOYchcFIA4972.png
 那么启动完成以后，就可以在浏览器里访问 kibana 的管理界面，敲入 kibana 对外暴露的 IP 地址，还有 5601 对外暴露的服务端口号，就可以访问 kibana 的后台。登录后的展示界面。
 
 CgqCHl6z5cuAQ4-LAAPqe8miRuU124.png
+
+接下来我们需要去配置客户端日志采集。客户端是如何来做的呢？首先我们需要安装好一台 MySQL，同时需要安装日志收集工具 filebeat。
+
+filebeat 同样是在安装好官方源后，直接通过 #yum install filebeat-y 方式来完成一键安装。安装完成以后，同样是要修改 filebeat 的配置文件，这里主要是修改对外输出的模式，我们需要设置让 filebeat 输出到 Elasticsearch 中，所以我们需要指定它通过 Elasticsearch 方式对外输出，要指定输出到 Elasticsearch 主机地址是哪个，这里演示的是一个单实例的方式配置只需要写一台 ES 接口。如果是集群的方式，可能就需要写多个主机和端口的接口地址了。
+
+我们刚配置的是 Elasticsearch 的一个输出端该如何做，也要要配置输入。从哪个地方做日志采集，我们收集的是 MySQL 的慢查询日志， filebeat 默认集成了很多的日志收集插件，我们只需要激活 MySQL 这个收集插件 ，就可以来收集 MySQL 的日志了。
+
+所以通过在终端执行 #filebeat modules enable mysql ，就把 MySQL 的日志激活插件完成了，同时我们可以通过 filebeat modules list 命令，去判断 MySQL 插件是否已经激活。接下来修改在 /etc/filebeat/modules.d 的 mysql.yml 插件配置。
+
+指定好它的 slowlog，也就是慢日志的收集路径，就可以监听并收集 MySQL 日志。我们可以在客户端通过这样一条命令，filebeat -e -c filebeat.yml -d "publish"，-c 指定的是它的主配置文件。然后通过 -d "publish" 方式去推送客户端日志。
+
+接下来登录到控制台，可以通过执行这条命令来推送。我们可以看到，终端会展示出推送日志的相关进度和一些信息。
