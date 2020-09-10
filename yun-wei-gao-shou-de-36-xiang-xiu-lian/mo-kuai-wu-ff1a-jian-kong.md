@@ -101,3 +101,31 @@ Ciqc1F7Dn-mAQzgBAAAz07_mVFg961.png
 然后我们就可以进入 Grafana 的控制台，针对 Prometheus 这样的一个数据源，它的具体的配置界面。这里需要配置的有如下几大块配置：
 
 CgqCHl7Dn_GAR0ZJAACqBAiI04E471.png
+
+一个是 HTTP，也就是 Prometheus 对外服务的接口的地址，我们填写的是 Prometheus 的服务地址和它对应的服务端口，并且设置它的权限是浏览的权限。另外Scrape interval 配置的是采集间隔，也就是每 15 秒去做一次采集。HTTP Method 代表是以 GET 的方式去请求 Prometheus 服务。这里就完成了整个对于 Prometheus 数据源的采集。
+
+接下来我们需要拿一个客户端的服务器去采集监控数据，登录 Grafana 去查看，是否能看到 Prometheus 的这些监控数据，并且做报表化的展示。
+
+接下来我们就来安装这个客户端，我们需要安装的是 node_exporter 组件，我们可以通过这个 GitHub 地址去下载源码包： https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz
+
+下载完成以后直接解压，完成之后会直接到这个界面上面，通过 cd node_exporter-0.18.1.linux-amd64/ 目录下，并执行 ./node_exporter 二进制命令，就能启动客户端采集，它提供这样的一个 metric 数据接口给到服务端来进行拉取。
+
+接下来 Prometheus 的服务端配置文件中配置客户端采集 metric 接口地址。
+
+刚刚讲到的 Prometheus 配置里面有一个 scrape_configs，我们来配置它所采集的目标服务器，填写好目标客户端的服务器 IP 地址和对应的 exporter 所监听的端口，默认是9100，然后我们重启一下 Prometheus 的服务端容器。接下来我们在整体界面进行检查，看是否有对应的数据产生，我们先通过 Prometheus 的界面来检查，可以登录到 Prometheus 的管理界面里，点击 Status，会看到这里有一个目标节点，以及状态、时间。
+
+CgqCHl7DoA2AAeX5AABpQrAzgLQ908.png
+
+最后我们就可以登录到 Grafna 的控制台，然后来看一下客户端的这些数据是否在 Grafna 里进行了报表化的展示。接下来需要导入 Grafna 对于普罗修斯所默认携带的面板插件。
+
+我来做一个演示，登录到我的浏览器打开grafana后台，然后点击 Dashboards 按钮，下面有一个 manager，然后点击 import，这里我搜索一个关键词 “405“，然后回车一下。这个时候我们点击完 load ，界面中有 Prometheus Metric 的插件，然后我们点击 input，这样就完成了面板插件导入。
+
+Ciqc1F7DoBaAQGZIAAExniuG9UE986.png
+
+最后我们点击主界面，这个时候我们在 Dashboard 的下面会看到一个新的 Dashboard 按钮（Node Exporter Server Metrics），我们点击进去，就会看到对应节点的 IP 地址和端口信息：
+
+CgqCHl7DoB2AH89nAAGezb5I0U0786.png
+
+这个一个节点就是我们刚刚所启用的新节点，在这里我们可以下拉来查看它相关的数据，如第一排是 CPU 的相关监控数据，后面是内存的数据，负载的数据，磁盘的一些使用数据，还有相关的一些监控报表数据，它们都会以图表的形式进行界面化的展示，我们可以在图形界面的控制台里面，直观地看到这样一些监控数据。
+
+到这里就完成了我们这节课所讲到的一个演示，从客户端 exporter 去做数据采集到服务端的数据拉取，以及 Grafna 最终的图表展示。
