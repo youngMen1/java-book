@@ -64,3 +64,10 @@ Context: http, server, location, if in location, limit_except
 我们会看到 access_log 配置允许配置的层级，在 Nginx conf 里配置到 http、server、location 等层级中。
 
 如果需要自定义配置access_log， 需要具体配置相关的选项，如下：
+
+* path：指定路径，即日志的存放位置。
+* format：定义日志的格式。默认使用预定义的 combined（combined 就是一个默认的预定义格式的名称），如果想要修改 Nginx 的 access_log 记录的内容及格式，就需要通过 log_format （另外一个配置项来进行格式的预定义，并通过 access_log这个选项引用 log_format 的预定义格式的名称）。
+* buffer：用来指定日志写入时的缓存区大小。默认是 64k。
+* gzip：设置日志写入前先进行压缩，压缩比越高，消耗也越大；压缩比越小，占用的空间就会越多。
+* flush：设置日志缓存的有效时间。
+* if：条件判断。也就是需要满足什么条件才记录访问日志，比如我们可以只把请求等于 200 的条件的日志来做记录。
