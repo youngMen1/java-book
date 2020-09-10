@@ -90,3 +90,4 @@ Ciqc1F7Q6Z6AEwfFAAD8F-GMrW4529.png
 ## CSRF 跨站请求伪造及其防护策略
 
 第 3 个就是 CSRF 跨站请求伪造 。我们首先来讲一下什么是 CSRF 跨站请求伪造行为。这里我画了一张图：
+CgqCHl7Q6f-AQensAAE6SboBoZM422.png
