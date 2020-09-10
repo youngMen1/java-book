@@ -84,3 +84,5 @@ server {
 Ciqc1F7Q6YiASMiTAAB4a-LuU8A861.png
 
 那么怎么来解决呢？我们可以通过使用 HTTPS 协议来代替 HTTP，采用 HTTPS 协议会在 HTTP 协议的基础上加了一层 TLS 防护，使得传输的数据进行加密， 劫持端无法分析和篡改内容。所以 HTTPS 这种方式可以保护我们的数据不被劫持，值得特殊注意的它是无法解决域名劫持的问题，对于基于域名劫持行为我们还需要考虑其他一些访问策略。
+
+Ciqc1F7Q6Z6AEwfFAAD8F-GMrW4529.png
