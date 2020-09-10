@@ -33,6 +33,7 @@
     * [第23课：操作系统紧急故障修复常见有效方案](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-23-ke-ff1a-cao-zuo-xi-tong-jin-ji-gu-zhang-xiu-fu-chang-jian-you-xiao-fang-an.md)
   * [模块五：监控](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-wu-ff1a-jian-kong.md)
     * [第24课：Zabbix 自动发现和自动注册](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-wu-ff1a-jian-kong/di-24-ke-ff1a-zabbix-zi-dong-fa-xian-he-zi-dong-zhu-ce.md)
+    * 第25课：容器监控实践：Prometheus、Grafana 方案介绍
   * [模块六：安全](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-liu-ff1a-an-quan.md)
     * 第26课：防火墙：iptables 企业级安全策略
   * [模块七：虚拟化](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-qi-ff1a-xu-ni-hua.md)
