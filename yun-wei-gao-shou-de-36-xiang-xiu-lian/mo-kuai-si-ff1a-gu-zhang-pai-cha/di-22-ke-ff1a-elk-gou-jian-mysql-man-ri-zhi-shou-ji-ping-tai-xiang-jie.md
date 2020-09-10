@@ -47,3 +47,13 @@ Ciqc1F6z5SaAKUmwAAYyNWdHooE182.png
 另外， Beats 提供了非常丰富的场景，除了使用 Filebeat 工具外，还可以看到会有其他的一些家族成员，如 Packetbeat 、Metricbeat、Winlogbeat ，每个家族成员都会针对性地收集一些不同的数据。所以我们想要收集其他数据内容时，就可以用 Beats 里面的其他工具针对性的收集，如 Winlog 主要收集 Windows 上的相关日志。
 
 Ciqc1F6z5TeAC7N2AAdHW2m1zI8345.png
+
+第 3 套方案，我们看到在第 2 套方案中加入了很多的组件，其中最重要的一个组件就是 Kafka。
+
+Kafka 作为日志消息队列，客户端通过 Filebeat 收集数据（日志）后将其先存入 Kafka，然后由 Logstash 提取并消费，这套架构的好处是：当我们有海量日志同步情况下，直接存入服务端 ES 很难直接应承接海量流量，所以 Kafka 会进行临时性的存取和缓冲，再由 Logstash 进行提取、过滤，通过 Logstash 以后，再把满足条件的日志数据存入 ES。
+
+ES 不再是以单实例的方部署，而是采用集群架构，考虑 Kafka 的集群模式， Logstash 也使用集群模式。
+
+我们会看到这套架构稍微庞大，大中型的企业往往存储海量数据（上百 T 或 P 级）运维日志、或者是系统日志、业务日志。
+
+搭建演示
