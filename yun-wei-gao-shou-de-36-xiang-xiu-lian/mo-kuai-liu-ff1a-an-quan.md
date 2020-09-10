@@ -102,3 +102,15 @@ CgqCHl7Q6f-AQensAAE6SboBoZM422.png
 那么我们来讲一讲应该如何去防范这样的攻击行为：
 
 第一点，需要验证 HTTP Referer 字段。前面的课程里面我们有讲过 HTTP Referer 是什么，它记录了用户本次访问的 URL 地址的上一次 URL 信息是，这个信息可以溯源出它的上一级来源 URL 地址。这个时候我们可以在网站 A 里面添加一个 Referer 的头的控制。如果是拿 Nginx 进行配置，它是这样来进行配置：
+
+
+```
+valid_referers none blocked server_names www.aaa.com
+if ($invalid_referer) {
+return 403;
+}
+
+```
+这里会加一个 valid_referer，就是可信的 Referer 头，它包含了正常的网站域名（www.aaa.com）等等。不满足 Referer 头信息，或是域名非指定则返回 403，这样就通过用户请求的 Referer 头的信息，有效地控制这种跨站请求行为。
+
+除此之外的常见防护策略，第一个就是在请求地址中添加 token 并验证，这当然是增加验证的安全机制。还可以通过用户端的浏览器来进行安全加固，如 Chrome 浏览器，那么浏览器就可以启用 SameSite cookie 设置，避免发生跨站安全攻击的产生。
