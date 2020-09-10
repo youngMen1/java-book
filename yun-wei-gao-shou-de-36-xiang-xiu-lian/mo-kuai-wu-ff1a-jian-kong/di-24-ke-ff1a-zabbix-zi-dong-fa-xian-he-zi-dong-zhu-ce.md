@@ -54,3 +54,11 @@ Ciqc1F68_IuAMgiIAAB-YdH43CY334.jpg
 Action 标签栏内最上面是 action 的名称（Name），我们可以自定义来书写。中间（Type of calculation）是配置它的条件等等,好了我们先看到这里，如果选择右边的标签“ Operations”，就是来定义具体执行动作。
 
 CgqCHl68_JOAIENYAADdSo5DXj4465.jpg
+
+回到 Actions 这一栏，继续详细讲解，这里添加的动作需要设置条件（供包含 3 大块），我们先来看下面的 New condition（就是添加新的条件），我们可以下拉对应的选项框，选择好对应的条件，比如这里规定了主机 IP 的范围。如果列好了这个条件以后，点击 add 按钮就会增加到 Conditions 这个选项框里面去，也就是说，新加的这些条件都会放入到这个选项框里面。
+
+接下来我们可以具体看一下这个事例新加的这些条件在选项框中有哪些，service type equals Zabbix agentt 表示扫描的主机中需要安装了 Zabbix_agent（Zabbix 的 agent 程序），所以添加这个动作的条件是扫描到的这一台主机必须装有 Zabbix_agent。Host IP equals 172.21.64.1-254 表示主机 IP 等于这个范围段，也就是说它必须要是某一个范围段的主机 IP。
+
+Type of calculation中的设置表示 Conditions 这个选项框里给它添加了两个条件（分别对应是条件 A 和条件 B）。它们必须满足什么关系（如：and 或者是 or），我这里是设置的是 A and B，也就是说添加的条件中需要同时成立，才能够满足整体的条件。
+
+整体的条件满足以后，我们就会继续配置 actions 里面的另外一大块 Operations。我们点击 Operations 会看到，它负责具体设置执行动作，我们可以在这里定义它的主题，还有它的 message（信息），这些都是用于我们发送这些文字提醒。
