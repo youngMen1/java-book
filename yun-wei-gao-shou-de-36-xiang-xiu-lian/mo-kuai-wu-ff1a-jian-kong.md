@@ -16,7 +16,7 @@ Prometheus 是由一套组件所组成，接下来我们具体来介绍一下它
 
 了解了几个核心组件后，我们来看一下 Prometheus 这些组件所构成的 Promethues 整体监控架构。
 
-CgqCHl7Dn2SAX4_sAAEeHG2vN7E056.png
+![](/static/image/CgqCHl7Dn2SAX4_sAAEeHG2vN7E056.png)
 
 在这张图里我们可以看到，中间的位置是 Prometheus server 核心组件，这个核心组件串联 Prometheus 整体监控流程。在 Prometheus server 这个大框里面有几部分：一个是收集模块（Retreval），另外一部分就是 TSDB，这是一个时序的数据库，HTTP server 是一个提供给外部访问的服务接口。
 
@@ -40,7 +40,7 @@ CgqCHl7Dn2SAX4_sAAEeHG2vN7E056.png
 
 在介绍整体架构之前，想必你对我们整个模块里讲到的两个监控系统：Zabbix 和 Prometheus ，那它们有什么区别？在这里我列了一张表格，分别从开发语言成熟度、性能、社区活跃度以及容器 K8s 微服务的支持，还有部署复杂度以及监控配置的复杂度等维度来为你做了一个对比。
 
-CgqCHl7Dn5yAKlxWAACmu5VzQHw993.png
+![](/static/image/CgqCHl7Dn5yAKlxWAACmu5VzQHw993.png)
 
 它们之间的不同主要体现在以下几个方面：
 
@@ -92,15 +92,15 @@ docker run -d -p 3000:3000 grafana/grafana
 安装好 Prometheus 以后，接下来需要安装的就是 Grafana，它是一个 Web 界面化的监控数据的展示平台，我们同样可以通过 docker run 的方式来完成一键化安装，并且3000 的端口对外服务。完成安装以后，同样可以在浏览器里访问 {ip}:3000 的端口，就可以访问到 Grafana 控制台的界面，它有一个默认的用户密码，用户是 admin，密码也是 admin，我们登录进去以后，就完成了 Grafana 的安装。
 接下来需要配置的就是 Grafana 的采集数据源要从哪个地方采集，所以我们需要把 Grafana 的数据源配置成从 Prometheus 去采集，我们在登录到 Grafana 界面以后，在浏览器里面点击 Data Source 这个按钮：
 
-CgqCHl7Dn92AUZXSAAA-WIx3DA0895.png
+![](/static/image/CgqCHl7Dn92AUZXSAAA-WIx3DA0895.png)
 
 然后点击 add data source，它里面有一个默认的配置模板，我们可以点击 Prometheus：
 
-Ciqc1F7Dn-mAQzgBAAAz07_mVFg961.png
+![](/static/image/Ciqc1F7Dn-mAQzgBAAAz07_mVFg961.png)
 
 然后我们就可以进入 Grafana 的控制台，针对 Prometheus 这样的一个数据源，它的具体的配置界面。这里需要配置的有如下几大块配置：
 
-CgqCHl7Dn_GAR0ZJAACqBAiI04E471.png
+![](/static/image/CgqCHl7Dn_GAR0ZJAACqBAiI04E471.png)
 
 一个是 HTTP，也就是 Prometheus 对外服务的接口的地址，我们填写的是 Prometheus 的服务地址和它对应的服务端口，并且设置它的权限是浏览的权限。另外Scrape interval 配置的是采集间隔，也就是每 15 秒去做一次采集。HTTP Method 代表是以 GET 的方式去请求 Prometheus 服务。这里就完成了整个对于 Prometheus 数据源的采集。
 
@@ -114,17 +114,17 @@ CgqCHl7Dn_GAR0ZJAACqBAiI04E471.png
 
 刚刚讲到的 Prometheus 配置里面有一个 scrape_configs，我们来配置它所采集的目标服务器，填写好目标客户端的服务器 IP 地址和对应的 exporter 所监听的端口，默认是9100，然后我们重启一下 Prometheus 的服务端容器。接下来我们在整体界面进行检查，看是否有对应的数据产生，我们先通过 Prometheus 的界面来检查，可以登录到 Prometheus 的管理界面里，点击 Status，会看到这里有一个目标节点，以及状态、时间。
 
-CgqCHl7DoA2AAeX5AABpQrAzgLQ908.png
+![](/static/image/CgqCHl7DoA2AAeX5AABpQrAzgLQ908.png)
 
 最后我们就可以登录到 Grafna 的控制台，然后来看一下客户端的这些数据是否在 Grafna 里进行了报表化的展示。接下来需要导入 Grafna 对于普罗修斯所默认携带的面板插件。
 
 我来做一个演示，登录到我的浏览器打开grafana后台，然后点击 Dashboards 按钮，下面有一个 manager，然后点击 import，这里我搜索一个关键词 “405“，然后回车一下。这个时候我们点击完 load ，界面中有 Prometheus Metric 的插件，然后我们点击 input，这样就完成了面板插件导入。
 
-Ciqc1F7DoBaAQGZIAAExniuG9UE986.png
+![](/static/image/Ciqc1F7DoBaAQGZIAAExniuG9UE986.png)
 
 最后我们点击主界面，这个时候我们在 Dashboard 的下面会看到一个新的 Dashboard 按钮（Node Exporter Server Metrics），我们点击进去，就会看到对应节点的 IP 地址和端口信息：
 
-CgqCHl7DoB2AH89nAAGezb5I0U0786.png
+![](/static/image/CgqCHl7DoB2AH89nAAGezb5I0U0786.png)
 
 这个一个节点就是我们刚刚所启用的新节点，在这里我们可以下拉来查看它相关的数据，如第一排是 CPU 的相关监控数据，后面是内存的数据，负载的数据，磁盘的一些使用数据，还有相关的一些监控报表数据，它们都会以图表的形式进行界面化的展示，我们可以在图形界面的控制台里面，直观地看到这样一些监控数据。
 
