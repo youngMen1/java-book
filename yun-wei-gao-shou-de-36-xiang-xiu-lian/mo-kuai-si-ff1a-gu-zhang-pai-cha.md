@@ -24,7 +24,7 @@
 
 traceroute 常被用来检测一个点到目的端的所有路由器，它的原理是：traceroute 默认基于 UDP 协议发送数据包到目的端（默认：UDP 端口大于 30000 的数据包）。所以它首先会发送一个 TTL 值等于 1 的数据包，TTL 值等于 1 代表发送的是第 1 次的数据包，发送给路由器并接受以后，会将 TTL 的值减 1，然后再发一个 ICMP 超时的数据包给客户端。
 
-CgoCgV6esyWAGx1tAAGuPOyHnUo585.png
+![](/static/image/CgoCgV6esyWAGx1tAAGuPOyHnUo585.png)
 
 发起 traceroute 的客户端继续进入第 2 次侦测，客户端会发一个 TTL 为 2 的数据包，这样它就可以经过两个路由，等到等于 0 的时候就是到了第 2 个路由，同样路由 2 再返回一个 ICMP TTL 超时的数据包给到客户端，等最终的目标端收到以后，目的端就不会再发 TTL 超时了，而是会发一个 ICMP 目标端口不可达的响应给到客户端。
 
