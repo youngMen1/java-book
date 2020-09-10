@@ -39,3 +39,7 @@ CgqCHl7Dn2SAX4_sAAEeHG2vN7E056.png
 **Prometheus 和 Zabbix 功能、使用差异**
 
 在介绍整体架构之前，想必你对我们整个模块里讲到的两个监控系统：Zabbix 和 Prometheus ，那它们有什么区别？在这里我列了一张表格，分别从开发语言成熟度、性能、社区活跃度以及容器 K8s 微服务的支持，还有部署复杂度以及监控配置的复杂度等维度来为你做了一个对比。
+
+CgqCHl7Dn5yAKlxWAACmu5VzQHw993.png
+
+它们之间的不同主要体现在以下几个方面：
