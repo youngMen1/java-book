@@ -30,3 +30,13 @@ Ciqah16ipEeAGWevAAbzAGpV_r4743.png
 说到 Nginx 日志，我们必须要了解 Nginx 的日志类型，主要分为两个类型：
 
 **第一个是处理请求的日志，记录了用户相关的访问信息。它的配置模块叫作 access_log，配置格式如下：**
+
+
+
+```
+Syntax:
+access_log path [format [buffer=size] [gzip[=level]] [flush=time] [if=condition]];
+access_log off;
+
+```
+
