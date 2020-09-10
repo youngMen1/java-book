@@ -74,12 +74,10 @@ CgqCHl68_JyABJdqAAC4yAEr8K4251.jpg
 
 整个添加完成以后，我们点击 update，就完成了 Zabbix 服务端自动发现规则的整体设置，完成服务端在控制台这一端的规则设置以后，接下来我们在 agent 这一端确认 zabbix_agentd.conf 中的几个配置：
 
-
-
 ```
 Server=172.21.64.12
 ServerActive=172.21.64.12  //主动上报zabbix服务端的Ip地址
 HostMetadataItem=system.uname  //通过system.uname函数动态获取主机元数据。
-
 ```
-
+* Server=172.21.64.12 配置，也就是 Zabbix_server（zabbix服务端） IP 地址。
+* HostMetadataItem 主要是来配置主机的元数据，这里可以通过 system.uname 来动态获取元数据信息。
