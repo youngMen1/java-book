@@ -56,7 +56,7 @@ root 用户密码错误是我们非常常见的错误，可能是由于忘记了
 
 注意：不同的操作系统进入单用户模式会有一些操作上的差异。
 
-CgqCHl66a_yAAvcMAAEMHAiOI_A313.jpg
+![](/static/image/CgqCHl66a_yAAvcMAAEMHAiOI_A313.jpg)
 
 在这里，我以 Centos 6 和 Centos 7 的版本来分别进行介绍，Centos 6 的操作如下：
 
