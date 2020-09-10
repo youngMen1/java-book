@@ -67,3 +67,5 @@ Ciqc1F7Z5qiABuNpAAGxNcsS_Ho822.png
 所以：我们会看到早期 Xen 虚拟化技术，用到这样的一种方式，它只能用 Linux 的操作系统来做虚拟机的操作系统，但是 Windows 是无法进行支持的，所以在操作系统的支持上就存在着一些局限性。
 
 ## CPU 硬件虚拟化原理
+
+除了软件的不断优化，硬件也在对虚拟化的技术不断改善及性能调优。主流的服务器 CPU 的厂商，如 Intel 和 AMD ，他们从 CPU 层，也就是硬件层，考虑去支持虚拟化的一些指令。Intel 引入了 Intel-VT （Virtualization Technology）虚拟化 CPU 指令集，这种 CPU 有 VMX root operation 和 VMX non-root operation 两种模式，且两种模式都有一套 Ring0-4 权限级别。 这里就使得 VMM 可以运行在 VMX root operation 模式下,客户 OS 运行在 VMX non-root operation 模式下，而且两种操作模式可以互相转换。
