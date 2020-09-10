@@ -96,7 +96,7 @@ root 用户密码错误是我们非常常见的错误，可能是由于忘记了
 
 进入 /boot 目录下输入 ls 会看到 GRUB 对应的文件目录，然后通过 rm -rf grub* 删除 GRUB 的文件目录。
 
-Ciqc1F66bCSAaCI3AAEn4wHWpb0519.jpg
+![](/static/image/Ciqc1F66bCSAaCI3AAEn4wHWpb0519.jpg)
 
 再次输入 ls，可以发现 GRUB 的文件目录就已经没有了。
 
