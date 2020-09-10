@@ -135,3 +135,22 @@ iptables -A INPUT  -p tcp -m state --state ESTABLISHED,RELATED -j ACCEPT    �
 这和黑名单的差异在于没有建立会话，这些黑名单的主机则主动对我的主机进行建联，这样是不允许的。所以同时加上这两点的话会更加符合一些实际的 iptables 规则的设置需求。这样如果主机想要主动去访问任何一个地址，都可以通过这样的规则进行优先匹配了。
 
 其实上面这些设置更多是基于源地址、目的地址、IP 地址这样的访问控制进行设置。那么下面我们会来看一看，对于一些常见的 4 层的攻击，比如说 SYN 的攻击，iptables 里有哪一些设置可以帮助到我们？
+
+
+
+```
+iptables -N SYN_FLOOD
+iptables -A SYN_FLOOD -p tcp --syn \
+         -m hashlimit \
+         --hashlimit 200/s \                         //每秒最多200个连接
+         --hashlimit-burst 3 \                      //如果连接数连续三次超过上述限制，则将有一个限制。
+         --hashlimit-htable-expire 300000 \        //管理表中记录的有效期限（单位：毫秒）
+         --hashlimit-mode srcip \                 //通过源地址管理请求数
+         --hashlimit-name t_SYN_FLOOD \    //哈希表名存储在/proc/net /ipt_hashlimit
+         -j RETURN
+iptables -A SYN_FLOOD -j LOG --log-prefix "syn_flood_attack: "
+iptables -A SYN_FLOOD -j DROP
+iptables -A INPUT -p tcp --syn -j SYN_FLOOD
+
+```
+
