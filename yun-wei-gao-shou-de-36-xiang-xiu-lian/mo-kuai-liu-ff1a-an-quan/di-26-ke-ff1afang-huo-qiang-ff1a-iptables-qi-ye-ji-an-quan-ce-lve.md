@@ -99,3 +99,23 @@ fi
 ```
 首先在前面我们会看到有一个 -A，表示对 INPUT 这一条链以及 -i（本地回放网卡）允许访问，也就是对允许访问本机规则默认开放。在下面有一个 LOCAL_NET，这里其实是定义了一个 Shell 变量，在这个变量里我们可以进行一些自定义配置，比如本地的网络段属于哪一个网站。如果允许本地网络段进行访问，就需要定义一整串网段信息，并且把网段信息复制给 LOCAL_NET，然后判断这个变量是否存在。如果存在的话，则允许本地的网络访问 iptables -A INPUT，-p tcp 表示 TCP 协议， -s 表示原地址，也就是允许所有本地网络原地址来访问这台主机。
 下面同样也是白名单设置 Shell 的实施方式：
+
+
+
+```
+DENY_HOSTS=(                //直接丢弃列表
+       "xxx.xxx.xxx.xxx"
+       "xxx.xxx.xxx.xxx"
+)
+if [ "${DENY_HOSTS}" ]
+then
+        for deny_host in ${DENY_HOSTS[@]}
+        do
+                iptables -A INPUT -s $deny_host -m limit --limit 1/s -j LOG --log-prefix "deny_host: "
+                iptables -A INPUT -s $deny_host -j DROP
+        done
+fi
+
+```
+
+
