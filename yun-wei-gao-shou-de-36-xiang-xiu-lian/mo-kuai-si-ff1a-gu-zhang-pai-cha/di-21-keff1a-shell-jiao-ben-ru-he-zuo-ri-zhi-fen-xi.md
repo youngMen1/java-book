@@ -176,3 +176,5 @@ ag 使用选项，跟 grep 命令基本上都是一致的。我们可以看一�
 11.寻找 302 跳转的脚本文件
 
 整体 Nginx 的日志进行分析，接下来登录到一台测试机上面，然后 cd t21 目录下，有一个 nginx_check.sh 的 Shell 脚本。
+
+Ciqah16oCk2AEbinAAF6FZc0C8Y862.png
