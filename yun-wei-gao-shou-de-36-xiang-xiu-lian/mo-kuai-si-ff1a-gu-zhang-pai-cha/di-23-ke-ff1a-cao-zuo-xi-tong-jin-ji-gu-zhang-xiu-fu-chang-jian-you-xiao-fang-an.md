@@ -123,3 +123,6 @@ Ciqc1F66bEGAYEcOAAEoAMQ3u00725.jpg
 这里输入 1，就进入了救援模式，并进入了一个 Shell 的交互界面了，这样我们就可以通过输入命令来修复已经损坏的 GRUB 文件。
 
 CgqCHl66bEmATe3oAAAx4fNQ8RQ164.jpg
+
+
+首先，我需要输入的是 chroot 命令（chroot /mnt/sysimage/），chroot 命令负责切换到原来的管理目录结构下，这时再输入 ls 会看到 / 目录下的文件内容及结构就是磁盘 1 （原系统盘）上的所有操作系统的磁盘文件，接下来我需要修复 GRUB。
