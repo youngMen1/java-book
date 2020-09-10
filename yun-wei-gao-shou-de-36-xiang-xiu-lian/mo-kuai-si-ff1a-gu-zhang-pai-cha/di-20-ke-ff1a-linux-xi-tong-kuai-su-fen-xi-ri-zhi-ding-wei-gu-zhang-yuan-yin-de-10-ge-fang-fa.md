@@ -270,3 +270,41 @@ tail -f access.log|awk '{if($(NF)>6){print $0}}'
 
 ## 安全分析统计
 还有就是对于安全的统计分析了，安全统计分析在 Nginx log 里面也是非常重要的，这里我列出了如下内容：
+
+**（1）分析请求中存在的敏感 SQL 语句**
+首先，就是对敏感词的 SQL 语句进行分析，我们知道 SQL 攻击是一种常见的攻击手段，关注这一类的攻击，我们在 Nginx access 请求日志里面需要去关心客户端的请求里面有没有携带敏感词，包括 MySQL 里常用的查询敏感的语句（具体可以关注 27 课时），如“selete”“and”“+and+”“ and ”这些关键词，我们需要对 access.log 进行分析，所以可以基于这些关键词来进行筛选，我们会看到这里有三条组合命令：
+
+
+
+```
+cat access.log|awk '/select/{print $1}'|sort -n|uniq -c|sort -nr
+
+cat access.log|awk '/\/and\//||/\+and\+/||/%20and%20and/{print $1}'|sort -n|uniq -c|sort -nr
+
+cat access.log|awk '/sleep/{print $1}'|sort -n|uniq -c|sort -nr
+
+```
+
+第一个是通过 awk 来做敏感词的筛选，这里只筛选 select 敏感词，把这个请求打印出来并且进行排序。
+第二个关注的是“and”敏感词，然后把这些请求打印出来。
+第三个是 sleep，sleep 是黑客经常用到的一个攻击手段。比如在注入成功以后，用户就会进行一个 sleep，使得后面的 MySQL 响应延迟变得更长。我们就可以通过 awk 命令在 access.log 里面直接进行关键词的筛选，并且把这个请求打印出来，看有没有这样的攻击行为。
+
+**（2）分析请求中存在的敏感 Shell 命令**
+第二类关注的是请求里面有没有携带敏感的 Shell 危险命令，比如这里我列出的 "cat /etc/passwd" 文件。
+
+
+
+```
+cat access.log|awk '/\/etc\/passwd/{print $1}'|sort -n|uniq -c|sort –nr
+
+```
+
+我们知道操作系统如果在请求里面有带“etc passwd”关键词，说明这个请求十分不正常。这类请求我们通常也是需要去进行关注和分析的。
+
+这就是 Nginx 中我们通常需要分析的几大块内容，一个是性能，一个是统计访问情况，还有就是安全类别。
+
+# 解析 MySQL 日志
+接下来给你介绍的就是 MySQL 的日志。
+
+MySQL 日志类型
+MySQL 日志相对来说更加简单，它只有几个类型，分别是 error_log、slow_log、binlog 和查询日志。
