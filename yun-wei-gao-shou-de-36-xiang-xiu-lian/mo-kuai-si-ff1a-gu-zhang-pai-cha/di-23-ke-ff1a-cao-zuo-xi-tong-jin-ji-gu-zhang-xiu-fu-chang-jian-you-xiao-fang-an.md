@@ -142,3 +142,6 @@ Ciqc1F66bHOAEm3PAAAfY1xGwoU495.jpg
 然后执行 grub2-install /dev/sda（添加需要修复系统所在的磁盘的设备）。
 
 CgqCHl66bHuAXyiiAAAmz6_nPZo827.jpg
+
+这个时候我们就可以通过 ls 命令查看对应目录下有没有文件生成，如果有文件生成以后就可以重启操作系统，
+
