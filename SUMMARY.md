@@ -28,7 +28,7 @@
     * [第18课：典型网络故障：选择长连接 or 短连接，大量 Timewait 的产生时如何处理？](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie/di-18-ke-ff1a-dian-xing-wang-luo-gu-zhang-ff1a-xuan-ze-chang-lian-jie-or-duan-lian-jie-ff0c-da-liang-timewait-de-chan-sheng-shi-ru-he-chu-li-ff1f.md)
     * 第19课：网络故障分析（ping、mtr、traceroute）与抓包分析（tcpdump）诊断
     * [第20课：Linux 系统快速分析日志定位故障原因的 10 个方法](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-20-ke-ff1a-linux-xi-tong-kuai-su-fen-xi-ri-zhi-ding-wei-gu-zhang-yuan-yin-de-10-ge-fang-fa.md)
-    * 第21课：Shell 脚本如何作日志分析
+    * [第21课：Shell 脚本如何作日志分析](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-21-keff1a-shell-jiao-ben-ru-he-zuo-ri-zhi-fen-xi.md)
   * [模块五：监控](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-wu-ff1a-jian-kong.md)
     * [第24课：Zabbix 自动发现和自动注册](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-wu-ff1a-jian-kong/di-24-ke-ff1a-zabbix-zi-dong-fa-xian-he-zi-dong-zhu-ce.md)
   * [模块六：安全](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-liu-ff1a-an-quan.md)
