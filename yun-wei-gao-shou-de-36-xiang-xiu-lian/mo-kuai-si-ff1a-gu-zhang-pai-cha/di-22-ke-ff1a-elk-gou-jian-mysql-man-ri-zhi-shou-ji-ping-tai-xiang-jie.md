@@ -114,3 +114,5 @@ CgqCHl6z5f2Adg-FAAG1tRCeSEs038.png
 Ciqc1F6z5gaAVbOEAADJKPLGQmc895.png
 
 配置完成以后，需要在 MySQL 终端上，模拟执行一条执行时间较长的语句，比如执行 select sleep(5)，这样就会模拟执行一条查询语句，并且会让它休眠 5 秒。接下来我们看到服务端窗口的 MySQL 这条 sleep 语句已经执行完毕了，同时我们可以再打开 filebeat 的推送窗口，发现这里产生了一条推送日志，表示成功地把这条日志推送给了 ES。
+
+Ciqc1F6z5g-ASJ0NAAA7FAzWRc8740.png
