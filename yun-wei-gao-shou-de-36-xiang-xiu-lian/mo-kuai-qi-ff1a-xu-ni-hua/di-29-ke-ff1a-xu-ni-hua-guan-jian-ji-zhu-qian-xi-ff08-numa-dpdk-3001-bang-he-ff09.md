@@ -79,3 +79,5 @@ CgqCHl7Z5rKAHPYjAAIJrpujE5k364.png
 ## NUMA 虚拟化技术
 
 接下来要给你来分享虚拟化技术，也是围绕 CPU 的资源优化，叫作 NUMA。NUMA 是对于虚拟主机调用内存的一套新的管理方式，为什么需要 NUMA？在早期的 CPU 架构里面，CPU 对于内存的调用都要通过硬件上面的北桥芯片，但随着 CPU 的核数不断增加， CPU 对于内存的调用都通过北桥芯片，肯定会产生很多冲突，这个时候就把内存逐步在底层硬件上面做了改造，把内存绑定到了不同的 CPU 的寄存器里面。
+
+CgqCHl7Z5rmAJBJ1AACo-ULE6rw595.png
