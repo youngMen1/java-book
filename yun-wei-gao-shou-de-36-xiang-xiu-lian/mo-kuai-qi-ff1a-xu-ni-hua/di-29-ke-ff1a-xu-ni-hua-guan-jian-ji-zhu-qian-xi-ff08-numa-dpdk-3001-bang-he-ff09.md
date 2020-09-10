@@ -6,7 +6,7 @@
 
 我这里列了一张图，把一些常见的虚拟主机技术进行罗列，横坐标是时间轴，纵坐标是具体的一些虚拟化技术名称。
 
-Ciqc1F7Z5pCAI3wpAACnKzGghUk811.png
+![](/static/image/Ciqc1F7Z5pCAI3wpAACnKzGghUk811.png)
 
 虚拟化技术里，有 Virtualbox、KVM、 Docker 及各个虚拟技术。结合横坐标轴，我们可以看到在最早期的虚拟主机是使用软件系统层的虚拟化技术实现的，列举的Virtualbox 是在 2000 年前诞生的，它就是基于软件虚拟化技术实现的。
 
@@ -42,7 +42,7 @@ Ciqc1F7Z5pCAI3wpAACnKzGghUk811.png
 ## CPU 虚拟化原理
 在 Linux 操作系统里，进程运行级别可以分为用户态和内核态，而对应 CPU 的指令级别则是通过 Ring 级别来进行访问控制的，级别共分 4 层，从 Ring0 到 Ring3，Ring0 是权限级别最大的，Ring3 是权限级别最小的。Ring3 的权限级对应用户态模式，Ring0 对应内核态。当应用程序执行特权指令时，会通过中断或异常来实现用户态到内核态的切换,比如访问磁盘、写文件，那就要通过执行系统调用（函数），执行系统调用的时候，CPU 的运行级别会发生从 ring3 到 ring0 的切换，并跳转到系统调用对应的内核代码位置执行。
 
-CgqCHl7Z5pqASfvmAAGwHYuxx1k074.png
+![](/static/image/CgqCHl7Z5pqASfvmAAGwHYuxx1k074.png)
 
 了解这个概念后我们如果在底层系统层再安装虚拟机，那么就是遵循：硬件层-->物理机系统-->虚拟机管理软件VMM-->虚拟主机系统-->虚拟主机应用 这样一个层次关系。那么在虚拟化技术中虚拟机应用所需要执行特权指令该如何切换呢？
 
@@ -50,7 +50,7 @@ CgqCHl7Z5pqASfvmAAGwHYuxx1k074.png
 
 下面这张图展示了 CPU 虚化早期的全虚拟化原理的实现方式：
 
-CgqCHl7Z5qGAHRbsAAGofogy0rg750.png
+![](/static/image/CgqCHl7Z5qGAHRbsAAGofogy0rg750.png)
 
 可以看到，内核态 Ring0 级别运行一个叫作 VMM 的软件，这个软件主要是用来做特权指令集的翻译。虚拟机系统 OS 在 Ring1，虚拟机上的应用 App 需要执行特权的底层调用指令时，它会先给自己运行的虚拟机的 OS 系统上发送对应的指令。它在执行特权指令时,会触发异常,然后 VMM 捕获这个异常,在异常里面做翻译模拟,返回到 OS。
 
@@ -60,7 +60,7 @@ CgqCHl7Z5qGAHRbsAAGofogy0rg750.png
 
 更好的技术最早出来一种技术叫半虚拟化技术。所谓半虚拟化技术，你可以看看下面这张图：
 
-Ciqc1F7Z5qiABuNpAAGxNcsS_Ho822.png
+![](/static/image/Ciqc1F7Z5qiABuNpAAGxNcsS_Ho822.png)
 
 我们会看到这里把虚拟机 OS 层放到 Ring0，这里封装了 Hypervisor 层，这种模式需要修改操作系统内核，替换掉不能虚拟化的指令，通过 Hypercall 直接和底层的虚拟化层 Hypervisor 来通信，Hypervisor 同时也提供了超级调用接口来满足其他关键内核操作，这种方式节省了全虚拟化中的捕获和模拟，大大提高了效率，但是存在一个问题，它需要让虚拟机上的 OS 系统进行内核上的改造，才能够调用 Hypervisor及整体这套架构。
 
@@ -70,7 +70,7 @@ Ciqc1F7Z5qiABuNpAAGxNcsS_Ho822.png
 
 除了软件的不断优化，硬件也在对虚拟化的技术不断改善及性能调优。主流的服务器 CPU 的厂商，如 Intel 和 AMD ，他们从 CPU 层，也就是硬件层，考虑去支持虚拟化的一些指令。Intel 引入了 Intel-VT （Virtualization Technology）虚拟化 CPU 指令集，这种 CPU 有 VMX root operation 和 VMX non-root operation 两种模式，且两种模式都有一套 Ring0-4 权限级别。 这里就使得 VMM 可以运行在 VMX root operation 模式下,客户 OS 运行在 VMX non-root operation 模式下，而且两种操作模式可以互相转换。
 
-CgqCHl7Z5rKAHPYjAAIJrpujE5k364.png
+![](/static/image/CgqCHl7Z5rKAHPYjAAIJrpujE5k364.png)
 
 对于虚拟主机上面的应用有需求，需要 OS 去使用底层特权或遇到需要 VMM 处理的事件，这时 OS 就可以切换到 VMX root operation 模式。
 
@@ -80,14 +80,14 @@ CgqCHl7Z5rKAHPYjAAIJrpujE5k364.png
 
 接下来要给你来分享虚拟化技术，也是围绕 CPU 的资源优化，叫作 NUMA。NUMA 是对于虚拟主机调用内存的一套新的管理方式，为什么需要 NUMA？在早期的 CPU 架构里面，CPU 对于内存的调用都要通过硬件上面的北桥芯片，但随着 CPU 的核数不断增加， CPU 对于内存的调用都通过北桥芯片，肯定会产生很多冲突，这个时候就把内存逐步在底层硬件上面做了改造，把内存绑定到了不同的 CPU 的寄存器里面。
 
-CgqCHl7Z5rmAJBJ1AACo-ULE6rw595.png
+![](/static/image/CgqCHl7Z5rmAJBJ1AACo-ULE6rw595.png)
 
 对于 CPU 调用内存而言，我们会看到一个单独的 CPU，它自己会绑定一组内存。但是这样模式会存在一个问题：在多核物理服务器的架构下，内存的控制器由于受到了拆分，分配到了不同的 CPU上，会导致 CPU 访问非本地这一组内存时，要比访问本地这组的内存慢 10%，也就是访问 Remote 这组内存时，会慢 10%，因为它不是在本地进行调用的，所以性能上一定会受损。
 
 为了避免这样的问题产生，我们在软件层使用了 NUMA 技术。这就涉及在进行虚拟机优化的情况下，虚拟机 CPU 尽量减少一些跨 NUMA 的调用，所以我们需要根据虚拟机上的虚拟 CPU 和它内存的调用关系来做提前分配，让具体的 CPU 能够尽量分配到同一种 NUMA 节点，来避免远程调用。
 
 所以具体的虚拟机的装箱算法通常是这样子的：
-Ciqc1F7Z5sCAR0RjAADU0NzcWqI053.png
+![](/static/image/Ciqc1F7Z5sCAR0RjAADU0NzcWqI053.png)
 
 物理机上的任何一个物理 CPU，在它能提供的虚拟核数足够的情况下，尽量让虚拟机的 CPU 能够放到单个物理及物理 CPU 上面。如果物理 CPU 小于子集所需要申请的虚拟 CPU ，我们尽量在虚拟机的 CPU 上和在物理机的 CPU 平分。
 
