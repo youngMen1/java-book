@@ -73,3 +73,13 @@ CgqCHl68_JyABJdqAAC4yAEr8K4251.jpg
 3.关联到主机需要监控的模板（Link to templates），这里关联的是 Linux 主机模版Template，Template OS Linux by zabbix agent 就是 Zabbix 里一个针对 Linux servers 的默认模板，关联好这个模板以后，就可以利用默认的模板对客户端主机进行数据的采集，然后监控并且画图。
 
 整个添加完成以后，我们点击 update，就完成了 Zabbix 服务端自动发现规则的整体设置，完成服务端在控制台这一端的规则设置以后，接下来我们在 agent 这一端确认 zabbix_agentd.conf 中的几个配置：
+
+
+
+```
+Server=172.21.64.12
+ServerActive=172.21.64.12  //主动上报zabbix服务端的Ip地址
+HostMetadataItem=system.uname  //通过system.uname函数动态获取主机元数据。
+
+```
+
