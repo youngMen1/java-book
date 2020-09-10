@@ -87,4 +87,6 @@ Syntax: error_log file [level];
 Default: error_log logs/error.log error;
 
 ```
+表示错误日志统一记录到 logs/error.log，并且日志级别是 error 级别，所有满足这个错误日志级别的都会输出到 error.log 里。
 
+## Nginx 的日志内容
