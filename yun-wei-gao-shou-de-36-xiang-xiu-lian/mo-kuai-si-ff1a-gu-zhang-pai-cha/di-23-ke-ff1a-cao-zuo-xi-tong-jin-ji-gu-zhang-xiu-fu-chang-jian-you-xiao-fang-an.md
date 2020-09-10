@@ -60,3 +60,8 @@ CgqCHl66a_yAAvcMAAEMHAiOI_A313.jpg
 
 在这里，我以 Centos 6 和 Centos 7 的版本来分别进行介绍，Centos 6 的操作如下：
 
+1.启动界面任意按一个字符，进入选择启动项菜单。
+2.在启动菜单（GRUB）读秒界面按 e 键进入编辑模式。
+3.用上下键移动到“kernel”行，按 e 进入行编辑模式。
+4.在行编辑界面，在行末尾键入s、S、1 或者 single。
+
