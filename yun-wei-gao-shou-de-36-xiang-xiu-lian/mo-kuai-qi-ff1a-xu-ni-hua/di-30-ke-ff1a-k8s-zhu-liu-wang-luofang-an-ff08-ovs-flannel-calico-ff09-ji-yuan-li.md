@@ -19,3 +19,5 @@ Ciqc1F7h0CuAQKQLAACg7iAyYtk957.png
 Ciqc1F7h0DSACfq1AAF-K0jMyOw430.png
 
 如 A 和 B 的通信过程，点对点的通信通常必须包含两大部分的数据包，一个是 IP 包，我们要了解 A、B 两个地址对应的 IP 地址，同时也需要了解到 A 和 B 之间的 MAC 地址，这样无论是在二层还是三层的网络结构下面，都使得这样的数据范围能够正常可达和回复。那对容器的不同宿主机下的网络模式而言，就会有一定的区别了。
+
+Ciqc1F7h0EOAHjRZAAEH3JdazRM728.png
