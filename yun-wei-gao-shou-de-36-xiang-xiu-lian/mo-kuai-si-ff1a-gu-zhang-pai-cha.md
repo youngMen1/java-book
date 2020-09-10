@@ -132,3 +132,5 @@ tcpdump使用样例，这里介绍另外一种方式，就是 tcpdump 后面加�
 CgoCgV6etMyAcMDhAAchCFSUgLE411.png
 
 接下来我们就可以把刚刚采集下来的文件，通过一些专业的工具进行分析。这里推荐你使用 WireShark，我们可以在客户端先安装好 WireShark 工具，然后在里面打开采集好的问天，我们会看到在这样的一个界面，它包含整个客户端和服务端发送数据包连接情况。
+
+Ciqah16etNSAWvR2AAj7TMGILF4299.png
