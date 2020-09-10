@@ -147,3 +147,5 @@ CgqCHl66bHuAXyiiAAAmz6_nPZo827.jpg
 Ciqc1F66bIOAVgJcAABUL1FHMtM765.jpg
 
 然后在 BIOS 中将启动介质设置为磁盘 1，然后重启启动，这个时候会看到正常进入 GRUB 的选择菜单栏里，这个时候选择默认的第一个启动菜单项。
+
+CgqCHl66bIuAECi-AAA33rT3QlU625.jpg
