@@ -98,3 +98,5 @@ Zabbix_agent 主动上报的一种配置这里需要配置 2 大块：
 CgqCHl68_KeAWF1gAAAn8mXN_z8660.jpg
 
 在这个规则里面配置 Action 动作，第 1 块是动作的名称（Name），下面是满足什么样的条件，这里我设置的条件为 Host metadata contains linux 表示是主机的元数据包含了 Linux 的条件，只要满足了是Linux类型的主机一个条件，然后配置执行步骤 Operation，如图：
+
+Ciqc1F68_LCADryJAACKuB-Bv8Y577.jpg
