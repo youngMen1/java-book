@@ -180,5 +180,5 @@ cat access.log|grep '221.219.98.129'|awk '{print $7}'|sort |uniq -c |sort -n -k 
     114 /jeson
 
 ```
-
+这时我们就可以通过 grep 把 access.log 按照某一个 IP 做一个筛选，然后把第 7 列 $reques（也就是请求路径等情况）打印出来。然后再进行一个同样的排序，我们会看到这个 IP 主要请求的是哪些地址，和它们对应的请求次数。
 
