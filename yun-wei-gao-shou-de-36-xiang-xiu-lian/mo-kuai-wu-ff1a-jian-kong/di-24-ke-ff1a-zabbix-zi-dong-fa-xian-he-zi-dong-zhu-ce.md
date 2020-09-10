@@ -48,3 +48,7 @@ Ciqc1F68_IWACLmRAAA5Dtpkssg217.jpg
 在配置好相应的录入规则以后，接下来我们需要做的就是配置它的执行动作，我们同样在 Zabbix 控制台，点击 Configuration 按钮，然后点击 Actions，在下面我们来新建一个 Discovery 类型的 action。
 
 Ciqc1F68_IuAMgiIAAB-YdH43CY334.jpg
+
+接下来就会进入这个动作的具体配置界面。
+
+Action 标签栏内最上面是 action 的名称（Name），我们可以自定义来书写。中间（Type of calculation）是配置它的条件等等,好了我们先看到这里，如果选择右边的标签“ Operations”，就是来定义具体执行动作。
