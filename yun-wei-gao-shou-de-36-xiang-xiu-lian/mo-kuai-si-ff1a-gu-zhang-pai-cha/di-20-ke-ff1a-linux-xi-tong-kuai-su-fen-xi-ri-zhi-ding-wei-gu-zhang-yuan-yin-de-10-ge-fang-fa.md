@@ -90,3 +90,11 @@ Default: error_log logs/error.log error;
 表示错误日志统一记录到 logs/error.log，并且日志级别是 error 级别，所有满足这个错误日志级别的都会输出到 error.log 里。
 
 ## Nginx 的日志内容
+
+接下来我重点围绕 access_log 给你做介绍和分析。
+
+我们刚讲到了，access_log 需要定义好日志内容和日志内容的格式，是通过 log_format 选项来提前定义的。log_format 也有对应的配置选项，比如：
+
+* name：格式名称。格式名称是在 access 刚刚讲到的配置语法里面所需要引用的。
+* escape：主要是用来定义字符的编码方式，可以是 JSON 格式，它默认使用的是 default 编码方式。
+* string：十分重要，主要定义日志格式和对应内容，它是通过 Nginx 变量来做具体定义。
