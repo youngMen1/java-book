@@ -75,5 +75,9 @@ Ciqc1F66bASAZ7p_AABx_fUX-gY425.jpg
 然后，保存编辑的内容，重启操作系统就可以进入单用户模式，接下来我们讲解救援模式，救援模式就以 Centos 7 为例来进行讲解。
 
 1.设置 BIOS 的引导设备，优先通过 ISO 启动。
-2.进入系统安装盘界面，先选 Troubleshooting，再选 Rescue a CentOS system。
+2.进入系统安装盘界面，先选 **Troubleshooting**，再选 **Rescue a CentOS system。**
 3.进入后等待最终进入提示模式，输入 1 回车。
+
+输入 chroot /mnt/sysimage 切换到原 Linux 系统主目录下，接着就可以开始对原系统进行修复工作，这就是 Centos 7 进入救援模式的大体过程。
+
+## 救援演示
