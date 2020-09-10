@@ -19,3 +19,4 @@
 我们首先来讲解 DDOS 反射放大攻击形式。我这里画了 3 张图，我们先来理解一下正常的用户访问服务端的过程。
 Ciqc1F7XGfiAKxguAABXbJVWs34227.png
 我们会看到，正常访问是客户 A，服务端 B，用户 A 请求服务端 B，返回正常响应。
+Ciqc1F7XGgeAKCTmAACZ2aWSUnA297.png
