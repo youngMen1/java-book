@@ -136,3 +136,5 @@ Ciqc1F66bGKAb3hQAABJCj_36rw341.jpg
 Ciqc1F66bGuAWYrCAABLIALdS3M504.jpg
 
 然后在输入 grub2 -mkconfig -o /boot/grub2/grub.cfg，这样就可以按照对应的路径要求生成配置文件。
+
+Ciqc1F66bHOAEm3PAAAfY1xGwoU495.jpg
