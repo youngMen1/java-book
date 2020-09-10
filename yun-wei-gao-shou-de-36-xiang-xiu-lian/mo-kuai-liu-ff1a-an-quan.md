@@ -39,3 +39,21 @@
 第三就是不使用用户密码的校验行为，加入一些更复杂的校验方式，如电子口令卡、动态密码等，这些都是非常有助于保护网站后台访问的，不至于把整个后台沦落到黑客手中。以上就是开发人员常常可以去做的一些防护的策略。
 
 接下来为你举一个例子，我们以 Nginx 的设置为例，如果 Nginx 作为你公司服务架构的代理网关，那么在 Nginx 来做一些防范策略，具体包含： Nginx 实现管理后台的白名单控制，限流配置。
+
+
+
+```
+limit_req_zone $binary_remote_addr zone=limiter:10m rate=20r/s;
+server {
+    ....
+    location /admin {
+      proxy_pass http://127.0.0.1:8080;
+      limit_req zone=limiter burst=1 nodelay;
+    }
+    location / {
+      proxy_pass http://127.0.0.1:9090;
+    }
+}
+
+```
+
