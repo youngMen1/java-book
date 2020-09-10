@@ -120,3 +120,5 @@ CgoCgV6etK2AfgBEAAEfyWiBW5E145.png
 Ciqah16etLWAcs2dAAC3nOSs2iU257.png
 
 这个时候我们可以在服务端看到抓包结果，客户端 7 个数据包，采集了 5 个数据包。所以在本地 执行ls命令 会生成一个 test.cap 的文件。打开这个数据包，看到的是一些二进制的格式，这个是无法通过文本来查看的，我们需要通过一些其他分析工具分析（如：WireShark）。
+
+Ciqah16etMCAKir4AAGFAKrq2qs530.png
