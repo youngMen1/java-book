@@ -67,3 +67,9 @@ Type of calculation中的设置表示 Conditions 这个选项框里给它添加�
 CgqCHl68_JyABJdqAAC4yAEr8K4251.jpg
 
 如果不发送文字提醒，只是为了添加主机到 Zabbix 列表里，监控主机的信息列表的话，我们就可以添加如下的几个对应的 Operations，首先在 Operations 这一栏里来添加 3 个操作：
+
+1.一个是添加主机（add host），也就是发现主机满足条件以后，首先把主机添加到主机列表里面。
+2.添加主机到某一个组里面去（Add to host groups），在 Zabbix 里面有个默认的主机组，就是 Linux servers，只要满足条件的都可以添加到 Linux servers 组中。
+3.关联到主机需要监控的模板（Link to templates），这里关联的是 Linux 主机模版Template，Template OS Linux by zabbix agent 就是 Zabbix 里一个针对 Linux servers 的默认模板，关联好这个模板以后，就可以利用默认的模板对客户端主机进行数据的采集，然后监控并且画图。
+
+整个添加完成以后，我们点击 update，就完成了 Zabbix 服务端自动发现规则的整体设置，完成服务端在控制台这一端的规则设置以后，接下来我们在 agent 这一端确认 zabbix_agentd.conf 中的几个配置：
