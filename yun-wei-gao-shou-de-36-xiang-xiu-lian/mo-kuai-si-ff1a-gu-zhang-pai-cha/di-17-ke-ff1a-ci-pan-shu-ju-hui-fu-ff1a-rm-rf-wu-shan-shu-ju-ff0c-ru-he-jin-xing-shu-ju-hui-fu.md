@@ -99,5 +99,7 @@ Ciqah16VdOeAOn_dAAB14_xLtZU663.png
 
 在执行以上恢复操作之前，我先要确保数据恢复的目录 /opt/recovertest 下，cd  /opt/recovertest 目录下，执行想恢复的文件 extundelete /dev/sdb --restore-file file。
 
+Ciqah16VdFOACsNKAAF1sVuVggU217.png
+
 
 
