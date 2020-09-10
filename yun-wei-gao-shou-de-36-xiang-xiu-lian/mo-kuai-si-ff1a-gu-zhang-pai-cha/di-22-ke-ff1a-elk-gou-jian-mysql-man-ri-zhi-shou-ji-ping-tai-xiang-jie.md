@@ -82,3 +82,7 @@ Ciqc1F6z5aiAPWhVAATBHouaBAk740.png
 具体的 curl 方式是这样的，curl 后面加对外暴露的接口地址，然后回车，就会在终端里返回并展示一段 JSON 格式的信息，我们会看到 Elasticsearch 当前的一些版本等信息，这说明 ES 运行正常。
 
 CgqCHl6z5bCASazjAAOYchcFIA4972.png
+
+接下来安装第 2 个组件 Kibana，我们来看一下它是怎么安装的。我先把本地的官方 yum 本源配置好（elk.repo），接下来可以直接用 yum install kibana 一键完成安装。安装完成以后，同样需要去修改它的配置，这个配置在 /etc/kibana.yml ，那么主要修改这几个地方，一个是服务端口默认是 5601，还有对外暴露的服务地址。 另外，需要取 Elasticsearch 里面数据接口地址，所以我们要配置好 Elasticsearch 对外的服务接口。启动方式是通过：/usr/share/kibana/bin/kibana -c /etc/kibana/kibana.yml，完成对 kibana 的启动，或者可以通过 systemctl start kibana 的方式，直接启动 kibana 服务。
+
+那么启动完成以后，就可以在浏览器里访问 kibana 的管理界面，敲入 kibana 对外暴露的 IP 地址，还有 5601 对外暴露的服务端口号，就可以访问 kibana 的后台。登录后的展示界面。
