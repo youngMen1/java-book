@@ -17,3 +17,25 @@ Prometheus 是由一套组件所组成，接下来我们具体来介绍一下它
 了解了几个核心组件后，我们来看一下 Prometheus 这些组件所构成的 Promethues 整体监控架构。
 
 CgqCHl7Dn2SAX4_sAAEeHG2vN7E056.png
+
+在这张图里我们可以看到，中间的位置是 Prometheus server 核心组件，这个核心组件串联 Prometheus 整体监控流程。在 Prometheus server 这个大框里面有几部分：一个是收集模块（Retreval），另外一部分就是 TSDB，这是一个时序的数据库，HTTP server 是一个提供给外部访问的服务接口。
+
+我们先来看收集模块，这个模块上面的“ discover targets”-代表去发现监控节点目标， Prometheus 一个非常重要的特性就是完美支持 K8s 对于 Docker 容器编排的服务架构，它能够动态地发现 K8s 集群里面目标节点pod ，发现并提取所有节点的监控信息，通过 pull metrics 针对性地提取具体每一个节点 pod 上面的监控数据。
+
+接下来我们看到图中的左侧，它展示了发现目标节点信息以后，具体提取这些节点上面的监控数据的方式。我们看到第一种方式就是通过 exporters 组件去进行节点数据采集，并标准化成一个通用的 metric 接口，给到 Prometheus server 的服务端来进行抓取。
+
+第二种方式是：Prometheus server 抓取一个 Push gateway（推送网关），客户端推送信息传递到推送网关，通过推送网关来进行转换，然后服务端再去拉取网关的数据，这样相当于Push gateway 做了一层转换。
+
+收取监控数据以后，Prometheus server 会存到自己的时序数据库里。存取到数据库以后，通过 Prometheus server 端的运算、转换，逻辑处理，最后提供给对外部HTTP 接口进行调用访问。
+
+如果触发了一些报警的规则，则需要把这些消息的报警规则推送给 Alertmanager 进行处理，可以对外发送邮件，提醒信息等行为，这些行为都是由 Alertmanager 组件负责实现的。
+
+另外就是可视化展示了，可视化的展示需要集成一些可视化插件。刚刚讲到的 Grafana 就属于可视化的插件，可以从 Prometheus server 里进行数据提取和展示。除了 Grafana 以外，还有一个是 Prometheus web UI，这是 Prometheus 默认自带的一个可视化管理后台。
+
+以上就是基于 K8s 服务架构下，Prometheus 组件的整体架构。
+
+了解了这些组件贯穿的架构图示之后，我们接下来会重点讲解 Prometheus server、exporters、Grafana 这三个组件，为你演示从数据的采集到 Prometheus 服务端抓取 Grafana，也就是数据的监控信息展示报表，这个流程架构是如何实现的。
+
+**Prometheus 和 Zabbix 功能、使用差异**
+
+在介绍整体架构之前，想必你对我们整个模块里讲到的两个监控系统：Zabbix 和 Prometheus ，那它们有什么区别？在这里我列了一张表格，分别从开发语言成熟度、性能、社区活跃度以及容器 K8s 微服务的支持，还有部署复杂度以及监控配置的复杂度等维度来为你做了一个对比。
