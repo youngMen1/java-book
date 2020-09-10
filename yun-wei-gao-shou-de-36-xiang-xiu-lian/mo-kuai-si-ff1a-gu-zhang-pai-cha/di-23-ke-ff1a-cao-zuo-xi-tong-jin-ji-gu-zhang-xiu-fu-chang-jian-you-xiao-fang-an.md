@@ -101,7 +101,7 @@ root 用户密码错误是我们非常常见的错误，可能是由于忘记了
 再次输入 ls，可以发现 GRUB 的文件目录就已经没有了。
 
 
-Ciqc1F66bCyAfM7FAAAvPF0DDv4130.jpg
+![](/static/image/Ciqc1F66bCyAfM7FAAAvPF0DDv4130.jpg)
 
 然后重启操作系统，这个时候会提示文件没有找到，需要进入救援模式的界面。
 
