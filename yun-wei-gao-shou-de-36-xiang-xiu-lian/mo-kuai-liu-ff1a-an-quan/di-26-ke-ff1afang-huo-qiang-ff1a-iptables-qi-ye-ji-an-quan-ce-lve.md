@@ -11,7 +11,7 @@
 
 在现实中，其实很多应用服务都调用了 Netfilter。这里我给你画了一张图：
 
-CgqCHl7GXLmAQNIJAAAx_JTgoQQ756.png
+![](/static/image/CgqCHl7GXLmAQNIJAAAx_JTgoQQ756.png)
 
 可以看到，在最中央就是 Netfilter 的 Linux 内核模块了，我们看到最下层 iptables 会调用 Netfilter 模块来作为安全防火墙。在 CentOS7 以后，出来一款新的防火墙服务叫作 firewalld，其实也是调用了 Netfilter 模块。总体来说，无论是 iptables，还是 firewalld，它们都是调用了 Linux 的 Netfilter 内核模块。
 
