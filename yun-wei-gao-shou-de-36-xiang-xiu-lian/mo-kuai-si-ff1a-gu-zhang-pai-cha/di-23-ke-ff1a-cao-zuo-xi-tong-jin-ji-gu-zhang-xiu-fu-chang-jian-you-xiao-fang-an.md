@@ -110,3 +110,5 @@ Ciqc1F66bCyAfM7FAAAvPF0DDv4130.jpg
 Ciqc1F66bDSAeMsVAABGEtLIoIQ378.jpg
 
 这个时候你会发现通过 BIOS 会直接进入一个安装的启动界面，然后选择 Centos 7 救援模式的按钮，这样就进入确认界面，然后点击确认就会启动救援模式。
+
+Ciqc1F66bDuAOuSNAADMrAEagRY261.jpg
