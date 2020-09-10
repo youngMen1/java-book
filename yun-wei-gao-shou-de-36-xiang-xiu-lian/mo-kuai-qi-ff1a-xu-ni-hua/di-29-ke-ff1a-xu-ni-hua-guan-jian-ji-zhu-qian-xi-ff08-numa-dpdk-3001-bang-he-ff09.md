@@ -59,3 +59,5 @@ CgqCHl7Z5qGAHRbsAAGofogy0rg750.png
 ## CPU 半虚拟化原理
 
 更好的技术最早出来一种技术叫半虚拟化技术。所谓半虚拟化技术，你可以看看下面这张图：
+
+Ciqc1F7Z5qiABuNpAAGxNcsS_Ho822.png
