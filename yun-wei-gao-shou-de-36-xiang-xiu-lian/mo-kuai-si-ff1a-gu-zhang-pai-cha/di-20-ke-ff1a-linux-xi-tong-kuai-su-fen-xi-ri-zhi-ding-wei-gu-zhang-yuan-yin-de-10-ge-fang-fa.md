@@ -51,4 +51,16 @@ Default: access_log logs/access.log combined;
 ```
 
 
-默认配置格式如下：
+access_log 后面加了默认日志路径（logs/access.log），然后加上日志类型的名称（combined）。什么是日志类型的名称呢？接下来我会给你做一个详细的介绍。
+
+然后是，下面的 Context 段落信息，它代表 access_log 这个配置模块可以在 Nginx。conf 配置的哪一层级进行配置。
+
+
+```
+Context: http, server, location, if in location, limit_except
+
+```
+
+我们会看到 access_log 配置允许配置的层级，在 Nginx conf 里配置到 http、server、location 等层级中。
+
+如果需要自定义配置access_log， 需要具体配置相关的选项，如下：
