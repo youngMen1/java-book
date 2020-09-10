@@ -40,3 +40,15 @@ access_log off;
 
 ```
 
+access_log 后面加 path （日志路径）和相关的选项。如果我们想关闭这个请求日志，配置为：access_log off，通过这个配置把请求日志关闭。
+
+
+默认配置格式如下：
+
+```
+Default: access_log logs/access.log combined;
+
+```
+
+
+默认配置格式如下：
