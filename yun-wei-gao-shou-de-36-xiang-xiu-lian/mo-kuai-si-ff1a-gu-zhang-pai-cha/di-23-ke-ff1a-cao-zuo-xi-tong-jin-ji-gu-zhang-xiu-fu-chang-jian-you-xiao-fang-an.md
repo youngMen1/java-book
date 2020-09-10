@@ -99,3 +99,4 @@ CgqCHl66bB2AVJwFAACveDe3Ia4694.jpg
 Ciqc1F66bCSAaCI3AAEn4wHWpb0519.jpg
 
 再次输入 ls，可以发现 GRUB 的文件目录就已经没有了。
+Ciqc1F66bCyAfM7FAAAvPF0DDv4130.jpg
