@@ -111,4 +111,12 @@ og_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
                       '"$http_user_agent" "$http_x_forwarded_for"';
 
 ```
+示例中通过 log_format 定义了一个名称“ main”，在 access_log 的配置选项里面，如果引用mian，日志的内容就会按照 main 的定义方式来打印具体内容。
 
+具体看下这里的配置，整体上最大的外层是通过一个单引号，我们会看到第一段单引号归纳的内容，一个是 remote_addr，它是 Nginx 的内置变量，记录的是直接请求客户端的ip地址。然后通过一个 “-” 符号，和 remote_user 也就是请求客户端的用户做了分隔，然后加入了一个括号，括号里面记录用户请求到 Nginx 上面的时间，request 就是用户请求的内容。
+
+$status 主要记录的是 Nginx 返回给客户端的状态码，我们看到有 200、300、400、500 等相关的 HTTP 状态码。body_bytes_sent 是服务端向客户端发送的 body 的字节大小。$http_referer 主要记录客户端请求地址的上一跳的地址。
+
+$http_user_agent 它记录用户请求时用的是哪个客户端。$http_x_forwarded_for 之前也讲过，记录的是用户的 IP 和 Proxy 的 IP 头信息。
+
+所有的格式内容默认以空格来进行分隔，除非我们自定义加入一些分隔符，比如“ / ”和“ [] ”都会在打印的格式里面进行打印。最终打印的内容会是这样的：
