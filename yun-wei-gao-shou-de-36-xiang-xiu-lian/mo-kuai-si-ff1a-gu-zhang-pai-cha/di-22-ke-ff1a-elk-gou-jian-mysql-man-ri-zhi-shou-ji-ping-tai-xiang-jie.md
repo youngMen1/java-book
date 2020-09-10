@@ -45,3 +45,5 @@ Ciqc1F6z5SaAKUmwAAYyNWdHooE182.png
 对内存 CPU 的资源消耗会比 Logstash 低，所以它的性能会更好，专门用于做日志收集比较合适。
 
 另外， Beats 提供了非常丰富的场景，除了使用 Filebeat 工具外，还可以看到会有其他的一些家族成员，如 Packetbeat 、Metricbeat、Winlogbeat ，每个家族成员都会针对性地收集一些不同的数据。所以我们想要收集其他数据内容时，就可以用 Beats 里面的其他工具针对性的收集，如 Winlog 主要收集 Windows 上的相关日志。
+
+Ciqc1F6z5TeAC7N2AAdHW2m1zI8345.png
