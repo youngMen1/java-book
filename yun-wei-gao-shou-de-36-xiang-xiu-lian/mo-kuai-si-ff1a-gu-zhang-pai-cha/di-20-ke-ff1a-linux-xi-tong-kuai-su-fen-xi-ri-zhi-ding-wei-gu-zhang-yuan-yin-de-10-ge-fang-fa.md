@@ -215,3 +215,58 @@ cat access.log|awk '{if($11~"-"){print $0}}’
 作为运维工程师，我们还要分析的第二大类型，就是 Nginx 的错误日志请求。
 **（1）状态码响应统计**
 比如状态码的错误，我们知道 200 是正常状态码，300 主要是重定向类型的状态码，400/500 说明对客户的请求可能存在问题，通常需要进行整体的分析。
+
+
+
+```
+cat access.log|awk '{print $9}'|sort|uniq -c|more
+
+    922 200
+    235 301
+      1   404
+     10  500
+
+```
+
+这样的组合命令通过 cat access.log，然后 awk 处理，并把 $9（第九列） 打印出来，$9 在 Nginx 配置的 log_format 中代表服务端所返回的状态码，并且基于状态码做了排序。
+
+可以看到，访问网站的大部分状态码是 200，以及 301 有多少个，404 有多少个，500 有多少个，然后就了解整体的用户对网站的请求和中间的错误率大概是什么样子的。
+**（2）请求延时分析**
+除了对错误码的分析，我们也需要去关注性能上的问题，比如请求的延时分析。在 Nginx 的 access.log 里面主要有两个变量，一个是 request_time，还有一个是 upstream_response_time。
+
+
+```
+$request_time:
+
+```
+指的就是从接受用户请求的第一个字节到发送完响应数据的时间，即包括接收请求数据时间、程序响应时间、输出响应数据时间。
+
+
+```
+$upstream_response_time
+
+```
+是指 Nginx 发出以后，到接到后端 real server 后端的服务，再给到 Nginx 的时间，upstream_response_time 主要用于反向代理模式里面所需要记录的时间，记录的是反向代理发出请求到拿到后端(Real server)给到反向代理的数据的时间。
+
+
+
+```
+log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+
+                      '$status $body_bytes_sent "$http_referer" '
+
+                      ‘“$http_user_agent” “$http_x_forwarded_for” $upstream_response_time';
+
+```
+所以在整个过程中，如果想要了解每一个请求的延迟情况，可以看到通过 log_forma t 来定义“main” 预定格式，这里可以在 main 的配置里最后加入一个 $upstream_response_time 变量，然后 reload(重启) Nginx，Nginx 的 access.log 里就可以把 upstream_response_time 时间记录下来了。
+
+
+```
+tail -f access.log|awk '{if($(NF)>6){print $0}}'
+
+```
+
+当用户请求 Nginx时，通过如上这个命令我来判断后端服务的响应延迟情况，通过这样的组合命令保持对文件的实时监听，了解每一行最新请求情况，并通过 awk 进行过滤，awk 语句中做一个条件判断，判断最后一行 upstream_response_time 数值的内容大于 6 秒时进行打印（表示打印后端响应整体大于 6 秒的请求），这个方式有助于运维和开发人员去分析每一个请求的具体请求延迟上的一些问题。这就是对于性能错误上的分析。
+
+## 安全分析统计
+还有就是对于安全的统计分析了，安全统计分析在 Nginx log 里面也是非常重要的，这里我列出了如下内容：
