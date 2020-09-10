@@ -36,6 +36,7 @@
     * 第25课：容器监控实践：Prometheus、Grafana 方案介绍
   * [模块六：安全](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-liu-ff1a-an-quan.md)
     * 第26课：防火墙：iptables 企业级安全策略
+    * 第26课：防火墙：iptables 企业级安全策略
   * [模块七：虚拟化](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-qi-ff1a-xu-ni-hua.md)
     * 第29课：虚拟化关键技术浅析（NUMA、dpdk、绑核）
   * [模块八：方案](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-ba-ff1a-fang-an.md)
