@@ -98,3 +98,5 @@ Default: error_log logs/error.log error;
 * name：格式名称。格式名称是在 access 刚刚讲到的配置语法里面所需要引用的。
 * escape：主要是用来定义字符的编码方式，可以是 JSON 格式，它默认使用的是 default 编码方式。
 * string：十分重要，主要定义日志格式和对应内容，它是通过 Nginx 变量来做具体定义。
+
+我们看看具体的配置：
