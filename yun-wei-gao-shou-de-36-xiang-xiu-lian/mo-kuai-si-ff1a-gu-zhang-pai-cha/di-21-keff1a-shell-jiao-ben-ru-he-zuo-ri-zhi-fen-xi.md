@@ -204,3 +204,5 @@ CgoCgV6oCoSABFmQAADl0mRWcSA337.png
 所以这样就完成了第 1 项的日志功能分析，分析出访次数问前 20 的 IP 地址，并且打印。后面的每一项功能分析其实都是类似的原理，通过 ag 命令来对文件进行关键字查找，并且进行分析和统计。
 
 CgoCgV6oCouACYpDAAOHWLR8AZM738.png
+
+好了，最后执行 sh nginx_check.sh，就可以开始 nginx access 日志来分析，我们在控制台终端关注它的执行过程和进度，并且在结果目录中详细分析日志得到的结果内容。
