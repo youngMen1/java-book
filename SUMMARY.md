@@ -30,7 +30,7 @@
     * [第20课：Linux 系统快速分析日志定位故障原因的 10 个方法](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-20-ke-ff1a-linux-xi-tong-kuai-su-fen-xi-ri-zhi-ding-wei-gu-zhang-yuan-yin-de-10-ge-fang-fa.md)
     * [第21课：Shell 脚本如何作日志分析](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-21-keff1a-shell-jiao-ben-ru-he-zuo-ri-zhi-fen-xi.md)
     * [第22课：ELK 构建 MySQL 慢日志收集平台详解](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-22-ke-ff1a-elk-gou-jian-mysql-man-ri-zhi-shou-ji-ping-tai-xiang-jie.md)
-    * 第23课：操作系统紧急故障修复常见有效方案
+    * [第23课：操作系统紧急故障修复常见有效方案](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-23-ke-ff1a-cao-zuo-xi-tong-jin-ji-gu-zhang-xiu-fu-chang-jian-you-xiao-fang-an.md)
   * [模块五：监控](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-wu-ff1a-jian-kong.md)
     * [第24课：Zabbix 自动发现和自动注册](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-wu-ff1a-jian-kong/di-24-ke-ff1a-zabbix-zi-dong-fa-xian-he-zi-dong-zhu-ce.md)
   * [模块六：安全](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-liu-ff1a-an-quan.md)
