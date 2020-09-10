@@ -17,22 +17,22 @@
 ## DDOS 反射放大及解决方式
 
 我们首先来讲解 DDOS 反射放大攻击形式。我这里画了 3 张图，我们先来理解一下正常的用户访问服务端的过程。
-Ciqc1F7XGfiAKxguAABXbJVWs34227.png
+![](/static/image/Ciqc1F7XGfiAKxguAABXbJVWs34227.png)
 我们会看到，正常访问是客户 A，服务端 B，用户 A 请求服务端 B，返回正常响应。
-Ciqc1F7XGgeAKCTmAACZ2aWSUnA297.png
+![](/static/image/Ciqc1F7XGgeAKCTmAACZ2aWSUnA297.png)
 第二幅图中呢，我们可以看到 A 来请求 B， B 返回的响应不再是给 A，而是响应给 C（另外一个客户端），A 可以通过一些特殊技术方式来实现，比如伪造自己的源 IP 地址，并利用一些 B 的协议类安全类漏洞，这样就导致 A 请求了 B，但是 B 却响应到了 C。
 
 通常 B 服务存漏洞，如 DNS 协议漏洞，memcache 漏洞，以及 NTP 协议漏洞等，这些服务都有漏洞可以导致这样的一种攻击效果，并且可以造成放大的流量攻击，让 B 响应 C 的流量远远大于 A 请求的流量。
-Ciqc1F7XGhCALO3jAAHVahXZDWQ149.png
+![](/static/image/Ciqc1F7XGhCALO3jAAHVahXZDWQ149.png)
 那么我们来看一下第三幅图，当一个黑客利用这个漏洞对带有这个种特征的客户端发起了批量请求，用很小的代价请求这些肉鸡，全部响应到黑客期望攻击的目标地址，这样就会造成 C 端被放大流量攻击，这种攻击的通过海量的肉鸡发包造成攻击端的网络流量被打满。网络流量被打满是一种非常简单粗暴的方式，但这种攻击行为的损害性非常大，所以我们应该怎么去防范这种行为呢？
 
 首先是通过接入第三方安全厂商作流量清洗 ，因为流量清洗需要投入很大的技术成本，所以一般情况下会采用第三方进行流量清洗。
-CgqCHl7XGheANnbxAADZIVo1jAY000.png
+![](/static/image/CgqCHl7XGheANnbxAADZIVo1jAY000.png)
 我们可以看一下这样一张图，当海量的用户请求服务端的时候，先经过第三方流量清洗的一层设备，由第三方来进行异常流量的识别，并且进行过滤，最终把正常的流量，图中红色这根线的正常流量能够穿透到服务端，来保证正常的服务不会受到影响。
 
 如果你不希望去花大价钱去购买第三方流量清洗服务，那么这个时候可能就需要考虑用一些自建的方式去解决，但是这种方式成本和技术投入又非常高，如果你也不想去花大代价自建防御体系，这个时候我给你推荐另外一种解决方式，就是通过 CDN 来做反向代理。我们知道 CDN 是内容分发的网络，它可以把网站内的静态资源分发到很多与用户贴近的节点，并且提供对应的一些代理类服务。那么 CDN 为什么能帮我们解决这样的一些问题？我们知道 CDN 有很多个这样的节点，假设 A 的流量到达 CDN 节点，就会让 CDN 帮我们阻挡一层访问，不会把流量直接打到真实服务端 C。
 
-CgqCHl7XGh6AJUcsAADJmlpjZoc188.png
+![](/static/image/CgqCHl7XGh6AJUcsAADJmlpjZoc188.png)
 
 我们可以理解为通过海量的边缘的 CDN 节点，可以帮助我们保护后台的原栈节点，当然这里面的技术一定要做到把所有后台服务的真实地址进行隐藏，通常是把所有的真实服务都通过 CDN 的方式进行代理，从而保证服务端不会直接对外暴露，并且被黑客拿到我们服务端直接访问的地址。
 
@@ -44,7 +44,7 @@ CgqCHl7XGh6AJUcsAADJmlpjZoc188.png
 
 第二种 DDOS 攻击类型就是 SYN FLOOD 攻击，它具有这样的一些特性，它虽然也使用了大量肉鸡进行访问，这些肉鸡是一直不停地发底层 TCP SYN+ACK 的数据包，它会有针对性地对这种数据频繁地发送 SYN+ACK 的 TCP 数据包，并不是单纯的封堵出口流量，可以实现服务端一直处于 TCP 等待连接（TCP 第 3 次握手）。
 
-CgqCHl7XGiaAPMPyAADmT73CQo0190.png
+![](/static/image/CgqCHl7XGiaAPMPyAADmT73CQo0190.png)
 
 我们在前面的课时里有讲到过，在 Linux 系统上Sync_backlog 的网卡队列，用于记录 TCP 三次握手里面最后一次会话的一些相关信息。如果大量客户端来伪造原客户端的地址，导致这些服务端一直得不到 TCP 完整地建立起三次握手，就会导致 Sync_backlog 的队列跑满了，导致服务端无法响应正常的连接。
 
@@ -56,7 +56,7 @@ CgqCHl7XGiaAPMPyAADmT73CQo0190.png
 
 我们被海量的肉鸡，用真实的用户地址进行访问的情况下，那边也是建议采购一些第三方的流量清洗，来做更加细致的识别和过滤。
 
-Ciqc1F7XGi6Ac2iHAACnXQYDWPk228.png
+![](/static/image/Ciqc1F7XGi6Ac2iHAACnXQYDWPk228.png)
 
 以上就是对于 SYN FLOOD 攻击的介绍和对应的一些防范策略的讲解。
 
