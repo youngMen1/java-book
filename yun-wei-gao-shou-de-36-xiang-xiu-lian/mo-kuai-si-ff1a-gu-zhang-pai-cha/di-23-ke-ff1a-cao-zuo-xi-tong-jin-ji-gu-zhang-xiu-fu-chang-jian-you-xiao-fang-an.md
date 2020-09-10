@@ -137,11 +137,11 @@ CgqCHl66bEmATe3oAAAx4fNQ8RQ164.jpg
 
 然后在输入 grub2 -mkconfig -o /boot/grub2/grub.cfg，这样就可以按照对应的路径要求生成配置文件。
 
-Ciqc1F66bHOAEm3PAAAfY1xGwoU495.jpg
+![](/static/image/Ciqc1F66bHOAEm3PAAAfY1xGwoU495.jpg)
 
 然后执行 grub2-install /dev/sda（添加需要修复系统所在的磁盘的设备）。
 
-CgqCHl66bHuAXyiiAAAmz6_nPZo827.jpg
+![](/static/image/CgqCHl66bHuAXyiiAAAmz6_nPZo827.jpg)
 
 这个时候我们就可以通过 ls 命令查看对应目录下有没有文件生成，如果有文件生成以后就可以重启操作系统，
 Ciqc1F66bIOAVgJcAABUL1FHMtM765.jpg
