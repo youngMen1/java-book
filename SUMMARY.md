@@ -22,6 +22,7 @@
     * [第13课：网站割接必须掌握的 N 个检查项及命令](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie/di-13-ke-ff1a-wang-zhan-ge-jie-bi-xu-zhang-wo-de-n-ge-jian-cha-xiang-ji-ming-ling.md)
     * [第14课：割接关键思路解析：停服维护、无缝升级如何设计](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie/di-14-ke-ff1a-ge-jie-guan-jian-si-lu-jie-xi-ff1a-ting-fu-wei-hu-3001-wu-feng-sheng-ji-ru-he-she-ji.md)
     * [第15课：服务向 Kubernetes 容器平台迁移必须了解的事情](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie/di-15-ke-ff1a-fu-wu-xiang-kubernetes-rong-qi-ping-tai-qian-yi-bi-xu-le-jie-de-shi-qing.md)
+    * 第18课：典型网络故障：选择长连接 or 短连接，大量 Timewait 的产生时如何处理？
   * [模块四：故障排查](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha.md)
     * [第16课：典型系统故障：快速排错操作系统问题进程](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-16-ke-ff1a-dian-xing-xi-tong-gu-zhang-ff1a-kuai-su-pai-cuo-cao-zuo-xi-tong-wen-ti-jin-cheng.md)
     * [第17课：磁盘数据恢复：rm -rf 误删数据，如何进行数据恢复](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-17-ke-ff1a-ci-pan-shu-ju-hui-fu-ff1a-rm-rf-wu-shan-shu-ju-ff0c-ru-he-jin-xing-shu-ju-hui-fu.md)
