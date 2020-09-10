@@ -80,3 +80,5 @@ Ciqc1F6z5aiAPWhVAATBHouaBAk740.png
 还有一个校验的方式，通过 curl 命令访问暴露对外地址和 elastic 默认监听的 9200 端口，并向对应路径发一个 HTTP 请求，判断是否有正常 HTTP 响应并且查看它的响应内容。
 
 具体的 curl 方式是这样的，curl 后面加对外暴露的接口地址，然后回车，就会在终端里返回并展示一段 JSON 格式的信息，我们会看到 Elasticsearch 当前的一些版本等信息，这说明 ES 运行正常。
+
+CgqCHl6z5bCASazjAAOYchcFIA4972.png
