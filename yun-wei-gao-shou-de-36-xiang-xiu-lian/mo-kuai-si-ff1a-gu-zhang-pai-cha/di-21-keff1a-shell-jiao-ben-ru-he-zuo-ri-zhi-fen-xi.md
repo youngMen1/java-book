@@ -192,3 +192,7 @@ CgoCgV6oCnSAMMVaAAHrrrcMxQM494.png
 再往下看的话，这里就是做系统版本检测，这个脚本需要在 Debian 操作系统或者 Ubuntu 、Centos 这样的操作系统上，如果操作系统不能满足的话也会退出。
 
 接下来就要用到我们刚刚讲到的 ag 命令。在没有 ag 命令情况下，脚本会先提示并进行安装，对应的使用 Yu m 或者是 apt get 包管理器安装。
+
+Ciqah16oCnyAU7F5AAK3m1tcm1U889.png
+
+下面就具体每一项的功能分析：
