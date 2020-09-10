@@ -26,6 +26,7 @@
     * [第16课：典型系统故障：快速排错操作系统问题进程](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-16-ke-ff1a-dian-xing-xi-tong-gu-zhang-ff1a-kuai-su-pai-cuo-cao-zuo-xi-tong-wen-ti-jin-cheng.md)
     * [第17课：磁盘数据恢复：rm -rf 误删数据，如何进行数据恢复](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-si-ff1a-gu-zhang-pai-cha/di-17-ke-ff1a-ci-pan-shu-ju-hui-fu-ff1a-rm-rf-wu-shan-shu-ju-ff0c-ru-he-jin-xing-shu-ju-hui-fu.md)
     * [第18课：典型网络故障：选择长连接 or 短连接，大量 Timewait 的产生时如何处理？](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-san-ff1a-ge-jie/di-18-ke-ff1a-dian-xing-wang-luo-gu-zhang-ff1a-xuan-ze-chang-lian-jie-or-duan-lian-jie-ff0c-da-liang-timewait-de-chan-sheng-shi-ru-he-chu-li-ff1f.md)
+    * 第19课：网络故障分析（ping、mtr、traceroute）与抓包分析（tcpdump）诊断
   * [模块五：监控](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-wu-ff1a-jian-kong.md)
     * 第24课：Zabbix 自动发现和自动注册
   * [模块六：安全](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-liu-ff1a-an-quan.md)
