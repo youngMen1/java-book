@@ -106,4 +106,13 @@ Ciqah16VdFOACsNKAAF1sVuVggU217.png
 
 Cgq2xl6VdFOASIv2AAEQM7CcbS4528.png
 
+刚刚讲到的选项是恢复单个文件，假设我们要恢复所有文件的话，就把选项改为 --restore-all，这样就把分析出来的已删除文件进行了恢复。如果件，只想恢复某一个目录，就可以把 "all" 改成 directory，然后用 restore-directory 这种方式恢复单个已删除的文件目录。
+
+
+
+以上就是通过 extundelete 作场景 2 恢复演示。
+
+
+
+平时工作中，你还是需要谨慎进行操作系统指令，以避免产生文件系统误删的情况，毕竟恢复起来对我们的业务影响，还有数据风险都是存在的。
 
