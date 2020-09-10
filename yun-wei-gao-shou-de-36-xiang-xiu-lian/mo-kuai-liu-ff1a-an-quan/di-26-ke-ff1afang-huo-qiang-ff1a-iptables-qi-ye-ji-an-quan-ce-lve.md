@@ -180,3 +180,38 @@ iptables -A INPUT -p icmp --icmp-type echo-request -j PING_OF_DEATH
 
 ```
 
+如果我们是想对 ICMP 的连接进行具体的规则设置的话，同样也需要新建一条自定义链，然后在里面设置它的频次，并且进行具体策略设置，对协议进行默认链 INPUT 链调用自定义链，这样就实现了对于 ICMP 超出规则的设置，我们会看到对这个设置每秒只能允许一次访问，那么如果超过了 10 次的话，则会开启频次限制。
+
+我们刚刚讲到了对于 ICMP 规则的设置，接下来也可以对 HTTP 的位置来进行设置，这里有一个疑问了，可能你会认为 HTTP 是基层的应用层协议安全，既然我们讲的是 4 层安全，怎么会有对 HTTP 进行访问的限制？其实对于 HTTP 协议现在也是基于4 层的策略来进行限制的，这里其实也是基于 TCP 的协议来进行设置。
+
+
+
+```
+iptables -N HTTP_DOS
+iptables -A HTTP_DOS -p tcp -m multiport --dports $HTTP \
+         -m hashlimit \
+         --hashlimit 1/s \
+         --hashlimit-burst 100 \
+         --hashlimit-htable-expire 300000 \
+         --hashlimit-mode srcip \
+         --hashlimit-name t_HTTP_DOS \ //哈希表存储在/ proc / net / ipt_hashlimit
+         -j RETURN
+iptables -A HTTP_DOS -j LOG --log-prefix "http_dos_attack: "
+iptables -A HTTP_DOS -j DROP
+iptables -A INPUT -p tcp -m multiport --dports $HTTP -j HTTP_DOS
+
+```
+
+因为我们这里是 -p tcp，只不过端口 -dports 是基于 HTTP 端口，也就是说其实是基于 4 层来限制的 7层，并不是基于 7 层会话的 cookie session 去进行设置的。所以这里也是进行的一个 TCP 连接，只不过是指定了访问具体的某一个服务端口，从而进行频次限制。
+
+所以基于底层的连接式的频次限制，同样有助于我们应用层的安全，基于这样的一个理念，对于 SSH 的安全设置，我们同样也可以通过这样的方式来设置。SSH 最大的问题就是会存在暴力破解，所以我们就需要设置在指定时间内允许多少次访问，否则就需要做具体的安全限制了。
+
+
+```
+SSH=22
+iptables -A INPUT -p tcp --syn -m multiport --dports $SSH -m recent --name ssh_attack –set
+iptables -A INPUT -p tcp --syn -m multiport --dports $SSH -m recent --name ssh_attack --rcheck --seconds 60 --hitcount 5 -j LOG --log-prefix "ssh_brute_force: "
+iptables -A INPUT -p tcp --syn -m multiport --dports $SSH -m recent --name ssh_attack --rcheck --seconds 60 --hitcount 5 -j REJECT --reject-with tcp-reset
+
+```
+
