@@ -32,3 +32,11 @@ Ciqc1F7og5SAHDTIAAFdGy6d7gs623.png
 7 层负载均衡 Nginx + LUA 我们已在本课程第一个章节讲解了很多内容，本课时我们主要讲解 4 层负载均衡实现原理及对应的优化点。
 
 围绕 4 层负载均衡我们还是以 LVS （全称：Linux Virtual Server）为例给你做介绍，LVS 4 层负载均衡的实现有 4 大种类。
+
+1.DR：即三角传输；
+
+2.NAT：也就是目的地址改写与转发；
+
+3.TUNNEL：在原有数据包上再封装了一层数据包；
+
+4.FULLNAT：基于 SNAT 和 DNAT 结合对数据包处理实现转发。
