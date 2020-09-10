@@ -38,3 +38,5 @@ Ciqah16X-TaACWjHAARWKvt67Qs928.png
 
 
 我们可以来看一下服务端，拿服务端常用的代理服务 Nginx 为例，在 Nginx 里有一个 keepalive 的配置，如果我们把它设置为 0，则表示把长连接关闭，服务端只能支持短连接，如果我们把 keepalive 设置一个较长的时间周期（比如写成 keepalive_timeout 120s），它表示支持两分钟的长连接。
+
+Cgq2xl6X-TaAeLlvAAB2ENLEb-Q379.png
