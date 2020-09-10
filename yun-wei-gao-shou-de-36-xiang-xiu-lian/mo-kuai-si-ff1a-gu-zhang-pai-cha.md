@@ -49,3 +49,5 @@ CgoCgV6es2GADVtdAAHGVu-elhg712.png
 
 
 我们会看到在第七跳的时候，会一直是 “..”、".."，没有新的数据在客户端显示。这种情况就可能是服务端因为一些安全策略关闭了对 UDP 数据包返回数据（ICMP 不可达的错误响应），所以我的客户端会不断向服务端去发送 UDP 数据包。
+
+Ciqah16es26ACqVnAAHPywKy70k381.png
