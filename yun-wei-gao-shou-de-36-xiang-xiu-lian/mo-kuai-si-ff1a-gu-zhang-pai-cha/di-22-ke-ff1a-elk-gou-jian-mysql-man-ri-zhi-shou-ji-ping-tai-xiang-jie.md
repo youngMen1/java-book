@@ -106,3 +106,5 @@ CgqCHl6z5d2AcOLCAAJxBl6qrh8402.png
 同时再开一个客户端的终端，然后登录到以前安装好的 MySQL 。 首先我们需要开启 MySQL 的慢查询日志，并且指定 MySQL 的慢查询日志路径和标准，比如说是大于 1 秒才做 MySQL 慢查询日志记录。此外，我们还要模拟执行一条延迟比较长的 MySQL 语句来产生这样的一条日志信息，让 filebeat 进行日志的推送。我们会看到 filebeat 在整个启动完成以后，日志停留在等待的状态，并没有新的日志在刷新。
 
 所以我们现在来模拟演示一下。首先我需要开启的是 MySQL 的慢查询配置，那么通过 set global slow_query_log=‘ON‘，这样就可以开启慢查询日志，还需要设置好慢查询日志标准是大于 1 秒的，那么同样是 set global long_query_time 大于或等于 1，它的意思是大于 1 秒的查询语句，才会认为是慢查询，并且做日志的记录。
+
+CgqCHl6z5f2Adg-FAAG1tRCeSEs038.png
