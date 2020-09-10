@@ -151,3 +151,5 @@ Ciqc1F66bIOAVgJcAABUL1FHMtM765.jpg
 CgqCHl66bIuAECi-AAA33rT3QlU625.jpg
 
 这时，我们观察下启动过程，会发现启动停留在一个 selinux 报错上，导致后面一直无法启动，这个时候我们还需要修复下，在启动的时候不去加载 selinux。
+
+CgqCHl66bJaAZoaXAAEhYTMITew904.jpg
