@@ -127,7 +127,7 @@ CgqCHl66bEmATe3oAAAx4fNQ8RQ164.jpg
 
 首先，我需要输入的是 chroot 命令（chroot /mnt/sysimage/），chroot 命令负责切换到原来的管理目录结构下，这时再输入 ls 会看到 / 目录下的文件内容及结构就是磁盘 1 （原系统盘）上的所有操作系统的磁盘文件，接下来我需要修复 GRUB。
 
-CgqCHl66bF2AdAI3AAANA6T4YWM710.jpg
+![](/static/image/CgqCHl66bF2AdAI3AAANA6T4YWM710.jpg)
 
 修复 GRUB，Centos 7 有对应的成熟的命令，首先新建一个目录（mkdir /boot/grub2），因为我们刚才把整个文件目录做了删除。
 
