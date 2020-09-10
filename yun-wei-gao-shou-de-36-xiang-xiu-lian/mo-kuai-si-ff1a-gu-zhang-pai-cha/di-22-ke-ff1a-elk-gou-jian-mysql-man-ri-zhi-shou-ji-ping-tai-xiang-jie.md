@@ -61,3 +61,16 @@ ES 不再是以单实例的方部署，而是采用集群架构，考虑 Kafka �
 讲到了 Elasticsearch 里面的常见架构模式的演变（1、继续性能；2、日志级别）。接下来我们要来详细讲解如何从零开始搭建 ELK，并且收集 MySQL 日志。我们首先来看一下这样的一张图：
 
 CgqCHl6z5U2AHWb9AAWMvjPVKxg279.png
+
+
+这张图主要用于展示接下来搭建的这套 ELK 收集 MySQL 日志的架构。这里主要用到两台机器，一个是客户端的机器，一个服务端的机器，我们知道客户端的机器是用来收集 MySQL 日志的，所以这里需要安装一个 MySQL 服务。
+
+同时在这个结构里面，通过 Filebeat 工具来进行 MySQL 日志收集，所以需要在客户端同样安装好 Filebeat。服务端，主要安装有两个核心组件，一个是 Elasticsearch ，一个是 Kibana。
+
+接下来，我们来大概讲一下安装 ES 的流程。首先 ELK 的所有组件可以用容器的方式去安装，而为了更加方便，主要为你演示如何直接部署。
+
+我们先来看一下 ES 的安装，这里会通过 rpm --import 的方式，把官方认证的 key 导入，同时编辑好在 CentOS 系统上面的 yum 源。接下来在 /etc/yum.repos.d 下新建一个 elk.repo 文件，并且 yum 源官方配置进去，这样操作系统上就会有一个官方的 yum 源。对于这个 elk.repo 文件你可以在课程最后的下载链接里直接拷贝。本课时演示 ELK 是通过 CentOS 7 的操作系统来安装。
+
+有了 ES 官方源以后，就可以安装第 1 个组件了，通过 #yum install elasticsearch -y 直接安装好 ES 。安装好以后，接下来需要配置 Elasticsearch。这里配置需要注意的一点就是把 Elasticsearch 暴露一个接口地址出来，所以我修改的是 /etc/elasticsearch 下面的 elasticsearch.yml 主配置文件，里面有一个 network.host，我们将它的配置文件修改为本地网卡的接口地址，然后通过 systemctl start elasticsearch.service 启动 ES 服务。
+
+如何判断 ES 服务启动是否成功呢？首先可以通过执行命令 journalctl --unit 来判断服务是否正常启动？也可以通过在控制台敲入 systemctl status elasticsearch 去判断服务是否处于“ running”的状态。
