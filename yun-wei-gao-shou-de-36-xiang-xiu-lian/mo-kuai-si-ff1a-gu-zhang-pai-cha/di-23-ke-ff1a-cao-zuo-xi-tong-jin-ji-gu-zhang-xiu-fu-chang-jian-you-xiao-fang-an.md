@@ -86,7 +86,7 @@ root 用户密码错误是我们非常常见的错误，可能是由于忘记了
 
 首先，我使用 Vmware 虚拟并启动了一个 Centos 7 的实验操作系统，使用这样的环境来模拟救援模式修复 GURB 的过程。
 
-CgqCHl66bA2AM-vuAABLSq_t41U364.jpg
+![](/static/image/CgqCHl66bA2AM-vuAABLSq_t41U364.jpg)
 
 我的操作系统挂载了两块硬盘，硬盘 1 为系统盘，硬盘 2 为数据盘，光盘这里挂载到了与已安装的操作系统 Centos 7 一样版本的 ISO 镜像，演示中进入的救援模式是需要 CD/DVD 介质来启动进入。
 
