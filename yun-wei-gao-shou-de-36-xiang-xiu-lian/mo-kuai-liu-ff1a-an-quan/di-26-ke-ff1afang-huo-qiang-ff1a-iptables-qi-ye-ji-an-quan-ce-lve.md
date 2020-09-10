@@ -49,7 +49,7 @@ iptables 默认是允许访问服务或者通过数据包进行访问的，如�
 
 ## iptables 命令规则设置的常见选项
 那么说到了 iptables 的规则设置，你可能需要了解，通过 iptables 命令进行安全防护规则设置都有哪些选项，下面逐一为你列举了几个具体的一些常见的选项：
-Ciqc1F7GXNaAWc-BAACVfKp2FC8903.png
+![](/static/image/Ciqc1F7GXNaAWc-BAACVfKp2FC8903.png)
 
 * -A 指向指定链添加一个或多个新规则；
 * -D 表示从指定链中删除一个或多个规则；
