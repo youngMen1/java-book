@@ -303,6 +303,12 @@ cat access.log|awk '/\/etc\/passwd/{print $1}'|sort -n|uniq -c|sort –nr
 
 这就是 Nginx 中我们通常需要分析的几大块内容，一个是性能，一个是统计访问情况，还有就是安全类别。
 
+
+```
+
+```
+
+
 # 解析 MySQL 日志
 接下来给你介绍的就是 MySQL 的日志。
 
@@ -320,3 +326,49 @@ Ciqah16ipcmAR_TTAAKv0YH9EQw405.png
 ## MySQL 日志分析工具
 对于这几块日志的分析，我们有对应的工具去进行操作，我这里列了一张表格：
 Ciqah16ipeCAF8MsAARCYvAZPyo620.png
+## MySQL 慢日志分析
+具体来看以下两个命令：
+
+**（1）mysqldumpslow**
+
+这个命令是 MySQL 下的工具集里的一个默认工具。它来帮助我们分析 slow query log，我们可以看到它的优势是 MySQL 官方自带的。
+
+**（2）pt-query-digest**
+
+第二个给你介绍的工具就是 pt-query-digest 命令，它是第三方的比较强大的工具集，它能够分析的程度相对 mysqldumpslow 会更加高。分析日志类型也会非常全面，而不限于 mysql slow log，可以分析 MySQL 的所有日志。
+
+课时的最后，我再摘取 MySQL 的这两个命令来给你做一个大体的介绍。
+
+mysqldumpslow 是 MySQL 自带的用来分析慢查询的工具，所以通常分析 MySQL 的慢查询时会用到这个的工具，它主要可以用到这样的一些选项，比如说：
+* # -s：排序方式。c 、t 、l 、r 表示记录次数、时间、查询时间的多少、返回的记录数排序；ac、at、al、ar 表示相应的倒叙；
+* # -t：返回前面多少条的数据；
+* # -g：包含大小写等的信息；
+
+使用案例如下：
+
+
+
+```
+mysqldumpslow -s r -t 10 /slowquery.log #slow记录最多的10个语句 
+
+mysqldumpslow -s t -t 10 -g "left join" /slowquery.log
+
+```
+
+mysqldumpslow 添加了一个 -s 排序方式，-t 表示返回的是10 行的数据，后面加的就是 SQL 的 慢日志路径，这样的话就可以进行 slowquery.log 的分析，并且把所有查询记录最多的 10 行语句打印出来，我们可以拿这个工具来进行慢查询的分析。
+
+后面还有一个加了一个 -g 的使用方式，也就是做筛选和排查，主要分析 slowquery.log 排序语句里面包含 left join 关键词的语句并打印出来。
+
+这就是 mysqldumpslow 的使用方式。
+
+**pt-query-digest** 命令是 percona-toolkit 工具集里面的，常用于作 MySQL 普通日志、慢查询日志以及二进制日志的一个分析查询工具。
+
+（1）直接分析慢查询文件: pt-query-digest [参数] /var/lib/mysql/log/slow.log > slow.report
+
+如果我们直接分析慢查询，同样是以这样的方式，命令后面加慢查询的日志路径，然后把结果做重定向导入 slow.report 文件里保存，然后对结果进行分析。
+
+（2）分析最近 12 小时内的查询： pt-query-digest --since=12h /var/lib/mysql/log/slow.log > slow_report2.log
+
+如果我们想分析在最近 12 个小时里面的查询，可以加入一个 --since 选项，也就是只查询最近 12 个小时里发生的慢日志请求，并且同样做结果的重定向。
+
+对于 MySQL 的日志分析的工具，本课时给你介绍的就是这些，在后面的内容里面，我们还会来讲解一套更加强大的日志分析和检索系统（如 EFK 来进行收集），本课时的内容就是这些，谢谢。
