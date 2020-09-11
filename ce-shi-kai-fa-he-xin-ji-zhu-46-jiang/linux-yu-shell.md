@@ -183,3 +183,10 @@ pattern有非常丰富的语法，你可以课后自己进行练习，同时 awk
 ![](/static/image/CgotOV3XtkGAV30WAAJ4BzFTx30014.png)
 
 除了这些之外，awk 还支持词典，用来统计一些特征和数据，它类似于 Java 的 hash 和 Python 的字典。awk 的语法非常灵活，希望你在课后能够把文档打印出来仔细阅读，它可以帮助你在日后的数据分析工作中更加得心应手。
+
+
+## sed
+
+
+
+
