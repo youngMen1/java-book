@@ -63,3 +63,7 @@ CgotOV3fosKAcDsaAAN5G0JEAsA725.png
 * PATH 表示当前所有可执行程序；
 
 * RANDOM 可以产生一个随机数。
+
+CgoB5l3fosOAVQSoAAUa3CT95gI876.png
+
+其中，我们需要特别注意 PATH 变量，比如输入 echo $PATH 指令，你可以看到 PATH 变量定义了所有可执行程序，定义在 PATH 中的程序可以直接调用程序名执行而不必再输入程序的全部路径。
