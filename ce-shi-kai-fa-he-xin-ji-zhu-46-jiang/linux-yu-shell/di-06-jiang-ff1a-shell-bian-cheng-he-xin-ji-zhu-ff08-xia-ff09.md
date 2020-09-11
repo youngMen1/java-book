@@ -85,3 +85,5 @@ CgotOV3mHtuANXSqAAEH6Py_Xac382.png
 而只定义函数是不会得到执行的，比如此时没有输出任何的测试开发结果。
 
 CgotOV3mHxiAYFWfAAEdgQmOdxA853.png
+
+而我们运行 hogwarts 函数并将 $2 参数传给它，此时 $2 是脚本的第二个参数，但却是 hogwarts函数 的第一个参数。
