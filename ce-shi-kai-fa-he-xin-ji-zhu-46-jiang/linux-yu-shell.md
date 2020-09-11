@@ -181,4 +181,6 @@ CgotOV3fosaAaPu1AAJ8n7xBAno779.png
  比如输入 for i in $(seq 1 3 10) 指令，然后在 do 语句块中打印 echo $i 的值，do 语句块以 done 结束。
  
  CgotOV3fosaALQ6mAAHflNfAfkU836.png
+ 
+ 你可以看到打印了 1、4、7、10，这个就是 for 循环的遍历用法。
 
