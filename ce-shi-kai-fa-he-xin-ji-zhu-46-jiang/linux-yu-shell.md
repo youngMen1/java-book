@@ -178,3 +178,6 @@ CgotOV3XtjCAVm3oAAJriQsbzwU106.png
      
 
 这里有几个例子，课后你可以试验一下，同样 awk 也可以实现简单的数据计算功能，比如说awk 'BEGIN{print 10000/3}'。
+
+
+CgotOV3XtkGAV30WAAJ4BzFTx30014.png
