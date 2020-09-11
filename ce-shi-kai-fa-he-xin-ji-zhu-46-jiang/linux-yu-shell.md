@@ -205,11 +205,11 @@ s 表示查找并替换。
 
 比如我们输入 sed 's#testerhome#world#' /tmp/hello.txt 指令，其中 s 后面可以跟任意符号，比如 / 或 # 都可以表示分隔符，它会用后面的内容替换前面的内容。
 
-CgotOV3Xtl6AetiKAAJ5M3Mbhfw934.png
+![](/static/image/CgotOV3Xtl6AetiKAAJ5M3Mbhfw934.png)
 
 比如我们把以 t 开头的三个字符都替换成 xxx。你可以看到，后面的 ter 没有改变，是因为需要添加一个额外的标记符 /g。
 
-CgotOV3Xtm-AajlrAAKRg0xYDTQ652.png
+![](/static/image/CgotOV3Xtm-AajlrAAKRg0xYDTQ652.png)
 
 /g 表示除了替换第一个匹配的字符以外还会把第二个也替换掉，这就是 sed 的用法，你看到 sed 主要帮助我们编辑文件。
 
