@@ -155,10 +155,10 @@ CgotOV3fosaAaPu1AAJ8n7xBAno779.png
 
 学完变量的相关知识，我们继续学习逻辑控制，基于数据可以设计一些逻辑，如下所示：
 
-条件判断 if；
+* 条件判断 if；
 
-分支判断 case、select，根据不同的条件进行不同的处理；
+* 分支判断 case、select，根据不同的条件进行不同的处理；
 
-循环 for、while、until；
+* 循环 for、while、until；
 
-break 和 continue，退出循环。
+* break 和 continue，退出循环。
