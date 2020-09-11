@@ -89,3 +89,9 @@ CgotOV3mHxiAYFWfAAEdgQmOdxA853.png
 而我们运行 hogwarts 函数并将 $2 参数传给它，此时 $2 是脚本的第二个参数，但却是 hogwarts函数 的第一个参数。
 
 CgoB5l3mHyKANsqtAAGM238AlPY383.png
+
+执行脚本，传入一个参数 java，没有任何显示，再传入一个 python 仍没有反应，直到传入 python java 两个参数后，才输出 java 测试开发，因为 hogwarts 接收的是整个脚本的第二个参数。
+
+             
+
+Ok，有了函数，你就可以把很多功能封装到函数里，这样可以让代码更优雅，还可以进行组件化，而掌握函数之后你就需要掌握脚本的执行方法。
