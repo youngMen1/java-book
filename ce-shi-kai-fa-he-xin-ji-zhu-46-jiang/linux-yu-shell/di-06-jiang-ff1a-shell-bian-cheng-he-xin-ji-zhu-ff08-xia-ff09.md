@@ -113,3 +113,5 @@ CgotOV3mH0yAbthXAAG_xPVX3HE664.png
 CgoB5l3mH1qAZynAAAG9pFvkV0M505.png
 
 一旦给了可执行权限之后，再次执行。你会发现它已经可以直接执行了，而如果我们想要输入 1.sh 就可以直接执行呢？
+
+CgoB5l3mH2aAOOGLAAG4sIaDfBY784.png
