@@ -103,3 +103,5 @@ CgoB5l3XtVaAJPZaAAJpe4YZD9c323.png
 我们举个例子，输入 grep -E "(hog|home)" /tmp/hello.tex 指令，输出结果分别匹配了 hog 与 home。
 
 CgotOV3XtWSAF9K-AAKOZuR4qrg333.png
+
+但如果你的指令中不含 -E，则指令不支持扩展正则，这个时候你会发现它什么都匹配不到。 
