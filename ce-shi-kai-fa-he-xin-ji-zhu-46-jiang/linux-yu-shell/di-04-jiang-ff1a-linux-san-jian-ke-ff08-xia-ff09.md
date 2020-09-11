@@ -35,4 +35,5 @@ CgoB5l3czEmAZ0OHAAAu39KhXGc899.png
 
 CgotOV3czFWAdLdxAAA6ljNKhhE539.png
 
+接下来，我们学习管道在整个输入输出过程中发挥的作用，以及管道的具体用法。在日常工作中，通常需要特殊的方法将多个程序串联起来，将程序 1 的输出 1 作为程序 2 的输入，在 Shell 中这个特殊的方法就是管道。
             
