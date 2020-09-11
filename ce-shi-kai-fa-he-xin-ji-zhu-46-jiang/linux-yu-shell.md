@@ -71,6 +71,5 @@ CgoB5l3XtUWAK5t-AAIxEAoUhtM359.png 
 
 -v 表示将匹配到的内容过滤掉，比如我们输入 grep -v "[st].." /tmp/hello.tex 指令，只显示了一条数据，过滤掉了匹配正则条件的内容。
 
-     
 
 -o 表示只打印匹配的数据，-E 表示支持使用扩展正则表达式，我们接下来详细了解下 pattern 正则表达式。
