@@ -27,3 +27,5 @@ CgotOV3fosGAOY1tAANwPox6f7I970.png
 CgoB5l3fosKAcC0AAANOqJ5Rmsk957.png
 
 又比如输入 hello 字符串赋值给变量 x，然后再打印 echo $x。
+
+CgotOV3fosKAVC89AAOEgykUuPg498.png
