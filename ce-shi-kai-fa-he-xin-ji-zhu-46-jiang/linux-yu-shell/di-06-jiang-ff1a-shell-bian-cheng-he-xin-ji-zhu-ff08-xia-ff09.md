@@ -32,4 +32,6 @@ CgotOV3mHnGAcmsMAAB09eOs0V8120.png
 
 * ${*:1:3}、${*:$#} 表示多个参数。
 
-接下来我们编写一个脚本。       
+接下来我们编写一个脚本。     
+
+CgoB5l3mHnyAa4b9AACcvwS38OE594.png  
