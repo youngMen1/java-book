@@ -86,3 +86,5 @@ Ciqc1F8hWmOAPL8qAAIV_f1lXdE332.png
 我们同样对比通过 HTTP2.0 + HTTPS 访问的这个页面效果，服务端代理 Nginx 中配置完 HTTP2.0 的支持以后，我的浏览器再访问博客站点（地址： https://www.imoocc.com）。
 
 首先是请求协议变化，我们会看到 Chrome 的开发者工具中 Protocol 这一栏是 HTTP2.0 的协议版本。
+
+CgqCHl8hWnGAW0_eAALw9UqakRE997.png
