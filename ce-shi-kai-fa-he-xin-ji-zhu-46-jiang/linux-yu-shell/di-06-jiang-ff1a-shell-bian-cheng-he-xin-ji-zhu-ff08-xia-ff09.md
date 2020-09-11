@@ -118,10 +118,7 @@ CgoB5l3mH2aAOOGLAAG4sIaDfBY784.png
 
 上一课时详细讲过 PATH 变量，我们将 /tmp 加入 PATH 变量中，这时就可以直接输入 1.sh 执行了。
 
-             
-
 还有一个问题就是如果我们的脚本写错了在执行过程中如何进行调试呢。
-
 
 CgoB5l3mH3CAJM6IAAFv8CFyLyo833.png
 
