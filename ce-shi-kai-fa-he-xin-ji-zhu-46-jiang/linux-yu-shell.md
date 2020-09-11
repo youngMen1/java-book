@@ -109,3 +109,8 @@ grep 还有一些其他的指令，比如 -i 可以忽略字符大小写。  
 ![](/static/image/CgoB5l3XtXGAQRR7AAKVDfReUHg948.png)
 
 如果不使用 -E，我们可以使用 \ 转义符对匹配条件进行转义，也可以达到同样的效果
+
+## awk
+
+
+
