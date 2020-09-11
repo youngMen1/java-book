@@ -122,15 +122,15 @@ awk 是 Linux 下的一个命令，同时也是一种语言解析引擎，它的
 
 pettern 语法在一定程度上可以代替 grep。
 
-CgotOV3XtaaAcU3QAAKjJeoBA8g632.png
+![](/static/image/CgotOV3XtaaAcU3QAAKjJeoBA8g632.png)
 
 举个例子，使用双 / 表示一个正则匹配，我们输入 awk '/[st]../' /tmp/hello.txt 指令，你可以看到和 grep 一样，轻松地打印出匹配到的内容，所以在一定程度上 awk 可以替代 grep，但它没有使用 grep 简洁。 
 
-CgoB5l3XtY-AaJPqAABKIEkO88U487.png  
+![](/static/image/CgoB5l3XtY-AaJPqAABKIEkO88U487.png)  
 
 还有表示区间选择，比如我们在 1、2、3 之间，使用 awk '$0>2' 指令打印大于 2 的数据 3。
 
- CgotOV3XtbWAZKNqAAK80TDMRgQ651.png         
+ ![](/static/image/CgotOV3XtbWAZKNqAAK80TDMRgQ651.png)         
  
  还有一个参数叫 NR，代表记录数，比如输入 awk 'NR>1' /tmp/hello.tex 指令打印去掉第一行的数据。
 
@@ -153,11 +153,11 @@ pattern有非常丰富的语法，你可以课后自己进行练习，同时 awk
 
 比如，我们输入 awk '{print NR,NF}' /tmp/hello.txt 指令，输出显示 hello from hogwarts 被空格分隔成了三个字段，并且 hello.txt 文件中的三条数据字段数都是 3。  
 
-CgotOV3XtcaAGbedAAJmB1D7zHw983.png
+![](/static/image/CgotOV3XtcaAGbedAAJmB1D7zHw983.png)
 
 我们输入 awk -Fo '{print NR,NF}' /tmp/hello.txt 指令，输出显示我们以 o 为分隔符，将 hello from hogwarts 分为了 4 个字段，下面两条数据以此类推。
 
-CgoB5l3XteOAYuu3AAGhkZYQVJA208.png
+![](/static/image/CgoB5l3XteOAYuu3AAGhkZYQVJA208.png)
 
 我们还可以使用 BEGIN 指令，能够得到同样的结果。              
 
@@ -165,13 +165,13 @@ CgoB5l3XteOAYuu3AAGhkZYQVJA208.png
 
 接下来，学习 awk 的字段数据处理。我们通过 -F 参数指定字段分隔符，这里需要注意 awk 有一个 $0~$N~$NF 的特殊参数，
 
-CgoB5l3XtiGAAolXAAHJ8Kvwgeo677.png
+![](/static/image/CgoB5l3XtiGAAolXAAHJ8Kvwgeo677.png)
 
 假设我们以 t 为分隔符打印 $1 和 $2，我们来分析夏结果，
 
 当输入 $1 以 t 为分隔符的时候，t 之前的 hello from hogwar 是 $1 记录，t 之后的 s 是 $2 记录，以此类推，也就是说 awk 通过解析数据内容，然后会根据默认的分隔符打印出每个字段的具体内容，我们输入 awk 'OFS=''-''{print $1,$2,$3}' 并打印输出。
 
-CgotOV3XtjCAVm3oAAJriQsbzwU106.png
+![](/static/image/CgotOV3XtjCAVm3oAAJriQsbzwU106.png)
 
 可以看到，hello 指定为 $1，from 指定为 $2，并将默认的空格分隔符替换为 -，我们可以通过 $ 获取具体字段并对其进行相关操作，接下来我们学习 awk 的字段分隔。
 
@@ -180,6 +180,6 @@ CgotOV3XtjCAVm3oAAJriQsbzwU106.png
 这里有几个例子，课后你可以试验一下，同样 awk 也可以实现简单的数据计算功能，比如说awk 'BEGIN{print 10000/3}'。
 
 
-CgotOV3XtkGAV30WAAJ4BzFTx30014.png
+![](/static/image/CgotOV3XtkGAV30WAAJ4BzFTx30014.png)
 
 除了这些之外，awk 还支持词典，用来统计一些特征和数据，它类似于 Java 的 hash 和 Python 的字典。awk 的语法非常灵活，希望你在课后能够把文档打印出来仔细阅读，它可以帮助你在日后的数据分析工作中更加得心应手。
