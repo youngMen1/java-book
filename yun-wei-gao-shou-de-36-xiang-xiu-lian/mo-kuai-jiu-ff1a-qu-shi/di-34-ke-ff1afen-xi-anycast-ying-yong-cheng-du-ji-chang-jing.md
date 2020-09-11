@@ -20,7 +20,7 @@ CgqCHl7y7BeAPQ_tAAEXgA5hLBQ539 (1).png
 
 第三个通信模式就是广播，它属于一对所有的模式，广播里的每一台主机发送出去的信号都会无条件的复制和转发，通常这种使用模式需要限制在局域网内部进行应用。好比今天公司发一个通知，告诉大家全体可以休息半天，所以大家都会比较高兴。
 
-Ciqc1F7y7CWADPR8AAFAo4N1AMU000 (1).png
+![](/static/image/Ciqc1F7y7CWADPR8AAFAo4N1AMU000.png)
 
 
 ## 任播
