@@ -95,3 +95,5 @@ CgoB5l3mHyKANsqtAAGM238AlPY383.png
              
 
 Ok，有了函数，你就可以把很多功能封装到函数里，这样可以让代码更优雅，还可以进行组件化，而掌握函数之后你就需要掌握脚本的执行方法。
+
+CgotOV3mHy2AA4GsAAFi8HS0YMk372.png
