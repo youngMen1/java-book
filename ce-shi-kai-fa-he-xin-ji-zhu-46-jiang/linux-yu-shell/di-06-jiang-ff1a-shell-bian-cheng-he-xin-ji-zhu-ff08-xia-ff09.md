@@ -79,3 +79,4 @@ CgoB5l3mHtGAaT5OAAG5fFP2WZw702.png
 如果传入参数 java，则输出 java 测试开发。
 
 CgotOV3mHtuANXSqAAEH6Py_Xac382.png
+接下来，我们把它封装成一个 hogwarts 函数，有了函数之后就可以在执行的过程中随时进行调用来实现功能封装和逻辑复用。
