@@ -48,6 +48,7 @@
     * [第33课：云原生关键技术浅析](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-jiu-ff1a-qu-shi/di-33-ke-ff1a-yun-yuan-sheng-guan-jian-ji-zhu-qian-xi.md)
     * [第34课：分析 Anycast 应用程度及场景](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-jiu-ff1a-qu-shi/di-34-ke-ff1afen-xi-anycast-ying-yong-cheng-du-ji-chang-jing.md)
     * [第35课：HTTP2.0 在 Nginx 的实践](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-jiu-ff1a-qu-shi/di-35-ke-ff1a-http2-0-zai-nginx-de-shi-jian.md)
+    * 第36课：IPv6 特性及当前应用程度介绍
 * [测试开发核心技术 46 讲](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang.md)
   * [Linux 与 Shell](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell.md)
     * [第01讲：Linux 与 Shell 环境搭建及介绍](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell/di-01-jiang-ff1a-linux-yu-shell-huan-jing-da-jian-ji-jie-shao.md)
