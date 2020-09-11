@@ -37,3 +37,7 @@ CgotOV3mHnGAcmsMAAB09eOs0V8120.png
 CgoB5l3mHnyAa4b9AACcvwS38OE594.png
 
 并打印 p0=$0、p1=$1 p2=$2，以及 $@ 和 $*。
+
+CgoB5l3mHoWAaTN7AAHqWUW2NTU287.png
+
+然后开始执行脚本，执行脚本的第一种方法是使用 bash /tmp/1.sh，在执行结果中 $0 是当前的文件名，但此时参数没有值。
