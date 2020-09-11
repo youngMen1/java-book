@@ -46,7 +46,8 @@ CgqCHl7rFF6AB9o4AAD3jaiMYWY086.png
 我们先来讲解 DNS 服务高可用的设计， DNS 协议本身是具备可靠性的，如：在客户端配置多个 DNS 服务地址或者有多个权威 DNS 的时候，DNS 协议在寻求解析过程中供容灾设计（1个节点无法解析，自动选择下一个DNS节点），可靠性比较高。
 
 
-Ciqc1F7rFGiAamGsAADMZ_Do6Hw638.png
+
+![](/static/image/Ciqc1F7rFGiAamGsAADMZ_Do6Hw638.png)
 
 所以，DNS 服务本身的高可用大企业通常会把自己的权威 DNS 分多个地域并结合 DNS 主从的高可用架构模式，如图DNS服务节点部署到不同地域的AZ（可用区），一个地域 AZ 中的 DNS 出现问题以后，其他地域的权威 DNS 仍能够正常进行解析，后端启用一套配置和数据服务源，主要用作配置文件、DNS 数据文件的同步分发。
 
