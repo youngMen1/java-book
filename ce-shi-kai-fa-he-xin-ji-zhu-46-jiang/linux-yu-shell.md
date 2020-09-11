@@ -166,3 +166,7 @@ CgoB5l3XteOAYuu3AAGhkZYQVJA208.png
 接下来，学习 awk 的字段数据处理。我们通过 -F 参数指定字段分隔符，这里需要注意 awk 有一个 $0~$N~$NF 的特殊参数，
 
 CgoB5l3XtiGAAolXAAHJ8Kvwgeo677.png
+
+假设我们以 t 为分隔符打印 $1 和 $2，我们来分析夏结果，
+
+当输入 $1 以 t 为分隔符的时候，t 之前的 hello from hogwar 是 $1 记录，t 之后的 s 是 $2 记录，以此类推，也就是说 awk 通过解析数据内容，然后会根据默认的分隔符打印出每个字段的具体内容，我们输入 awk 'OFS=''-''{print $1,$2,$3}' 并打印输出。
