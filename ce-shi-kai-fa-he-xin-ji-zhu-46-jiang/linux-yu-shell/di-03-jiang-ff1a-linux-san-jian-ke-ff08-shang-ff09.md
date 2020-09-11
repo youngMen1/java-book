@@ -23,3 +23,5 @@
 * awk 相当于 SQL 的 select field from table，它可以进行数据切片。
 
 * sed 相当于 SQL 的 update table set field=new where field=old，它可以对数据进行修改。
+
+你可以发现，grep 和 awk 可以进行组合使用，来达到查找数据并对数据进行分割的目的，grep 也可以与 sed 组合使用，达到查找数据并修改的目的，它们三个还可以组合在一起使用来完成一系列的操作，就相当于大数据处理中的 Map-Reduce，我们接下来看如何具体的使用它们。
