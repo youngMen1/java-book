@@ -107,3 +107,5 @@ CgotOV3mHzeAXyu9AAGwW6ETkz4673.png
 CgotOV3mH0OAUIsfAAGy_TmPGnc630.png
 
 然后输入 1.sh 的全路径 /tmp/1.sh，系统会提示 Permission denied 没有执行权限。
+
+CgotOV3mH0yAbthXAAG_xPVX3HE664.png
