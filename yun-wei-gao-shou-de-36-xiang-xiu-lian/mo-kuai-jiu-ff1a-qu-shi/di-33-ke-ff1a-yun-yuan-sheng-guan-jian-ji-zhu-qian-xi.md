@@ -33,3 +33,5 @@ CgqCHl7xs4yAHNE4AADh1KsRsBM428.png
 
 
 CgqCHl7xs7GAGwXYAAMc5moEoWI792.png
+
+基于此，我们再宏观到整个集群，所有实例的相互调用就形成了一张网格状的图表，我们可以看到深蓝色的部分代表的就是具体的微服务应用，而它调用的 Sidecar 关联起每个实例应用，所以这样就形成了一个服务类的服务网格，Sidecar 通信的组织框架可以用 K8s 进行统一管理，常见的 Sidecar 代码实现方式主要是通过 Istio，它是由 Google 和 IBM 主导并支持开源的 Service Mesh 框架。
