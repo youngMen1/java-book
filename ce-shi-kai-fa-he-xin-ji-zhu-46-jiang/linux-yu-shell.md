@@ -170,3 +170,5 @@ CgoB5l3XtiGAAolXAAHJ8Kvwgeo677.png
 假设我们以 t 为分隔符打印 $1 和 $2，我们来分析夏结果，
 
 当输入 $1 以 t 为分隔符的时候，t 之前的 hello from hogwar 是 $1 记录，t 之后的 s 是 $2 记录，以此类推，也就是说 awk 通过解析数据内容，然后会根据默认的分隔符打印出每个字段的具体内容，我们输入 awk 'OFS=''-''{print $1,$2,$3}' 并打印输出。
+
+CgotOV3XtjCAVm3oAAJriQsbzwU106.png
