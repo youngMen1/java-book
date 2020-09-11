@@ -60,6 +60,7 @@
   * Web 自动化测试技术
   * [App 自动化测试技术](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/app-zi-dong-hua-ce-shi-ji-zhu.md)
     * 第34讲：App 自动化测试演练
+    * 第28讲：Appium 自动化测试框架
   * [接口自动化测试](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/jie-kou-zi-dong-hua-ce-shi.md)
     * 第35讲：接口常用协议讲解
   * 持续集成、持续交付、DevOps 体系
