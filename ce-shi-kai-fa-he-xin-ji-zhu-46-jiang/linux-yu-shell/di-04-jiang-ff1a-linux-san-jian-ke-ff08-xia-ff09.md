@@ -26,4 +26,6 @@ CgoB5l3czD-ABCoWAAHsxWlG56g657.png
 
 但如果我们不传递给指令一个文件，会发生什么样的效果？比如输入 grep "hogwarts" 指令，你会发现什么都没有显示，继续输入 xxx、dddd 仍没有任何反应，直到输入 hogwarts 时，系统才会输出 hogwarts，我们看到如果不传递输入文件，grep 会默认从当前输入读取内容。    
 
-CgoB5l3czEmAZ0OHAAAu39KhXGc899.png            
+CgoB5l3czEmAZ0OHAAAu39KhXGc899.png
+
+ 我们来简单总结一下，输入文件就是标准输入 0，如果当没有输入文件时会获取当前输入窗口中的数据，读到数据后可以对数据进行一系列的操作，标准输出 1 就是一个输出文件，而如果错误输出文件就是标准错误 2。            
