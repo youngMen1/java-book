@@ -131,4 +131,10 @@ CgoB5l3XtY-AaJPqAABKIEkO88U487.png  
 还有表示区间选择，比如我们在 1、2、3 之间，使用 awk '$0>2' 指令打印大于 2 的数据 3。
 
  CgotOV3XtbWAZKNqAAK80TDMRgQ651.png         
+ 
+ 还有一个参数叫 NR，代表记录数，比如输入 awk 'NR>1' /tmp/hello.tex 指令打印去掉第一行的数据。
+
+     
+
+pattern有非常丰富的语法，你可以课后自己进行练习，同时 awk 还有几个标准的内置变量。
 
