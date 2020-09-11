@@ -21,3 +21,5 @@ CgotOV3czCaAPOigAAI94SOIP8Q284.png
 CgotOV3czDOAQH4QAAJeXeuP_OE959.png
 
 而输入是一个读取文件的过程，比如我们输入 grep "hogwarts" /tmp/hello.txt 指令便是从 hello.txt 文件中读取 hogwarts。
+
+CgoB5l3czD-ABCoWAAHsxWlG56g657.png
