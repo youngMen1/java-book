@@ -17,3 +17,7 @@ CgotOV3mHmOAVwNqAAB4Dtu9NTs336.png
 CgotOV3mHnGAcmsMAAB09eOs0V8120.png
 
 接下来开始编写脚本，输入注释 # this is a demo script 用来告诉大家这个脚本是干什么的，当然注释不是必需的，只是为了增加可读性，同时 Shell 也不会执行注释语句。
+
+## 参数     
+
+而一旦脚本开始执行，就需要我们掌握系统默认的参数解析规则。当传递一个参数给脚本时，它是怎样被解析的呢？
