@@ -55,3 +55,15 @@ CgotOV3XtRqAHiTCAAIU-z_0BFc527.png    
 如果我们输入 grep hello 指令，它会把三条数据都提取出来。这就是 grep 的第一个作用，根据指定的正则表达式查取对应的数据，我们上面的演示用的是简单的字符串。
 
 CgotOV3XtSmAVa4mAAKQLiKRwF0939.png
+
+接下来，我们学习如何使用正则表达式获取以字母 s 或 t 开头的后面跟任意两个字符的数据，输入 grep "[st].." /tmp/hello.tex 指令，其中 [] 表示正则表达式，..表示后面跟任意的两个字符，你可以看到输出了两条数据。
+
+CgoB5l3XtTeAfsKQAAJKMXmUvhU283.png
+
+我们还可以通过 -o 指令只打印匹配的内容，输入 grep -o "[st].." /tmp/hello.tex 指令，你可以看到只打印了匹配到的内容，而不是整条数据。
+
+       
+
+grep 还有一些其他的指令，比如 -i 可以忽略字符大小写。  
+
+CgoB5l3XtUWAK5t-AAIxEAoUhtM359.png 
