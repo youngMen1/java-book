@@ -93,3 +93,22 @@ CgqCHl8hWnGAW0_eAALw9UqakRE997.png
 
 ## Nginx 配置服务端推送
 接下来我们再来演示一个案例-服务端的主动推送，这个支持要求 Nginx 版本大于或等于 1.13.9 的版本，Nginx 的配置如下：
+
+
+
+```
+server_name  www.imoocc.com; 
+ root /test;  
+ index index.html index.htm;  
+ location = /index.html {    
+ http2_push /css/style.css;  
+ http2_push /js/main.js;  
+ http2_push /img/yule.jpg;  
+ http2_push /img/avatar.jpg;   
+} 
+
+```
+
+如果用户请求 index.html 页面（首页），那么服务通过配置项 http2_push+ 加上对应的资源路径。
+这就表示服务端会主动推送这些元素（/css/style.css、/js/main.js、/img/yule.jpg、/img/avatar.jpg）给到客户端，同样通过浏览器的开发者工具在客户端分析，会明显地看到页面加载元素展示上 Push *** 展示方式，这个就表示打开这个页面服务端主动推送过来的页面元素。
+Ciqc1F8hWpOAD5wgAATOaZqbqn0907.png
