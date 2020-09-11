@@ -195,3 +195,5 @@ CgoB5l3foseAOrrnAAHk4lHDC9s130.png
 你可以看到，输出结果每隔 1 秒打印一个 i 的值，而 i 的值逐渐增加，直到等于 3 时不再满足条件，退出循环。   
 
 而 while 还有一个很常用的功能，就是通过 while read line 循环读取文件的每一行。
+
+CgoB5l3foseADrLRAAIeM1hcmns056.png
