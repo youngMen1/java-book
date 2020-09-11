@@ -34,4 +34,6 @@ CgotOV3mHnGAcmsMAAB09eOs0V8120.png
 
 接下来我们编写一个脚本。     
 
-CgoB5l3mHnyAa4b9AACcvwS38OE594.png  
+CgoB5l3mHnyAa4b9AACcvwS38OE594.png
+
+并打印 p0=$0、p1=$1 p2=$2，以及 $@ 和 $*。
