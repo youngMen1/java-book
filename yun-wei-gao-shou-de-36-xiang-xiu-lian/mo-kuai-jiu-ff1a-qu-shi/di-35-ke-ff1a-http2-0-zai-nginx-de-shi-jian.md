@@ -5,7 +5,7 @@
 ## 关于 HTTP 协议
 在当前这个互联网时代，越来越多的应用场景使用 HTTP 协议（超文本传输协议），它是一个十分重要的协议。HTTP 当前主要使用的版本是 HTTP1.1，HTTP2.0 和 HTTP3.0，在这张图里我们先来整体了解下。
 
-CgqCHl8hWe-ABsyqAABPxZNtCbI636.png
+![](/static/image/CgqCHl8hWe-ABsyqAABPxZNtCbI636.png)
 
 HTTP1.1 算是早期的版本了，如图所示它包含几大部分：HTTP 协议报文，底层 TCP 内容，还有 IP 及 MAC 这些内容。
 
@@ -41,7 +41,7 @@ HTTP1.1 这两点劣势在 HTTP2.0 都得到了很好的解决，接下来我们
 最后值得一提的就是服务端的主动推送机制，浏览器发送一个请求的时候，服务端会主动向浏览器推送与请求相关的资源，这个时候浏览器就不用再发起后续的请求了。
 
 
-CgqCHl8hWhOANgePAAIKBW6JBzk016.png
+![](/static/image/CgqCHl8hWhOANgePAAIKBW6JBzk016.png)
 
 
 在上面这张图中，左边是服务端，右边是客户端，客户端在请求流 stream1（也就是 page.html）的时候，服务端就会主动向客户端响应，除了 page.html 响应的内容以外，还同时响应了 stream2、stream4(script.js、style.css)，服务端主动响应给了客户端，这样机制减少多次连接，从而提高对应页面的响应性能和用户体验。
@@ -75,7 +75,7 @@ server {
 
 接下来，测试对比 Nginx 分别在 HTTP1.1 和 HTTP2.0+HTTPS 两个场景中性能上的差异，这个测试我们在前端打开浏览器-开发者工具，示例这里先访问的是我的 HTTP1.1协议博客地址（http://www.imoocc.com）。
 
-Ciqc1F8hWmOAPL8qAAIV_f1lXdE332.png
+![](/static/image/Ciqc1F8hWmOAPL8qAAIV_f1lXdE332.png)
 
 同时在底端点击鼠标右键，把“协议“这一栏展示出来。在刷新浏览器请求以后，就会看到这样一个页面，这个页里面我们需要重点关注的是三部分，一部分是客户端发起的协议版本类型（Protocol），我们会看到在这一栏里面，向服务端发送的协议版本都是 HTTP1.1。
 
@@ -87,7 +87,7 @@ Ciqc1F8hWmOAPL8qAAIV_f1lXdE332.png
 
 首先是请求协议变化，我们会看到 Chrome 的开发者工具中 Protocol 这一栏是 HTTP2.0 的协议版本。
 
-CgqCHl8hWnGAW0_eAALw9UqakRE997.png
+![](/static/image/CgqCHl8hWnGAW0_eAALw9UqakRE997.png)
 
 另外在图的右边元素更多并行的方式加载，最后会看到整个页面的加载时长会略低于前面这张图的时长，因为 HTTPS 本身在整个页面的响应时就会增加，即使这样用HTTP2.0+HTTPS也能明显感觉到页面的加载速度优于 HTTP1.1 协议页面的加载速度。
 
