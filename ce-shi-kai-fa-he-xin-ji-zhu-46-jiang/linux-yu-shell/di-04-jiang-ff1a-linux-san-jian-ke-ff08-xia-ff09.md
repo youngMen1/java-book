@@ -15,3 +15,5 @@ CgoB5l3czBiAQrPTAAJmF953Il8386.png
 因为 dddd 文件是不存在的，所以会打印了一个独立显示的报错信息，我们就称之为错误输出。
 
 CgotOV3czCaAPOigAAI94SOIP8Q284.png
+
+我们现在输入 ls -l /tmp appium.log 指令，可以打印一个正确的输出。
