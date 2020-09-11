@@ -57,3 +57,5 @@ CgoB5l3czKCAdhjzAAHmEnTiajE963.png
 
 再举个例子，首先通过 cat /tmp/hello.txt 指令打印 hello.txt 文件。
 
+CgotOV3czKyAV6LNAAIYxUQ2cfk322.png
+
