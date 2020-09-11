@@ -88,3 +88,8 @@ Ciqc1F8hWmOAPL8qAAIV_f1lXdE332.png
 首先是请求协议变化，我们会看到 Chrome 的开发者工具中 Protocol 这一栏是 HTTP2.0 的协议版本。
 
 CgqCHl8hWnGAW0_eAALw9UqakRE997.png
+
+另外在图的右边元素更多并行的方式加载，最后会看到整个页面的加载时长会略低于前面这张图的时长，因为 HTTPS 本身在整个页面的响应时就会增加，即使这样用HTTP2.0+HTTPS也能明显感觉到页面的加载速度优于 HTTP1.1 协议页面的加载速度。
+
+## Nginx 配置服务端推送
+接下来我们再来演示一个案例-服务端的主动推送，这个支持要求 Nginx 版本大于或等于 1.13.9 的版本，Nginx 的配置如下：
