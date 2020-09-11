@@ -49,3 +49,5 @@ CgotOV3mHo2ARK47AAHLXCyvNz8110.png
              
 
 然后，既然 $@ 与 $* 都表示所有的参数但它们有什么区别呢？你可以简单的理解成 $* 会把参数打散，举个例子。
+
+CgoB5l3mHpaAJwbtAAGm5AmGJZA068.png
