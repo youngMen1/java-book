@@ -110,11 +110,11 @@ CgotOV3mH0OAUIsfAAGy_TmPGnc630.png
 
 ![](/static/image/CgotOV3mH0yAbthXAAG_xPVX3HE664.png)
 这个时候怎么做呢，我们使用 chmod +x /tmp/1.sh 指令，给它一个可执行权限就可以了。
-CgoB5l3mH1qAZynAAAG9pFvkV0M505.png
+![](/static/image/CgoB5l3mH1qAZynAAAG9pFvkV0M505.png)
 
 一旦给了可执行权限之后，再次执行。你会发现它已经可以直接执行了，而如果我们想要输入 1.sh 就可以直接执行呢？
 
-CgoB5l3mH2aAOOGLAAG4sIaDfBY784.png
+![](/static/image/CgoB5l3mH2aAOOGLAAG4sIaDfBY784.png)
 
 上一课时详细讲过 PATH 变量，我们将 /tmp 加入 PATH 变量中，这时就可以直接输入 1.sh 执行了。
 
