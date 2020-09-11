@@ -173,14 +173,13 @@ CgotOV3fosaAaPu1AAJ8n7xBAno779.png
 然后是 for 循环，for 循环在 Shell 中有两种用法，第一种类似 Java 或 Python ，从 1~10 进行循环，这个时候可以使用 for((i=0;i<10;i++)) 实现，这种用法是根据基数进行精准循环次数的一个判断。
 
      
-
 第二种用法是 for 遍历循环，你可以使用 for...in...语句块。  
 
- CgoB5l3fosaAOw4CAAHflNfAfkU288.png    
+CgoB5l3fosaAOw4CAAHflNfAfkU288.png    
  
- 比如输入 for i in $(seq 1 3 10) 指令，然后在 do 语句块中打印 echo $i 的值，do 语句块以 done 结束。
+比如输入 for i in $(seq 1 3 10) 指令，然后在 do 语句块中打印 echo $i 的值，do 语句块以 done 结束。
  
- CgotOV3fosaALQ6mAAHflNfAfkU836.png
+CgotOV3fosaALQ6mAAHflNfAfkU836.png
  
- 你可以看到打印了 1、4、7、10，这个就是 for 循环的遍历用法。
+你可以看到打印了 1、4、7、10，这个就是 for 循环的遍历用法。
 
