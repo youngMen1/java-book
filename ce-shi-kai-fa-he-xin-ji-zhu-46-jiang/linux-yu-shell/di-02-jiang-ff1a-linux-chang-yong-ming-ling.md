@@ -74,3 +74,24 @@ CgoB5l3TuqGAPlkYAAP4ne07kvY351.png
 你可以通过 chmod 命令修改一个文件的权限，也可以通过 chown 修改一个文件所归属的用户或组。
 
 CgoB5l3TuqGAZVizAAO7_xP36EU749.png
+
+
+这里需要重点注意，ls-l 可以查看文件权限，我们以 README.md 为例，这个文件是当前用户可读可写，但其他用户能读不能写的。   
+
+CgotOV3TuqGAPdkpAAQUyxFIc9Y577.png
+
+那如果我们现在不想让任何用户看到文件该怎么办呢？可以通过 chmod o-r readme.md 命令进行权限的修改。重新进入该文件的权限后，我们发现第三组权限没有状态了，也就是其他用户不能看到该文件了。
+
+CgoB5l3TuqGAeDD9AALMW8rpxEk407.png
+
+关于 chmod 命令的更多用法，你通过 Linux 下的 man 查看它的命令帮助，你可以看到该命令的属性、参数，以及具体描述。如果你不了解 Linux 某些命令的用法，就可以通过 man 来查看使用方法。  
+
+                    
+
+关于文件，你还可以通过 find 命令搜索当前的目录并列出所有文件，也可以通过 find + name 的方式查找具体文件。对于特殊文件，比如软链、socket、管道等内容，你可以课下自己搜索知识，这里不再详细介绍。
+
+## 进程   
+
+第二个方面是进程，进程是一个文件的运行形态。如果一个文件是可执行文件，比如setup.go，系统就可以通过 CPU 去调度它，通过解析器完成相应的操作。那我们如何知道到底有多少文件是可以被调度的呢？
+
+CgotOV3TuqKAYGE6AAPva3zSUbM410.png
