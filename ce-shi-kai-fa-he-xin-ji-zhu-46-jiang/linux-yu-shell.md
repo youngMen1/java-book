@@ -138,3 +138,18 @@ CgoB5l3XtY-AaJPqAABKIEkO88U487.png  
 
 pattern有非常丰富的语法，你可以课后自己进行练习，同时 awk 还有几个标准的内置变量。
 
+
+* FS 表示字段分隔符
+
+* OFS 表示输出数据的字段分隔符
+
+* RS 表示记录分隔符
+
+* ORS 表示输出字段的行分隔符
+
+* NF 表示字段数
+
+* NR 表示记录数            
+
+比如，我们输入 awk '{print NR,NF}' /tmp/hello.txt 指令，输出显示 hello from hogwarts 被空格分隔成了三个字段，并且 hello.txt 文件中的三条数据字段数都是 3。  
+
