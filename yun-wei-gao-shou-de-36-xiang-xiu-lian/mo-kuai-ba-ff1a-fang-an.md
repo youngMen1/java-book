@@ -88,3 +88,4 @@ Ciqc1F7rFKuAIh18AADhYGjMa4A896.png
 
 # 数据层-MySQL 服务高可用设计
 这里我给你再介绍一下 MySQL 的一个主从同步原理，我们看到这样的一张图：
+CgqCHl7q--GAeXj5AAH_coBsrgQ277.png
