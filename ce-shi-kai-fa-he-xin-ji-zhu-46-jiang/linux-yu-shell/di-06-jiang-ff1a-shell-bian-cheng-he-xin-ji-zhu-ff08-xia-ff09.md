@@ -121,3 +121,6 @@ CgoB5l3mH2aAOOGLAAG4sIaDfBY784.png
              
 
 还有一个问题就是如果我们的脚本写错了在执行过程中如何进行调试呢。
+
+
+CgoB5l3mH3CAJM6IAAFv8CFyLyo833.png
