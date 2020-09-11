@@ -105,3 +105,5 @@ CgotOV3TuqKAYGE6AAPva3zSUbM410.png
 ### ps
 
 CgotOV3TuqKAeyHXAAPRfiGYfJY753.png
+
+我们先从简单的 ps 学起，使用 ps 会列举当前用户下的所执行的命令。
