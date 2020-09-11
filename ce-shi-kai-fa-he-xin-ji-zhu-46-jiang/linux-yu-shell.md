@@ -53,3 +53,13 @@ CgotOV3fosKAcDsaAAN5G0JEAsA725.png
 ## 预定义变量 
 
 在 Shell 编程中，系统还提供了几个预定义变量。比如：
+
+* PWD 表示当前目录；
+
+* USER 表示当前用户；
+
+* HOME 表示当前用户的主目录，HOME 还可以用 ~ 简写；
+
+* PATH 表示当前所有可执行程序；
+
+* RANDOM 可以产生一个随机数。
