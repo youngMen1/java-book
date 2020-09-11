@@ -128,3 +128,7 @@ CgotOV3XtaaAcU3QAAKjJeoBA8g632.png
 
 CgoB5l3XtY-AaJPqAABKIEkO88U487.png  
 
+还有表示区间选择，比如我们在 1、2、3 之间，使用 awk '$0>2' 指令打印大于 2 的数据 3。
+
+ CgotOV3XtbWAZKNqAAK80TDMRgQ651.png         
+
