@@ -26,7 +26,7 @@ Ciqc1F7y7CWADPR8AAFAo4N1AMU000.png
 
 任播则区别于单播和组播，它则是网络地址和网络节点有一对多的关系，但在通信过程中却保持着一对一的关系，注意，这里是指在同一时刻的时候，保持一对一的关系，所以它结合了单播和组播两者的特点。网络地址和网络节点存在一对多的关系，但是通信过程中却保持着一对一的关系。任播模式通常应用在更大范围或者全局性网络架构中，大公网或者大规模网络架构中才应用到的一种任播方式。
 
-CgqCHl7y7C6ATeCAAAFmj3UsAXs135.png
+![](/static/image/CgqCHl7y7C6ATeCAAAFmj3UsAXs135.png)
 
 了解了它的接入模式之后接下来我们来具体介绍一下任播的优势。任播的优势是这样的：
 
@@ -47,7 +47,7 @@ CgqCHl7y7C6ATeCAAAFmj3UsAXs135.png
 
 我们来看下面这张图：
 
-CgqCHl7y7DeASsvgAAHdnr6HsEg948.png
+![](/static/image/CgqCHl7y7DeASsvgAAHdnr6HsEg948.png)
 
 在这张图中，我们把一个企业的 DNS 系统部署三套服务端，都可以同时提供域名解析的服务，分别有 A、B、C 3 台，对外发布的地址都是 10.10.10.10（任播地址）。而在客户端的系统里配置它的 DNS 解析，只需要配置为这个对外发布的 Anycast 接入地址（10.10.10.10）。
 
