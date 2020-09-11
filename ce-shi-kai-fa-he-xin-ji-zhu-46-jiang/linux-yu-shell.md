@@ -101,3 +101,5 @@ CgotOV3fosWAUtBiAAMX01YRWG0720.png
 比如输入 x=$(echo xxxx) 指令将字符串 xxxx 存入 x 变量中，这时输入 echo $x 指令，你会看到 $() 会把括号内的命令执行然后把输出结果作为值传递给变量。
 
 CgoB5l3fosWAKUt6AAMqCZTcpAk900.png
+
+还有一个需要注意的是序列，比如我们想从 1~10 获取一个序列，可以输入 echo {1..10} 指令来打印 1~10 的数字。
