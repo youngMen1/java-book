@@ -55,7 +55,8 @@
     * [第02讲：Linux 常用命令](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell/di-02-jiang-ff1a-linux-chang-yong-ming-ling.md)
     * 第03讲：Linux 三剑客（上）
   * [编程语言](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/bian-cheng-yu-yan.md)
-  * 数据结构与算法
+  * [数据结构与算法](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/shu-ju-jie-gou-yu-suan-fa.md)
+    * 第14讲：排序算法考题与经典冒泡排序算法剖析
   * [数据库](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/shu-ju-ku.md)
     * 第19讲：MySQL 数据库搭建与操作
   * [Web 自动化测试技术](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/web-zi-dong-hua-ce-shi-ji-zhu.md)
