@@ -172,3 +172,9 @@ CgoB5l3XtiGAAolXAAHJ8Kvwgeo677.png
 当输入 $1 以 t 为分隔符的时候，t 之前的 hello from hogwar 是 $1 记录，t 之后的 s 是 $2 记录，以此类推，也就是说 awk 通过解析数据内容，然后会根据默认的分隔符打印出每个字段的具体内容，我们输入 awk 'OFS=''-''{print $1,$2,$3}' 并打印输出。
 
 CgotOV3XtjCAVm3oAAJriQsbzwU106.png
+
+可以看到，hello 指定为 $1，from 指定为 $2，并将默认的空格分隔符替换为 -，我们可以通过 $ 获取具体字段并对其进行相关操作，接下来我们学习 awk 的字段分隔。
+
+     
+
+这里有几个例子，课后你可以试验一下，同样 awk 也可以实现简单的数据计算功能，比如说awk 'BEGIN{print 10000/3}'。
