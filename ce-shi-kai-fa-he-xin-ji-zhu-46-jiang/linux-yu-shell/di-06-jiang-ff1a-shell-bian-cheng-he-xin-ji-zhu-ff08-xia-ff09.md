@@ -57,3 +57,5 @@ CgoB5l3mHpaAJwbtAAGm5AmGJZA068.png
 CgoB5l3mHp-AGEWgAACvvz4hjIA356.png
 
 我们使用 for 循环来分别打印 "$@" 和 $* 所代表的参数。
+
+CgotOV3mHqmAJ1dsAAFw0CGIpXM118.png
