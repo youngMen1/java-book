@@ -13,7 +13,7 @@ CgqCHl7y7AaAWhCJAADaSjK7P-4901 (1).png
 
 第二种通信模式就是组播，组播是一对多的模式，通过使用一个组播地址将数据在同一时间以高效的方式发往处于 TCP/IP 网络上的多个接收者。我们看到下面这张图：
 
-CgqCHl7y7BeAPQ_tAAEXgA5hLBQ539 (1).png
+![](/static/image/CgqCHl7y7BeAPQ_tAAEXgA5hLBQ539.png)
 
 
 可以看到，图中有一个红色的节点，它同时发给了三个绿色的实体节点，这就是组播的通信形式。这种模式就好比你在大街上大喊一声“美女”，这个时候就会有一大群女性回头看你。
