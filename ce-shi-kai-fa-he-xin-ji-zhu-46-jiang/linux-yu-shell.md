@@ -164,3 +164,5 @@ CgoB5l3XteOAYuu3AAGhkZYQVJA208.png
 
 
 接下来，学习 awk 的字段数据处理。我们通过 -F 参数指定字段分隔符，这里需要注意 awk 有一个 $0~$N~$NF 的特殊参数，
+
+CgoB5l3XtiGAAolXAAHJ8Kvwgeo677.png
