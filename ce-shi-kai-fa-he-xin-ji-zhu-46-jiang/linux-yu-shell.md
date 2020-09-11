@@ -183,3 +183,7 @@ CgotOV3fosaALQ6mAAHflNfAfkU836.png
  
 你可以看到打印了 1、4、7、10，这个就是 for 循环的遍历用法。
 
+## while 循环 
+
+
+
