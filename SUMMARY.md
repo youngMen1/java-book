@@ -57,6 +57,7 @@
   * [编程语言](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/bian-cheng-yu-yan.md)
   * 数据结构与算法
   * [数据库](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/shu-ju-ku.md)
+    * 第19讲：MySQL 数据库搭建与操作
   * [Web 自动化测试技术](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/web-zi-dong-hua-ce-shi-ji-zhu.md)
     * 第23讲：Selenium 框架安装与使用
   * [App 自动化测试技术](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/app-zi-dong-hua-ce-shi-ji-zhu.md)
