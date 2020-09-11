@@ -98,14 +98,14 @@ grep 还有一些其他的指令，比如 -i 可以忽略字符大小写。  
 * | 表示匹配多个表达式中的任何一个。   
 
 
-CgoB5l3XtVaAJPZaAAJpe4YZD9c323.png
+![](/static/image/CgoB5l3XtVaAJPZaAAJpe4YZD9c323.png)
 
 我们举个例子，输入 grep -E "(hog|home)" /tmp/hello.tex 指令，输出结果分别匹配了 hog 与 home。
 
-CgotOV3XtWSAF9K-AAKOZuR4qrg333.png
+![](/static/image/CgotOV3XtWSAF9K-AAKOZuR4qrg333.png)
 
 但如果你的指令中不含 -E，则指令不支持扩展正则，这个时候你会发现它什么都匹配不到。 
 
-CgoB5l3XtXGAQRR7AAKVDfReUHg948.png
+![](/static/image/CgoB5l3XtXGAQRR7AAKVDfReUHg948.png)
 
 如果不使用 -E，我们可以使用 \ 转义符对匹配条件进行转义，也可以达到同样的效果
