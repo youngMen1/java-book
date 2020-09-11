@@ -67,7 +67,8 @@
     * 第28讲：Appium 自动化测试框架
   * [接口自动化测试](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/jie-kou-zi-dong-hua-ce-shi.md)
     * 第35讲：接口常用协议讲解
-  * 持续集成、持续交付、DevOps 体系
+  * [持续集成、持续交付、DevOps 体系](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/chi-xu-ji-cheng-3001-chi-xu-jiao-fu-3001-devops-ti-xi.md)
+    * 第40讲：持续集成体系
   * [测试平台开发技术栈讲解](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/ce-shi-ping-tai-kai-fa-ji-zhu-zhan-jiang-jie.md)
     * 第46讲：开源自动化测试框架底层代码改造
 * [Java 并发编程 78 讲](java-bing-fa-bian-cheng-78-jiang.md)
