@@ -33,35 +33,35 @@ CgoB5l3czEmAZ0OHAAAu39KhXGc899.png
 
 ## 管道
 
-CgotOV3czFWAdLdxAAA6ljNKhhE539.png
+![](/static/image/CgotOV3czFWAdLdxAAA6ljNKhhE539.png)
 
 接下来，我们学习管道在整个输入输出过程中发挥的作用，以及管道的具体用法。在日常工作中，通常需要特殊的方法将多个程序串联起来，将程序 1 的输出 1 作为程序 2 的输入，在 Shell 中这个特殊的方法就是管道。
          
-CgoB5l3czGCAP4CYAAHPxkU23_Y997.png
+![](/static/image/CgoB5l3czGCAP4CYAAHPxkU23_Y997.png)
 
 举个例子，比如我们输入 echo hello | gerp hogwarts 指令，打印一个 hello 传给 grep hogwarts，这个时候，你会发现没有任何输出，这是为什么呢？
 
-CgoB5l3czG-APPCuAAHKJe8bVUg331.png
+![](/static/image/CgoB5l3czG-APPCuAAHKJe8bVUg331.png)
 
 我们把指令分为两部分执行，第一部分执行 echo hello，这个指令没有任何输入但是有输出。
 
-CgotOV3czHyAC5P7AAHcF8HELcU211.png
+![](/static/image/CgotOV3czHyAC5P7AAHcF8HELcU211.png)
 
 然后，将 echo hello 通过管道传递给 grep hogwarts，此时管道已经找到输入内容 echo hello，于是便不再从当前窗口读取数据，但因为读入的内容实际是没有输入的所以会得不到任何输出。
 
-CgoB5l3czJKAXcksAAHlS8hzS9g985.png
+![](/static/image/CgoB5l3czJKAXcksAAHlS8hzS9g985.png)
 
 我们应该如何正确操作呢，输入 echo hello hogwarts | gerp hogwarts 指令，你会看到输出了正确的内容。因为上一个命令输入了 hello hogwarts，再经 grep 后输出。你可以看到通过管道我们可以让 Linux 三剑客的功能发挥到一个新的高度，有了管道很多的操作就变得非常简单易处理。
 
-CgoB5l3czKCAdhjzAAHmEnTiajE963.png
+![](/static/image/CgoB5l3czKCAdhjzAAHmEnTiajE963.png)
 
 再举个例子，首先通过 cat /tmp/hello.txt 指令打印 hello.txt 文件。
 
-CgotOV3czKyAV6LNAAIYxUQ2cfk322.png
+![](/static/image/CgotOV3czKyAV6LNAAIYxUQ2cfk322.png)
 
 然后通过管道打印包含 testerhome 的信息行。
 
-CgotOV3czLaAMLMMAAJYe229DN0565.png
+![](/static/image/CgotOV3czLaAMLMMAAJYe229DN0565.png)
 
 如果此时我们只想得到 testerhome 这个单词怎么办呢？输入 cat /tmp/hello.txt | grep testerhome | awk '{print $3}' 指令就可以单独打印 testerhome 了，因为 hello from testerhome 是以空格隔开的，所以指令中的 $3 表示第三个元素。
 
