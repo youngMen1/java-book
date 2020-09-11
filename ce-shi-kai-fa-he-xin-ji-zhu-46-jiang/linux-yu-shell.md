@@ -66,7 +66,7 @@ CgoB5l3XtTeAfsKQAAJKMXmUvhU283.png
 
 grep 还有一些其他的指令，比如 -i 可以忽略字符大小写。  
 
-CgoB5l3XtUWAK5t-AAIxEAoUhtM359.png 
+![](/static/image/CgoB5l3XtUWAK5t-AAIxEAoUhtM359.png)
 
 
 -v 表示将匹配到的内容过滤掉，比如我们输入 grep -v "[st].." /tmp/hello.tex 指令，只显示了一条数据，过滤掉了匹配正则条件的内容。
