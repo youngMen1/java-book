@@ -42,3 +42,5 @@ CgoB5l3czGCAP4CYAAHPxkU23_Y997.png
 举个例子，比如我们输入 echo hello | gerp hogwarts 指令，打印一个 hello 传给 grep hogwarts，这个时候，你会发现没有任何输出，这是为什么呢？
 
 CgoB5l3czG-APPCuAAHKJe8bVUg331.png
+
+我们把指令分为两部分执行，第一部分执行 echo hello，这个指令没有任何输入但是有输出。
