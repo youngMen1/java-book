@@ -25,3 +25,13 @@
 * sed 相当于 SQL 的 update table set field=new where field=old，它可以对数据进行修改。
 
 你可以发现，grep 和 awk 可以进行组合使用，来达到查找数据并对数据进行分割的目的，grep 也可以与 sed 组合使用，达到查找数据并修改的目的，它们三个还可以组合在一起使用来完成一系列的操作，就相当于大数据处理中的 Map-Reduce，我们接下来看如何具体的使用它们。
+
+### grep      
+
+首先，我们来看下如何使用 grep，grep 用于根据正则表达式查找相关内容并打印对应的数据，我们打开 Shell 环境，通过 vim/tmp/hello.txt 命令创建一个文件，并在文件内输入三条数据：
+
+* hello from hogwarts
+
+* hello from sevenriby
+
+* hello from testerhome
