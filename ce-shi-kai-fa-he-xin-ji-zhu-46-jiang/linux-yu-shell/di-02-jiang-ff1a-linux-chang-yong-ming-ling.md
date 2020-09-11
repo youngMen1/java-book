@@ -33,3 +33,5 @@ ls 有一个常用的参数叫 -l，-l 可以打印出每个文件的基本信�
 CgoB5l3TuqCAQUV2AAQ_154z-Wg836.png
 
 可以通过 cd 命令进入 battery-historian 的目录，进入目录后，通过 ls 查看目录下所有文件。
+
+CgotOV3TuqCAP51TAASKn8MrnI4613.png
