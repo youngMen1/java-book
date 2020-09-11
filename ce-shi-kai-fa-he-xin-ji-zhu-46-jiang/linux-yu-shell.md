@@ -17,3 +17,9 @@
 ## Linux 三剑客价值      
 
 接下来，我们通过对三剑客与 SQL 进行类比，来具体看看它们到底能做些什么？
+
+* grep 相当于 SQL 的 select *from table，它可以进行数据的查找与定位。
+
+* awk 相当于 SQL 的 select field from table，它可以进行数据切片。
+
+* sed 相当于 SQL 的 update table set field=new where field=old，它可以对数据进行修改。
