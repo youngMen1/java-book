@@ -48,3 +48,8 @@ CgoB5l3czG-APPCuAAHKJe8bVUg331.png
 CgotOV3czHyAC5P7AAHcF8HELcU211.png
 
 然后，将 echo hello 通过管道传递给 grep hogwarts，此时管道已经找到输入内容 echo hello，于是便不再从当前窗口读取数据，但因为读入的内容实际是没有输入的所以会得不到任何输出。
+
+CgoB5l3czJKAXcksAAHlS8hzS9g985.png
+
+我们应该如何正确操作呢，输入 echo hello hogwarts | gerp hogwarts 指令，你会看到输出了正确的内容。因为上一个命令输入了 hello hogwarts，再经 grep 后输出。你可以看到通过管道我们可以让 Linux 三剑客的功能发挥到一个新的高度，有了管道很多的操作就变得非常简单易处理。
+
