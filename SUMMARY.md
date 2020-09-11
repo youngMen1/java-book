@@ -55,6 +55,7 @@
     * [第02讲：Linux 常用命令](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell/di-02-jiang-ff1a-linux-chang-yong-ming-ling.md)
     * [第03讲：Linux 三剑客（上）](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell/di-03-jiang-ff1a-linux-san-jian-ke-ff08-shang-ff09.md)
     * [第04讲：Linux 三剑客（下）](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell/di-04-jiang-ff1a-linux-san-jian-ke-ff08-xia-ff09.md)
+    * 第05讲：Shell 编程核心技术（上）
   * [编程语言](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/bian-cheng-yu-yan.md)
     * 第08讲：Python 语言基础
   * [数据结构与算法](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/shu-ju-jie-gou-yu-suan-fa.md)
