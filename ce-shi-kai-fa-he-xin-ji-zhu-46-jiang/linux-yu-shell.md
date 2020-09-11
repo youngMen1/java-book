@@ -119,3 +119,5 @@ CgotOV3fosWAUSepAAJPWmR_Pm8293.png
      
 
 然后是布尔类型，布尔的基本表示表现形式是 true 和 false，需要注意的是在 Shell 中有一个特殊的用法，如果是某个命令返回的是 0，则表示这个进程是正常工作的。
+
+CgoB5l3fosWADT10AAIM0bYzP1o997.png
