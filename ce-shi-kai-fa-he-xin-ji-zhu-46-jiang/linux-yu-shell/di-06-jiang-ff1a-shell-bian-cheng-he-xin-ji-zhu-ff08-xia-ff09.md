@@ -108,7 +108,7 @@ CgotOV3mH0OAUIsfAAGy_TmPGnc630.png
 
 然后输入 1.sh 的全路径 /tmp/1.sh，系统会提示 Permission denied 没有执行权限。
 
-CgotOV3mH0yAbthXAAG_xPVX3HE664.png
+![](/static/image/CgotOV3mH0yAbthXAAG_xPVX3HE664.png)
 这个时候怎么做呢，我们使用 chmod +x /tmp/1.sh 指令，给它一个可执行权限就可以了。
 CgoB5l3mH1qAZynAAAG9pFvkV0M505.png
 
