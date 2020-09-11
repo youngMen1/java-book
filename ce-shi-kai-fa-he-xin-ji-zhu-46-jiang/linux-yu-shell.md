@@ -103,3 +103,5 @@ CgotOV3fosWAUtBiAAMX01YRWG0720.png
 CgoB5l3fosWAKUt6AAMqCZTcpAk900.png
 
 还有一个需要注意的是序列，比如我们想从 1~10 获取一个序列，可以输入 echo {1..10} 指令来打印 1~10 的数字。
+
+CgotOV3fosWAUSepAAJPWmR_Pm8293.png
