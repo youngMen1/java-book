@@ -101,3 +101,5 @@ grep 还有一些其他的指令，比如 -i 可以忽略字符大小写。  
 CgoB5l3XtVaAJPZaAAJpe4YZD9c323.png
 
 我们举个例子，输入 grep -E "(hog|home)" /tmp/hello.tex 指令，输出结果分别匹配了 hog 与 home。
+
+CgotOV3XtWSAF9K-AAKOZuR4qrg333.png
