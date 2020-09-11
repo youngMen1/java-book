@@ -53,3 +53,5 @@ CgotOV3mHo2ARK47AAHLXCyvNz8110.png
 CgoB5l3mHpaAJwbtAAGm5AmGJZA068.png
 
 比如第二个参数是包含空格的，将 "m n" 作为一个完整的参数传递给脚本并执行，你会发现第二个参数是 m n，但其实 $@ 与 $* 的值已经发生了变化，$* 会将参数打散，而 "$@" 则不会。
+
+CgoB5l3mHp-AGEWgAACvvz4hjIA356.png
