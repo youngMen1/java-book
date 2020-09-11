@@ -4,3 +4,5 @@
 
 ## 关于 HTTP 协议
 在当前这个互联网时代，越来越多的应用场景使用 HTTP 协议（超文本传输协议），它是一个十分重要的协议。HTTP 当前主要使用的版本是 HTTP1.1，HTTP2.0 和 HTTP3.0，在这张图里我们先来整体了解下。
+
+CgqCHl8hWe-ABsyqAABPxZNtCbI636.png
