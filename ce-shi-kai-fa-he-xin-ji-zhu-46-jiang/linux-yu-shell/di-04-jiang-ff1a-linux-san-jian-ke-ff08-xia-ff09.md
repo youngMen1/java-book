@@ -38,3 +38,5 @@ CgotOV3czFWAdLdxAAA6ljNKhhE539.png
 接下来，我们学习管道在整个输入输出过程中发挥的作用，以及管道的具体用法。在日常工作中，通常需要特殊的方法将多个程序串联起来，将程序 1 的输出 1 作为程序 2 的输入，在 Shell 中这个特殊的方法就是管道。
          
 CgoB5l3czGCAP4CYAAHPxkU23_Y997.png
+
+举个例子，比如我们输入 echo hello | gerp hogwarts 指令，打印一个 hello 传给 grep hogwarts，这个时候，你会发现没有任何输出，这是为什么呢？
