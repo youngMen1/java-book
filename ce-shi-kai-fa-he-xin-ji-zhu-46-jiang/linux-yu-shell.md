@@ -167,3 +167,5 @@ CgotOV3fosaAaPu1AAJ8n7xBAno779.png
 
 ## if 判断
 
+首先看下 if 条件判断，if 首先检测判断条件是否成立，如果成立则执行 then 语句块内的逻辑，else 执行判断不成立的逻辑，还有 elif...if...，它类似于 Python，当条件都不满足时去判断下一个条件。
+
