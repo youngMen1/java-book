@@ -43,6 +43,7 @@
     * [第30课：k8s 主流网络方案（OVS、Flannel、Calico）及原理](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-qi-ff1a-xu-ni-hua/di-30-ke-ff1a-k8s-zhu-liu-wang-luofang-an-ff08-ovs-flannel-calico-ff09-ji-yuan-li.md)
   * [模块八：方案](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-ba-ff1a-fang-an.md)
     * [第31课：4、7 层入口负载均衡 SLB 如何作才是最佳姿势](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-ba-ff1a-fang-an/di-31-ke-ff1a-4-7-ceng-ru-kou-fu-zai-jun-heng-slb-ru-he-zuo-cai-shi-zui-jia-zi-shi.md)
+    * 第32课：浅析多可用区容灾、多活到两地三中心的架构
   * [模块九：趋势](yun-wei-gao-shou-de-36-xiang-xiu-lian/mo-kuai-jiu-ff1a-qu-shi.md)
     * 第33课：云原生关键技术浅析
 * [测试开发核心技术 46 讲](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang.md)
