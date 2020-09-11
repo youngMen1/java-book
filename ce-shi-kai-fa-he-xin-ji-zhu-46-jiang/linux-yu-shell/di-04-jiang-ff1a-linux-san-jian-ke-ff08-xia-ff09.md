@@ -10,11 +10,11 @@
 
 接下来，我们来看一下管道的具体用法。如图所示，Shell 下任何程序都有输入和输出，这里需要额外注意的是错误输出，比如我们输入 ls dddd 指令。
 
-CgoB5l3czBiAQrPTAAJmF953Il8386.png
+![](/static/image/CgoB5l3czBiAQrPTAAJmF953Il8386.png)
 
 因为 dddd 文件是不存在的，所以会打印了一个独立显示的报错信息，我们就称之为错误输出。
 
-CgotOV3czCaAPOigAAI94SOIP8Q284.png
+![](/static/image/CgotOV3czCaAPOigAAI94SOIP8Q284.png)
 
 我们现在输入 ls -l /tmp appium.log 指令，可以打印一个正确的输出。
 
