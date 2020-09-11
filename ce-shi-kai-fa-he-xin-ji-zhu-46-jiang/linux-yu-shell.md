@@ -162,3 +162,5 @@ CgotOV3fosaAaPu1AAJ8n7xBAno779.png
 * 循环 for、while、until；
 
 * break 和 continue，退出循环。
+
+你可以看到整个逻辑控制和 Python 是很相似的。
