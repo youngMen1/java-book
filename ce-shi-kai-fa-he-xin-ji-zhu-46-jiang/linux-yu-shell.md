@@ -177,4 +177,6 @@ CgotOV3fosaAaPu1AAJ8n7xBAno779.png
 第二种用法是 for 遍历循环，你可以使用 for...in...语句块。  
 
  CgoB5l3fosaAOw4CAAHflNfAfkU288.png    
+ 
+ 比如输入 for i in $(seq 1 3 10) 指令，然后在 do 语句块中打印 echo $i 的值，do 语句块以 done 结束。
 
