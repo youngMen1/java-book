@@ -47,3 +47,6 @@ CgqCHl8hWhOANgePAAIKBW6JBzk016.png
 在上面这张图中，左边是服务端，右边是客户端，客户端在请求流 stream1（也就是 page.html）的时候，服务端就会主动向客户端响应，除了 page.html 响应的内容以外，还同时响应了 stream2、stream4(script.js、style.css)，服务端主动响应给了客户端，这样机制减少多次连接，从而提高对应页面的响应性能和用户体验。
 
 ## HTTP2.0 在 Nginx 中的配置实践
+了解了 HTTP2.0 的优势以后，我们就 Nginx 是如何支持 HTTP2.0 协议的为你进行介绍。
+
+我们首先讲到的是对 HTTP2.0 整个协议的支持，在 Nginx 的版本里，支持 HTTP2.0 的协议对其版本是有要求的，Nginx 的软件版本需要大于 Nginx1.10 的版本，才能支持到 HTTP2.0 协议。同时，由于 openssl 版本做了升级，所以对操作系统或 Linux 系统上面 openssl 库版本也有要求，openssl 需要大于 1.0.2 版本，在同时满足了这样的前提下，我们就可以来配置 Nginx 配置文件以使得 Nginx 支持 HTTP2.0 协议。
