@@ -53,3 +53,5 @@ CgoB5l3czJKAXcksAAHlS8hzS9g985.png
 
 我们应该如何正确操作呢，输入 echo hello hogwarts | gerp hogwarts 指令，你会看到输出了正确的内容。因为上一个命令输入了 hello hogwarts，再经 grep 后输出。你可以看到通过管道我们可以让 Linux 三剑客的功能发挥到一个新的高度，有了管道很多的操作就变得非常简单易处理。
 
+CgoB5l3czKCAdhjzAAHmEnTiajE963.png
+
