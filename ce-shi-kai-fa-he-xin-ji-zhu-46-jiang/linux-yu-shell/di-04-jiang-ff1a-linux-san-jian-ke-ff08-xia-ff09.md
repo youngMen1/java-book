@@ -46,3 +46,5 @@ CgoB5l3czG-APPCuAAHKJe8bVUg331.png
 我们把指令分为两部分执行，第一部分执行 echo hello，这个指令没有任何输入但是有输出。
 
 CgotOV3czHyAC5P7AAHcF8HELcU211.png
+
+然后，将 echo hello 通过管道传递给 grep hogwarts，此时管道已经找到输入内容 echo hello，于是便不再从当前窗口读取数据，但因为读入的内容实际是没有输入的所以会得不到任何输出。
