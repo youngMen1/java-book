@@ -110,3 +110,5 @@ AZ2 里 DB 是主库，那么在 AZ1 的数据库为从库。正常服务时数�
 
 Ciqc1F7rFNeALR7JAADoCYCXSD8254.png
 通常通过 MySQL 源生的 Binlog 方式是很难去实现的，就算实现起来也会有很大的问题（如：数据写入回环）。这时我们会考虑自己去研发一些工具来做，其中的原理我这里画了一张图：
+
+Ciqc1F7rFQGAPgQGAAB3kxrpM60329.png
