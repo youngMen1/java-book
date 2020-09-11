@@ -50,15 +50,15 @@ CgotOV3mHo2ARK47AAHLXCyvNz8110.png
 
 然后，既然 $@ 与 $* 都表示所有的参数但它们有什么区别呢？你可以简单的理解成 $* 会把参数打散，举个例子。
 
-CgoB5l3mHpaAJwbtAAGm5AmGJZA068.png
+![](/static/image/CgoB5l3mHpaAJwbtAAGm5AmGJZA068.png)
 
 比如第二个参数是包含空格的，将 "m n" 作为一个完整的参数传递给脚本并执行，你会发现第二个参数是 m n，但其实 $@ 与 $* 的值已经发生了变化，$* 会将参数打散，而 "$@" 则不会。
 
-CgoB5l3mHp-AGEWgAACvvz4hjIA356.png
+![](/static/image/CgoB5l3mHp-AGEWgAACvvz4hjIA356.png)
 
 我们使用 for 循环来分别打印 "$@" 和 $* 所代表的参数。
 
-CgotOV3mHqmAJ1dsAAFw0CGIpXM118.png
+![](/static/image/CgotOV3mHqmAJ1dsAAFw0CGIpXM118.png)
 
 执行脚本，你会发现如果是"$@"，第一个参数打印的是 x，第二个参数打印的是 m n，而 $* 把第二个参数拆成了两个。
 
@@ -66,29 +66,29 @@ CgotOV3mHqmAJ1dsAAFw0CGIpXM118.png
 
 最后是函数，函数是以函数名()后跟 {} 括起来的内容组成，函数可以实现一些功能封装，同时函数也支持与脚本类似的参数解析逻辑。
 
-CgoB5l3mHrSALa60AAG18PfnhoY767.png
+![](/static/image/CgoB5l3mHrSALa60AAG18PfnhoY767.png)
 
 比如定义一个 hogwarts 函数，在函数中通过 if 语句判断第一个参数 $1 是否等于 python，如果等于就打印 python 测试开发。然后运行 hogwarts 函数，你会发现什么都没有，是因为你并没有给函数传入一个参数，传入 python 参数后，系统打印 python 测试开发。
 
-CgotOV3mHr-AN2ZyAAEBtQa6ZR8422.png
+![](/static/image/CgotOV3mHr-AN2ZyAAEBtQa6ZR8422.png)
 
 执行并传入 python 参数，你可以看到最终打印了 python 测试开发。
 
-CgoB5l3mHtGAaT5OAAG5fFP2WZw702.png
+![](/static/image/CgoB5l3mHtGAaT5OAAG5fFP2WZw702.png)
 
 如果传入参数 java，则输出 java 测试开发。
 
-CgotOV3mHtuANXSqAAEH6Py_Xac382.png
+![](/static/image/CgotOV3mHtuANXSqAAEH6Py_Xac382.png)
 
 接下来，我们把它封装成一个 hogwarts 函数，有了函数之后就可以在执行的过程中随时进行调用来实现功能封装和逻辑复用。
 
 而只定义函数是不会得到执行的，比如此时没有输出任何的测试开发结果。
 
-CgotOV3mHxiAYFWfAAEdgQmOdxA853.png
+![](/static/image/CgotOV3mHxiAYFWfAAEdgQmOdxA853.png)
 
 而我们运行 hogwarts 函数并将 $2 参数传给它，此时 $2 是脚本的第二个参数，但却是 hogwarts函数 的第一个参数。
 
-CgoB5l3mHyKANsqtAAGM238AlPY383.png
+![](/static/image/CgoB5l3mHyKANsqtAAGM238AlPY383.png)
 
 执行脚本，传入一个参数 java，没有任何显示，再传入一个 python 仍没有反应，直到传入 python java 两个参数后，才输出 java 测试开发，因为 hogwarts 接收的是整个脚本的第二个参数。
 
@@ -96,15 +96,15 @@ CgoB5l3mHyKANsqtAAGM238AlPY383.png
 
 Ok，有了函数，你就可以把很多功能封装到函数里，这样可以让代码更优雅，还可以进行组件化，而掌握函数之后你就需要掌握脚本的执行方法。
 
-CgotOV3mHy2AA4GsAAFi8HS0YMk372.png
+![](/static/image/CgotOV3mHy2AA4GsAAFi8HS0YMk372.png)
 
 通过前面案例的演示我们已经掌握使用 bash 执行脚本，但如果我们不想使用 bash 执行脚本，而是想让系统自动进行解析，该怎么做呢？可以通过加权限位实现。
 
-CgotOV3mHzeAXyu9AAGwW6ETkz4673.png
+![](/static/image/CgotOV3mHzeAXyu9AAGwW6ETkz4673.png)
 
 首先查看 1.sh 的权限位目前是多少，输入 ls -l /tmp/1.sh 指令，你会发现它的权限里没有 x。
 
-CgotOV3mH0OAUIsfAAGy_TmPGnc630.png
+![](/static/image/CgotOV3mH0OAUIsfAAGy_TmPGnc630.png)
 
 然后输入 1.sh 的全路径 /tmp/1.sh，系统会提示 Permission denied 没有执行权限。
 
