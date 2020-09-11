@@ -103,3 +103,5 @@ CgotOV3TuqKAYGE6AAPva3zSUbM410.png
 那么用什么命令可以查看当前有多少个进程呢？通常我们使用 top 或 ps 命令查看当前进程。
 
 ### ps
+
+CgotOV3TuqKAeyHXAAPRfiGYfJY753.png
