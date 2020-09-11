@@ -197,3 +197,5 @@ CgoB5l3foseAOrrnAAHk4lHDC9s130.png
 而 while 还有一个很常用的功能，就是通过 while read line 循环读取文件的每一行。
 
 CgoB5l3foseADrLRAAIeM1hcmns056.png
+
+比如输入 while read line；do echo $line;done< /tmp/hello.txt 指令，它就会打印出文件的每一行信息。
