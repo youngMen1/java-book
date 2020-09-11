@@ -25,3 +25,5 @@ CgotOV3fosGAOY1tAANwPox6f7I970.png
 举个例子，我们定义一个 x=1 的变量，然后输入 echo $x 指令，其中 $x 表示可以引用这个变量。
 
 CgoB5l3fosKAcC0AAANOqJ5Rmsk957.png
+
+又比如输入 hello 字符串赋值给变量 x，然后再打印 echo $x。
