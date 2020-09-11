@@ -189,5 +189,8 @@ CgotOV3fosaALQ6mAAHflNfAfkU836.png
 
 CgoB5l3foseAOrrnAAHk4lHDC9s130.png
 
-举个例子，定义 i=0，然后输入 while ((i<3));do((i=i+1));sleep 1;echo $i;done 指令。   
+举个例子，定义 i=0，然后输入 while ((i<3));do((i=i+1));sleep 1;echo $i;done 指令。
+
+
+ 你可以看到，输出结果每隔 1 秒打印一个 i 的值，而 i 的值逐渐增加，直到等于 3 时不再满足条件，退出循环。   
 
