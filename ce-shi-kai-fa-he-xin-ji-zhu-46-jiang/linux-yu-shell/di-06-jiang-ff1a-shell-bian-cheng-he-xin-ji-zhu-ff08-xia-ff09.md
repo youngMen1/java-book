@@ -41,3 +41,5 @@ CgoB5l3mHnyAa4b9AACcvwS38OE594.png
 CgoB5l3mHoWAaTN7AAHqWUW2NTU287.png
 
 然后开始执行脚本，执行脚本的第一种方法是使用 bash /tmp/1.sh，在执行结果中 $0 是当前的文件名，但此时参数没有值。
+
+CgotOV3mHo2ARK47AAHLXCyvNz8110.png
