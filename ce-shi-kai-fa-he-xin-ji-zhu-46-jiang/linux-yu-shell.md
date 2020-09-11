@@ -158,3 +158,9 @@ CgotOV3XtcaAGbedAAJmB1D7zHw983.png
 我们输入 awk -Fo '{print NR,NF}' /tmp/hello.txt 指令，输出显示我们以 o 为分隔符，将 hello from hogwarts 分为了 4 个字段，下面两条数据以此类推。
 
 CgoB5l3XteOAYuu3AAGhkZYQVJA208.png
+
+我们还可以使用 BEGIN 指令，能够得到同样的结果。              
+
+
+
+接下来，学习 awk 的字段数据处理。我们通过 -F 参数指定字段分隔符，这里需要注意 awk 有一个 $0~$N~$NF 的特殊参数，
