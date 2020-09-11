@@ -156,3 +156,5 @@ pattern有非常丰富的语法，你可以课后自己进行练习，同时 awk
 CgotOV3XtcaAGbedAAJmB1D7zHw983.png
 
 我们输入 awk -Fo '{print NR,NF}' /tmp/hello.txt 指令，输出显示我们以 o 为分隔符，将 hello from hogwarts 分为了 4 个字段，下面两条数据以此类推。
+
+CgoB5l3XteOAYuu3AAGhkZYQVJA208.png
