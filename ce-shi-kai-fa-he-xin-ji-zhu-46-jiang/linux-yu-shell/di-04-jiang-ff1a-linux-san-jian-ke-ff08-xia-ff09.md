@@ -17,3 +17,5 @@ CgoB5l3czBiAQrPTAAJmF953Il8386.png
 CgotOV3czCaAPOigAAI94SOIP8Q284.png
 
 我们现在输入 ls -l /tmp appium.log 指令，可以打印一个正确的输出。
+
+CgotOV3czDOAQH4QAAJeXeuP_OE959.png
