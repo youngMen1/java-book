@@ -107,3 +107,13 @@ CgotOV3TuqKAYGE6AAPva3zSUbM410.png
 CgotOV3TuqKAeyHXAAPRfiGYfJY753.png
 
 我们先从简单的 ps 学起，使用 ps 会列举当前用户下的所执行的命令。
+
+CgoB5l3TuqKAVAhKAAPxiio6rRE747.png
+
+接下来，输入另外一个命令 sleep，比如 sleep 3，它可以让当前进程窗口休眠 3 秒钟，你可以看到它是一个非常典型的进程。
+
+CgotOV3TuqOAENLvAAOxjUP1BaI416.png
+
+我们在课时开始时说 Linux 下有一个基本的设计原则就是 Everything is file，所以这里的 sleep 也是一个文件，我们可以通过 which 命令查看它所在的目录，当我们需要调度它的时候，就可以通过路径或名字直接调度它。
+
+CgoB5l3TuqOASCW9AAHZdh_W3zw797.png
