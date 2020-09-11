@@ -47,7 +47,7 @@ Ciqc1F8EEzOAOJBBAAFtj2q8hZU766.png
 
 而如果使用中间地址映射的一种过渡方式，比如通过协议映射的方式进行访问，这里的访问就略微复杂了，访问链路相对较长，下面我们来重点拿出 IPv6 客户端如何去访问 IPv6 来给你举例：
 
-CgqCHl8EEzqALhcCAAJBeVLjS4E787.png
+![](/static/image/CgqCHl8EEzqALhcCAAJBeVLjS4E787.png)
 
 如果是 IPv6 的客户端去访问 IPv4 后台的服务端，首先它要去改造两个非常重要的设备，一个是 DNS64 Server 设备的支持，一个是 NAT64 路由器的支持，NAT64支持 IPv6 的域名解析，能返回后端 IPv4 的地址，因为（IPv6-IPv4）都做了协议映射，IPv6用户的请求还是 IPv6，但实际通过这两个设备以后，做了一个地址地转发，把 IPv6 的一个请求都转化到了后端变成 IPv4 的地址。所以这两个设备都需要做对应的改造。
 
