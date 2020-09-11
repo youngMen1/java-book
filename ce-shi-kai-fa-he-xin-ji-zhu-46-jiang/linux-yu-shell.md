@@ -37,3 +37,7 @@
 * hello from testerhome
 
 CgoB5l3XtNuAPoP1AACZeigKKy8997.png
+
+然后通过 grep hogwarts /tmp/hello.txt 指令查找数据，指令中间的参数是正则表达式，指令后面的参数是文件名。
+
+CgotOV3XtPiAXjErAADUYrh9hPI032.png
