@@ -80,7 +80,8 @@ Ciqc1F7rFICAa4bmAACZpZXhT7w370.png
 
 其实我们能遇到可用区 IDC 整个挂掉的可能性并不多，通常是一个可用区中内部有一部分服务出现问题，比如这张图里，假设内部中的 LB（负载均衡）调用我们的 DB（数据库），这里出现了问题，我们考虑通过 DNS 去做整体切换代价是比较大的，所以我们可以考虑需要在局部进行这样的切换，这时我们就可以通过 LB 切换到可用区 2（AZ2）中的 DB。
 
-Ciqc1F7rFKuAIh18AADhYGjMa4A896.png
+
+![](/static/image/Ciqc1F7rFKuAIh18AADhYGjMa4A896.png)
 
 这种设计需要在底层网络把多个可用区的 IP 在网络层进行多可用区的分发，使得 LB 能够在多可用区中动态地通过 VIP 的方式飘移，这个是在底层网络以及 LB 的设计里面需要去考虑的。
 
@@ -88,13 +89,15 @@ Ciqc1F7rFKuAIh18AADhYGjMa4A896.png
 
 # 数据层-MySQL 服务高可用设计
 这里我给你再介绍一下 MySQL 的一个主从同步原理，我们看到这样的一张图：
-CgqCHl7q--GAeXj5AAH_coBsrgQ277.png
+
+![](/static/image/CgqCHl7q--GAeXj5AAH_coBsrgQ277.png)
 
 数据首先写入的是 MySQL 主库，主库除了把数据写入到库中，同时以 Binlog 方式记录日志。而从库只需要启动 IO 线程，IO 线程实现从主库里面取出 Binlog 日志，拿到本地以后，写到从库里面的 relay log，从库的另外一个 SQL 线程，SQL 线程是专门用来负责读取本地 relay log 的，并且在读取完以后会写入本地的数据库里。这样我们就可以看到 MySQL 的主从同步原理，就是通过 Binlog 的日志方式进行主从之间的数据同步。主库里面做了什么样的更改和写入操作，从库里通过 relay log 同时能够进行同步更改。
 
 ## MySQL 灾备模式
 MySQL 灾备模式也是基于这样数据同步机制应用在多AZ间，并作 MySQL 数据主从同步模式，我们来看这样一张图：
-Ciqc1F7rFOOAIJnUAADuIjCU_lk506.png
+
+![](/static/image/Ciqc1F7rFOOAIJnUAADuIjCU_lk506.png)
 
 
 AZ2 里 DB 是主库，那么在 AZ1 的数据库为从库。正常服务时数据往主 AZ2的数据库里面写入或者读取，从库（AZ1 的 DB） 只以 Binlog 的方式同步主库数据。
@@ -108,10 +111,11 @@ AZ2 里 DB 是主库，那么在 AZ1 的数据库为从库。正常服务时数�
 ## LB 高可用模式
 如果要设计高可用的双活模式（两个可用区域都要同时对外提供服务），这个时候则要求两个 DB 之间要相互进行数据同步，也就是 AZ2 的数据要同步给 AZ1，AZ1 里面的 DB 发生数据更改之后要同步给 AZ2，所以这个时候我们需要考虑如何进行同步设计。
 
-Ciqc1F7rFNeALR7JAADoCYCXSD8254.png
+
+![](/static/image/Ciqc1F7rFNeALR7JAADoCYCXSD8254.png)
 通常通过 MySQL 源生的 Binlog 方式是很难去实现的，就算实现起来也会有很大的问题（如：数据写入回环）。这时我们会考虑自己去研发一些工具来做，其中的原理我这里画了一张图：
 
-Ciqc1F7rFQGAPgQGAAB3kxrpM60329.png
+![](/static/image/Ciqc1F7rFQGAPgQGAAB3kxrpM60329.png)
 
 这里有 MySQL1 和 MySQL2，假设两个 MySQL 在不同的可用区，那么在 MySQL1 里面，如果要写入数据的话，会在本地生成 Binlog。这个时候自研一个同步的进程（ 如：Rsync SQL），它会去读取 MySQL1 里面的 Binlog 日志，并且把 Binlog 做反向解析，原始 Binlog 日志是二进制的，解析成一个 SQL 语句，再同步操作 MySQL2 。有了这样一层机制，就可以使得数据库数据发生更改时作到双向的同步。
 
