@@ -50,3 +50,29 @@ CgqCHl8hWhOANgePAAIKBW6JBzk016.png
 了解了 HTTP2.0 的优势以后，我们就 Nginx 是如何支持 HTTP2.0 协议的为你进行介绍。
 
 我们首先讲到的是对 HTTP2.0 整个协议的支持，在 Nginx 的版本里，支持 HTTP2.0 的协议对其版本是有要求的，Nginx 的软件版本需要大于 Nginx1.10 的版本，才能支持到 HTTP2.0 协议。同时，由于 openssl 版本做了升级，所以对操作系统或 Linux 系统上面 openssl 库版本也有要求，openssl 需要大于 1.0.2 版本，在同时满足了这样的前提下，我们就可以来配置 Nginx 配置文件以使得 Nginx 支持 HTTP2.0 协议。
+
+
+
+```
+server { 
+    listen       443 ssl http2; 
+    charset      utf-8; 
+    server_name  www.imoocc.com imoocc.com; 
+    access_log  /opt/app/jeson/logs/https_access.log  main; 
+    error_log  /opt/app/jeson/logs/https_error.log; 
+             
+    ssl_certificate /jeson/key/www.imoocc.com.pem; 
+    ssl_certificate_key /jeson/key/www.imoocc.com.key; 
+    ssl_session_timeout 5m; 
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4; 
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2; 
+    ssl_prefer_server_ciphers on; 
+    … 
+} 
+
+```
+配置如上，对于 http2.0 协议的支持 Nginx 配置文件中在监听的端口后面加入了一个 http2（listen 443 ssl http2），这就配置使得 Nginx 里面支持 HTTP2.0，配置完毕可以重启 Nginx 服务。
+
+接下来，测试对比 Nginx 分别在 HTTP1.1 和 HTTP2.0+HTTPS 两个场景中性能上的差异，这个测试我们在前端打开浏览器-开发者工具，示例这里先访问的是我的 HTTP1.1协议博客地址（http://www.imoocc.com）。
+
+Ciqc1F8hWmOAPL8qAAIV_f1lXdE332.png
