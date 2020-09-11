@@ -11,4 +11,7 @@
           
 CgotOV3mHmOAVwNqAAB4Dtu9NTs336.png
 
+
+首先看下注释，我们使用 vim 创建一个文件，当然你也可以使用 vs code 等其他编辑器，vs code 可以支持语法高亮，也是非常不错的，输入 vim /tmp/1.sh 指令创建了 1.sh 文件。 
+
 CgotOV3mHnGAcmsMAAB09eOs0V8120.png
