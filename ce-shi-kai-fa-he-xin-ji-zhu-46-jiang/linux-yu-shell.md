@@ -203,3 +203,7 @@ CgoB5l3foseADrLRAAIeM1hcmns056.png
 CgotOV3fosiAdS1TAAIysEIC3Y0290.png
 
 除此之外，使用管道也是可以的，输入 cat /tmp/hello.txt | while read line;do echo $line;done 指令，输出效果是一样的。
+
+## 退出控制
+而有一些复杂的条件需要适时推出，这个时候就需要我们掌握控制推出的语句，比如：
+
