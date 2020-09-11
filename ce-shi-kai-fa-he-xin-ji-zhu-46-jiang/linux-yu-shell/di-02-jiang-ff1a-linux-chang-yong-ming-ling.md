@@ -23,3 +23,5 @@ CgotOV3Tup-AG_EQAAL0lCLE7zk733.png
 CgoB5l3Tup-ADQLAAANXFk643ts803.png
 
 第二个命令叫 ls，ls 可以打印当前目录下的所有文件和目录，你可以通过 ls 命令，把当前所有的目录和文件都打印出来了。
+
+CgotOV3Tup-ADf9JAANefM9Rhwg364.png
