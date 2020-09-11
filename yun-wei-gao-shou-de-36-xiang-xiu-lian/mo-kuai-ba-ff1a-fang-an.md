@@ -94,3 +94,4 @@ CgqCHl7q--GAeXj5AAH_coBsrgQ277.png
 
 ## MySQL 灾备模式
 MySQL 灾备模式也是基于这样数据同步机制应用在多AZ间，并作 MySQL 数据主从同步模式，我们来看这样一张图：
+Ciqc1F7rFOOAIJnUAADuIjCU_lk506.png
