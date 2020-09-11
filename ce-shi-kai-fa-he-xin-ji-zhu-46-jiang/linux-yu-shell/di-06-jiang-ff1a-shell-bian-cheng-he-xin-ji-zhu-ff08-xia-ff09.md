@@ -87,3 +87,5 @@ CgotOV3mHtuANXSqAAEH6Py_Xac382.png
 CgotOV3mHxiAYFWfAAEdgQmOdxA853.png
 
 而我们运行 hogwarts 函数并将 $2 参数传给它，此时 $2 是脚本的第二个参数，但却是 hogwarts函数 的第一个参数。
+
+CgoB5l3mHyKANsqtAAGM238AlPY383.png
