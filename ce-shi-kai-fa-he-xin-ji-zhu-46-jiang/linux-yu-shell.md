@@ -69,3 +69,7 @@ CgoB5l3fosOAVQSoAAUa3CT95gI876.png
 其中，我们需要特别注意 PATH 变量，比如输入 echo $PATH 指令，你可以看到 PATH 变量定义了所有可执行程序，定义在 PATH 中的程序可以直接调用程序名执行而不必再输入程序的全部路径。
 
 CgotOV3fosSATo1pAASkBuOkl-M111.png
+
+比如使用 which ls 指令，你会发现 ls 在 /bin/ls 目录下，打印 echo $PATH 变量，你会发现里面有对应的 /bin 目录，但如果程序没有定义在 PATH 变量中，就需要你打印全部路径来执行程序 。
+
+特殊符号的使用   
