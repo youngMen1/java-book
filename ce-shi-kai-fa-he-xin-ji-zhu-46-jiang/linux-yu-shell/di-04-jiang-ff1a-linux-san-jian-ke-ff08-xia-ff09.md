@@ -69,6 +69,5 @@
 
 我们再继续使用管道将 testerhome 中的 tester 替换成 dev，输入 cat /tmp/hello.txt | grep testerhome | awk '{print $3}' | sed 's#tester#dev#' 指令，你可以看到 testerhome 就变成了devhome 了。
 
- 
 
 这就是使用管道的魅力，管道和三剑客结合使用可以实现非常好的执行效果，它可以帮助我们处理一些复杂的数据处理工作，提高我们的工作效率。                                
