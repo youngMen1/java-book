@@ -103,3 +103,5 @@ CgotOV3mHy2AA4GsAAFi8HS0YMk372.png
 CgotOV3mHzeAXyu9AAGwW6ETkz4673.png
 
 首先查看 1.sh 的权限位目前是多少，输入 ls -l /tmp/1.sh 指令，你会发现它的权限里没有 x。
+
+CgotOV3mH0OAUIsfAAGy_TmPGnc630.png
