@@ -35,3 +35,5 @@ CgotOV3fosKAVC89AAOEgykUuPg498.png
 CgoB5l3fosKAdqgFAAOGtJpRb8Q155.png
 
 那我们应该怎么做呢？和 Python 一样，我们只需要对字符串加上单引号或双引号。然后再打印这个变量 echo $x 就可以了。
+
+CgotOV3fosKAcDsaAAN5G0JEAsA725.png
