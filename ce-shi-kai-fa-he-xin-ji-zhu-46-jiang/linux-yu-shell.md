@@ -203,5 +203,8 @@ s 表示查找并替换。
 
 ![](/static/image/CgoB5l3Xtk6AM47hAAJ7IwffrqA691.png)
 
+比如我们输入 sed 's#testerhome#world#' /tmp/hello.txt 指令，其中 s 后面可以跟任意符号，比如 / 或 # 都可以表示分隔符，它会用后面的内容替换前面的内容。
+
+CgotOV3Xtl6AetiKAAJ5M3Mbhfw934.png
 
 
