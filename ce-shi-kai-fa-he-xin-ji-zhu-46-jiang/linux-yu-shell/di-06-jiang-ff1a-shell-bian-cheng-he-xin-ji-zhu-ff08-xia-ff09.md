@@ -99,3 +99,4 @@ Ok，有了函数，你就可以把很多功能封装到函数里，这样可以
 CgotOV3mHy2AA4GsAAFi8HS0YMk372.png
 
 通过前面案例的演示我们已经掌握使用 bash 执行脚本，但如果我们不想使用 bash 执行脚本，而是想让系统自动进行解析，该怎么做呢？可以通过加权限位实现。
+CgotOV3mHzeAXyu9AAGwW6ETkz4673.png
