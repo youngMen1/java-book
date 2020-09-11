@@ -123,3 +123,5 @@ CgotOV3fosWAUSepAAJPWmR_Pm8293.png
 CgoB5l3fosWADT10AAIM0bYzP1o997.png
 
 比如输入 ls /tmp/hello.txt ;echo $? 指令，你可以看到返回值是 0，表示该进程运行正确，如果返回其他值就表示进程运行错误。
+
+CgotOV3fosaAaPu1AAJ8n7xBAno779.png
