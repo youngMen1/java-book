@@ -34,7 +34,7 @@ ls 有一个常用的参数叫 -l，-l 可以打印出每个文件的基本信�
 
 可以通过 cd 命令进入 battery-historian 的目录，进入目录后，通过 ls 查看目录下所有文件。
 
-CgotOV3TuqCAP51TAASKn8MrnI4613.png
+![](/static/image/CgotOV3TuqCAP51TAASKn8MrnI4613.png)
 
 使用 ls、cd 命令可以让我们在不同目录之间进行切换，切换之后还可以通过 pwd  命令获取当前目录所在的路径。
 
