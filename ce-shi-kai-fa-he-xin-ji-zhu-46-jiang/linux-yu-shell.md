@@ -112,5 +112,19 @@ grep 还有一些其他的指令，比如 -i 可以忽略字符大小写。  
 
 ## awk
 
+了解完 grep 如何使用，我们接下来学习如何使用 awk。
 
+     
+
+awk 是 Linux 下的一个命令，同时也是一种语言解析引擎，它的功能非常强大，具备完整的编程特性，可以执行命令、进行网络请求等操作。所以精通 awk 是一个 Linux 工作者必备的技能。我们接下来看下 awk 的语法 awk 'pattern{action}' 的相关知识，pattern 是匹配条件，action 表示具体需要做的处理。
+
+
+
+pettern 语法在一定程度上可以代替 grep。
+
+CgotOV3XtaaAcU3QAAKjJeoBA8g632.png
+
+举个例子，使用双 / 表示一个正则匹配，我们输入 awk '/[st]../' /tmp/hello.txt 指令，你可以看到和 grep 一样，轻松地打印出匹配到的内容，所以在一定程度上 awk 可以替代 grep，但它没有使用 grep 简洁。 
+
+CgoB5l3XtY-AaJPqAABKIEkO88U487.png  
 
