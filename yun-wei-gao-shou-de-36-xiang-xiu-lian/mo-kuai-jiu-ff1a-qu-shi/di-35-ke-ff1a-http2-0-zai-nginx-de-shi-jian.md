@@ -111,7 +111,7 @@ server_name  www.imoocc.com;
 
 如果用户请求 index.html 页面（首页），那么服务通过配置项 http2_push+ 加上对应的资源路径。
 这就表示服务端会主动推送这些元素（/css/style.css、/js/main.js、/img/yule.jpg、/img/avatar.jpg）给到客户端，同样通过浏览器的开发者工具在客户端分析，会明显地看到页面加载元素展示上 Push *** 展示方式，这个就表示打开这个页面服务端主动推送过来的页面元素。
-Ciqc1F8hWpOAD5wgAATOaZqbqn0907.png
+![](/static/image/Ciqc1F8hWpOAD5wgAATOaZqbqn0907.png)
 
 那么我们再来介绍一下 HTTP3.0 优化 HTTP2.0 的哪些内容，HTTP3.0 最大的特点就是支持了 QUIC 协议，QUIC 协议最大的优化方式就是解决了 HTTPS 会话缓存的问题（课时 2 有讲解会话缓存的原理），在客户端缓存 HTTPS 认证回话信息，再一次访问服务端的时候，就可以不用重新建立 HTTPS 会话了，而是在原有认证信息的基础上，直接建立连接。这种方式优化了 HTTPS 这种多次建立连接的问题，由于页面建连速度非常快，所以专业术语称呼为 0RTT 建连**。**
 
