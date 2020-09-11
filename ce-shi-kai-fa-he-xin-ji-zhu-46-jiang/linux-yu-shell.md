@@ -201,7 +201,7 @@ s 表示查找并替换。
 
 -E 支持扩展表达式。
 
-CgoB5l3Xtk6AM47hAAJ7IwffrqA691.png
+![](/static/image/CgoB5l3Xtk6AM47hAAJ7IwffrqA691.png)
 
 
 
