@@ -65,3 +65,5 @@ CgotOV3mHqmAJ1dsAAFw0CGIpXM118.png
 ## 函数     
 
 最后是函数，函数是以函数名()后跟 {} 括起来的内容组成，函数可以实现一些功能封装，同时函数也支持与脚本类似的参数解析逻辑。
+
+CgoB5l3mHrSALa60AAG18PfnhoY767.png
