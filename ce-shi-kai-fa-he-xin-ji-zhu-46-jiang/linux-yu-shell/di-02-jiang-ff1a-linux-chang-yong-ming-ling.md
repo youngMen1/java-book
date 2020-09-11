@@ -73,3 +73,4 @@ CgoB5l3TuqGAPlkYAAP4ne07kvY351.png
 
 你可以通过 chmod 命令修改一个文件的权限，也可以通过 chown 修改一个文件所归属的用户或组。
 
+CgoB5l3TuqGAZVizAAO7_xP36EU749.png
