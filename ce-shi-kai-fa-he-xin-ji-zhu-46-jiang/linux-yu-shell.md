@@ -209,3 +209,5 @@ CgotOV3Xtl6AetiKAAJ5M3Mbhfw934.png
 
 比如我们把以 t 开头的三个字符都替换成 xxx。你可以看到，后面的 ter 没有改变，是因为需要添加一个额外的标记符 /g。
 
+CgotOV3Xtm-AajlrAAKRg0xYDTQ652.png
+
