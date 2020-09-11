@@ -164,3 +164,6 @@ CgotOV3fosaAaPu1AAJ8n7xBAno779.png
 * break 和 continue，退出循环。
 
 你可以看到整个逻辑控制和 Python 是很相似的。
+
+## if 判断
+
