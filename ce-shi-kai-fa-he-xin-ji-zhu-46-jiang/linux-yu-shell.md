@@ -185,5 +185,5 @@ CgotOV3fosaALQ6mAAHflNfAfkU836.png
 
 ## while 循环 
 
-
+最后是 while 循环，和 for 循环很像，while 首先判断条件，条件成立则在 do 语句块中执行操作。   
 
