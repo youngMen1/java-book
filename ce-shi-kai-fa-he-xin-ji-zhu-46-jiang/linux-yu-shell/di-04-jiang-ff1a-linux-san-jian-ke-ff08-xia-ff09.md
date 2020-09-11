@@ -66,3 +66,9 @@ CgotOV3czLaAMLMMAAJYe229DN0565.png
 如果此时我们只想得到 testerhome 这个单词怎么办呢？输入 cat /tmp/hello.txt | grep testerhome | awk '{print $3}' 指令就可以单独打印 testerhome 了，因为 hello from testerhome 是以空格隔开的，所以指令中的 $3 表示第三个元素。
 
 CgotOV3czMCAbfmlAAKapT3G6Ps078.png
+
+我们再继续使用管道将 testerhome 中的 tester 替换成 dev，输入 cat /tmp/hello.txt | grep testerhome | awk '{print $3}' | sed 's#tester#dev#' 指令，你可以看到 testerhome 就变成了devhome 了。
+
+ 
+
+这就是使用管道的魅力，管道和三剑客结合使用可以实现非常好的执行效果，它可以帮助我们处理一些复杂的数据处理工作，提高我们的工作效率。                                
