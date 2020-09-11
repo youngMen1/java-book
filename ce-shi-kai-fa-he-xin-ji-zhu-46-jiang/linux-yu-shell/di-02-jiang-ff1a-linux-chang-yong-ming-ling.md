@@ -30,7 +30,7 @@
 
 ls 有一个常用的参数叫 -l，-l 可以打印出每个文件的基本信息，比如第一个文件，这里打印出了它的文件权限 -rw-r--r--、文件归属 root、文件大小，以及何时被创建等信息。ls-l 在我们的日常工作中使用频率比较高。那如果我们想进入 battery-historian 这个移动端做电量分析的专用工具的子目录，该怎么做呢？
 
-CgoB5l3TuqCAQUV2AAQ_154z-Wg836.png
+![](/static/image/CgoB5l3TuqCAQUV2AAQ_154z-Wg836.png)
 
 可以通过 cd 命令进入 battery-historian 的目录，进入目录后，通过 ls 查看目录下所有文件。
 
