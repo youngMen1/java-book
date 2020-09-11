@@ -124,3 +124,5 @@ CgoB5l3mH2aAOOGLAAG4sIaDfBY784.png
 
 
 CgoB5l3mH3CAJM6IAAFv8CFyLyo833.png
+
+你可以使用 bash -x 指令，它可以在脚本运行时打印当前脚本的每一行命令，当脚本出错时就可以知道到底是哪一行出错了，它通过以 + 开头的输出来显示当前正在执行的是哪一行的 Shell 代码，有了它调试就变得非常便捷。
