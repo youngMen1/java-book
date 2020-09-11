@@ -41,3 +41,13 @@ CgoB5l3XtNuAPoP1AACZeigKKy8997.png
 然后通过 grep hogwarts /tmp/hello.txt 指令查找数据，指令中间的参数是正则表达式，指令后面的参数是文件名。
 
 CgotOV3XtPiAXjErAADUYrh9hPI032.png
+
+
+你可以看到 grep 把 hello from hogwarts 从文件中提取出来。
+
+ CgoB5l3XtQuAMGB7AAFQI4atTN4017.png
+ 
+你还可以通过 grep 把 testerhome 提取出来，通过 cat 指令可以看到在 hello.txt 中有三行数据。 
+  
+CgotOV3XtRqAHiTCAAIU-z_0BFc527.png     
+如果我们输入 grep hello 指令，它会把三条数据都提取出来。这就是 grep 的第一个作用，根据指定的正则表达式查取对应的数据，我们上面的演示用的是简单的字符串。
