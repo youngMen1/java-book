@@ -199,3 +199,5 @@ CgoB5l3foseAOrrnAAHk4lHDC9s130.png
 CgoB5l3foseADrLRAAIeM1hcmns056.png
 
 比如输入 while read line；do echo $line;done< /tmp/hello.txt 指令，它就会打印出文件的每一行信息。
+
+CgotOV3fosiAdS1TAAIysEIC3Y0290.png
