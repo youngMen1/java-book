@@ -61,3 +61,5 @@ CgotOV3czKyAV6LNAAIYxUQ2cfk322.png
 
 然后通过管道打印包含 testerhome 的信息行。
 
+CgotOV3czLaAMLMMAAJYe229DN0565.png
+
