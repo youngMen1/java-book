@@ -91,3 +91,5 @@ CgotOV3fosSATo1pAASkBuOkl-M111.png
 * {1..10} 等价于 seq 1 10，表示 1~10 数字；
 
 * seq 1 3 10 表示生成一个步进为 3 的 1~10 的数字。
+
+CgoB5l3fosSAeiWNAAN3mkLaCuI573.png
