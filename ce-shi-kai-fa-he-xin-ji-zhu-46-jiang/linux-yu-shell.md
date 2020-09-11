@@ -31,3 +31,5 @@ CgoB5l3fosKAcC0AAANOqJ5Rmsk957.png
 CgotOV3fosKAVC89AAOEgykUuPg498.png
 
 如果输入 x=hello world 呢，这时系统运行会报错，因为 x=hello 会被认为是一个变量赋值，而 world 会被认为是另外一个独立的命令。
+
+CgoB5l3fosKAdqgFAAOGtJpRb8Q155.png
