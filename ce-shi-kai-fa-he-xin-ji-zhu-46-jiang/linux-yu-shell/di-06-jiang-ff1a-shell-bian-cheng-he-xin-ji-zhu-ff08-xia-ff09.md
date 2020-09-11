@@ -77,3 +77,5 @@ CgotOV3mHr-AN2ZyAAEBtQa6ZR8422.png
 CgoB5l3mHtGAaT5OAAG5fFP2WZw702.png
 
 如果传入参数 java，则输出 java 测试开发。
+
+CgotOV3mHtuANXSqAAEH6Py_Xac382.png
