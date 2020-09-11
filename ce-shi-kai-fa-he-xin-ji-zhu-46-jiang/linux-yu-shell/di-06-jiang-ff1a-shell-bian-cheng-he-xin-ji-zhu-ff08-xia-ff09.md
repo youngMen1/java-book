@@ -71,3 +71,5 @@ CgoB5l3mHrSALa60AAG18PfnhoY767.png
 比如定义一个 hogwarts 函数，在函数中通过 if 语句判断第一个参数 $1 是否等于 python，如果等于就打印 python 测试开发。然后运行 hogwarts 函数，你会发现什么都没有，是因为你并没有给函数传入一个参数，传入 python 参数后，系统打印 python 测试开发。
 
 CgotOV3mHr-AN2ZyAAEBtQa6ZR8422.png
+
+执行并传入 python 参数，你可以看到最终打印了 python 测试开发。
