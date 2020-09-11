@@ -154,3 +154,5 @@ pattern有非常丰富的语法，你可以课后自己进行练习，同时 awk
 比如，我们输入 awk '{print NR,NF}' /tmp/hello.txt 指令，输出显示 hello from hogwarts 被空格分隔成了三个字段，并且 hello.txt 文件中的三条数据字段数都是 3。  
 
 CgotOV3XtcaAGbedAAJmB1D7zHw983.png
+
+我们输入 awk -Fo '{print NR,NF}' /tmp/hello.txt 指令，输出显示我们以 o 为分隔符，将 hello from hogwarts 分为了 4 个字段，下面两条数据以此类推。
