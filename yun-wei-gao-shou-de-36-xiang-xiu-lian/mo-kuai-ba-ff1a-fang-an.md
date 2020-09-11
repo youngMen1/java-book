@@ -59,7 +59,8 @@ Ciqc1F7rFGiAamGsAADMZ_Do6Hw638.png
 轮巡的解析模式
 第一种需要介绍的就是 DNS 的解析模式也就是轮巡的解析模式，服务端给客户端同时返回多个 AZ记录的解析。这样的好处是可以降低提供访问服务端（RS1、RS2）的压力。
 
-Ciqc1F7rFHWAVow1AAB_xrJfBtc736.png
+
+![](/static/image/Ciqc1F7rFHWAVow1AAB_xrJfBtc736.png)
 
 这种模式实现起来相对简单，我们只需要配置的同一个域名的多条 A 解析记录就可以实现。
 
@@ -68,7 +69,8 @@ Ciqc1F7rFHWAVow1AAB_xrJfBtc736.png
 ## 智能 DNS
 如果考虑解决这样的问题，我们可以考虑使用的第 2 套方案-智能 DNS，它会动态地判断访问者的来源，根据不同的访问者的来源的 IP 地址和来分来了解他具体的地域，同时返回给用户针对地域特定的 IP地址。
 
-Ciqc1F7rFICAa4bmAACZpZXhT7w370.png
+
+![](/static/image/Ciqc1F7rFICAa4bmAACZpZXhT7w370.png)
 
 如在这张图里面，我们会看到一个在广州的用户，在请求 DNS 的时候，DNS 会判断用户所在的区域，如果在广州的话，就会返回用户我们网站在广州部署的真实节点服务IP，这个时候用户拿到的 IP 就是请求广州的 AZ 可用区的后台服务。
 
