@@ -86,8 +86,6 @@
 
 执行脚本，传入一个参数 java，没有任何显示，再传入一个 python 仍没有反应，直到传入 python java 两个参数后，才输出 java 测试开发，因为 hogwarts 接收的是整个脚本的第二个参数。
 
-             
-
 Ok，有了函数，你就可以把很多功能封装到函数里，这样可以让代码更优雅，还可以进行组件化，而掌握函数之后你就需要掌握脚本的执行方法。
 
 ![](/static/image/CgotOV3mHy2AA4GsAAFi8HS0YMk372.png)
