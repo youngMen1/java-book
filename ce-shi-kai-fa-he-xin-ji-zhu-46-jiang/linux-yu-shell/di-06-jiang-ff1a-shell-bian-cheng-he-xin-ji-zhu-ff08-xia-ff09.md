@@ -67,3 +67,5 @@ CgotOV3mHqmAJ1dsAAFw0CGIpXM118.png
 最后是函数，函数是以函数名()后跟 {} 括起来的内容组成，函数可以实现一些功能封装，同时函数也支持与脚本类似的参数解析逻辑。
 
 CgoB5l3mHrSALa60AAG18PfnhoY767.png
+
+比如定义一个 hogwarts 函数，在函数中通过 if 语句判断第一个参数 $1 是否等于 python，如果等于就打印 python 测试开发。然后运行 hogwarts 函数，你会发现什么都没有，是因为你并没有给函数传入一个参数，传入 python 参数后，系统打印 python 测试开发。
