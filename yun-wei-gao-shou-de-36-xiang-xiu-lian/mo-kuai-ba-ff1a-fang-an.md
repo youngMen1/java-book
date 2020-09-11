@@ -59,5 +59,6 @@ Ciqc1F7rFGiAamGsAADMZ_Do6Hw638.png
 轮巡的解析模式
 第一种需要介绍的就是 DNS 的解析模式也就是轮巡的解析模式，服务端给客户端同时返回多个 AZ记录的解析。这样的好处是可以降低提供访问服务端（RS1、RS2）的压力。
 
+Ciqc1F7rFHWAVow1AAB_xrJfBtc736.png
 
 
