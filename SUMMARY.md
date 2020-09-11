@@ -57,7 +57,7 @@
     * [第04讲：Linux 三剑客（下）](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell/di-04-jiang-ff1a-linux-san-jian-ke-ff08-xia-ff09.md)
     * 第05讲：Shell 编程核心技术（上）
     * [第06讲：Shell 编程核心技术（下）](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell/di-06-jiang-ff1a-shell-bian-cheng-he-xin-ji-zhu-ff08-xia-ff09.md)
-    * 第07讲：Linux 与 Shell 名企面试考点梳理与真题剖析
+    * [第07讲：Linux 与 Shell 名企面试考点梳理与真题剖析](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/linux-yu-shell/di-07-jiang-ff1a-linux-yu-shell-ming-qi-mian-shi-kao-dian-shu-li-yu-zhen-ti-pou-xi.md)
   * [编程语言](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/bian-cheng-yu-yan.md)
     * 第08讲：Python 语言基础
   * [数据结构与算法](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/shu-ju-jie-gou-yu-suan-fa.md)
