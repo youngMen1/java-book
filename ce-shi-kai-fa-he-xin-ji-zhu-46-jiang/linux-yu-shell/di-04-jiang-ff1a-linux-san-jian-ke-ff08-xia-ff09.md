@@ -44,3 +44,5 @@ CgoB5l3czGCAP4CYAAHPxkU23_Y997.png
 CgoB5l3czG-APPCuAAHKJe8bVUg331.png
 
 我们把指令分为两部分执行，第一部分执行 echo hello，这个指令没有任何输入但是有输出。
+
+CgotOV3czHyAC5P7AAHcF8HELcU211.png
