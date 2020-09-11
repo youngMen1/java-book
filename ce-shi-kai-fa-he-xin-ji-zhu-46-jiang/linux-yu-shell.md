@@ -107,3 +107,5 @@ CgotOV3XtWSAF9K-AAKOZuR4qrg333.png
 但如果你的指令中不含 -E，则指令不支持扩展正则，这个时候你会发现它什么都匹配不到。 
 
 CgoB5l3XtXGAQRR7AAKVDfReUHg948.png
+
+如果不使用 -E，我们可以使用 \ 转义符对匹配条件进行转义，也可以达到同样的效果
