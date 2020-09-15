@@ -94,3 +94,5 @@ CgpOIF3oo56ALxWwAAHZ_GW0g9E684.png
 CgpOIF3oo6eADjVvAATco8oWqcQ886.png
 
 通常在回答这个问题时，你首先需要知道这份日志的格式是什么，可以通过 less nginx.log 指令查看日志格式，你可以看到第一个信息是 IP，后面是以空格隔开的其他字段，这是一份服务器日志访问记录，那么我们如何在繁杂的数据中找出访问量最高的那 3 个 IP 呢？
+
+CgpOIF3oo7GAP4yxAAGIJe043rs272.png
