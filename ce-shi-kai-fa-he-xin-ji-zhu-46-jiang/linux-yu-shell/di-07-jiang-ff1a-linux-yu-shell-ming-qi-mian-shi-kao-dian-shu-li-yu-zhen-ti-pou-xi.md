@@ -114,3 +114,5 @@ CgpOIF3oo9CAT9AfAAHPAHniQQQ244.png
 CgpOIF3oo9qAICpMAAHs7iA9Wig257.png
 
 而我们想按照数字进行排序，我们可以用 sort -n 命令，它就可以按照从小到大的顺序进行了排序。
+
+Cgq2xl3oo-OAXpmiAAM7_6RNUxc216.png
