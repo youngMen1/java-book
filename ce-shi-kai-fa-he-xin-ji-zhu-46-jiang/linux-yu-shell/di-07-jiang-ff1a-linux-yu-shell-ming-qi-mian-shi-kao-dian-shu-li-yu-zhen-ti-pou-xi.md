@@ -102,3 +102,5 @@ CgpOIF3oo7GAP4yxAAGIJe043rs272.png
 CgpOIF3oo7qAN0rBAAGafa7tPPg079.png
 
 但我们只需要统计前三，这时需要对它进行一个排序，通过 awk '{print $1}' nginx.log | sort | less 完成排序。
+
+CgpOIF3oo8aAAz8bAAG1lMxKy2s763.png
