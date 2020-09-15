@@ -98,3 +98,5 @@ CgpOIF3oo6eADjVvAATco8oWqcQ886.png
 CgpOIF3oo7GAP4yxAAGIJe043rs272.png
 
 我们首先输入 awk '{print $1}' nginx.log | less 指令，第一列输出了所有的 IP。
+
+CgpOIF3oo7qAN0rBAAGafa7tPPg079.png
