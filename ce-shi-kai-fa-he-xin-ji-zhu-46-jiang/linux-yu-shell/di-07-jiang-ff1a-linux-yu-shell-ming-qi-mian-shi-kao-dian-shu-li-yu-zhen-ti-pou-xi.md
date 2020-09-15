@@ -76,3 +76,5 @@ Cgq2xl3oo4WATWv7AAPT15q6zb0718.png
 Cgq2xl3oo46AbVlXAAP41ALHjEk157.png
 
 通过 | tail -1 命令实现只打印最后一行核心数据。
+
+CgpOIF3oo5aAMQfFAAPcJ8rwxrk401.png
