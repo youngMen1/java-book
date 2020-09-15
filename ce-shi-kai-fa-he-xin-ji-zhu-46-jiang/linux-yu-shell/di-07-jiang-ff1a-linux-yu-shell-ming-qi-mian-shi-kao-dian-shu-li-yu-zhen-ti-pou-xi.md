@@ -90,3 +90,5 @@ CgpOIF3oo56ALxWwAAHZ_GW0g9E684.png
 最后是数据统计分析，考察的是你如何使用基本命令配合管道和三剑客来完成数据分析工作的，
 
 比如有一份 Nginx 日志文件，第一列是 IP，如何给出访问量前三的 IP 地址？
+
+CgpOIF3oo6eADjVvAATco8oWqcQ886.png
