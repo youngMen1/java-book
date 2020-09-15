@@ -60,3 +60,5 @@
 Cgq2xl3oo2qAT5Q9AAP9QW1unW4571.png
 
 如何解答这个问题呢？首先，我们通过 top 命令给大家列举机器的所有进程，你可以看到里面有一个 AliYunDun 的进程，它的 PID 是 705，我们便以它为例来一步步解答这个问题。
+
+CgpOIF3oo3OAamVXAAGmDLd3sfQ915.png
