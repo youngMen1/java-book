@@ -118,3 +118,5 @@ CgpOIF3oo9qAICpMAAHs7iA9Wig257.png
 Cgq2xl3oo-OAXpmiAAM7_6RNUxc216.png
 
 这个时候我们加入 tail -3 命令，就列举访问量最高的三个数据。
+
+CgpOIF3oo-yAXKDeAAMOJudQ9kQ423.png
