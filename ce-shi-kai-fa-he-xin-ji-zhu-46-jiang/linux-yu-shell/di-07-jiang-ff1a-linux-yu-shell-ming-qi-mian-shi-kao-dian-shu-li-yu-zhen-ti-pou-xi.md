@@ -64,3 +64,5 @@ Cgq2xl3oo2qAT5Q9AAP9QW1unW4571.png
 CgpOIF3oo3OAamVXAAGmDLd3sfQ915.png
 
 输入 top -p 705 指令，它会列举这个进程的数据，此时的数据是可交互的。
+
+Cgq2xl3oo3uAK4O1AAHoIk6W5bA925.png
