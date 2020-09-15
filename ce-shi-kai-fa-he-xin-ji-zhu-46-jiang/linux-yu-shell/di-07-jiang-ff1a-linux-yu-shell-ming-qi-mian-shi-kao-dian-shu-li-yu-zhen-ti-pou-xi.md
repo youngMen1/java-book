@@ -112,3 +112,5 @@ CgpOIF3oo9CAT9AfAAHPAHniQQQ244.png
 然后我们发现它的排序是有问题的，它是按照 ASCII 码进行排序的。
 
 CgpOIF3oo9qAICpMAAHs7iA9Wig257.png
+
+而我们想按照数字进行排序，我们可以用 sort -n 命令，它就可以按照从小到大的顺序进行了排序。
