@@ -66,3 +66,5 @@ CgpOIF3oo3OAamVXAAGmDLd3sfQ915.png
 输入 top -p 705 指令，它会列举这个进程的数据，此时的数据是可交互的。
 
 Cgq2xl3oo3uAK4O1AAHoIk6W5bA925.png
+
+我们此时需要不可交互的数据，可以给指令加入一个 -b 命令，-b 表示非交互模式，加入 -b 后系统会每隔 3 秒打印一份内容。
