@@ -72,3 +72,5 @@ Cgq2xl3oo3uAK4O1AAHoIk6W5bA925.png
 Cgq2xl3oo4WATWv7AAPT15q6zb0718.png
 
 而我们只需要关注核心数据，就可以在指令中加入 -n 1 命令，让系统只输出一次，那我们如何获取最后一行核心数据呢？
+
+Cgq2xl3oo46AbVlXAAP41ALHjEk157.png
