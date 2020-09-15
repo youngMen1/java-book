@@ -80,3 +80,5 @@ Cgq2xl3oo46AbVlXAAP41ALHjEk157.png
 CgpOIF3oo5aAMQfFAAPcJ8rwxrk401.png
 
 我们继续通过 | awk 打印 $9 $10 的参数显示 CPU 和内存的使用情况。
+
+CgpOIF3oo56ALxWwAAHZ_GW0g9E684.png
