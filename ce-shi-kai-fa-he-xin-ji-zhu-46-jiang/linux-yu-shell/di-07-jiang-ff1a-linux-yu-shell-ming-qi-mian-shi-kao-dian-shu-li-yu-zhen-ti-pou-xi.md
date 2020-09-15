@@ -106,3 +106,5 @@ CgpOIF3oo7qAN0rBAAGafa7tPPg079.png
 CgpOIF3oo8aAAz8bAAG1lMxKy2s763.png
 
 然后加入 uniq 命令，它可以把相同的数据整合成一个，-c 命令可以再进行数据整合时记录相同数据有几个重复项。
+
+CgpOIF3oo9CAT9AfAAHPAHniQQQ244.png
