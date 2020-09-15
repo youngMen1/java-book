@@ -78,3 +78,5 @@ Cgq2xl3oo46AbVlXAAP41ALHjEk157.png
 通过 | tail -1 命令实现只打印最后一行核心数据。
 
 CgpOIF3oo5aAMQfFAAPcJ8rwxrk401.png
+
+我们继续通过 | awk 打印 $9 $10 的参数显示 CPU 和内存的使用情况。
