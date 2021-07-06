@@ -74,6 +74,6 @@
   * [持续集成、持续交付、DevOps 体系](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/chi-xu-ji-cheng-3001-chi-xu-jiao-fu-3001-devops-ti-xi.md)
     * 第40讲：持续集成体系
   * [测试平台开发技术栈讲解](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/ce-shi-ping-tai-kai-fa-ji-zhu-zhan-jiang-jie.md)
-    * 第46讲：开源自动化测试框架底层代码改造
+    * [第46讲：开源自动化测试框架底层代码改造](ce-shi-kai-fa-he-xin-ji-zhu-46-jiang/ce-shi-ping-tai-kai-fa-ji-zhu-zhan-jiang-jie/di-46-jiang-ff1a-kai-yuan-zi-dong-hua-ce-shi-kuang-jia-di-ceng-dai-ma-gai-zao.md)
 * [Java 并发编程 78 讲](java-bing-fa-bian-cheng-78-jiang.md)
 
